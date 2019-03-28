@@ -14,20 +14,42 @@ body {
     width: 800px;
 }
 
+.sub_header, .scedule_ordering {
+    text-align: center;
+}
+
+.scedule_ordering ul {
+    border: none;
+    padding: 30px 0px;
+}
+
+.scedule_ordering a {
+    color: white;
+    font-size: 35px;
+    margin: 0px 20px;
+}
+
+.scedule_ordering a:hover {
+    color: aqua;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     overflow: hidden;
     background-color: black;
+    border-bottom: 1px solid white;
+    padding: 0px;
+    font-size: 0px;
 }
 
 li {
-    float: left;
+    display: inline-block;
 }
 
 li a {
     display: block;
-    color: white;
+    color:blueviolet;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -35,7 +57,54 @@ li a {
     font-family: Forte;
 }
 
-li a:hover {
+.sub_header li a:hover {
     background-color: white;
     color: black;
+}
+
+.schedule_content {
+    background-color: black;
+    height: 100%;
+    padding: 50px;
+}
+
+.schedule_content table {
+    font-family: cursive;
+    color:cornflowerblue;
+    margin: auto;
+    font-size: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 60px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-family: cursive;
+    margin: 0px;
+}
+
+.schedule_content table a, .schedule_content table p {
+    text-decoration: none;
+    color:cornflowerblue;
+}
+
+.schedule_content table a:visited {
+    color:cornflowerblue;
+}
+
+.schedule_content table td {
+    vertical-align: top;
+    min-width: 400px;
+}
+
+.old_date, .old_date a,.old_gray a:visited {
+    color: gray !important;
+}
+
+.touranment_place {
+    font-size: 15px;
+    margin: 0px;
+    color: aqua !important;
 }
