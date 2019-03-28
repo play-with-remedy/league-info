@@ -14,15 +14,22 @@ body {
     width: 800px;
 }
 
+.sub_header {
+    text-align: center;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     overflow: hidden;
     background-color: black;
+    border-bottom: 1px solid white;
+    padding: 0px;
+    font-size: 0px;
 }
 
 li {
-    float: left;
+    display: inline-block;
 }
 
 li a {
@@ -35,7 +42,53 @@ li a {
     font-family: Forte;
 }
 
+li a:visited {
+    color: white;
+}
+
 li a:hover {
     background-color: white;
     color: black;
+}
+
+.schedule_content {
+    background-color: black;
+    height: 100%;
+    padding: 50px;
+}
+
+.schedule_content table {
+    font-family: cursive;
+    color: white;
+    margin: auto;
+    font-size: 30px;
+    text-align: center;
+}
+
+.table_header {
+    font-size: 60px;
+}
+
+.schedule_content table a {
+    text-decoration: none;
+    color: white;
+}
+
+.schedule_content table td {
+    vertical-align: top;
+    min-width: 400px;
+}
+
+.old_date, .old_date a,.old_gray a:visited {
+    color: gray !important;
+}
+
+.schedule_content table a:visited {
+    color:white;
+}
+
+.schedule_content table td p {
+    font-size: 15px;
+    margin: 0px;
+    color: darkgoldenrod;
 }
