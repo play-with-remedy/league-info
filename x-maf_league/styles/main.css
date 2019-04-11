@@ -1,6 +1,7 @@
 @import url(../fonts/forte.TTF);
 
 body {
+    
     margin: 0px;
 }
 
@@ -91,4 +92,17 @@ li a:hover {
     font-size: 15px;
     margin: 0px;
     color: darkgoldenrod;
+}
+table {
+    margin: auto; /* выравнивание по центру*/
+    font-family: Forte;
+    width: 60%; /* Ширина таблицы */
+    background: black; /* Цвет фона таблицы */
+    color: white; /* Цвет текста */
+    border-spacing: 1px; /* Расстояние между ячейками */
+   }
+
+.table{
+    background: black;
+
 }
