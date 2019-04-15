@@ -108,3 +108,39 @@ h2 {
     margin: 0px;
     color: aqua !important;
 }
+
+.rating_content {
+    background-color: black;
+}
+
+.rating_content table {
+    color: white;
+    margin: auto;
+}
+
+.rating_content td:nth-child(1) {
+    min-width: 30px;
+}
+
+.rating_content td:nth-child(2) {
+    min-width: 50px;
+}
+
+.rating_content td:nth-child(3) {
+    min-width: 200px;
+}
+
+.rating_content tr {
+    font-size: 20px;
+    height: 50px;
+}
+
+.rating_content h2 {
+    padding: 25px 0px 30px;
+}
+
+.rating_content table img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
