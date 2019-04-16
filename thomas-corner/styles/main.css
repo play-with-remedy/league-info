@@ -63,9 +63,19 @@ table.thomas_rating {
 }
 
 table.thomas_rating tr {
-    vertical-align: top;
+    height: 40px;
+}
+
+table.thomas_rating tr:nth-child(1) {
+    height: 60px;
+}
+
+table.thomas_rating tr:nth-child(1) td {
+    color: white;
+    background-color: black
 }
 
 table.thomas_rating td {
     min-width: 65px;
+    border: dashed 1px black;
 }
