@@ -33,11 +33,11 @@ window.onload = function () {
             table += "<td>" + element.first_kill + "</td>";
             table += "<td>" + element.best_turn + "</td>";
 
-            var score = win_total + element.plus_points + element.best_turn;
+            var score = (win_total + element.plus_points + element.best_turn).toFixed(2);
             table += "<td>" + score + "</td>";
 
             if (game_total > 0) {
-                var result = score * win_total / game_total;
+                var result = (score * win_total / game_total).toFixed(2);
             } else {
                 var result = 0;
             }

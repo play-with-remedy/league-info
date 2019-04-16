@@ -57,7 +57,9 @@ table.thomas_rating {
     margin: 20px;
     font-size: 20px;
     text-align: center;
+    overflow: scroll;
     border: double 5px cornflowerblue;
+    display: block;
 }
 
 table.thomas_rating tr {
