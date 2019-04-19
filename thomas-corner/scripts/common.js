@@ -7,19 +7,30 @@ window.onload = function () {
 
     request.onload = function() {
         var ratingArray = request.response;
+
+        ratingArray.forEach(element => {
+            element.win_total = element.sherif_win + element.don_win + element.mafia_win + element.citizen_win;
+            element.game_total = element.sherif_total + element.don_total + element.mafia_total + element.citizen_total;
+            element.score = (element.win_total + element.plus_points - element.minus_points+ element.best_turn).toFixed(3);
+            if (element.game_total > 0) {
+                var result = (element.score * element.win_total / element.game_total).toFixed(3);
+            } else {
+                var result = 0;
+            }
+            element.result = result;
+        });
+
+        ratingArray.sort(function (a, b) {
+            return b.result - a.result;
+        });
+
         var table = "<table class='thomas_rating'>";
         table += get_table_header();
         ratingArray.forEach(element => {
             table += "<tr>";
-
             table += "<td>" + element.name + "</td>";
-
-            var game_total = element.sherif_total + element.don_total + element.mafia_total + element.citizen_total;
-            table += "<td>" + game_total + "</td>";
-
-            var win_total = element.sherif_win + element.don_win + element.mafia_win + element.citizen_win;
-            table += "<td>" + win_total + "</td>";
-            
+            table += "<td>" + element.game_total + "</td>";
+            table += "<td>" + element.win_total + "</td>";
             table += "<td>" + element.plus_points + "</td>";
             table += "<td>" + element.minus_points + "</td>";
             table += "<td>" + element.sherif_total + "</td>";
@@ -32,17 +43,8 @@ window.onload = function () {
             table += "<td>" + element.citizen_win + "</td>";
             table += "<td>" + element.first_kill + "</td>";
             table += "<td>" + element.best_turn + "</td>";
-
-            var score = (win_total + element.plus_points + element.best_turn).toFixed(2);
-            table += "<td>" + score + "</td>";
-
-            if (game_total > 0) {
-                var result = (score * win_total / game_total).toFixed(2);
-            } else {
-                var result = 0;
-            }
-            table += "<td>" + result + "</td>";
-            
+            table += "<td>" + element.score + "</td>";
+            table += "<td>" + element.result + "</td>";      
             table += "</tr>";
         });
         table += "</table>"; 
@@ -58,10 +60,10 @@ function get_table_header() {
         "<td>Wins</td>" +
         "<td>Additional poiunts</td>" +
         "<td>Penalty points</td>" +
+        "<td>Sheriff games</td>" +
+        "<td>Sheriff wins</td>" +
         "<td>Don games</td>" +
         "<td>Don wins</td>" +
-        "<td>Sheriff games</td>" +
-        "<td>Sherif wins</td>" +
         "<td>Mafia games</td>" +
         "<td>Mafia wins</td>" +
         "<td>Citizen games</td>" +
