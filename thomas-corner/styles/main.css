@@ -54,15 +54,21 @@ body {
     color: skyblue;
 }
 
+/*  content */
+
+.content {
+    text-align: center;
+    overflow-x: scroll;
+}
+
 /* Rating */
 table.thomas_rating {
     color: black;
     margin: 20px;
     font-size: 20px;
     text-align: center;
-    overflow: scroll;
     border: double 5px cornflowerblue;
-    display: block;
+    display: inline-block;
 }
 
 table.thomas_rating tr {
