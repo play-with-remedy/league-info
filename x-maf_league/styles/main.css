@@ -85,6 +85,11 @@ a.active{
     text-align: center;
 }
 
+.schedule_content table a {
+    color: goldenrod;
+    text-decoration: none;
+}
+
 h2 {
     font-size: 60px;
     color: white;
@@ -102,8 +107,8 @@ h2 {
     display: none;
 }
 
-.old_date, .old_date a,.old_gray a:visited {
-    color: darkgray;
+.old_date, .old_date a, .old_gray a:visited {
+    color: goldenrod;
     text-decoration: none;
 }
 
