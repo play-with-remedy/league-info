@@ -18,6 +18,13 @@ window.onload = function () {
                 var result = 0;
             }
             element.result = result;
+
+            if (element.game_total > 9) {
+            element.percent = (element.win_total * 100 / element.game_total 
+                                + element.plus_points - element.minus_points + element.best_turn).toFixed(2);
+            } else {
+                element.percent = '-';
+            }
         });
 
         ratingArray.sort(function (a, b) {
@@ -44,10 +51,14 @@ window.onload = function () {
             table += "<td>" + element.first_kill + "</td>";
             table += "<td>" + element.best_turn + "</td>";
             table += "<td>" + element.score + "</td>";
-            table += "<td>" + element.result + "</td>";      
+            table += "<td>" + element.result + "</td>";
+            table += "<td>" + element.percent + "</td>";
             table += "</tr>";
         });
-        table += "</table>"; 
+        table += "<tr>" +
+            "<td colspan='9'>Дата обновления - 27.04</td>" +
+            "<td colspan='9'>Количество игр - 19</td>" +
+        "</tr></table>"; 
 
         $("#rating_content").append(table);
     }
@@ -71,6 +82,8 @@ function get_table_header() {
         "<td>First kill</td>" +
         "<td>Best move</td>" +
         "<td>Scores</td>" +
-        "<td>Total</td>" +
+        "<td id='total_score'>Total</td>" +
+        "<td>Percent</td>" +
     "</tr>";
 }
+

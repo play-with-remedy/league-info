@@ -79,9 +79,16 @@ table.thomas_rating tr:nth-child(1) {
     height: 60px;
 }
 
+table.thomas_rating tr:last-child td {
+    background-color: aliceblue;
+    width: 50%;
+    border: none;
+}
+
 table.thomas_rating tr:nth-child(1) td {
     color: white;
-    background-color: black
+    background-color: black;
+    border: none;
 }
 
 table.thomas_rating td {
