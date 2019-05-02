@@ -80,7 +80,7 @@ a.active{
 .schedule_content table {
     font-family: cursive;
     color: goldenrod;
-    margin: auto;
+    margin: 30px auto;
     font-size: 30px;
     text-align: center;
 }
