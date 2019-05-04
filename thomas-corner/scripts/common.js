@@ -56,8 +56,8 @@ window.onload = function () {
             table += "</tr>";
         });
         table += "<tr>" +
-            "<td colspan='9'>Дата обновления - 27.04</td>" +
-            "<td colspan='9'>Количество игр - 19</td>" +
+            "<td colspan='9'>Дата обновления - 04.05</td>" +
+            "<td colspan='9'>Количество игр - 24</td>" +
         "</tr></table>"; 
 
         $("#rating_content").append(table);
