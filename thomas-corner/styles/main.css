@@ -95,3 +95,38 @@ table.thomas_rating td {
     min-width: 65px;
     border: dashed 1px black;
 }
+
+/* sub menu */
+.rating_ordering {
+    text-align: center;
+    margin: 30px 0px 10px;
+    font-family: fantasy;
+}
+
+.rating_ordering ul {
+    padding: 0px;
+    font-size: 0px;
+}
+
+.rating_ordering li {
+    display: inline-block;
+}
+
+.rating_ordering a {
+    color: black;
+    font-size: 35px;
+    margin: 0px 20px;
+    text-decoration: none;
+
+}
+
+.rating_ordering a:hover {
+    color: darkred;
+}
+
+a.active  {
+    border-bottom: solid 3px darkred;
+    color: darkred;
+}
+
+/* END sub menu */
