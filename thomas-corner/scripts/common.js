@@ -1,8 +1,8 @@
 const season_rating_request_URL = 'https://x-maf-league.github.io/league-info/thomas-corner/files/season_rating.json';
 const all_time_rating_request_URL = 'https://x-maf-league.github.io/league-info/thomas-corner/files/all_time_rating.json';
 
-const season_game_counter = 0;
-const total_game_counter = 24;
+const season_game_counter = 4;
+const total_game_counter = 28;
 
 var season_table;
 var all_time_table;
@@ -86,29 +86,31 @@ function build_table(request) {
     var table = "<table class='thomas_rating'>";
     table += get_table_header();
     ratingArray.forEach(element => {
-        table += "<tr>";
-        table += "<td>" + element.name + "</td>";
-        table += "<td>" + element.game_total + "</td>";
-        table += "<td>" + element.win_total + "</td>";
-        table += "<td>" + element.plus_points + "</td>";
-        table += "<td>" + element.minus_points + "</td>";
-        table += "<td>" + element.sherif_total + "</td>";
-        table += "<td>" + element.sherif_win + "</td>";
-        table += "<td>" + element.don_total + "</td>";
-        table += "<td>" + element.don_win + "</td>";
-        table += "<td>" + element.mafia_total + "</td>";
-        table += "<td>" + element.mafia_win + "</td>";
-        table += "<td>" + element.citizen_total + "</td>";
-        table += "<td>" + element.citizen_win + "</td>";
-        table += "<td>" + element.first_kill + "</td>";
-        table += "<td>" + element.best_turn + "</td>";
-        table += "<td>" + element.score + "</td>";
-        table += "<td>" + element.result + "</td>";
-        table += "<td>" + element.percent + "</td>";
-        table += "</tr>";
+        if (!element.hide) {
+            table += "<tr>";
+            table += "<td>" + element.name + "</td>";
+            table += "<td>" + element.game_total + "</td>";
+            table += "<td>" + element.win_total + "</td>";
+            table += "<td>" + element.plus_points + "</td>";
+            table += "<td>" + element.minus_points + "</td>";
+            table += "<td>" + element.sherif_total + "</td>";
+            table += "<td>" + element.sherif_win + "</td>";
+            table += "<td>" + element.don_total + "</td>";
+            table += "<td>" + element.don_win + "</td>";
+            table += "<td>" + element.mafia_total + "</td>";
+            table += "<td>" + element.mafia_win + "</td>";
+            table += "<td>" + element.citizen_total + "</td>";
+            table += "<td>" + element.citizen_win + "</td>";
+            table += "<td>" + element.first_kill + "</td>";
+            table += "<td>" + element.best_turn + "</td>";
+            table += "<td>" + element.score + "</td>";
+            table += "<td>" + element.result + "</td>";
+            table += "<td>" + element.percent + "</td>";
+            table += "</tr>";
+        }
     });
     table += "<tr>" +
-        "<td colspan='9'>Дата обновления - 04.05</td>" +
+        "<td colspan='9'>Дата обновления - 20.05</td>" +
         "<td colspan='9'>Количество игр - <span id='game_count'>" + season_game_counter + "</span</td>" +
     "</tr></table>";
 
