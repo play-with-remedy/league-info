@@ -128,5 +128,76 @@ a.active  {
     border-bottom: solid 3px darkred;
     color: darkred;
 }
-
 /* END sub menu */
+
+/* HOME section */
+.home_wrapper {
+text-align: center;
+}
+
+.home {
+    width: 90%;
+    margin: 30px 0px;
+    text-align: center;
+    display: inline-block;
+}
+/* END HOME section */
+/* ABOUT section */
+.about {
+    width: 80%;
+    margin: 30px auto;
+    font-family: Schule;
+    font-size: 20px;
+    text-indent: 1.5em;
+}
+
+.about h2 {
+    font-size: 60px;
+    color: darkred;
+    font-family: fantasy;
+    text-align: center;
+}
+
+.about p {
+    line-height: 35px;
+    text-align: justify;
+    border-left: solid 10px darkred;
+    padding: 0px 20px;
+}
+
+#idea p {
+    border-left: solid 10px darkgreen;
+}
+
+#scoring p {
+    border-left: solid 10px darkorange;
+}
+
+#scoring li {
+    font-size: 19px;
+    font-family: serif;
+    text-align: justify;
+    line-height: 30px;
+}
+
+#masters p {
+    border-left: solid 10px darkcyan;
+}
+
+#newcomers p {
+    border-left: solid 10px darkorchid;
+}
+
+#additional p {
+    border-left: solid 10px black;
+}
+
+#end p {
+    font-style: italic;
+    text-align: center;
+    border: none;
+    font-size: 25px;
+    color: firebrick;
+    font-weight: 600;
+}
+/* END ABOUT section */
