@@ -4,7 +4,7 @@
 /* body */
 body {
     margin: 0px;
-    background-color: black;
+    background-color: #222226;
 }
 
 /* header */
@@ -43,7 +43,7 @@ body {
 
 .sub_header li a {
     display: block;
-    color:black;
+    color:white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -52,7 +52,7 @@ body {
 }
 
 .sub_header li a:hover {
-    color: white;
+    color: black;
 }
 
 /*  content */
@@ -64,7 +64,7 @@ body {
 
 /* Rating */
 table.thomas_rating {
-    color: white;
+    color: #aaa;
     margin: 20px;
     font-size: 20px;
     text-align: center;
@@ -84,6 +84,7 @@ table.thomas_rating tr:last-child td {
     background-color: steelblue;
     width: 50%;
     border: none;
+    color: white;
 }
 
 table.thomas_rating tr:nth-child(1) td {
@@ -162,7 +163,7 @@ text-align: center;
     text-align: justify;
     border-left: solid 10px darkred;
     padding: 0px 20px;
-    color: white;
+    color: #aaa;
 }
 
 #idea p {
@@ -178,7 +179,7 @@ text-align: center;
     font-family: serif;
     text-align: justify;
     line-height: 30px;
-    color: white;
+    color: #aaa;
 }
 
 #masters p {
