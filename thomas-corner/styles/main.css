@@ -4,14 +4,15 @@
 /* body */
 body {
     margin: 0px;
+    background-color: black;
 }
 
 /* header */
 .header {
     background-color: white;
-    height: 200px;
+    height: 230px;
     text-align: center;
-    background-image: url(../images/tg-logo.png);
+    background-image: url(../images/Tomas-logo.jpg);
     background-position: center;
     background-size: 250px 200px;
 }
@@ -28,9 +29,9 @@ body {
     list-style-type: none;
     margin: 0;
     overflow: hidden;
-    background-color: azure;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    background-color: steelblue;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
     padding: 0px;
     font-size: 0px;
     text-align: center;
@@ -51,7 +52,7 @@ body {
 }
 
 .sub_header li a:hover {
-    color: skyblue;
+    color: white;
 }
 
 /*  content */
@@ -63,7 +64,7 @@ body {
 
 /* Rating */
 table.thomas_rating {
-    color: black;
+    color: white;
     margin: 20px;
     font-size: 20px;
     text-align: center;
@@ -80,26 +81,26 @@ table.thomas_rating tr:nth-child(1) {
 }
 
 table.thomas_rating tr:last-child td {
-    background-color: aliceblue;
+    background-color: steelblue;
     width: 50%;
     border: none;
 }
 
 table.thomas_rating tr:nth-child(1) td {
     color: white;
-    background-color: black;
+    background-color: steelblue;
     border: none;
 }
 
 table.thomas_rating td {
     min-width: 65px;
-    border: dashed 1px black;
+    border: dashed 1px cornflowerblue;
 }
 
 /* sub menu */
 .rating_ordering {
     text-align: center;
-    margin: 30px 0px 10px;
+    margin: 50px 0px 30px;
     font-family: fantasy;
 }
 
@@ -112,21 +113,18 @@ table.thomas_rating td {
     display: inline-block;
 }
 
-.rating_ordering a {
-    color: black;
-    font-size: 35px;
+.rating_ordering a, .rating_ordering p {
+    color: white;
+    font-size: 45px;
     margin: 0px 20px;
     text-decoration: none;
+    font-weight: bold;
 
-}
-
-.rating_ordering a:hover {
-    color: darkred;
 }
 
 a.active  {
-    border-bottom: solid 3px darkred;
-    color: darkred;
+    border-bottom: solid 3px white;
+    color: white;
 }
 /* END sub menu */
 
@@ -153,9 +151,10 @@ text-align: center;
 
 .about h2 {
     font-size: 60px;
-    color: darkred;
+    color: white;
     font-family: fantasy;
     text-align: center;
+    margin: 50px 0px 30px;
 }
 
 .about p {
@@ -163,6 +162,7 @@ text-align: center;
     text-align: justify;
     border-left: solid 10px darkred;
     padding: 0px 20px;
+    color: white;
 }
 
 #idea p {
@@ -178,6 +178,7 @@ text-align: center;
     font-family: serif;
     text-align: justify;
     line-height: 30px;
+    color: white;
 }
 
 #masters p {
@@ -189,7 +190,7 @@ text-align: center;
 }
 
 #additional p {
-    border-left: solid 10px black;
+    border-left: solid 10px steelblue;
 }
 
 #end p {
