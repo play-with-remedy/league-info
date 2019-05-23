@@ -1,8 +1,9 @@
 const season_rating_request_URL = 'https://x-maf-league.github.io/league-info/thomas-corner/files/season_rating.json';
 const all_time_rating_request_URL = 'https://x-maf-league.github.io/league-info/thomas-corner/files/all_time_rating.json';
 
-const season_game_counter = 4;
+const season_game_counter = 8;
 const total_game_counter = 28;
+const update = '23.05';
 
 var season_table;
 var all_time_table;
@@ -110,7 +111,7 @@ function build_table(request) {
         }
     });
     table += "<tr>" +
-        "<td colspan='9'>Дата обновления - 20.05</td>" +
+        "<td colspan='9'>Дата обновления - " + update + "</td>" +
         "<td colspan='9'>Количество игр - <span id='game_count'>" + season_game_counter + "</span</td>" +
     "</tr></table>";
 
