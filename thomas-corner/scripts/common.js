@@ -2,7 +2,7 @@ const season_rating_request_URL = 'https://x-maf-league.github.io/league-info/th
 const all_time_rating_request_URL = 'https://x-maf-league.github.io/league-info/thomas-corner/files/all_time_rating.json';
 
 const season_game_counter = 8;
-const total_game_counter = 28;
+const total_game_counter = 32;
 const update = '23.05';
 
 var season_table;
@@ -42,7 +42,7 @@ function build_season_rating() {
     request.send();
 
     request.onload = function() {
-        season_table = build_table(request);
+        season_table = build_table(request, 'scores');
         $("#rating_content").append(season_table);
     };
 }
@@ -54,11 +54,11 @@ function build_total_rating() {
     request.send();
 
     request.onload = function() {
-        all_time_table = build_table(request);
+        all_time_table = build_table(request, 'percents');
     };
 }
 
-function build_table(request) {
+function build_table(request, ordering) {
     var ratingArray = request.response;
 
     ratingArray.forEach(element => {
@@ -80,9 +80,7 @@ function build_table(request) {
         }
     });
 
-    ratingArray.sort(function (a, b) {
-        return b.result - a.result;
-    });
+    build_ordered_table(ratingArray, ordering);
 
     var table = "<table class='thomas_rating'>";
     table += get_table_header();
@@ -116,6 +114,22 @@ function build_table(request) {
     "</tr></table>";
 
     return table;
+}
+
+function build_ordered_table(ratingArray, ordering) {
+    switch(ordering) {
+    
+        case 'scores':
+            ratingArray.sort(function (a, b) {
+                return b.result - a.result;
+            });
+            break;
+        case 'percents':
+            ratingArray.sort(function (a, b) {
+                return b.percent - a.percent;
+            });
+            break;
+    }
 }
 
 function get_table_header() {
