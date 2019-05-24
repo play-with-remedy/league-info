@@ -3,6 +3,7 @@ const all_time_rating_request_URL = 'https://x-maf-league.github.io/league-info/
 
 const season_game_counter = 8;
 const total_game_counter = 32;
+var init_game_counter;
 const update = '23.05';
 
 var season_table;
@@ -10,29 +11,45 @@ var all_time_table;
 
 window.onload = function () {
     
-    build_season_rating();
-    build_total_rating();
+    init_vars();
 
     $('#ratingOrdering a').on("click", function () {
         var href = $(this).attr('href');
-        if ('#first_season' === href) {
-            //$('.alltime').hide();
-            //$('.season').show();
+        if ('#second_season' === href) {
+            if (jQuery.type(season_table) === "undefined") {
+                init_game_counter = season_game_counter;
+                build_season_rating();
+            }
             $('#season').addClass('active');
             $('#alltime').removeClass();
             $("#rating_content").empty();
             $("#rating_content").append(season_table);
             $("#game_count").html(season_game_counter);
         } else {
-            //$('.alltime').show();
-            //$('.season').hide();
+            if (jQuery.type(all_time_table) === "undefined") {
+                init_game_counter = total_game_counter;
+                build_total_rating();
+            }
             $('#alltime').addClass('active');
             $('#season').removeClass();
             $("#rating_content").empty();
             $("#rating_content").append(all_time_table);
-            $("#game_count").text(total_game_counter);
+            $("#game_count").html(total_game_counter);
         }
     });
+}
+
+function init_vars() {
+    var hash = window.location.hash;
+    if (hash === '#all_time') {
+        build_total_rating();
+        $('#alltime').addClass('active');
+        init_game_counter = total_game_counter;
+    } else {
+        build_season_rating();
+        $('#season').addClass('active');
+        init_game_counter = season_game_counter;
+    }
 }
 
 function build_season_rating() {
@@ -55,6 +72,7 @@ function build_total_rating() {
 
     request.onload = function() {
         all_time_table = build_table(request, 'percents');
+        $("#rating_content").append(all_time_table);
     };
 }
 
@@ -82,6 +100,25 @@ function build_table(request, ordering) {
 
     build_ordered_table(ratingArray, ordering);
 
+    return buildHTMLTable(ratingArray);
+}
+
+function build_ordered_table(ratingArray, ordering) {
+    switch(ordering) {
+        case 'scores':
+            ratingArray.sort(function (a, b) {
+                return b.result - a.result;
+            });
+            break;
+        case 'percents':
+            ratingArray.sort(function (a, b) {
+                return b.percent - a.percent;
+            });
+            break;
+    }
+}
+
+function buildHTMLTable(ratingArray) {
     var table = "<table class='thomas_rating'>";
     table += get_table_header();
     ratingArray.forEach(element => {
@@ -110,26 +147,10 @@ function build_table(request, ordering) {
     });
     table += "<tr>" +
         "<td colspan='9'>Дата обновления - " + update + "</td>" +
-        "<td colspan='9'>Количество игр - <span id='game_count'>" + season_game_counter + "</span</td>" +
+        "<td colspan='9'>Количество игр - <span id='game_count'>" + init_game_counter + "</span</td>" +
     "</tr></table>";
 
     return table;
-}
-
-function build_ordered_table(ratingArray, ordering) {
-    switch(ordering) {
-    
-        case 'scores':
-            ratingArray.sort(function (a, b) {
-                return b.result - a.result;
-            });
-            break;
-        case 'percents':
-            ratingArray.sort(function (a, b) {
-                return b.percent - a.percent;
-            });
-            break;
-    }
 }
 
 function get_table_header() {
