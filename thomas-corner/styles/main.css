@@ -55,12 +55,30 @@ body {
     color: black;
 }
 
-/*  content */
+/* Сontent */
 .content {
     text-align: center;
     overflow-x: scroll;
 }
+/* HOME */
+.home_title {
+    font-size: 80px;
+    color: white;
+    font-family: fantasy;
+    text-align: center;
+    margin: 80px auto 40px;
+}
 
+.home_title span {
+    transform: none;
+    position: initial;
+    transition: none;
+}
+
+.home_title{
+    text-align: center;
+}
+/* END HOME */
 /* Rating */
 table.thomas_rating {
     color: #aaa;

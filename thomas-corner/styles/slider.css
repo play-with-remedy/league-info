@@ -120,6 +120,7 @@ small:after {
   position: relative;
   transform: translateX(0%);
   transition-delay: 500ms;
+  border-radius: 10%;
 }
 .parent--el.is-selected .is-item--inner p {
   transform: translateY(0px);
