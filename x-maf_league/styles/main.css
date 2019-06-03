@@ -169,3 +169,11 @@ h2 {
     margin: 40px auto 50px;
     display: inline-block;
 }
+
+.tournaments_table tr {
+    display: none;
+}
+
+.tournaments_table .future {
+    display: table-row;
+}
