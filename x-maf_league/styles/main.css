@@ -4,6 +4,11 @@
 /* Body */
 body {
     margin: 0px;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Header */
@@ -103,7 +108,7 @@ h2 {
     min-width: 400px;
 }
 
-.old_date {
+div.old_date {
     display: none;
 }
 
@@ -170,10 +175,71 @@ h2 {
     display: inline-block;
 }
 
-.tournaments_table tr {
+/* scoring */
+.scoring {
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+/* END scoring */
+
+/* new tournament */
+.tournament {
+    width: 80%;
+    margin: 0px auto 50px;
     display: none;
+    border-left: solid 15px;
 }
 
-.tournaments_table .future {
-    display: table-row;
+div.future {
+    display: flex;
 }
+
+.tournament_image_wrapper {
+    width: 40%;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 30px 50px 30px 30px;
+}
+
+.tournament_metadata {
+    width: 59%;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 40px;
+}
+
+.tournament_metadata {
+    text-align: center;
+}
+
+.tournament_metadata h3 {
+    font-size: 40px;
+    margin: 30px 0px;
+    font-family: Zebulon-bold;
+    color: ghostwhite;
+}
+
+.tournament_metadata h3 a:visited {
+    color: inherit;
+}
+
+.tournament_metadata p {
+    text-align: justify;
+    color: #aaa;;
+    font-family: Mga;
+    text-indent: 30px;
+    font-size: 21px;
+}
+
+.tournament_metadata p a, .tournament_metadata p a:visited {
+    color: red;
+}
+
+.tournament_date {
+    float: right;
+}
+/* END new tournament */
