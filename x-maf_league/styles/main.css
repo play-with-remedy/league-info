@@ -1,5 +1,7 @@
 /* Custom fonts */
 @import url(../fonts/forte.TTF);
+@import url(../fonts/Zebulon.otf);
+@import url(../fonts/Mga.ttf);
 
 /* Body */
 body {
@@ -219,7 +221,7 @@ div.future {
 .tournament_metadata h3 {
     font-size: 40px;
     margin: 30px 0px;
-    font-family: Zebulon-bold;
+    font-family: Zebulon;
     color: ghostwhite;
 }
 
