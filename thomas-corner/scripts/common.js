@@ -1,10 +1,10 @@
 const season_rating_request_URL = 'https://x-maf-league.github.io/league-info/thomas-corner/files/season_rating.json';
 const all_time_rating_request_URL = 'https://x-maf-league.github.io/league-info/thomas-corner/files/all_time_rating.json';
 
-const season_game_counter = 12;
+const season_game_counter = 16;
 const total_game_counter = 36;
 var init_game_counter;
-const update = '29.05';
+const update = '30.06';
 
 var season_table;
 var all_time_table;
