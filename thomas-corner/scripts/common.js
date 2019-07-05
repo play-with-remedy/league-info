@@ -9,6 +9,11 @@ const update = '30.06';
 var season_table;
 var all_time_table;
 
+var totalRatingArray;
+var seasonRatingArray;
+
+var currentPageType;
+
 window.onload = function () {
     
     init_vars();
@@ -25,6 +30,7 @@ window.onload = function () {
             $("#rating_content").empty();
             $("#rating_content").append(season_table);
             $("#game_count").html(season_game_counter);
+            currentPageType = 'season';
         } else {
             if (jQuery.type(all_time_table) === "undefined") {
                 init_game_counter = total_game_counter;
@@ -35,6 +41,7 @@ window.onload = function () {
             $("#rating_content").empty();
             $("#rating_content").append(all_time_table);
             $("#game_count").html(total_game_counter);
+            currentPageType = 'total';
         }
     });
 }
@@ -45,10 +52,12 @@ function init_vars() {
         build_total_rating();
         $('#alltime').addClass('active');
         init_game_counter = total_game_counter;
+        currentPageType = 'total';
     } else {
         build_season_rating();
         $('#season').addClass('active');
         init_game_counter = season_game_counter;
+        currentPageType = 'season';
     }
 }
 
@@ -59,7 +68,9 @@ function build_season_rating() {
     request.send();
 
     request.onload = function() {
-        season_table = build_table(request, 'scores');
+        var ratingArray = request.response;
+        saveRatingArray(ratingArray, 'season');
+        season_table = build_table(ratingArray, 'result');
         $("#rating_content").append(season_table);
     };
 }
@@ -71,14 +82,14 @@ function build_total_rating() {
     request.send();
 
     request.onload = function() {
-        all_time_table = build_table(request, 'percents');
+        var ratingArray = request.response;
+        saveRatingArray(ratingArray, 'total');
+        all_time_table = build_table(ratingArray, 'percents');
         $("#rating_content").append(all_time_table);
     };
 }
 
-function build_table(request, ordering) {
-    var ratingArray = request.response;
-
+function build_table(ratingArray, ordering) {
     ratingArray.forEach(element => {
         element.win_total = element.sherif_win + element.don_win + element.mafia_win + element.citizen_win;
         element.game_total = element.sherif_total + element.don_total + element.mafia_total + element.citizen_total;
@@ -94,7 +105,7 @@ function build_table(request, ordering) {
         element.percent = (element.win_total * 100 / element.game_total 
                             + element.plus_points - element.minus_points + element.best_turn).toFixed(2);
         } else {
-            element.percent = '-';
+            element.percent = 0;
         }
     });
 
@@ -105,7 +116,7 @@ function build_table(request, ordering) {
 
 function build_ordered_table(ratingArray, ordering) {
     switch(ordering) {
-        case 'scores':
+        case 'result':
             ratingArray.sort(function (a, b) {
                 return b.result - a.result;
             });
@@ -115,6 +126,11 @@ function build_ordered_table(ratingArray, ordering) {
                 return b.percent - a.percent;
             });
             break;
+        case 'add_points':
+        ratingArray.sort(function (a, b) {
+            return b.plus_points - a.plus_points;
+        });
+        break;
     }
 }
 
@@ -142,7 +158,11 @@ function buildHTMLTable(ratingArray) {
             table += "<td>" + element.best_turn + "</td>";
             table += "<td>" + element.score + "</td>";
             table += "<td>" + element.result + "</td>";
-            table += "<td>" + element.percent + "</td>";
+            if (element.percent == 0) {
+                table += "<td>-</td>";
+            } else {
+                table += "<td>" + element.percent + "</td>";
+            }
             table += "</tr>";
         }
     });
@@ -155,12 +175,12 @@ function buildHTMLTable(ratingArray) {
 }
 
 function get_table_header() {
-    return "<tr>" +
+    return "<tr class='table_header'>" +
         "<td>Place</td>" +
         "<td>Player</td>" +
         "<td>Games</td>" +
         "<td>Wins</td>" +
-        "<td>Additional poiunts</td>" +
+        "<td onclick=orderBy('add_points');>Additional poiunts</td>" +
         "<td>Penalty points</td>" +
         "<td>Sheriff games</td>" +
         "<td>Sheriff wins</td>" +
@@ -173,8 +193,24 @@ function get_table_header() {
         "<td>First kill</td>" +
         "<td>Best move</td>" +
         "<td>Scores</td>" +
-        "<td id='total_score'>Total</td>" +
-        "<td>Percent</td>" +
+        "<td onclick=orderBy('result');>Total</td>" +
+        "<td onclick=orderBy('percents');>Percent</td>" +
     "</tr>";
 }
 
+function saveRatingArray(array, type) {
+    switch(type) {
+        case 'total':
+            totalRatingArray = array;
+            break;
+        case 'season':
+            seasonRatingArray = array;
+            break;
+    }
+}
+
+function orderBy(param) {
+    var array = currentPageType === 'season' ? seasonRatingArray : totalRatingArray;
+    $("#rating_content").empty();
+    $("#rating_content").append(build_table(array, param));
+}

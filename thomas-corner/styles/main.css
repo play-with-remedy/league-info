@@ -115,6 +115,10 @@ table.thomas_rating td {
     border: dashed 1px cornflowerblue;
 }
 
+.table_header td {
+    cursor: pointer;
+}
+/* END RATING */
 /* sub menu */
 .rating_ordering {
     text-align: center;
