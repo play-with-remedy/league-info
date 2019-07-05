@@ -147,7 +147,7 @@ function buildHTMLTable(ratingArray) {
         }
     });
     table += "<tr>" +
-        "<td colspan='9'>Дата обновления - " + update + "</td>" +
+        "<td colspan='10'>Дата обновления - " + update + "</td>" +
         "<td colspan='9'>Количество игр - <span id='game_count'>" + init_game_counter + "</span</td>" +
     "</tr></table>";
 
