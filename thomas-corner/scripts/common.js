@@ -2,7 +2,7 @@ const season_rating_request_URL = 'https://x-maf-league.github.io/league-info/th
 const all_time_rating_request_URL = 'https://x-maf-league.github.io/league-info/thomas-corner/files/all_time_rating.json';
 
 const season_game_counter = 16;
-const total_game_counter = 36;
+const total_game_counter = 40;
 var init_game_counter;
 const update = '30.06';
 
@@ -121,9 +121,10 @@ function build_ordered_table(ratingArray, ordering) {
 function buildHTMLTable(ratingArray) {
     var table = "<table class='thomas_rating'>";
     table += get_table_header();
-    ratingArray.forEach(element => {
+    ratingArray.forEach(function (element, index, array) {
         if (!element.hide) {
             table += "<tr>";
+            table += "<td>" + (index + 1) + "</td>";
             table += "<td>" + element.name + "</td>";
             table += "<td>" + element.game_total + "</td>";
             table += "<td>" + element.win_total + "</td>";
@@ -155,6 +156,7 @@ function buildHTMLTable(ratingArray) {
 
 function get_table_header() {
     return "<tr>" +
+        "<td>Place</td>" +
         "<td>Player</td>" +
         "<td>Games</td>" +
         "<td>Wins</td>" +
