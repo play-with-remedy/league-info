@@ -196,21 +196,6 @@
         "minus_points" : 0
     },
     {
-        "name" : "Томми",
-        "sherif_total" : 0,
-        "sherif_win" : 0,
-        "don_total" : 0,
-        "don_win" : 0,
-        "mafia_total" : 2,
-        "mafia_win" : 2,
-        "citizen_total" : 2,
-        "citizen_win" : 0,
-        "first_kill" : 0,
-        "best_turn" : 0,
-        "plus_points" : 0.39,
-        "minus_points" : 0
-    },
-    {
         "name" : "Сол",
         "sherif_total" : 0,
         "sherif_win" : 0,

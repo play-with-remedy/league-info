@@ -118,6 +118,13 @@ table.thomas_rating td {
 .table_header td {
     cursor: pointer;
 }
+
+.season_left {
+    text-align: center;
+    color: red;
+    font-size: 15px;
+    font-family: Zebulon;
+}
 /* END RATING */
 /* sub menu */
 .rating_ordering {
