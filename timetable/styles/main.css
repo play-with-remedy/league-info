@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    background-image: url('https://www.muralswallpaper.co.uk/app/uploads/Clean-white-brick-wallpaper-mural-1024x664-825x535.jpg');
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: cursive;
+    font-size: 80px;
+    margin: 40px 0px;
+}
+
+div div {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 30px 100px;
+}
+
+div p {
+    font-family: Zebulon;
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+table {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid;
+}
+
+table tr:first-child {
+    font-size: 50px;
+    font-family: cursive;
+}
+td {
+    min-width: 100px;
+    border: double 1px black;
+}
