@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: Zebulon;
-    scr: url(../fonts/Zebulon.otf);
+    src: url(../fonts/Zebulon.otf);
 }
 
 body {
