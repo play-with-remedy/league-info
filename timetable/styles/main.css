@@ -1,4 +1,8 @@
-@import url(../fonts/Zebulon.otf);
+
+@font-face {
+    font-family: Zebulon;
+    scr: url(../fonts/Zebulon.otf);
+}
 
 body {
     text-align: center;
