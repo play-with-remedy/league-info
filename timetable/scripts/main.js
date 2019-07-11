@@ -17,8 +17,8 @@ var b5 = {'id':'B-5', 'name': ''};
 var b6 = {'id':'B-6', 'name': ''};
 var b7 = {'id':'B-7', 'name': ''};
 var b8 = {'id':'B-8', 'name': ''};
-var b9 = {'id':'D-4', 'name': ''};
-var b10 = {'id':'D-5', 'name': ''};
+var b9 = {'id':'B-9', 'name': ''};
+var b10 = {'id':'B-10', 'name': ''};
 
 var array_1_1 = [a9, a2, b9, b5, b3, b8, b4, a10, a1, a8];
 var array_1_2 = [b10, a3, b6, a6, b1, b2, a4, a5, b7, a7];
