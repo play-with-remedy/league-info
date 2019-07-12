@@ -16,13 +16,13 @@ h1 {
     margin: 40px 0px;
 }
 
-div div {
+div div div div {
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.1);
     margin: 30px 100px;
 }
 
-div p {
+div div div p {
     font-family: Zebulon;
     font-size: 40px;
     background-color: rgba(0, 0, 0, 0.1);
@@ -42,4 +42,39 @@ table tr:first-child {
 td {
     min-width: 100px;
     border: double 1px black;
+}
+
+/* sub menu */
+.rating_ordering {
+    text-align: center;
+    margin: 50px 0px 30px;
+    font-family: fantasy;
+}
+
+.rating_ordering ul {
+    padding: 0px;
+    font-size: 0px;
+}
+
+.rating_ordering li {
+    display: inline-block;
+}
+
+.rating_ordering a, .rating_ordering p {
+    color: brown;
+    font-size: 45px;
+    margin: 0px 20px;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+a.active  {
+    border-bottom: double 7px brown;
+    color: brown;
+}
+/* END sub menu */
+
+.ng-hidden {
+    display: none;
 }
