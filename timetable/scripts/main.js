@@ -156,37 +156,37 @@ var game_7_table_2 = {
 var game_8_table_1 = {
     'table_id' : '#semi2 #table1',
     'table_name' : 'Table 1',
-    'player' : [],
+    'player' : [a8, b6, b2, a1, a9, a7, b3, b7, a4, b1],
     'role' : ['', '', '', '', '', '', '', '', '', ''],
-    'points' : ['', '', '', '', '', '', '', '', '', ''],
-    'extra' : ['', '', '', '', '', '', '', '', '', '']
+    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 };
 
 var game_8_table_2 = {
     'table_id' : '#semi2 #table2',
     'table_name' : 'Table 2',
-    'player' : [],
+    'player' : [a6, b10, b9, a10, a2, b8, b4, a3, b5, a5],
     'role' : ['', '', '', '', '', '', '', '', '', ''],
-    'points' : ['', '', '', '', '', '', '', '', '', ''],
-    'extra' : ['', '', '', '', '', '', '', '', '', '']
+    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 };
 
 var game_9_table_1 = {
     'table_id' : '#semi3 #table1',
     'table_name' : 'Table 1',
-    'player' : [],
+    'player' : [b1, b7, a7, a8, a1, b2, b6, a9, b3, a4],
     'role' : ['', '', '', '', '', '', '', '', '', ''],
-    'points' : ['', '', '', '', '', '', '', '', '', ''],
-    'extra' : ['', '', '', '', '', '', '', '', '', '']
+    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 };
 
 var game_9_table_2 = {
     'table_id' : '#semi3 #table2',
     'table_name' : 'Table 2',
-    'player' : [],
+    'player' : [a6, b10, b4, b8, b9, a3, a2, b5, a5, a10],
     'role' : ['', '', '', '', '', '', '', '', '', ''],
-    'points' : ['', '', '', '', '', '', '', '', '', ''],
-    'extra' : ['', '', '', '', '', '', '', '', '', '']
+    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 };
 
 var game_10_table_1 = {
@@ -194,8 +194,8 @@ var game_10_table_1 = {
     'table_name' : 'Table 1',
     'player' : [],
     'role' : ['', '', '', '', '', '', '', '', '', ''],
-    'points' : ['', '', '', '', '', '', '', '', '', ''],
-    'extra' : ['', '', '', '', '', '', '', '', '', '']
+    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 };
 
 var game_11_table_1 = {
@@ -203,8 +203,8 @@ var game_11_table_1 = {
     'table_name' : 'Table 1',
     'player' : [],
     'role' : ['', '', '', '', '', '', '', '', '', ''],
-    'points' : ['', '', '', '', '', '', '', '', '', ''],
-    'extra' : ['', '', '', '', '', '', '', '', '', '']
+    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 };
 
 window.onload = function () {
@@ -232,11 +232,11 @@ window.onload = function () {
     generateTimeTable(game_7_table_1);
     generateTimeTable(game_7_table_2);
 
-    //generateTimeTable(game_8_table_1);
-    //generateTimeTable(game_8_table_2);
+    generateTimeTable(game_8_table_1);
+    generateTimeTable(game_8_table_2);
 
-    //generateTimeTable(game_9_table_1);
-    //generateTimeTable(game_9_table_2);
+    generateTimeTable(game_9_table_1);
+    generateTimeTable(game_9_table_2);
 
     //generateTimeTable(game_10_table_1);
     //generateTimeTable(game_11_table_1);
