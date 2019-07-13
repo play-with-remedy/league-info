@@ -279,7 +279,7 @@ function generateTimeTable (game) {
         "<tr>" +
             "<td>Place</td>" +
             "<td>Team ID</td>" +
-            "<td>Player</td>" +
+            "<td id='player'>Player</td>" +
             "<td>Role</td>" +
             "<td>Points</td>" +
             "<td>Extra</td>" +
@@ -311,7 +311,7 @@ function generateMainTable() {
         "<tr>" +
             "<td>Place</td>" +
             "<td>Team ID</td>" +
-            "<td>Player</td>" +
+            "<td id='player'>Player</td>" +
             "<td>Points</td>" +
             "<td>Extra</td>" +
             "<td>Total</td>" +
@@ -323,7 +323,7 @@ function generateMainTable() {
         "<tr>" +
             "<td>Place</td>" +
             "<td>Team ID</td>" +
-            "<td>Player</td>" +
+            "<td id='player'>Player</td>" +
             "<td>Points</td>" +
             "<td>Extra</td>" +
             "<td>Total</td>" +
@@ -335,7 +335,7 @@ function generateMainTable() {
         "<tr>" +
             "<td>Place</td>" +
             "<td>Team ID</td>" +
-            "<td>Player</td>" +
+            "<td id='player'>Player</td>" +
             "<td>Points</td>" +
             "<td>Extra</td>" +
             "<td>Total</td>" +

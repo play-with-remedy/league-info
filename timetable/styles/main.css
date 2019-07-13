@@ -78,3 +78,7 @@ a.active  {
 .ng-hidden {
     display: none;
 }
+
+#player {
+    min-width: 200px;
+}
