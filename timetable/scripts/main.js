@@ -101,8 +101,8 @@ var game_5_table_1 = {
     'table_name' : 'Table 1',
     'player' : [a3, a4, a6, a8, a1, b5, b2, b4, a2, b7],
     'role' : ['Sh', 'C', 'C', 'D', 'C', 'C', 'C', 'C', 'M', 'M'],
-    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    'points' : [0, 0, 0, 1, 0, 0, 0, 0, 1, 1],
+    'extra' : [0, 0, 0, 0.3, 0, 0, 0, 0, 0, 0]
 };
 
 var game_5_table_2 = {
