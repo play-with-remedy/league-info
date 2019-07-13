@@ -24,6 +24,9 @@ var players_all = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, b1, b2, b3, b4, b5, 
 var players_a = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10];
 var players_b = [b1, b2, b3, b4, b5, b6, b7, b8, b9, b10];
 
+var players_w = [b6, a9, a7, a8, a4, b1, b2, b7, a1, b3];
+var players_l = [a10, b4, b10, a2, b8, a6, b5, b9, a5, a3];
+
 var game_1_table_1 = {
     'table_id' : '#round1 #table1',
     'table_name' : 'Table 1',
@@ -320,7 +323,7 @@ function generateMainTable() {
 
     var table_a =
     "<table>" +
-        "<tr><td colspan='7'>Group A</td></tr>" +
+        "<tr><td colspan='7'>Winners Group</td></tr>" +
         "<tr>" +
             "<td>Place</td>" +
             "<td>Team ID</td>" +
@@ -333,7 +336,7 @@ function generateMainTable() {
 
     var table_b =
     "<table>" +
-        "<tr><td colspan='7'>Group B</td></tr>" +
+        "<tr><td colspan='7'>Losers Group</td></tr>" +
         "<tr>" +
             "<td>Place</td>" +
             "<td>Team ID</td>" +
@@ -344,28 +347,28 @@ function generateMainTable() {
             "<td>Total</td>" +
         "</tr>";
 
-    players_a.sort(function (a, b) {
-        return (b.points + b.extra + b.Ci) - (a.points + a.extra - a.Ci);
+    players_w.sort(function (a, b) {
+        return (b.points + b.extra + b.Ci) - (a.points + a.extra + a.Ci);
     });
 
-    players_b.sort(function (a, b) {
-        return (b.points + b.extra + b.Ci) - (a.points + a.extra - a.Ci);
+    players_l.sort(function (a, b) {
+        return (b.points + b.extra + b.Ci) - (a.points + a.extra + a.Ci);
     });
 
     players_all.sort(function (a, b) {
-        return (b.points + b.extra + b.Ci) - (a.points + a.extra - a.Ci);
+        return (b.points + b.extra + b.Ci) - (a.points + a.extra + a.Ci);
     });
 
     for (var i = 0; i < 10; i++) {
         table_a +=
             "<tr>" +
                 "<td>" + (i + 1) + "</td>" +
-                "<td>" + players_a[i].id + "</td>" +
-                "<td>" + players_a[i].name + "</td>" +
-                "<td>" + players_a[i].points + "</td>" +
-                "<td>" + parseFloat(players_a[i].extra).toFixed(2) + "</td>" +
-                "<td>" + parseFloat(players_a[i].Ci).toFixed(1) + "</td>" +
-                "<td>" + parseFloat(players_a[i].total + players_a[i].Ci).toFixed(2) + "</td>" +
+                "<td>" + players_w[i].id + "</td>" +
+                "<td>" + players_w[i].name + "</td>" +
+                "<td>" + players_w[i].points + "</td>" +
+                "<td>" + parseFloat(players_w[i].extra).toFixed(2) + "</td>" +
+                "<td>" + parseFloat(players_w[i].Ci).toFixed(1) + "</td>" +
+                "<td>" + parseFloat(players_w[i].total + players_w[i].Ci).toFixed(2) + "</td>" +
             "</tr>";
     }
 
@@ -373,12 +376,12 @@ function generateMainTable() {
         table_b +=
             "<tr>" +
                 "<td>" + (i + 1) + "</td>" +
-                "<td>" + players_b[i].id + "</td>" +
-                "<td>" + players_b[i].name + "</td>" +
-                "<td>" + players_b[i].points+ "</td>" +
-                "<td>" + parseFloat(players_b[i].extra).toFixed(2) + "</td>" +
-                "<td>" + parseFloat(players_b[i].Ci).toFixed(1) + "</td>" +
-                "<td>" + parseFloat(players_b[i].total + players_b[i].Ci).toFixed(2) + "</td>" +
+                "<td>" + players_l[i].id + "</td>" +
+                "<td>" + players_l[i].name + "</td>" +
+                "<td>" + players_l[i].points+ "</td>" +
+                "<td>" + parseFloat(players_l[i].extra).toFixed(2) + "</td>" +
+                "<td>" + parseFloat(players_l[i].Ci).toFixed(1) + "</td>" +
+                "<td>" + parseFloat(players_l[i].total + players_l[i].Ci).toFixed(2) + "</td>" +
             "</tr>";
     }
 
