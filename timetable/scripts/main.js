@@ -1,4 +1,4 @@
-var a1 = {'id':'A-1', 'name': 'Freddy Krueger', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var a1 = {'id':'A-1', 'name': 'Freddy Krueger', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0.13};
 var a2 = {'id':'A-2', 'name': 'Green', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
 var a3 = {'id':'A-3', 'name': 'Продажник', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
 var a4 = {'id':'A-4', 'name': 'Гаджет', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
@@ -139,18 +139,18 @@ var game_7_table_1 = {
     'table_id' : '#semi1 #table1',
     'table_name' : 'Table 1',
     'player' : [b6, a9, a7, a8, a4, b1, b2, b7, a1, b3],
-    'role' : ['D', '', '', 'M', '', 'M', 'Sh', '', '', ''],
-    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    'role' : ['D', 'C', 'C', 'M', 'C', 'M', 'Sh', 'C', 'C', 'C'],
+    'points' : [1, 0, 0, 1, 0, 1, 0, 0, 0, 0],
+    'extra' : [0.3, 0, 0, 0.3, 0, 0.3, 0, 0, 0, 0],
 };
 
 var game_7_table_2 = {
     'table_id' : '#semi1 #table2',
     'table_name' : 'Table 2',
     'player' : [a10, b4, b10, a2, b8, a6, b5, b9, a5, a3],
-    'role' : ['', 'Sh', '', 'M', '', '', 'D', 'M', '', ''],
-    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    'role' : ['C', 'Sh', 'C', 'M', 'C', 'C', 'D', 'M', 'C', 'C'],
+    'points' : [1, 1, 1, 0, 1, 1, 0, 0, 1, 1],
+    'extra' : [0.2, 0, 0.3, 0, 0.2, 0, 0, 0, 0.3, 0]
 };
 
 var game_8_table_1 = {
@@ -211,32 +211,32 @@ window.onload = function () {
 
     init_vars();
 
-    generateTimeTable(game_1_table_1);
-    generateTimeTable(game_1_table_2);
+    generateTimeTable(game_1_table_1, 1);
+    generateTimeTable(game_1_table_2, 1);
 
-    generateTimeTable(game_2_table_1);
-    generateTimeTable(game_2_table_2);
+    generateTimeTable(game_2_table_1, 1);
+    generateTimeTable(game_2_table_2, 1);
 
-    generateTimeTable(game_3_table_1);
-    generateTimeTable(game_3_table_2);
+    generateTimeTable(game_3_table_1, 1);
+    generateTimeTable(game_3_table_2, 1);
     
-    generateTimeTable(game_4_table_1);
-    generateTimeTable(game_4_table_2);
+    generateTimeTable(game_4_table_1, 1);
+    generateTimeTable(game_4_table_2, 1);
 
-    generateTimeTable(game_5_table_1);
-    generateTimeTable(game_5_table_2);
+    generateTimeTable(game_5_table_1, 1);
+    generateTimeTable(game_5_table_2, 1);
 
-    generateTimeTable(game_6_table_1);
-    generateTimeTable(game_6_table_2);
+    generateTimeTable(game_6_table_1, 1);
+    generateTimeTable(game_6_table_2, 1);
 
-    generateTimeTable(game_7_table_1);
-    generateTimeTable(game_7_table_2);
+    generateTimeTable(game_7_table_1, 1.3);
+    generateTimeTable(game_7_table_2, 1.3);
 
-    generateTimeTable(game_8_table_1);
-    generateTimeTable(game_8_table_2);
+    generateTimeTable(game_8_table_1, 1.3);
+    generateTimeTable(game_8_table_2, 1.3);
 
-    generateTimeTable(game_9_table_1);
-    generateTimeTable(game_9_table_2);
+    generateTimeTable(game_9_table_1, 1.3);
+    generateTimeTable(game_9_table_2, 1.3);
 
     //generateTimeTable(game_10_table_1);
     //generateTimeTable(game_11_table_1);
@@ -275,7 +275,7 @@ function init_vars() {
 }
 
 
-function generateTimeTable (game) {
+function generateTimeTable (game, koef) {
     var table =
     "<table>" +
         "<tr><td colspan='6'>" + game.table_name + "</td></tr>" +
@@ -287,20 +287,36 @@ function generateTimeTable (game) {
             "<td>Points</td>" +
             "<td>Extra</td>" +
         "</tr>";
-
-    for (var i = 0; i < 10; i++) {
-        table +=
-            "<tr>" +
-                "<td>" + (i + 1) + "</td>" +
-                "<td>" + game.player[i].id + "</td>" +
-                "<td>" + game.player[i].name + "</td>" +
-                "<td>" + game.role[i]+ "</td>" +
-                "<td>" + game.points[i]+ "</td>" +
-                "<td>" + game.extra[i]+ "</td>" +
-            "</tr>";
-        game.player[i].points += game.points[i];
-        game.player[i].extra += game.extra[i];
-        game.player[i].total += game.points[i] + game.extra[i];
+    if (koef == 1) {
+        for (var i = 0; i < 10; i++) {
+            table +=
+                "<tr>" +
+                    "<td>" + (i + 1) + "</td>" +
+                    "<td>" + game.player[i].id + "</td>" +
+                    "<td>" + game.player[i].name + "</td>" +
+                    "<td>" + game.role[i] + "</td>" +
+                    "<td>" + game.points[i] + "</td>" +
+                    "<td>" + game.extra[i] + "</td>" +
+                "</tr>";
+            game.player[i].points += game.points[i];
+            game.player[i].extra += game.extra[i];
+            game.player[i].total += game.points[i] + game.extra[i];
+        }
+    } else {
+        for (var i = 0; i < 10; i++) {
+            table +=
+                "<tr>" +
+                    "<td>" + (i + 1) + "</td>" +
+                    "<td>" + game.player[i].id + "</td>" +
+                    "<td>" + game.player[i].name + "</td>" +
+                    "<td>" + game.role[i] + "</td>" +
+                    "<td>" + game.points[i] * koef + "</td>" +
+                    "<td>" + game.extra[i] * koef + "</td>" +
+                "</tr>";
+            game.player[i].points += (game.points[i] * koef);
+            game.player[i].extra += (game.extra[i] * koef);
+            game.player[i].total += ((game.points[i] + game.extra[i]) * koef);
+        }
     }
 
     table += "</table>";
@@ -367,7 +383,7 @@ function generateMainTable() {
                 "<td>" + players_w[i].name + "</td>" +
                 "<td>" + players_w[i].points + "</td>" +
                 "<td>" + parseFloat(players_w[i].extra).toFixed(2) + "</td>" +
-                "<td>" + parseFloat(players_w[i].Ci).toFixed(1) + "</td>" +
+                "<td>" + parseFloat(players_w[i].Ci).toFixed(2) + "</td>" +
                 "<td>" + parseFloat(players_w[i].total + players_w[i].Ci).toFixed(2) + "</td>" +
             "</tr>";
     }
