@@ -193,18 +193,18 @@ var game_10_table_1 = {
     'table_id' : '#final1 #table1',
     'table_name' : 'Table 1',
     'player' : [a3, b8, a10, a8, b3, b6, a7, b1, b2, a4],
-    'role' : ['', '', '', '', '', '', '', '', '', ''],
-    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    'role' : ['D', '', 'Sh', '', '', 'M', '', '', 'M', ''],
+    'points' : [1, 0, 0, 0, 0, 1, 0, 0, 1, 0],
+    'extra' : [0.3, 0, 0, 0, 0, 0.4, 0, 0, 0, 0]
 };
 
 var game_11_table_1 = {
     'table_id' : '#final2 #table1',
     'table_name' : 'Table 1',
     'player' : [a7, a4, a3, a8, b6, b3, a10, b2, b1, b8],
-    'role' : ['', '', '', '', '', '', '', '', '', ''],
-    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    'role' : ['', '', 'Sh', 'M', 'M', '', '', '', 'D', ''],
+    'points' : [1, 1, 1, 0, 0, 1, 1, 1, 0, 1],
+    'extra' : [0, 0, 0.3, 0, 0, 0.2, 0, 0, 0, 0]
 };
 
 window.onload = function () {
@@ -310,8 +310,8 @@ function generateTimeTable (game, koef) {
                     "<td>" + game.player[i].id + "</td>" +
                     "<td>" + game.player[i].name + "</td>" +
                     "<td>" + game.role[i] + "</td>" +
-                    "<td>" + game.points[i] * koef + "</td>" +
-                    "<td>" + game.extra[i] * koef + "</td>" +
+                    "<td>" + parseFloat(game.points[i] * koef).toFixed(2) + "</td>" +
+                    "<td>" + parseFloat(game.extra[i] * koef).toFixed(2) + "</td>" +
                 "</tr>";
             game.player[i].points += (game.points[i] * koef);
             game.player[i].extra += (game.extra[i] * koef);
