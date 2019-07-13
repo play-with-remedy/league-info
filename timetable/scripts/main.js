@@ -201,7 +201,7 @@ var game_10_table_1 = {
 var game_11_table_1 = {
     'table_id' : '#final2 #table1',
     'table_name' : 'Table 1',
-    'player' : [],
+    'player' : [a7, a4, a3, a8, b6, b3, a10, b2, b1, b8],
     'role' : ['', '', '', '', '', '', '', '', '', ''],
     'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -239,7 +239,7 @@ window.onload = function () {
     generateTimeTable(game_9_table_2, 1.3);
 
     generateTimeTable(game_10_table_1, 1.5);
-    //generateTimeTable(game_11_table_1);
+    generateTimeTable(game_11_table_1, 1.5);
 
     generateMainTable();
 
