@@ -82,18 +82,18 @@ var game_4_table_1 = {
     'table_id' : '#round4 #table1',
     'table_name' : 'Table 1',
     'player' : [b2, b1, a10, b4, b8, b9, b7, a3, a6, a5],
-    'role' : ['D', '', '', '', '', '', 'Sh', '', 'M', 'M'],
-    'points' : ['', '', '', '', '', '', '', '', '', ''],
-    'extra' : ['', '', '', '', '', '', '', '', '', '']
+    'role' : ['D', 'C', 'C', 'C', 'C', 'C', 'Sh', 'C', 'M', 'M'],
+    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 };
 
 var game_4_table_2 = {
     'table_id' : '#round4 #table2',
     'table_name' : 'Table 2',
     'player' : [a8, a4, b6, a9, b10, b3, a2, b5, a1, a7],
-    'role' : ['M', '', '', '', 'M', '', '', 'D', '', 'Sh'],
-    'points' : ['', '', '', '', '', '', '', '', '', ''],
-    'extra' : ['', '', '', '', '', '', '', '', '', '']
+    'role' : ['M', 'C', 'C', 'C', 'M', 'C', 'C', 'D', 'C', 'Sh'],
+    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 };
 
 var game_5_table_1 = {
@@ -360,8 +360,8 @@ function generateMainTable() {
                 "<td>" + players_a[i].id + "</td>" +
                 "<td>" + players_a[i].name + "</td>" +
                 "<td>" + players_a[i].points + "</td>" +
-                "<td>" + players_a[i].extra + "</td>" +
-                "<td>" + players_a[i].total + "</td>" +
+                "<td>" + parseFloat(players_a[i].extra).toFixed(2) + "</td>" +
+                "<td>" + parseFloat(players_a[i].total).toFixed(2) + "</td>" +
             "</tr>";
     }
 
@@ -372,8 +372,8 @@ function generateMainTable() {
                 "<td>" + players_b[i].id + "</td>" +
                 "<td>" + players_b[i].name + "</td>" +
                 "<td>" + players_b[i].points+ "</td>" +
-                "<td>" + players_b[i].extra+ "</td>" +
-                "<td>" + players_b[i].total+ "</td>" +
+                "<td>" + parseFloat(players_b[i].extra).toFixed(2) + "</td>" +
+                "<td>" + parseFloat(players_b[i].total).toFixed(2) + "</td>" +
             "</tr>";
     }
 
@@ -384,8 +384,8 @@ function generateMainTable() {
                 "<td>" + players_all[i].id + "</td>" +
                 "<td>" + players_all[i].name + "</td>" +
                 "<td>" + players_all[i].points+ "</td>" +
-                "<td>" + players_all[i].extra+ "</td>" +
-                "<td>" + players_all[i].total + "</td>" +
+                "<td>" + parseFloat(players_all[i].extra).toFixed(2)+ "</td>" +
+                "<td>" + parseFloat(players_all[i].total).toFixed(2) + "</td>" +
             "</tr>";
     }
 
