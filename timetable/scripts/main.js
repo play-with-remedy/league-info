@@ -15,7 +15,7 @@ var b3 = {'id':'B-3', 'name': 'Искра', 'points' : 0, 'extra' : 0, 'total' :
 var b4 = {'id':'B-4', 'name': 'Эцио', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
 var b5 = {'id':'B-5', 'name': 'Инженер', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
 var b6 = {'id':'B-6', 'name': 'Жнец', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
-var b7 = {'id':'B-7', 'name': 'Yesterday', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var b7 = {'id':'B-7', 'name': 'Yesterday', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0.26};
 var b8 = {'id':'B-8', 'name': 'Архи', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
 var b9 = {'id':'B-9', 'name': 'Sky', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
 var b10 = {'id':'B-10', 'name': 'Bon', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
@@ -157,25 +157,25 @@ var game_8_table_1 = {
     'table_id' : '#semi2 #table1',
     'table_name' : 'Table 1',
     'player' : [a8, b6, b2, a1, a9, a7, b3, b7, a4, b1],
-    'role' : ['', '', '', '', '', '', '', '', '', ''],
-    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    'role' : ['D', '', 'M', '', '', 'M', '', '', '', 'Sh'],
+    'points' : [1, 0, 1, 0, 0, 1, 0, 0, 0, 0],
+    'extra' : [0.4, 0, 0, 0, 0, 0.4, 0, 0, 0, 0]
 };
 
 var game_8_table_2 = {
     'table_id' : '#semi2 #table2',
     'table_name' : 'Table 2',
     'player' : [a6, b10, b9, a10, a2, b8, b4, a3, b5, a5],
-    'role' : ['', '', '', '', '', '', '', '', '', ''],
-    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    'role' : ['M', '', '', 'M', 'D', '', '', '', 'Sh', ''],
+    'points' : [1, 0, 0, 1, 1, 0, 0, 0, 0, 0],
+    'extra' : [0, 0, 0, 0.3, 0.3, 0, 0, 0, 0, 0]
 };
 
 var game_9_table_1 = {
     'table_id' : '#semi3 #table1',
     'table_name' : 'Table 1',
     'player' : [b1, b7, a7, a8, a1, b2, b6, a9, b3, a4],
-    'role' : ['', '', '', '', '', '', '', '', '', ''],
+    'role' : ['', '', '', 'M', '', '', 'Sh', '', 'M', 'D'],
     'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 };
@@ -184,7 +184,7 @@ var game_9_table_2 = {
     'table_id' : '#semi3 #table2',
     'table_name' : 'Table 2',
     'player' : [a6, b10, b4, b8, b9, a3, a2, b5, a5, a10],
-    'role' : ['', '', '', '', '', '', '', '', '', ''],
+    'role' : ['D', '', 'M', '', '', 'Sh', '', '', 'M', ''],
     'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 };
