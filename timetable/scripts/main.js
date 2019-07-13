@@ -14,7 +14,7 @@ var b2 = {'id':'B-2', 'name': 'Опер', 'points' : 0, 'extra' : 0, 'total' : 0
 var b3 = {'id':'B-3', 'name': 'Искра', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
 var b4 = {'id':'B-4', 'name': 'Эцио', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
 var b5 = {'id':'B-5', 'name': 'Инженер', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
-var b6 = {'id':'B-6', 'name': 'Жнец', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var b6 = {'id':'B-6', 'name': 'Жнец', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0.26};
 var b7 = {'id':'B-7', 'name': 'Yesterday', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0.26};
 var b8 = {'id':'B-8', 'name': 'Архи', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
 var b9 = {'id':'B-9', 'name': 'Sky', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
@@ -176,8 +176,8 @@ var game_9_table_1 = {
     'table_name' : 'Table 1',
     'player' : [b1, b7, a7, a8, a1, b2, b6, a9, b3, a4],
     'role' : ['', '', '', 'M', '', '', 'Sh', '', 'M', 'D'],
-    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    'points' : [0, 0, 0, 1, 0, 0, 0, 0, 1, 1],
+    'extra' : [0, 0, 0, 0, 0, 0, 0.2, 0, 0.3, 0]
 };
 
 var game_9_table_2 = {
@@ -185,14 +185,14 @@ var game_9_table_2 = {
     'table_name' : 'Table 2',
     'player' : [a6, b10, b4, b8, b9, a3, a2, b5, a5, a10],
     'role' : ['D', '', 'M', '', '', 'Sh', '', '', 'M', ''],
-    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    'points' : [0, 1, 0, 1, 1, 1, 1, 1, 0, 1],
+    'extra' : [0, 0, 0, 0.4, 0.2, 0.2, 0.2, 0, 0, 0]
 };
 
 var game_10_table_1 = {
     'table_id' : '#final1 #table1',
     'table_name' : 'Table 1',
-    'player' : [],
+    'player' : [a3, b8, a10, a8, b3, b6, a7, b1, b2, a4],
     'role' : ['', '', '', '', '', '', '', '', '', ''],
     'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -238,7 +238,7 @@ window.onload = function () {
     generateTimeTable(game_9_table_1, 1.3);
     generateTimeTable(game_9_table_2, 1.3);
 
-    //generateTimeTable(game_10_table_1);
+    generateTimeTable(game_10_table_1, 1.5);
     //generateTimeTable(game_11_table_1);
 
     generateMainTable();
@@ -381,7 +381,7 @@ function generateMainTable() {
                 "<td>" + (i + 1) + "</td>" +
                 "<td>" + players_w[i].id + "</td>" +
                 "<td>" + players_w[i].name + "</td>" +
-                "<td>" + players_w[i].points + "</td>" +
+                "<td>" + parseFloat(players_w[i].points).toFixed(2 )+ "</td>" +
                 "<td>" + parseFloat(players_w[i].extra).toFixed(2) + "</td>" +
                 "<td>" + parseFloat(players_w[i].Ci).toFixed(2) + "</td>" +
                 "<td>" + parseFloat(players_w[i].total + players_w[i].Ci).toFixed(2) + "</td>" +
@@ -394,7 +394,7 @@ function generateMainTable() {
                 "<td>" + (i + 1) + "</td>" +
                 "<td>" + players_l[i].id + "</td>" +
                 "<td>" + players_l[i].name + "</td>" +
-                "<td>" + players_l[i].points+ "</td>" +
+                "<td>" + parseFloat(players_l[i].points).toFixed(2) + "</td>" +
                 "<td>" + parseFloat(players_l[i].extra).toFixed(2) + "</td>" +
                 "<td>" + parseFloat(players_l[i].Ci).toFixed(1) + "</td>" +
                 "<td>" + parseFloat(players_l[i].total + players_l[i].Ci).toFixed(2) + "</td>" +
@@ -407,7 +407,7 @@ function generateMainTable() {
                 "<td>" + (i + 1) + "</td>" +
                 "<td>" + players_all[i].id + "</td>" +
                 "<td>" + players_all[i].name + "</td>" +
-                "<td>" + players_all[i].points+ "</td>" +
+                "<td>" + parseFloat(players_all[i].points).toFixed(2) + "</td>" +
                 "<td>" + parseFloat(players_all[i].extra).toFixed(2)+ "</td>" +
                 "<td>" + parseFloat(players_all[i].Ci).toFixed(1) + "</td>" +
                 "<td>" + parseFloat(players_all[i].total + players_all[i].Ci).toFixed(2) + "</td>" +
