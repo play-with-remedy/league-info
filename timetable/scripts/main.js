@@ -1,24 +1,24 @@
-var a1 = {'id':'A-1', 'name': 'Freddy Krueger', 'points' : 0, 'extra' : 0, 'total' : 0};
-var a2 = {'id':'A-2', 'name': 'Green', 'points' : 0, 'extra' : 0, 'total' : 0};
-var a3 = {'id':'A-3', 'name': 'Продажник', 'points' : 0, 'extra' : 0, 'total' : 0};
-var a4 = {'id':'A-4', 'name': 'Гаджет', 'points' : 0, 'extra' : 0, 'total' : 0};
-var a5 = {'id':'A-5', 'name': 'Kinder', 'points' : 0, 'extra' : 0, 'total' : 0};
-var a6 = {'id':'A-6', 'name': 'Алекси', 'points' : 0, 'extra' : 0, 'total' : 0};
-var a7 = {'id':'A-7', 'name': 'Мориарти', 'points' : 0, 'extra' : 0, 'total' : 0};
-var a8 = {'id':'A-8', 'name': 'Зодиак', 'points' : 0, 'extra' : 0, 'total' : 0};
-var a9 = {'id':'A-9', 'name': 'Маг', 'points' : 0, 'extra' : 0, 'total' : 0};
-var a10 = {'id':'A-10', 'name': 'Крузенштерн', 'points' : 0, 'extra' : 0, 'total' : 0};
+var a1 = {'id':'A-1', 'name': 'Freddy Krueger', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var a2 = {'id':'A-2', 'name': 'Green', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var a3 = {'id':'A-3', 'name': 'Продажник', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var a4 = {'id':'A-4', 'name': 'Гаджет', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var a5 = {'id':'A-5', 'name': 'Kinder', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var a6 = {'id':'A-6', 'name': 'Алекси', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var a7 = {'id':'A-7', 'name': 'Мориарти', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var a8 = {'id':'A-8', 'name': 'Зодиак', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var a9 = {'id':'A-9', 'name': 'Маг', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0.1};
+var a10 = {'id':'A-10', 'name': 'Крузенштерн', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0.1};
 
-var b1 = {'id':'B-1', 'name': 'Light', 'points' : 0, 'extra' : 0, 'total' : 0};
-var b2 = {'id':'B-2', 'name': 'Опер', 'points' : 0, 'extra' : 0, 'total' : 0};
-var b3 = {'id':'B-3', 'name': 'Искра', 'points' : 0, 'extra' : 0, 'total' : 0};
-var b4 = {'id':'B-4', 'name': 'Эцио', 'points' : 0, 'extra' : 0, 'total' : 0};
-var b5 = {'id':'B-5', 'name': 'Инженер', 'points' : 0, 'extra' : 0, 'total' : 0};
-var b6 = {'id':'B-6', 'name': 'Жнец', 'points' : 0, 'extra' : 0, 'total' : 0};
-var b7 = {'id':'B-7', 'name': 'Yesterday', 'points' : 0, 'extra' : 0, 'total' : 0};
-var b8 = {'id':'B-8', 'name': 'Архи', 'points' : 0, 'extra' : 0, 'total' : 0};
-var b9 = {'id':'B-9', 'name': 'Sky', 'points' : 0, 'extra' : 0, 'total' : 0};
-var b10 = {'id':'B-10', 'name': 'Bon', 'points' : 0, 'extra' : 0, 'total' : 0};
+var b1 = {'id':'B-1', 'name': 'Light', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0.1};
+var b2 = {'id':'B-2', 'name': 'Опер', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0.4};
+var b3 = {'id':'B-3', 'name': 'Искра', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var b4 = {'id':'B-4', 'name': 'Эцио', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var b5 = {'id':'B-5', 'name': 'Инженер', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var b6 = {'id':'B-6', 'name': 'Жнец', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var b7 = {'id':'B-7', 'name': 'Yesterday', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var b8 = {'id':'B-8', 'name': 'Архи', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var b9 = {'id':'B-9', 'name': 'Sky', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
+var b10 = {'id':'B-10', 'name': 'Bon', 'points' : 0, 'extra' : 0, 'total' : 0, 'Ci' : 0};
 
 var players_all = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10];
 var players_a = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10];
@@ -119,8 +119,8 @@ var game_6_table_1 = {
     'table_name' : 'Table 1',
     'player' : [b3, b8, a2, b7, a4, b10, b5, b6, a5, a10],
     'role' : ['D', '', 'Sh', 'M', 'M', '', '', '', '', ''],
-    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    'points' : [1, 0, 0, 1, 1, 0, 0, 0, 0, 0],
+    'extra' : [0.2, 0, 0, 0.2, 0, 0, 0, 0, 0, 0]
 };
 
 var game_6_table_2 = {
@@ -128,14 +128,14 @@ var game_6_table_2 = {
     'table_name' : 'Table 2',
     'player' : [a7, a6, b9, b4, a9, a1, b1, b2, a8, a3],
     'role' : ['M', '', 'D', 'Sh', '', '', 'M', '', '', ''],
-    'points' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    'extra' : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    'points' : [1, 0, 1, 0, 0, 0, 1, 0, 0, 0],
+    'extra' : [0, 0, 0.2, 0, 0, 0, 0, 0, 0, 0]
 };
 
 var game_7_table_1 = {
     'table_id' : '#semi1 #table1',
     'table_name' : 'Table 1',
-    'player' : [],
+    'player' : [b6, a9, a7, a8, a4, b1, b2, b7, a1, b3],
     'role' : ['', '', '', '', '', '', '', '', '', ''],
     'points' : ['', '', '', '', '', '', '', '', '', ''],
     'extra' : ['', '', '', '', '', '', '', '', '', '']
@@ -144,7 +144,7 @@ var game_7_table_1 = {
 var game_7_table_2 = {
     'table_id' : '#semi1 #table2',
     'table_name' : 'Table 2',
-    'player' : [],
+    'player' : [a10, b4, b10, a2, b8, a6, b5, b9, a5, a3],
     'role' : ['', '', '', '', '', '', '', '', '', ''],
     'points' : ['', '', '', '', '', '', '', '', '', ''],
     'extra' : ['', '', '', '', '', '', '', '', '', '']
@@ -226,8 +226,8 @@ window.onload = function () {
     generateTimeTable(game_6_table_1);
     generateTimeTable(game_6_table_2);
 
-    //generateTimeTable(game_7_table_1);
-    //generateTimeTable(game_7_table_2);
+    generateTimeTable(game_7_table_1);
+    generateTimeTable(game_7_table_2);
 
     //generateTimeTable(game_8_table_1);
     //generateTimeTable(game_8_table_2);
@@ -307,50 +307,53 @@ function generateTimeTable (game) {
 function generateMainTable() {
     var table_all =
     "<table>" +
-        "<tr><td colspan='6'>Total</td></tr>" +
+        "<tr><td colspan='7'>Total</td></tr>" +
         "<tr>" +
             "<td>Place</td>" +
             "<td>Team ID</td>" +
             "<td id='player'>Player</td>" +
             "<td>Points</td>" +
             "<td>Extra</td>" +
+            "<td>Ci</td>" +
             "<td>Total</td>" +
         "</tr>";
 
     var table_a =
     "<table>" +
-        "<tr><td colspan='6'>Group A</td></tr>" +
+        "<tr><td colspan='7'>Group A</td></tr>" +
         "<tr>" +
             "<td>Place</td>" +
             "<td>Team ID</td>" +
             "<td id='player'>Player</td>" +
             "<td>Points</td>" +
             "<td>Extra</td>" +
+            "<td>Ci</td>" +
             "<td>Total</td>" +
         "</tr>";
 
     var table_b =
     "<table>" +
-        "<tr><td colspan='6'>Group B</td></tr>" +
+        "<tr><td colspan='7'>Group B</td></tr>" +
         "<tr>" +
             "<td>Place</td>" +
             "<td>Team ID</td>" +
             "<td id='player'>Player</td>" +
             "<td>Points</td>" +
             "<td>Extra</td>" +
+            "<td>Ci</td>" +
             "<td>Total</td>" +
         "</tr>";
 
     players_a.sort(function (a, b) {
-        return (b.points + b.extra) - (a.points + a.extra);
+        return (b.points + b.extra + b.Ci) - (a.points + a.extra - a.Ci);
     });
 
     players_b.sort(function (a, b) {
-        return (b.points + b.extra) - (a.points + a.extra);
+        return (b.points + b.extra + b.Ci) - (a.points + a.extra - a.Ci);
     });
 
     players_all.sort(function (a, b) {
-        return (b.points + b.extra) - (a.points + a.extra);
+        return (b.points + b.extra + b.Ci) - (a.points + a.extra - a.Ci);
     });
 
     for (var i = 0; i < 10; i++) {
@@ -361,7 +364,8 @@ function generateMainTable() {
                 "<td>" + players_a[i].name + "</td>" +
                 "<td>" + players_a[i].points + "</td>" +
                 "<td>" + parseFloat(players_a[i].extra).toFixed(2) + "</td>" +
-                "<td>" + parseFloat(players_a[i].total).toFixed(2) + "</td>" +
+                "<td>" + parseFloat(players_a[i].Ci).toFixed(1) + "</td>" +
+                "<td>" + parseFloat(players_a[i].total + players_a[i].Ci).toFixed(2) + "</td>" +
             "</tr>";
     }
 
@@ -373,7 +377,8 @@ function generateMainTable() {
                 "<td>" + players_b[i].name + "</td>" +
                 "<td>" + players_b[i].points+ "</td>" +
                 "<td>" + parseFloat(players_b[i].extra).toFixed(2) + "</td>" +
-                "<td>" + parseFloat(players_b[i].total).toFixed(2) + "</td>" +
+                "<td>" + parseFloat(players_b[i].Ci).toFixed(1) + "</td>" +
+                "<td>" + parseFloat(players_b[i].total + players_b[i].Ci).toFixed(2) + "</td>" +
             "</tr>";
     }
 
@@ -385,7 +390,8 @@ function generateMainTable() {
                 "<td>" + players_all[i].name + "</td>" +
                 "<td>" + players_all[i].points+ "</td>" +
                 "<td>" + parseFloat(players_all[i].extra).toFixed(2)+ "</td>" +
-                "<td>" + parseFloat(players_all[i].total).toFixed(2) + "</td>" +
+                "<td>" + parseFloat(players_all[i].Ci).toFixed(1) + "</td>" +
+                "<td>" + parseFloat(players_all[i].total + players_all[i].Ci).toFixed(2) + "</td>" +
             "</tr>";
     }
 
