@@ -5,20 +5,20 @@ var a4 = {'id':'A-4', 'name': 'Гаджет', 'points' : 0, 'extra' : 0, 'total'
 var a5 = {'id':'A-5', 'name': 'Kinder', 'points' : 0, 'extra' : 0, 'total' : 0};
 var a6 = {'id':'A-6', 'name': 'Алекси', 'points' : 0, 'extra' : 0, 'total' : 0};
 var a7 = {'id':'A-7', 'name': 'Мориарти', 'points' : 0, 'extra' : 0, 'total' : 0};
-var a8 = {'id':'A-8', 'name': '', 'points' : 0, 'extra' : 0, 'total' : 0};
+var a8 = {'id':'A-8', 'name': 'Зодиак', 'points' : 0, 'extra' : 0, 'total' : 0};
 var a9 = {'id':'A-9', 'name': 'Маг', 'points' : 0, 'extra' : 0, 'total' : 0};
 var a10 = {'id':'A-10', 'name': 'Крузенштерн', 'points' : 0, 'extra' : 0, 'total' : 0};
 
-var b1 = {'id':'B-1', 'name': '', 'points' : 0, 'extra' : 0, 'total' : 0};
+var b1 = {'id':'B-1', 'name': 'Light', 'points' : 0, 'extra' : 0, 'total' : 0};
 var b2 = {'id':'B-2', 'name': 'Опер', 'points' : 0, 'extra' : 0, 'total' : 0};
-var b3 = {'id':'B-3', 'name': '', 'points' : 0, 'extra' : 0, 'total' : 0};
+var b3 = {'id':'B-3', 'name': 'Искра', 'points' : 0, 'extra' : 0, 'total' : 0};
 var b4 = {'id':'B-4', 'name': 'Эцио', 'points' : 0, 'extra' : 0, 'total' : 0};
-var b5 = {'id':'B-5', 'name': '', 'points' : 0, 'extra' : 0, 'total' : 0};
-var b6 = {'id':'B-6', 'name': '', 'points' : 0, 'extra' : 0, 'total' : 0};
+var b5 = {'id':'B-5', 'name': 'Инженер', 'points' : 0, 'extra' : 0, 'total' : 0};
+var b6 = {'id':'B-6', 'name': 'Жнец', 'points' : 0, 'extra' : 0, 'total' : 0};
 var b7 = {'id':'B-7', 'name': 'Yesterday', 'points' : 0, 'extra' : 0, 'total' : 0};
 var b8 = {'id':'B-8', 'name': 'Архи', 'points' : 0, 'extra' : 0, 'total' : 0};
 var b9 = {'id':'B-9', 'name': 'Sky', 'points' : 0, 'extra' : 0, 'total' : 0};
-var b10 = {'id':'B-10', 'name': '', 'points' : 0, 'extra' : 0, 'total' : 0};
+var b10 = {'id':'B-10', 'name': 'Bon', 'points' : 0, 'extra' : 0, 'total' : 0};
 
 var players_all = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10];
 var players_a = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10];
