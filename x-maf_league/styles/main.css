@@ -160,6 +160,19 @@ div.old_date {
     border-radius: 50%;
 }
 
+.rating_content table span img {
+    width: 15px;
+    height: 15px;
+    vertical-align: bottom;
+    margin: 3px;
+}
+
+.rating_content table span {
+    font-size: 15px;
+    margin-left: 5px
+}
+
+
 .full_table {
     text-align: center;
     margin-left: 30px;
