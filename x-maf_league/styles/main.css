@@ -244,4 +244,8 @@ div.future {
 .tournament_date {
     float: right;
 }
+
+.tournament_metadata a {
+    color: white;
+}
 /* END new tournament */
