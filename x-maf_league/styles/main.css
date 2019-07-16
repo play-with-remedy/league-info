@@ -1,7 +1,20 @@
 /* Custom fonts */
-@import url(../fonts/forte.TTF);
-@import url(../fonts/Zebulon.otf);
-@import url(../fonts/Mga.ttf);
+@font-face {
+    font-family: Zebulon;
+    src: url(../fonts/Zebulon.otf);
+}
+
+
+@font-face {
+    font-family: Mga;
+    src: url(../fonts/Mga.ttf);
+}
+
+
+@font-face {
+    font-family: Forte;
+    src: url(../fonts/forte.TTF);
+}
 
 /* Body */
 body {
