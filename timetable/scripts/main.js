@@ -14,14 +14,24 @@ window.onload = function () {
         });
 
         var total = points + extra;
+        element.points = points;
+        element.extra = extra;
+        element.Ci = Ci;
+        element.total = total;
+    });
 
+    teams.sort(function (a, b) {
+        return b.total - a.total;
+    });
+
+    teams.forEach(function (element, index, array) {
         table += "<tr>" +
-            "<td>" + (index + 1) + "</td>" +
-            "<td>" + element.name + "</td>" +
-            "<td>" + points + "</td>" +
-            "<td>" + extra + "</td>" +
-            "<td>" + total + "</td>" +
-        "</tr>";
+                "<td>" + (index + 1) + "</td>" +
+                "<td>" + element.name + "</td>" +
+                "<td>" + element.points + "</td>" +
+                "<td>" + element.extra + "</td>" +
+                "<td>" + element.total + "</td>" +
+            "</tr>";
     });
 
     table += "</table>";
