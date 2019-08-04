@@ -13,11 +13,11 @@ window.onload = function () {
             Ci+= player.Ci;
         });
 
-        var total = points + extra;
+        var total = points + extra + Ci;
         element.points = points;
-        element.extra = extra;
+        element.extra = extra.toFixed(2);
         element.Ci = Ci;
-        element.total = total;
+        element.total = total.toFixed(2);
     });
 
     teams.sort(function (a, b) {
@@ -30,6 +30,7 @@ window.onload = function () {
                 "<td>" + element.name + "</td>" +
                 "<td>" + element.points + "</td>" +
                 "<td>" + element.extra + "</td>" +
+                "<td>" + element.Ci + "</td>" +
                 "<td>" + element.total + "</td>" +
             "</tr>";
     });
@@ -45,6 +46,7 @@ function getTableHeader() {
         "<td>Команда</td>" +
         "<td>Победы</td>" +
         "<td>Допы</td>" +
+        "<td>Ci</td>" +
         "<td>Сумма</td>" +
     "</tr>";
 }
