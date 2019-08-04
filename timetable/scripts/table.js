@@ -5,15 +5,15 @@ var table_json = {
             players : [
                 {
                     name : "Remedy",
-                    point : 2,
-                    extra : 0, 
-                    Ci : 1,
+                    point : 5,
+                    extra : 0.2, 
+                    Ci : 0.05,
                     win : 0
                 },
                 {
                     name : "Yesterday",
-                    point : 1,
-                    extra : 0.2, 
+                    point : 5,
+                    extra : 0.6, 
                     Ci : 0
                 }
             ]
@@ -23,15 +23,16 @@ var table_json = {
             players : [
                 {
                     name : "Ко-ко-ко",
-                    point : 3,
-                    extra : 0.2, 
+                    point : 4,
+                    extra : 0.5, 
                     Ci : 0
                 },
                 {
                     name : "Шпагат",
-                    point : 2,
-                    extra : 0.2, 
-                    Ci : 0
+                    point : 7,
+                    extra : 1, 
+                    Ci : 0.1,
+                    win : 1/2
                 }
             ]
         },
@@ -40,17 +41,17 @@ var table_json = {
             players : [
                 {
                     name : "Флэш",
-                    point : 2,
-                    extra : -0.05, 
-                    Ci : 2,
+                    point : 3,
+                    extra : 0.05, 
+                    Ci : 1,
                     win : 0/2
                 },
                 {
                     name : "Маг",
                     point : 3,
-                    extra : 0.45, 
-                    Ci : 1,
-                    win : 1
+                    extra : 0.05, 
+                    Ci : 0,
+                    win : 1/3
                 }
             ]
         },
@@ -59,16 +60,17 @@ var table_json = {
             players : [
                 {
                     name : "Артик",
-                    point : 4,
+                    point : 6,
                     extra : 1.25, 
-                    Ci : 1,
+                    Ci : 0.5,
                     win : 1/2
                 },
                 {
                     name : "Крис",
-                    point : 0,
-                    extra : 0, 
-                    Ci : 0
+                    point : 5,
+                    extra : 0.75, 
+                    Ci : 0,
+                    win : 2/3
                 }
             ]
         },
@@ -77,16 +79,16 @@ var table_json = {
             players : [
                 {
                     name : "Мортал",
-                    point : 1,
+                    point : 2,
                     extra : 0.3, 
                     Ci : 0
                 },
                 {
                     name : "Молчун",
-                    point : 3,
-                    extra : 0.2, 
-                    Ci : 1, 
-                    win : 1
+                    point : 6,
+                    extra : 0.7, 
+                    Ci : 0.3, 
+                    win : 1/3
                 }
             ]
         },
@@ -95,16 +97,17 @@ var table_json = {
             players : [
                 {
                     name : "Андерсен",
-                    point : 2,
-                    extra : 0, 
-                    Ci : 1,
+                    point : 5,
+                    extra : 0.2, 
+                    Ci : 0.2,
                     win : 0
                 },
                 {
                     name : "Юстас",
-                    point : 1,
-                    extra : 0, 
-                    Ci : 0
+                    point : 5,
+                    extra : 0.3, 
+                    Ci : 0,
+                    win : 0
                 }
             ]
         },
@@ -114,13 +117,13 @@ var table_json = {
                 {
                     name : "Зодиак",
                     point : 3,
-                    extra : 0.3, 
+                    extra : 0.5, 
                     Ci : 0
                 },
                 {
                     name : "Дутче",
-                    point : 0,
-                    extra : 0, 
+                    point : 6,
+                    extra : 0.5, 
                     Ci : 0
                 }
             ]
@@ -131,14 +134,15 @@ var table_json = {
                 {
                     name : "Альфа",
                     point : 4,
-                    extra : 0.5, 
+                    extra : 0.8, 
                     Ci : 0
                 },
                 {
                     name : "КО",
-                    point : 2,
-                    extra : 0, 
-                    Ci : 0
+                    point : 8,
+                    extra : 0.4, 
+                    Ci : 0.05,
+                    win : 0
                 }
             ]
         },
@@ -147,15 +151,15 @@ var table_json = {
             players : [
                 {
                     name : "Sha",
-                    point : 0,
-                    extra : 0, 
+                    point : 4,
+                    extra : 0.2, 
                     Ci : 0
                 },
                 {
                     name : "John Galt",
-                    point : 5,
-                    extra : 0.2, 
-                    Ci : 1,
+                    point : 8,
+                    extra : 0.4, 
+                    Ci : 0,
                     win : 1
                 }
             ]
@@ -165,9 +169,10 @@ var table_json = {
             players : [
                 {
                     name : "Алиот",
-                    point : 1,
-                    extra : 0.2, 
-                    Ci : 0
+                    point : 3,
+                    extra : 0.4, 
+                    Ci : 0.1,
+                    win : 0
                 },
                 {
                     name : "Печаль",
@@ -177,9 +182,10 @@ var table_json = {
                 },
                 {
                     name : "Бон",
-                    point : 4,
-                    extra : 0.6, 
-                    Ci : 0
+                    point : 7,
+                    extra : 1.35,
+                    Ci : 0,
+                    win : 1
                 }
             ]
         }
