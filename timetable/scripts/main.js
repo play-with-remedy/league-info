@@ -1,4 +1,5 @@
 window.onload = function () {
+
     var json = getTable();
     var teams = json.teams;
     var table = getTableHeader();
@@ -36,7 +37,35 @@ window.onload = function () {
     });
 
     table += "</table>";
-    $("#all_stars").empty().append(table);
+    $("#results_div").empty().append(table);
+
+    var hash = window.location.hash;
+    if (hash === '#results') {
+        $("#results_id").addClass('active');
+        $("#results_wrapper").removeClass();
+        $("#games_wrapper").addClass('ng-hidden');
+        $("#games_id").removeClass();
+    } else {
+        $("#games_id").addClass('active');
+        $("#results_wrapper").addClass('ng-hidden');
+        $("#games_wrapper").removeClass();
+        $("#results_id").removeClass();
+    }
+
+    $('#ratingOrdering a').on("click", function () {
+        var href = $(this).attr('href');
+        if (href === "#results") {
+            $("#results_id").addClass('active');
+            $("#results_wrapper").removeClass();
+            $("#games_wrapper").addClass('ng-hidden');
+            $("#games_id").removeClass();
+        } else {
+            $("#games_id").addClass('active');
+            $("#results_wrapper").addClass('ng-hidden');
+            $("#games_wrapper").removeClass();
+            $("#results_id").removeClass();
+        }
+    });
 };
 
 function getTableHeader() {
