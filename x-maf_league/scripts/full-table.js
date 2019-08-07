@@ -9,28 +9,18 @@ window.onload = function () {
     
     request.onload = function() {
         var response = request.response;
+        var table = "<table>";
+        $.each(response, function(index, player) {
+            table+= "<tr>" +
+                "<td>" + player.name + "</td>" +
+            "</tr>"
+        });
+
+        table += "</table>"
+        $(".full_rating_content").empty().append(table);
     };
 }
 
 function create_table_header() {
-    return "<tr>" +
-        "<td>Player</td>" +
-        "<td>Games</td>" +
-        "<td>Wins</td>" +
-        "<td>Additional poiunts</td>" +
-        "<td>Penalty points</td>" +
-        "<td>Sheriff games</td>" +
-        "<td>Sheriff wins</td>" +
-        "<td>Don games</td>" +
-        "<td>Don wins</td>" +
-        "<td>Mafia games</td>" +
-        "<td>Mafia wins</td>" +
-        "<td>Citizen games</td>" +
-        "<td>Citizen wins</td>" +
-        "<td>First kill</td>" +
-        "<td>Best move</td>" +
-        "<td>Scores</td>" +
-        "<td id='total_score'>Total</td>" +
-        "<td>Percent</td>" +
-    "</tr>";
+    
 }
