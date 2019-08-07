@@ -8,9 +8,9 @@ window.onload = function () {
     request.send();
     
     request.onload = function() {
-        var response = request.response;
+        var players = request.response.players;
         var table = "<table>";
-        $.each(response, function(index, player) {
+        $.each(players, function(index, player) {
             table+= "<tr>" +
                 "<td>" + player.name + "</td>" +
             "</tr>"
