@@ -2,6 +2,7 @@
     "players" : [
         {
             "name" : "Архи",
+            "image" : "arhi.jpg",
             "tournaments" : [
                 {
                     "title" : "Frozen Throne",
