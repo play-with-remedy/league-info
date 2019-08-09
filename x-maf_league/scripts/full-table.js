@@ -10,12 +10,13 @@ window.onload = function () {
     
     request.onload = function() {
         var players = request.response.players;
-        var table = "<table>";
+        var table = "<h2>All Stars</h2><table>" + buildTableHeader();
         $.each(players, function(index, player) {
-            table+= "<h2>All Stars</h2><tr>" +
+            table+= "<tr>" +
                 "<td>" + (index + 1) + "</td>" +
                 "<td><img src='" + PATH_TO_IMAGES + player.image + "' /></td>" +
                 "<td>" + player.name + "</td>" +
+                "<td>" + player.tournaments.length + "</td>" +
                 "<td>" + getPlayerPoints(player) + "</td>" +
             "</tr>"
         });
@@ -23,6 +24,18 @@ window.onload = function () {
         table += "</table>"
         $(".rating_content").empty().append(table);
     };
+}
+
+function buildTableHeader() {
+    var h = "<tr class='rating_header'>" +
+                "<td></td>" +
+                "<td></td>" +
+                "<td>Player</td>" +
+                "<td>Tournaments</td>" +
+                "<td>Score</td>" +
+            "</tr>";
+
+    return h;
 }
 
 function getPlayerPoints(player) {
