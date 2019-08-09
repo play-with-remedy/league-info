@@ -37,16 +37,16 @@ window.onload = function () {
 };
 
 function initActiveTab(hash) {
-    if (hash === '#planned') {
-        $('.old_date').hide();
-        $('.future').css('display', 'flex');
-        $('#planned_tournaments').addClass('active');
-        $('#overpast_tournaments').removeClass();
-    } else {
+    if (hash === '#overpast') {
         $('.old_date').css('display', 'flex');
         $('.future').hide();
         $('#overpast_tournaments').addClass('active');
         $('#planned_tournaments').removeClass();
+    } else {
+        $('.old_date').hide();
+        $('.future').css('display', 'flex');
+        $('#planned_tournaments').addClass('active');
+        $('#overpast_tournaments').removeClass();
     }
 }
 
