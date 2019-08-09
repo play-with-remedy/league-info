@@ -26,23 +26,29 @@ window.onload = function () {
         });
 
         $("#schedule_content").empty().append(tournaments);
+        var hash = window.location.hash;
+        initActiveTab(hash);
     };
 
     $('#sceduleOrdering a').on("click", function () {
         var href = $(this).attr('href');
-        if ('#planned' === href) {
-            $('.old_date').hide();
-            $('.future').css('display', 'flex');
-            $('#planned_tournaments').addClass('active');
-            $('#overpast_tournaments').removeClass();
-        } else {
-            $('.old_date').css('display', 'flex');
-            $('.future').hide();
-            $('#overpast_tournaments').addClass('active');
-            $('#planned_tournaments').removeClass();
-        }
+        initActiveTab(href);
     });
 };
+
+function initActiveTab(hash) {
+    if (hash === '#planned') {
+        $('.old_date').hide();
+        $('.future').css('display', 'flex');
+        $('#planned_tournaments').addClass('active');
+        $('#overpast_tournaments').removeClass();
+    } else {
+        $('.old_date').css('display', 'flex');
+        $('.future').hide();
+        $('#overpast_tournaments').addClass('active');
+        $('#planned_tournaments').removeClass();
+    }
+}
 
 function buildTournament(t) {
     var html = "<div class='tournament " + t.dateClass + "' style='border-color: " + t.color + ";'>" +
