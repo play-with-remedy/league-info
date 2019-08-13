@@ -55,9 +55,9 @@ function buildTournament(t) {
                 "<div class='tournament_image_wrapper' style='background-image: url(" + t.logo + ")'>" +
             "</div>" + 
             "<div class='tournament_metadata'>" + 
-                "<h3><a href='" + t.vkLink + "' target='_blank'>" + t.title+ "</a></h3>" + 
+                "<h3>" + t.title+ "</h3>" +
                 t.description +
-                "<p class='tournament_date'>" + t.date + "</p>" +
+                "<p class='tournament_date'>" + t.date + "<a href='" + t.vkLink + "'><img src='../../images/vk_icon.png'/></a></p>" +
             "</div>" +
         "</div>";
     return html;

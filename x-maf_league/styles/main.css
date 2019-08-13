@@ -280,6 +280,14 @@ div.future {
     float: right;
 }
 
+.tournament_date img {
+    vertical-align: bottom;
+}
+
+.tournament_date a {
+    margin-left: 5px;
+}
+
 .tournament_metadata a {
     color: white;
 }
