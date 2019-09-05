@@ -327,5 +327,7 @@ div.future {
 
 .stream_content iframe {
     margin: 30px 0px 30px 0px;
+    border: solid 3px white;
+    border-radius: 10px;
 }
 /* END STREAM */
