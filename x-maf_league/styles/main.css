@@ -322,11 +322,21 @@ div.future {
 }
 
 .stream_content h2 {
-    margin-top: 40px;
+    display: inline-block;
+    margin: 40px 0px 0px 70px;
+}
+
+.stream_content img {
+    display: inline-block;
+    width: 70px;
+    margin-left: 20px;
+    position: relative;
+    top: 15px;
 }
 
 .stream_content iframe {
-    margin: 30px 0px 30px 0px;
+    display: block;
+    margin: 30px auto;
     border: solid 3px white;
     border-radius: 10px;
 }
