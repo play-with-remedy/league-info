@@ -18,7 +18,8 @@
 /* body */
 body {
     margin: 0px;
-    background-color: #222226;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqpHVD9OXVEvMxSXC0xdXVhCzopcuBwSeGi6Q6VYym6ISYSeBE0Q);
+
 }
 
 /* header */
@@ -69,6 +70,13 @@ body {
     color: black;
 }
 
+.sub_header li img {
+    width: 30px;
+    vertical-align: middle;
+    position: relative;
+    left: 3px;
+}
+
 /* Сontent */
 .content {
     text-align: center;
@@ -105,6 +113,7 @@ table.thomas_rating {
 
 table.thomas_rating tr {
     height: 40px;
+    background-color: #222226;
 }
 
 table.thomas_rating tr:nth-child(1) {
@@ -177,6 +186,7 @@ a.active  {
     font-family: Schule;
     font-size: 20px;
     text-indent: 1.5em;
+    background-color: rgba(34,34,38, 0.3);
 }
 
 .about h2 {
@@ -241,11 +251,21 @@ a.active  {
     font-size: 60px;
     color: white;
     font-family: fantasy;
-    margin: 50px 0px 0px;
+    padding: 50px 0px 0px;
+    margin: 0px;
 }
 
 .striming_wrapper iframe {
-    padding: 30px 0px;
+    margin-top: 30px;
+    border-radius: 8px;
+    border: solid 3px white;
+}
+
+.striming_wrapper p {
+    color: white;
+    font-size: 25px;
+    margin: 10px 0px 30px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* END STRIMING */

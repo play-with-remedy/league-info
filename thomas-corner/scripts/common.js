@@ -1,7 +1,7 @@
 const season_rating_request_URL = 'https://x-maf-league.github.io/league-info/thomas-corner/files/season_rating.json';
 const all_time_rating_request_URL = 'https://x-maf-league.github.io/league-info/thomas-corner/files/all_time_rating.json';
 
-const season_game_counter = 28;
+const season_game_counter = 0;
 const total_game_counter = 53;
 var init_game_counter;
 const update = '04.08';
@@ -20,7 +20,7 @@ window.onload = function () {
 
     $('#ratingOrdering a').on("click", function () {
         var href = $(this).attr('href');
-        if ('#second_season' === href) {
+        if ('#third_season' === href) {
             if (jQuery.type(season_table) === "undefined") {
                 init_game_counter = season_game_counter;
                 build_season_rating();
