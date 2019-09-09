@@ -186,7 +186,7 @@ a.active  {
     font-family: Schule;
     font-size: 20px;
     text-indent: 1.5em;
-    background-color: rgba(34,34,38, 0.3);
+    background-color: rgba(34,34,38, 0.5);
 }
 
 .about h2 {
@@ -202,7 +202,7 @@ a.active  {
     text-align: justify;
     border-left: solid 10px darkred;
     padding: 0px 20px;
-    color: #aaa;
+    color: lightgrey;
 }
 
 #idea p {
@@ -218,7 +218,7 @@ a.active  {
     font-family: serif;
     text-align: justify;
     line-height: 30px;
-    color: #aaa;
+    color: lightgrey;
 }
 
 #masters p {
