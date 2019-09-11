@@ -40,7 +40,7 @@
         "mafia_total" : 0,
         "mafia_win" : 0,
         "citizen_total" : 3,
-        "citizen_win" : 1,
+        "citizen_win" : 0,
         "first_kill" : 0,
         "best_turn" : 0,
         "game_points" : 8.5,

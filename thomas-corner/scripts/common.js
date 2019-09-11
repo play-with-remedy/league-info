@@ -25,7 +25,6 @@ window.onload = function () {
                 init_game_counter = season_game_counter;
                 build_season_rating();
             }
-            $('#season').addClass('active');
             $('#alltime').removeClass();
             $("#rating_content").empty();
             $("#rating_content").append(season_table);
@@ -52,13 +51,11 @@ function init_vars() {
     var hash = window.location.hash;
     if (hash === '#all_time') {
         build_total_rating();
-        $('#alltime').addClass('active');
         init_game_counter = total_game_counter;
         currentPageType = 'total';
         $('.season_left').hide();
     } else {
         build_season_rating();
-        $('#season').addClass('active');
         init_game_counter = season_game_counter;
         currentPageType = 'season';
     }
@@ -98,17 +95,11 @@ function build_table(ratingArray, ordering) {
         element.game_total = element.sherif_total + element.don_total + element.mafia_total + element.citizen_total;
         element.score = (element.game_points + element.role_points + element.players_points + element.best_turn).toFixed(3);
         if (element.game_total > 0) {
-            var result = (element.score * element.win_total / element.game_total).toFixed(3);
+            var result = (element.score / element.game_total).toFixed(3);
         } else {
             var result = 0;
         }
         element.result = result;
-
-        if (element.game_total > 9) {
-        element.percent = (element.win_total * 100 / element.game_total + element.best_turn).toFixed(2);
-        } else {
-            element.percent = 0;
-        }
     });
 
     build_ordered_table(ratingArray, ordering);
@@ -131,11 +122,6 @@ function build_ordered_table(ratingArray, ordering) {
         case 'result':
             ratingArray.sort(function (a, b) {
                 return b.result - a.result;
-            });
-            break;
-        case 'percents':
-            ratingArray.sort(function (a, b) {
-                return b.percent - a.percent;
             });
             break;
         case 'add_points':
@@ -203,6 +189,21 @@ function build_ordered_table(ratingArray, ordering) {
                 return b.score - a.score;
             });
             break;
+        case 'role_points':
+            ratingArray.sort(function (a, b) {
+                return b.role_points - a.role_points;
+            });
+            break;
+        case 'game_points':
+            ratingArray.sort(function (a, b) {
+                return b.game_points - a.game_points;
+            });
+        break;
+        case 'players_points':
+            ratingArray.sort(function (a, b) {
+                return b.players_points - a.players_points;
+            });
+            break;
     }
 }
 
@@ -232,11 +233,6 @@ function buildHTMLTable(ratingArray) {
             table += "<td>" + element.best_turn + "</td>";
             table += "<td>" + element.score + "</td>";
             table += "<td>" + element.result + "</td>";
-            if (element.percent == 0) {
-                table += "<td>-</td>";
-            } else {
-                table += "<td>" + element.percent + "</td>";
-            }
             table += "</tr>";
         } else {
             i--;
@@ -258,7 +254,7 @@ function get_table_header() {
         "<td onclick=orderBy('wins');>Wins</td>" +
         "<td onclick=orderBy('role_points');>Role poiunts</td>" +
         "<td onclick=orderBy('game_points');>Game points</td>" +
-        "<td onclick=orderBy('player_points');>Player points</td>" +
+        "<td onclick=orderBy('players_points');>Player points</td>" +
         "<td onclick=orderBy('sher_games');>Sheriff games</td>" +
         "<td onclick=orderBy('sher_wins');>Sheriff wins</td>" +
         "<td onclick=orderBy('don_games');>Don games</td>" +
@@ -271,7 +267,6 @@ function get_table_header() {
         "<td onclick=orderBy('best_moves');>Best move</td>" +
         "<td onclick=orderBy('scores');>Scores</td>" +
         "<td onclick=orderBy('result');>Total</td>" +
-        "<td onclick=orderBy('percents');>Percent</td>" +
     "</tr>";
 }
 
