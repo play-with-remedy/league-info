@@ -219,7 +219,7 @@ function buildHTMLTable(ratingArray) {
             table += "<td>" + element.win_total + "</td>";
             table += "<td>" + element.role_points + "</td>";
             table += "<td>" + element.game_points + "</td>";
-            table += "<td>" + element.player_points + "</td>";
+            table += "<td>" + element.players_points + "</td>";
             table += "<td>" + element.sherif_total + "</td>";
             table += "<td>" + element.sherif_win + "</td>";
             table += "<td>" + element.don_total + "</td>";
