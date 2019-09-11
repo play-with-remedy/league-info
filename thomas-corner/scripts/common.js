@@ -96,7 +96,7 @@ function build_table(ratingArray, ordering) {
     ratingArray.forEach(element => {
         element.win_total = element.sherif_win + element.don_win + element.mafia_win + element.citizen_win;
         element.game_total = element.sherif_total + element.don_total + element.mafia_total + element.citizen_total;
-        element.score = (element.win_total + element.plus_points - element.minus_points+ element.best_turn).toFixed(3);
+        element.score = (element.game_points + element.role_points + element.players_points + element.best_turn).toFixed(3);
         if (element.game_total > 0) {
             var result = (element.score * element.win_total / element.game_total).toFixed(3);
         } else {
@@ -105,8 +105,7 @@ function build_table(ratingArray, ordering) {
         element.result = result;
 
         if (element.game_total > 9) {
-        element.percent = (element.win_total * 100 / element.game_total 
-                            + element.plus_points - element.minus_points + element.best_turn).toFixed(2);
+        element.percent = (element.win_total * 100 / element.game_total + element.best_turn).toFixed(2);
         } else {
             element.percent = 0;
         }
@@ -218,8 +217,9 @@ function buildHTMLTable(ratingArray) {
             table += "<td>" + element.name + "</td>";
             table += "<td>" + element.game_total + "</td>";
             table += "<td>" + element.win_total + "</td>";
-            table += "<td>" + element.plus_points + "</td>";
-            table += "<td>" + element.minus_points + "</td>";
+            table += "<td>" + element.role_points + "</td>";
+            table += "<td>" + element.game_points + "</td>";
+            table += "<td>" + element.player_points + "</td>";
             table += "<td>" + element.sherif_total + "</td>";
             table += "<td>" + element.sherif_win + "</td>";
             table += "<td>" + element.don_total + "</td>";
@@ -256,8 +256,9 @@ function get_table_header() {
         "<td>Player</td>" +
         "<td onclick=orderBy('games');>Games</td>" +
         "<td onclick=orderBy('wins');>Wins</td>" +
-        "<td onclick=orderBy('add_points');>Additional poiunts</td>" +
-        "<td onclick=orderBy('pen_points');>Penalty points</td>" +
+        "<td onclick=orderBy('role_points');>Role poiunts</td>" +
+        "<td onclick=orderBy('game_points');>Game points</td>" +
+        "<td onclick=orderBy('player_points');>Player points</td>" +
         "<td onclick=orderBy('sher_games');>Sheriff games</td>" +
         "<td onclick=orderBy('sher_wins');>Sheriff wins</td>" +
         "<td onclick=orderBy('don_games');>Don games</td>" +
