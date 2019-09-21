@@ -19,17 +19,13 @@
 body {
     margin: 0px;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqpHVD9OXVEvMxSXC0xdXVhCzopcuBwSeGi6Q6VYym6ISYSeBE0Q);
-
 }
 
 /* header */
 .header {
-    background-color: white;
     height: 230px;
     text-align: center;
-    background-image: url(../images/Tomas-logo.jpg);
-    background-position: center;
-    background-size: 250px 200px;
+    background-color: black;
 }
 
 .header h1 {
@@ -38,6 +34,11 @@ body {
     vertical-align: middle;
     display: inline-block;
     font-size: 70px;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
 }
 /* sub header */
 .sub_header ul {
