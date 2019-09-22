@@ -45,7 +45,7 @@ body {
     list-style-type: none;
     margin: 0;
     overflow: hidden;
-    background-color: steelblue;
+    background-color: darkslategrey;
     border-bottom: 1px solid white;
     border-top: 1px solid white;
     padding: 0px;
@@ -108,7 +108,7 @@ table.thomas_rating {
     margin: 20px;
     font-size: 20px;
     text-align: center;
-    border: double 5px cornflowerblue;
+    border: double 5px darkslategrey;
     display: inline-block;
 }
 
@@ -122,7 +122,7 @@ table.thomas_rating tr:nth-child(1) {
 }
 
 table.thomas_rating tr:last-child td {
-    background-color: steelblue;
+    background-color: darkslategrey;
     width: 50%;
     border: none;
     color: white;
@@ -130,13 +130,13 @@ table.thomas_rating tr:last-child td {
 
 table.thomas_rating tr:nth-child(1) td {
     color: white;
-    background-color: steelblue;
+    background-color: darkslategrey;
     border: none;
 }
 
 table.thomas_rating td {
     min-width: 65px;
-    border: dashed 1px cornflowerblue;
+    border: dashed 1px darkslategrey;
 }
 
 .table_header td {
