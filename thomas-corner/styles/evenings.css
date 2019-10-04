@@ -1,0 +1,33 @@
+.game_archive_wrapper {
+    text-align: center;
+}
+
+table.thomas_archive {
+    color: #aaa;
+    margin: 20px;
+    font-size: 20px;
+    text-align: center;
+    border: double 5px darkslategrey;
+    display: inline-block;
+}
+
+table.thomas_archive tr {
+    height: 40px;
+    background-color: #222226;
+}
+
+table.thomas_archive tr:nth-child(1) {
+    height: 60px;
+}
+
+table.thomas_archive tr:nth-child(1) td {
+    color: white;
+    background-color: darkslategrey;
+    border: none;
+}
+
+table.thomas_archive td {
+    min-width: 65px;
+    padding: 0px 10px;
+    border: dashed 1px darkslategrey;
+}

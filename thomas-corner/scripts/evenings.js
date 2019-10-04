@@ -7,7 +7,7 @@ window.onload = function () {
     request.send();
 
     request.onload = function() {
-        var table = "<table class='thomas_rating'>"
+        var table = "<table class='thomas_archive'>"
         var eveningArray = request.response;
         eveningArray.forEach(evenings => {
             var playersArray = evenings.evening.players;
