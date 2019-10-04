@@ -1,0 +1,65 @@
+[
+    {
+        "evening": {
+            "number": 5,
+            "date": "02.10.2019",
+            "players": [
+                {
+                    "nickname": "Валерун-Балерун",
+                    "games":[
+                        {
+                            "number": 1,
+                            "points": {
+                                "role": 0,
+                                "game": 0,
+                                "player" : 0
+                            },
+                            "role": "first_killed"
+                        },
+                        {
+                            "number": 2,
+                            "points": {
+                                "role": 0,
+                                "game": 0,
+                                "player" : 0
+                            },
+                            "role": "citizen"
+
+                        },
+                        {
+                            "number": 3,
+                            "points": {
+                                "role": 0,
+                                "game": 0,
+                                "player" : 0
+                            },
+                            "role": "citizen"
+
+                        },
+                        {
+                            "number": 4,
+                            "points": {
+                                "role": 0,
+                                "game": 0,
+                                "player" : 0
+                            },
+                            "role": "citizen"
+
+                        },
+                        {
+                            "number": 5,
+                            "points": {
+                                "role": 0,
+                                "game": 0,
+                                "player" : 0
+                            },
+                            "role": "citizen"
+
+                        }
+                        
+                    ]
+                }
+            ]
+        }
+    }
+]
