@@ -18,16 +18,19 @@ window.onload = function () {
                 var total_points = 0;
                 var gamesArray = player.games;
                 gamesArray.forEach(game => {
-                    var total_points_per_game = game.points.role + game.points.game + game.points.player;
-                    table += "<td class='left_border " + game.role + "'>" + game.points.role + "</td>" +
-                             "<td>" + game.points.game + "</td>" +
-                             "<td class='right_border'>" + game.points.player + "</td>";
+                    if (game.points.game > 0){
+                        var total_points_per_game = game.points.role + game.points.game + game.points.player;
+                        table += "<td class='left_border " + game.role + "'>" + game.points.role + "</td>" +
+                                "<td>" + game.points.game + "</td>" +
+                                "<td class='right_border'>" + game.points.player + "</td>";
 
-                    total_points += total_points_per_game;         
+                        total_points += total_points_per_game;
+                    } else {
+                        table += "<td colspan='3' class='left_border right_border'>-</td>"
+                    }
                 });
 
-                table += "<td class='left_border right_border'>" + total_points.toFixed(1) + "</td>" +
-                         "<td class='left_border'>" + (total_points/total).toFixed(1) + "</td></tr>";
+                table += "<td class='left_border'>" + total_points.toFixed(1) + "</td>";
             });
         });
 
@@ -44,8 +47,7 @@ window.onload = function () {
                 header += "<td colspan='3'>Game " + i + "</td>";
             }
 
-            header += "<td>Total</td>" +
-            "<td>Avr</td>" +
+            header += "<td>Total</td></tr>" +
         "</tr>";
 
         return header;

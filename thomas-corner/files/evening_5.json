@@ -295,8 +295,8 @@
                         {
                             "number": 2,
                             "points": {
-                                "role": 2,
-                                "game": 0,
+                                "role": 0,
+                                "game": 2,
                                 "player" : 0
                             },
                             "role": "citizen"
