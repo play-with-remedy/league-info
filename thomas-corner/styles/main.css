@@ -269,7 +269,7 @@ a.active  {
     text-align: center;
 }
 
-.striming_wrapper h2 {
+.striming_wrapper h2, .archive_wrapper h2 {
     font-size: 60px;
     color: white;
     font-family: fantasy;

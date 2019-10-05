@@ -1,4 +1,4 @@
-.game_archive_wrapper {
+.archive_wrapper {
     text-align: center;
 }
 
@@ -7,7 +7,7 @@ table.thomas_archive {
     margin: 20px;
     font-size: 20px;
     text-align: center;
-    border: double 5px darkslategrey;
+    border: double 5px white;
     display: inline-block;
 }
 
@@ -22,12 +22,68 @@ table.thomas_archive tr:nth-child(1) {
 
 table.thomas_archive tr:nth-child(1) td {
     color: white;
-    background-color: darkslategrey;
+    background-color: darkred;
     border: none;
 }
 
 table.thomas_archive td {
-    min-width: 65px;
+    min-width: 40px;
     padding: 0px 10px;
     border: dashed 1px darkslategrey;
 }
+
+@media only screen and (max-width: 981px) {
+    table.thomas_archive td {
+        min-width: 10px;
+        padding: 0px 10px;
+        border: dashed 1px darkslategrey;
+    }
+}
+
+.sherif, .don, .mafia, .first_killed {
+    color: white;
+}
+
+.sherif {
+    background-color: red;
+}
+
+.don, .mafia {
+    background-color: black
+}
+
+.first_killed {
+    background-color: rebeccapurple;
+}
+
+.sherif.first_killed {
+    background-color: deeppink;
+}
+
+.right_border {
+    border-right: dashed 1px white !important;
+}
+
+.left_border {
+    border-left: dashed 1px white !important;
+}
+
+.evening_wrapper {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 981px) {
+    .evening_wrapper {
+        padding: 0;
+    }
+}
+
+.evening_wrapper p {
+    color: white;
+    text-align: left;
+    margin: 0 0 0 20px;
+    font-size: 25px;
+    font-family: Zebulon;
+    cursor: pointer;
+}
+

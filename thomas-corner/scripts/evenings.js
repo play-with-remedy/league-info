@@ -10,15 +10,24 @@ window.onload = function () {
         var table = "<table class='thomas_archive'>"
         var eveningArray = request.response;
         eveningArray.forEach(evenings => {
+            var total = evenings.evening.game_total;
+            table += build_table_header(total);
             var playersArray = evenings.evening.players;
             playersArray.forEach(player => {
-                table += "<tr><td>" + player.nickname + "</td>";
+                table += "<tr><td class='right_border'>" + player.nickname + "</td>";
+                var total_points = 0;
                 var gamesArray = player.games;
                 gamesArray.forEach(game => {
-                    table += "<td>" + game.points.role + "</td>" +
+                    var total_points_per_game = game.points.role + game.points.game + game.points.player;
+                    table += "<td class='left_border " + game.role + "'>" + game.points.role + "</td>" +
                              "<td>" + game.points.game + "</td>" +
-                             "<td>" + game.points.player + "</td>";
+                             "<td class='right_border'>" + game.points.player + "</td>";
+
+                    total_points += total_points_per_game;         
                 });
+
+                table += "<td class='left_border right_border'>" + total_points.toFixed(1) + "</td>" +
+                         "<td class='left_border'>" + (total_points/total).toFixed(1) + "</td></tr>";
             });
         });
 
@@ -27,9 +36,22 @@ window.onload = function () {
         $('#ev_5').empty().append(table);
     };
 
-    function build_table_header() {
-        return "<tr class='table_header'>" +
-            "<td>Player</td>" +
+    function build_table_header(total) {
+        var header = "<tr class='table_header'>" +
+            "<td>Player</td>";
+
+            for(var i = 1; i <= total; i++) {
+                header += "<td colspan='3'>Game " + i + "</td>";
+            }
+
+            header += "<td>Total</td>" +
+            "<td>Avr</td>" +
         "</tr>";
+
+        return header;
     }
+}
+
+function toggle_evening(){
+    $('#ev_5').toggle('normal');
 }
