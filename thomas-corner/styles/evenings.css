@@ -70,6 +70,7 @@ table.thomas_archive td {
 
 .evening_wrapper {
     display: inline-block;
+    width: 100%;
 }
 
 @media only screen and (max-width: 981px) {
@@ -78,9 +79,9 @@ table.thomas_archive td {
     }
 }
 
-.evening_wrapper p {
+.evening_wrapper span {
     color: white;
-    text-align: left;
+    text-align: center;
     margin: 0 0 0 20px;
     font-size: 25px;
     font-family: Zebulon;
