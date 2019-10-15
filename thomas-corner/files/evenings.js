@@ -1,4 +1,4 @@
-[
+var EVENINGS_JSON = [
     {
         "evenings": [
             {
@@ -615,7 +615,7 @@
             {
                 "number": 6,
                 "date": "11.10.2019",
-                "game_total": 4,
+                "game_total": 5,
                 "players": [
                     {
                         "nickname": "Алиса (Лиза)",
@@ -692,7 +692,7 @@
                                 "number": 3,
                                 "points": {
                                     "role": 0,
-                                    "game": ,
+                                    "game": 0,
                                     "player" : 0
                                 },
                                 "role": ""
