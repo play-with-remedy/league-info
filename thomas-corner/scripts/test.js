@@ -29,18 +29,21 @@ function calculate() {
     for (var i=1; result[i]; i++) {
         table += "<td>" + Object.keys(result)[i] + "</td>"
     }
-    table += "</tr><tr>";
+    table += "<td>Games</td></tr><tr>";
 
     for (var i=1; result[i]; i++) {
         table += "<td>" + Object.keys(result)[i] + "</td>";
+        var count = 0;
         for (var j=1; result[j]; j++) {
             if(i===j) {
                 table += "<td style='color:red'>#</td>";
             } else {
                 table += "<td>" + result[i][j] + "</td>";
+                count += result[i][j];
             }
         }
-        table += "</tr>";
+        table += "<td>" + count/9 + "</td></tr>";
+
     }
 
     table += "</table>"
