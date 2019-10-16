@@ -170,6 +170,13 @@ table.thomas_rating td {
     font-size: 15px;
     font-family: Zebulon;
 }
+
+.accepted_player {
+    background-image: url(https://www.pinclipart.com/picdir/big/190-1901635_green-paint-splatter-png-for-kids-color-splash.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: 9px -3px;
+}
 /* END RATING */
 /* sub menu */
 .rating_ordering {

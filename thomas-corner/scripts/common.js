@@ -4,6 +4,7 @@ const all_time_rating_request_URL = 'https://x-maf-league.github.io/league-info/
 const season_game_counter = 25;
 const total_game_counter = 53;
 var init_game_counter;
+var limit;
 const update = '16.10';
 
 var season_table;
@@ -59,6 +60,7 @@ function init_vars() {
         init_game_counter = season_game_counter;
         currentPageType = 'season';
     }
+    limit = (init_game_counter * 0.4).toFixed(0);
 }
 
 function build_season_rating() {
@@ -210,6 +212,7 @@ function build_ordered_table(ratingArray, ordering) {
 function buildHTMLTable(ratingArray) {
     var table = "<table class='thomas_rating'>";
     var i = 1;
+
     table += get_table_header();
     ratingArray.forEach(function (element, index, array) {
         if (!element.hide) {
@@ -239,8 +242,9 @@ function buildHTMLTable(ratingArray) {
         }
     });
     table += "<tr>" +
-        "<td colspan='10'>Дата обновления - " + update + "</td>" +
-        "<td colspan='10'>Количество игр - <span id='game_count'>" + init_game_counter + "</span</td>" +
+        "<td colspan='6'>Дата обновления - " + update + "</td>" +
+        "<td colspan='7'>Количество игр - <span id='game_count'>" + init_game_counter + "</span</td>" +
+        "<td colspan='6'>Количество игр для учета в рейтинге - <span id='game_count'>" + (init_game_counter * 0.4).toFixed(0) + "</span</td>" +
     "</tr></table>";
 
     return table;
