@@ -181,6 +181,18 @@ div.old_date {
     padding: 25px 0px 30px;
 }
 
+.rating_content table td div:nth-child(1) {
+    width: 50%;
+    text-align: right;
+    float: left;
+}
+
+.rating_content table td div:nth-child(2) {
+    width: 50%;
+    text-align: left;
+    float: right;
+}
+
 .rating_content table img {
     width: 40px;
     height: 40px;
@@ -198,7 +210,6 @@ div.old_date {
     font-size: 15px;
     margin-left: 5px
 }
-
 
 .full_table {
     text-align: center;
