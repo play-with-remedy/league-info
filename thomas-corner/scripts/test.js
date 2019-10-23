@@ -38,7 +38,8 @@ function calculate() {
             if(i===j) {
                 table += "<td style='color:red'>#</td>";
             } else {
-                table += "<td>" + result[i][j] + "</td>";
+                var add_class = result[i][j] > (5) ? 'color:red' : result[i][j] <= (1) ? 'color:white' : '';
+                table += "<td style='" + add_class + "'>" + result[i][j] + "</td>";
                 count += result[i][j];
             }
         }
