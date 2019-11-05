@@ -1368,6 +1368,505 @@ var EVENINGS_JSON = [
                         ]
                     }
                 ]
+            },
+            {
+                "number": 7,
+                "date": "01.11.2019",
+                "game_total": 4,
+                "players": [
+                    {
+                        "nickname": "Light",
+                        "games":[
+                            {
+                                "number": 1,
+                                "points": {
+                                    "role": 0,
+                                    "game": 1.5,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 2,
+                                "points": {
+                                    "role": 3,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "sherif"
+                            },
+                            {
+                                "number": 3,
+                                "points": {
+                                    "role": 0,
+                                    "game": 0,
+                                    "player" : 0
+                                },
+                                "role": ""
+                            },
+                            {
+                                "number": 4,
+                                "points": {
+                                    "role": 0,
+                                    "game": 0,
+                                    "player" : 0
+                                },
+                                "role": ""
+                            }
+                        ]
+                    },
+                    {
+                        "nickname": "Sol",
+                        "games":[
+                            {
+                                "number": 1,
+                                "points": {
+                                    "role": 0,
+                                    "game": 1.5,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 2,
+                                "points": {
+                                    "role": 3,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "first_killed"
+                            },
+                            {
+                                "number": 3,
+                                "points": {
+                                    "role": 3,
+                                    "game": 2.5,
+                                    "player" : 0.3
+                                },
+                                "role": "don"
+                            },
+                            {
+                                "number": 4,
+                                "points": {
+                                    "role": 3,
+                                    "game": 1.5,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            }
+                        ]
+                    },
+                    {
+                        "nickname": "Аспин",
+                        "games":[
+                            {
+                                "number": 1,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 2,
+                                "points": {
+                                    "role": 0,
+                                    "game": 0,
+                                    "player" : 0
+                                },
+                                "role": ""
+                            },
+                            {
+                                "number": 3,
+                                "points": {
+                                    "role": 0,
+                                    "game": 1.5,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 4,
+                                "points": {
+                                    "role": 3,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "first_killed"
+                            }
+                        ]
+                    },
+                    {
+                        "nickname": "ВБ",
+                        "games":[
+                            {
+                                "number": 1,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2.5,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 2,
+                                "points": {
+                                    "role": 3,
+                                    "game": 3.5,
+                                    "player" : 0.6
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 3,
+                                "points": {
+                                    "role": 1,
+                                    "game": 2.5,
+                                    "player" : 0
+                                },
+                                "role": "sherif first_killed"
+                            },
+                            {
+                                "number": 4,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "don"
+                            }
+                        ]
+                    },
+                    {
+                        "nickname": "Опер",
+                        "games":[
+                            {
+                                "number": 1,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 2,
+                                "points": {
+                                    "role": 3,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 3,
+                                "points": {
+                                    "role": 0,
+                                    "game": 3.5,
+                                    "player" : 1.2
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 4,
+                                "points": {
+                                    "role": 0,
+                                    "game": 0,
+                                    "player" : 0
+                                },
+                                "role": ""
+                            }
+                        ]
+                    },
+                    {
+                        "nickname": "Никки",
+                        "games":[
+                            {
+                                "number": 1,
+                                "points": {
+                                    "role": 3,
+                                    "game": 3.5,
+                                    "player" : 2.1
+                                },
+                                "role": "mafia"
+                            },
+                            {
+                                "number": 2,
+                                "points": {
+                                    "role": 0,
+                                    "game": 0,
+                                    "player" : 0
+                                },
+                                "role": ""
+                            },
+                            {
+                                "number": 3,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 4,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "mafia"
+                            }
+                        ]
+                    },
+                    {
+                        "nickname": "Sky",
+                        "games":[
+                            {
+                                "number": 1,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "first_killed"
+                            },
+                            {
+                                "number": 2,
+                                "points": {
+                                    "role": 3,
+                                    "game": 2.5,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 3,
+                                "points": {
+                                    "role": 3,
+                                    "game": 3.5,
+                                    "player" : 1.2
+                                },
+                                "role": "mafia"
+                            },
+                            {
+                                "number": 4,
+                                "points": {
+                                    "role": 3,
+                                    "game": 2.5,
+                                    "player" : 0.9
+                                },
+                                "role": "citizen"
+                            }
+                        ]
+                    },
+                    {
+                        "nickname": "Архи",
+                        "games":[
+                            {
+                                "number": 1,
+                                "points": {
+                                    "role": 3,
+                                    "game": 3,
+                                    "player" : 0.9
+                                },
+                                "role": "don"
+                            },
+                            {
+                                "number": 2,
+                                "points": {
+                                    "role": 3,
+                                    "game": 3.5,
+                                    "player" : 1.8
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 3,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2.5,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 4,
+                                "points": {
+                                    "role": 3,
+                                    "game": 3,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            }
+                        ]
+                    },
+                    {
+                        "nickname": "Yoda",
+                        "games":[
+                            {
+                                "number": 1,
+                                "points": {
+                                    "role": 0,
+                                    "game": 1.5,
+                                    "player" : 0
+                                },
+                                "role": "sherif"
+                            },
+                            {
+                                "number": 2,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "don"
+                            },
+                            {
+                                "number": 3,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2.5,
+                                    "player" : 0.3
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 4,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "mafia"
+                            }
+                        ]
+                    },
+                    {
+                        "nickname": "Yesterday",
+                        "games":[
+                            {
+                                "number": 1,
+                                "points": {
+                                    "role": 3,
+                                    "game": 2.5,
+                                    "player" : 0
+                                },
+                                "role": "mafia"
+                            },
+                            {
+                                "number": 2,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2.5,
+                                    "player" : 0.6
+                                },
+                                "role": "mafia"
+                            },
+                            {
+                                "number": 3,
+                                "points": {
+                                    "role": 0,
+                                    "game": 0,
+                                    "player" : 0
+                                },
+                                "role": ""
+                            },
+                            {
+                                "number": 4,
+                                "points": {
+                                    "role": 3,
+                                    "game": 2.5,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            }
+                        ]
+                    },
+                    {
+                        "nickname": "Алиса (Лиза)",
+                        "games":[
+                            {
+                                "number": 1,
+                                "points": {
+                                    "role": 0,
+                                    "game": 0,
+                                    "player" : 0
+                                },
+                                "role": ""
+                            },
+                            {
+                                "number": 2,
+                                "points": {
+                                    "role": 3,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 3,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "citizen"
+                            },
+                            {
+                                "number": 4,
+                                "points": {
+                                    "role": 3,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "sherif"
+                            }
+                        ]
+                    },
+                    {
+                        "nickname": "Лекса",
+                        "games":[
+                            {
+                                "number": 1,
+                                "points": {
+                                    "role": 0,
+                                    "game": 0,
+                                    "player" : 0
+                                },
+                                "role": ""
+                            },
+                            {
+                                "number": 2,
+                                "points": {
+                                    "role": 0,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "mafia"
+                            },
+                            {
+                                "number": 3,
+                                "points": {
+                                    "role": 3,
+                                    "game": 2,
+                                    "player" : 0
+                                },
+                                "role": "mafia"
+                            },
+                            {
+                                "number": 4,
+                                "points": {
+                                    "role": 3,
+                                    "game": 4,
+                                    "player" : 2.1
+                                },
+                                "role": "citizen"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }
