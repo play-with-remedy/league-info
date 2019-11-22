@@ -4,16 +4,32 @@
     src: url(../fonts/Zebulon.otf);
 }
 
+@font-face {
+    font-family: Forum;
+    src: url(../fonts/forum.ttf);
+}
+
 body {
     text-align: center;
-    background-image: url('https://www.muralswallpaper.co.uk/app/uploads/Clean-white-brick-wallpaper-mural-1024x664-825x535.jpg');
     background-attachment: fixed;
+    background-image: url(https://i.pinimg.com/originals/0f/18/72/0f1872ae8eef2e9e06c32d0e30277ac2.jpg);
 }
 
 h1 {
-    font-family: cursive;
+    font-family: Forum;
+    text-align: center;
+    margin-left: 100px;
+    color: white;
     font-size: 80px;
-    margin: 40px 0px;
+    margin: 40px;
+}
+
+h1 img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 20px;
+    left: -10px;
 }
 
 div div div div {
@@ -28,19 +44,23 @@ div div div p {
 }
 
 table {
+    color: white;
+    margin: auto;
+    margin-bottom: 75px;
     text-align: center;
     font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Forum;
     border: solid;
 }
 
 table tr:first-child {
     font-size: 50px;
-    font-family: cursive;
+    font-family: Forum;
 }
+
 td {
-    min-width: 100px;
-    border: double 1px black;
+    padding: 5px 10px 0px 20px;
+    border: dashed 1px white;
 }
 
 /* sub menu */
@@ -85,4 +105,12 @@ a.active  {
 .total {
     font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
+}
+
+
+
+.game_title {
+    border-bottom: solid 3px white !important;
+    padding: 10px 0px !important;
+    font-weight: bold;
 }
