@@ -1,11 +1,11 @@
 const season_rating_request_URL = 'https://x-maf-league.github.io/league-info/thomas-corner/files/season_rating.json';
 const all_time_rating_request_URL = 'https://x-maf-league.github.io/league-info/thomas-corner/files/all_time_rating.json';
 
-const season_game_counter = 38;
+const season_game_counter = 42;
 const total_game_counter = 53;
 var init_game_counter;
 var limit;
-const update = '12.12';
+const update = '17.12';
 
 var season_table;
 var all_time_table;
@@ -92,6 +92,9 @@ function build_total_rating() {
 }
 
 function build_table(ratingArray, ordering) {
+    var game_limit = (init_game_counter * 0.4).toFixed(0);
+    var valid_players = [];
+    var invalid_players = [];
     ratingArray.forEach(element => {
         element.win_total = element.sherif_win + element.don_win + element.mafia_win + element.citizen_win;
         element.game_total = element.sherif_total + element.don_total + element.mafia_total + element.citizen_total;
@@ -101,10 +104,45 @@ function build_table(ratingArray, ordering) {
         } else {
             var result = 0;
         }
+
+        if (element.sherif_total > 0 && element.sherif_win > 0) {
+            element.sherif_percent = (element.sherif_win * 100 / element.sherif_total).toFixed(1);
+        } else {
+            element.sherif_percent = 0;
+        }
+
+        if (element.don_total > 0 && element.don_win > 0) {
+            element.don_percent = (element.don_win * 100 / element.don_total).toFixed(1);
+        } else {
+            element.don_percent = 0;
+        }
+
+        if (element.mafia_total > 0 && element.mafia_win > 0) {
+            element.mafia_percent = (element.mafia_win * 100 / element.mafia_total).toFixed(1);
+        } else {
+            element.mafia_percent = 0;
+        }
+
+        if (element.citizen_total > 0 && element.citizen_win > 0) {
+            element.citizen_percent = (element.citizen_win * 100 / element.citizen_total).toFixed(1);
+        } else {
+            element.citizen_percent = 0;
+        }
+
         element.result = result;
+
+        if (element.game_total < game_limit) {
+            invalid_players.push(element);
+        } else {
+            element.style = 'valid_player';
+            valid_players.push(element);
+        }
     });
 
-    build_ordered_table(ratingArray, ordering);
+    build_ordered_table(valid_players, ordering);
+    build_ordered_table(invalid_players, ordering);
+
+    ratingArray = valid_players.concat(invalid_players);
 
     return buildHTMLTable(ratingArray);
 }
@@ -143,7 +181,7 @@ function build_ordered_table(ratingArray, ordering) {
             break;
         case 'sher_wins':
             ratingArray.sort(function (a, b) {
-                return b.sherif_win - a.sherif_win;
+                return b.sherif_percent - a.sherif_percent;
             });
             break;
         case 'don_games':
@@ -153,7 +191,7 @@ function build_ordered_table(ratingArray, ordering) {
             break;
         case 'don_wins':
             ratingArray.sort(function (a, b) {
-                return b.don_win - a.don_win;
+                return b.don_percent - a.don_percent;
             });
             break;
         case 'maf_games':
@@ -163,7 +201,7 @@ function build_ordered_table(ratingArray, ordering) {
             break;
         case 'maf_wins':
             ratingArray.sort(function (a, b) {
-                return b.mafia_win - a.mafia_win;
+                return b.mafia_percent - a.mafia_percent;
             });
             break;
         case 'cit_games':
@@ -173,7 +211,7 @@ function build_ordered_table(ratingArray, ordering) {
             break;
         case 'cit_wins':
             ratingArray.sort(function (a, b) {
-                return b.citizen_win - a.citizen_win;
+                return b.citizen_percent - a.citizen_percent;
             });
             break;
         case 'kils':
@@ -216,7 +254,11 @@ function buildHTMLTable(ratingArray) {
     table += get_table_header();
     ratingArray.forEach(function (element, index, array) {
         if (!element.hide) {
-            table += "<tr>";
+            if (element.style) {
+                table += "<tr class='" + element.style + "'>";
+            } else {
+                table += "<tr>";
+            }
             table += "<td>" + (index + i) + "</td>";
             table += "<td>" + element.name + "</td>";
             table += "<td>" + element.game_total + "</td>";
@@ -225,13 +267,13 @@ function buildHTMLTable(ratingArray) {
             table += "<td>" + element.game_points + "</td>";
             table += "<td>" + element.players_points + "</td>";
             table += "<td>" + element.sherif_total + "</td>";
-            table += "<td>" + element.sherif_win + "</td>";
+            table += "<td>" + element.sherif_percent + "</td>";
             table += "<td>" + element.don_total + "</td>";
-            table += "<td>" + element.don_win + "</td>";
+            table += "<td>" + element.don_percent + "</td>";
             table += "<td>" + element.mafia_total + "</td>";
-            table += "<td>" + element.mafia_win + "</td>";
+            table += "<td>" + element.mafia_percent + "</td>";
             table += "<td>" + element.citizen_total + "</td>";
-            table += "<td>" + element.citizen_win + "</td>";
+            table += "<td>" + element.citizen_percent + "</td>";
             table += "<td>" + element.first_kill + "</td>";
             table += "<td>" + element.best_turn + "</td>";
             table += "<td>" + element.score + "</td>";
@@ -256,17 +298,17 @@ function get_table_header() {
         "<td>Player</td>" +
         "<td onclick=orderBy('games');>Games</td>" +
         "<td onclick=orderBy('wins');>Wins</td>" +
-        "<td onclick=orderBy('role_points');>Role poiunts</td>" +
+        "<td onclick=orderBy('role_points');>Role points</td>" +
         "<td onclick=orderBy('game_points');>Game points</td>" +
         "<td onclick=orderBy('players_points');>Player points</td>" +
         "<td onclick=orderBy('sher_games');>Sheriff games</td>" +
-        "<td onclick=orderBy('sher_wins');>Sheriff wins</td>" +
+        "<td onclick=orderBy('sher_wins');>Sheriff wins, %</td>" +
         "<td onclick=orderBy('don_games');>Don games</td>" +
-        "<td onclick=orderBy('don_wins');>Don wins</td>" +
+        "<td onclick=orderBy('don_wins');>Don wins, %</td>" +
         "<td onclick=orderBy('maf_games');>Mafia games</td>" +
-        "<td onclick=orderBy('maf_wins');>Mafia wins</td>" +
+        "<td onclick=orderBy('maf_wins');>Mafia wins, %</td>" +
         "<td onclick=orderBy('cit_games');>Citizen games</td>" +
-        "<td onclick=orderBy('cit_wins');>Citizen wins</td>" +
+        "<td onclick=orderBy('cit_wins');>Citizen wins, %</td>" +
         "<td onclick=orderBy('kils');>First kill</td>" +
         "<td onclick=orderBy('best_moves');>Best move</td>" +
         "<td onclick=orderBy('scores');>Scores</td>" +
