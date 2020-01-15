@@ -1,0 +1,118 @@
+/* Custom fonts */
+@font-face {
+    font-family: Copperplate;
+    src: url(../fonts/Copperplate.otf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.header {
+    height: 64px;
+    width: 100%;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.container .logo {
+    float: left;
+    height: 55px;
+    margin-top: 4px;
+}
+
+/* sub header */
+.menu_wrapper {
+    display: inline-block;
+}
+
+.menu_wrapper ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0px;
+    font-size: 0px;
+    align-items: center;
+    display: flex;
+    height: 64px;
+}
+
+.menu_wrapper li {
+    display: inline-block;
+}
+
+.menu_wrapper li a {
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.menu_wrapper li a:hover {
+    border-bottom: 3px solid white;
+}
+
+.menu_wrapper li img {
+    width: 30px;
+    vertical-align: middle;
+    position: relative;
+    left: 3px;
+}
+/* END sub header */
+/* CONTENT */
+.content {
+    background-color: black;
+}
+
+.content .news {
+    height: 720px;
+    background: url(../images/players/artik.jpg);
+    background-size: cover;
+}
+
+.content .news img {
+    float: left;
+}
+
+.content .news h2 {
+    font-family: Copperplate;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    font-size: 100px;
+}
+
+.content .news .description_box {
+    width: 80%;
+    margin: auto;
+    padding: 150px 0px 0px;
+}
+
+.content .news .description_box .description_wrapper{
+    display: inline-block;
+}
+
+.content .news .description_box .info {
+    padding: 10px 0px 0px 0px;
+    margin: 0px;
+    color: ghostwhite;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 18px;
+    border-top: solid 5px ghostwhite;
+}
+/* END CONTENT */
