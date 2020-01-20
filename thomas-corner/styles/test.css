@@ -116,3 +116,25 @@ body {
     border-top: solid 5px ghostwhite;
 }
 /* END CONTENT */
+
+/* TEMP */
+.rt_temp {
+    float: right;
+}
+
+.rt_temp_table {
+    border: solid 2px white;
+    color: white;
+    margin: auto;
+}
+
+.tr_temp_content h1 {
+    color: red;
+    text-align: center;
+    font-size: 70px;
+    font-family: Mga;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 50px 0px 30px;
+}
+/* END TEMP */
