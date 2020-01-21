@@ -4,13 +4,16 @@ var results = {
             name: 'Со смертью не играй глупец, а то маме расскажу',
             players: [
                 {
-                    nickname: 'Ворон (с)'
+                    nickname: 'Ворон (с)',
+                    total: 0
                 },
                 {
-                    nickname: 'Кошка'
+                    nickname: 'Кошка',
+                    total: 0
                 },
                 {
-                    nickname: 'Жнец'
+                    nickname: 'Жнец',
+                    total: 0
                 }
             ],
             games: [
@@ -60,13 +63,16 @@ var results = {
             name: 'Канье Уэст',
             players: [
                 {
-                    nickname: 'Аврора (с)'
+                    nickname: 'Аврора (с)',
+                    total: 0
                 },
                 {
-                    nickname: 'Yesteday'
+                    nickname: 'Yesteday',
+                    total: 0
                 },
                 {
-                    nickname: 'Юстас'
+                    nickname: 'Юстас',
+                    total: 0
                 }
             ],
             games: [
@@ -116,13 +122,16 @@ var results = {
             name: 'Натуралов здесь не любят',
             players: [
                 {
-                    nickname: 'Шут (с)'
+                    nickname: 'Шут (с)',
+                    total: 0
                 },
                 {
-                    nickname: 'Пиковый Валет'
+                    nickname: 'Пиковый Валет',
+                    total: 0
                 },
                 {
-                    nickname: 'Зодиак'
+                    nickname: 'Зодиак',
+                    total: 0
                 }
             ],
             games: [
@@ -172,13 +181,16 @@ var results = {
             name: 'Moneymakers',
             players: [
                 {
-                    nickname: 'Архи (c)'
+                    nickname: 'Архи (c)',
+                    total: 0
                 },
                 {
-                    nickname: 'Young'
+                    nickname: 'Young',
+                    total: 0
                 },
                 {
-                    nickname: 'Плесень'
+                    nickname: 'Плесень',
+                    total: 0
                 }
             ],
             games: [
@@ -228,13 +240,16 @@ var results = {
             name: 'Спокойной ночи, малыши',
             players: [
                 {
-                    nickname: 'Шарлотта (с)'
+                    nickname: 'Шарлотта (с)',
+                    total: 0
                 },
                 {
-                    nickname: 'Крузенштерн'
+                    nickname: 'Крузенштерн',
+                    total: 0
                 },
                 {
-                    nickname: 'Бильбо'
+                    nickname: 'Бильбо',
+                    total: 0
                 }
             ],
             games: [
@@ -284,13 +299,16 @@ var results = {
             name: 'Расслабься и получай удовольствие',
             players: [
                 {
-                    nickname: 'Тихий (с)'
+                    nickname: 'Тихий (с)',
+                    total: 0
                 },
                 {
-                    nickname: 'Маузер'
+                    nickname: 'Маузер',
+                    total: 0
                 },
                 {
-                    nickname: 'Sky'
+                    nickname: 'Sky',
+                    total: 0
                 }
             ],
             games: [
@@ -340,13 +358,16 @@ var results = {
             name: 'Дружба народов',
             players: [
                 {
-                    nickname: 'Чуха (с)'
+                    nickname: 'Чуха (с)',
+                    total: 0
                 },
                 {
-                    nickname: 'Алиса'
+                    nickname: 'Алиса',
+                    total: 0
                 },
                 {
-                    nickname: 'Лютер'
+                    nickname: 'Лютер',
+                    total: 0
                 }
             ],
             games: [
@@ -396,13 +417,16 @@ var results = {
             name: 'Мы нассым вам прямо в уши, два парниши и Настюша',
             players: [
                 {
-                    nickname: 'Крис (с)'
+                    nickname: 'Крис (с)',
+                    total: 0
                 },
                 {
-                    nickname: 'Remedy'
+                    nickname: 'Remedy',
+                    total: 0
                 },
                 {
-                    nickname: 'Коржик'
+                    nickname: 'Коржик',
+                    total: 0
                 }
             ],
             games: [
@@ -452,13 +476,16 @@ var results = {
             name: 'КИМ Кардашьян',
             players: [
                 {
-                    nickname: 'Киндер'
+                    nickname: 'Киндер (c)',
+                    total: 0
                 },
                 {
-                    nickname: 'Искра'
+                    nickname: 'Искра',
+                    total: 0
                 },
                 {
-                    nickname: 'Мориарти'
+                    nickname: 'Мориарти',
+                    total: 0
                 }
             ],
             games: [
@@ -508,13 +535,16 @@ var results = {
             name: 'Полкило, Ляля и я',
             players: [
                 {
-                    nickname: 'Артик'
+                    nickname: 'Артик (c)',
+                    total: 0
                 },
                 {
-                    nickname: 'Флэш'
+                    nickname: 'Флэш',
+                    total: 0
                 },
                 {
-                    nickname: 'Маг'
+                    nickname: 'Маг',
+                    total: 0
                 }
             ],
             games: [

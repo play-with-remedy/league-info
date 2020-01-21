@@ -4,6 +4,11 @@
     src: url(../fonts/Copperplate.otf);
 }
 
+@font-face {
+    font-family: Mga;
+    src: url(../fonts/Mga.ttf);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -136,5 +141,21 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     margin: 50px 0px 30px;
+}
+
+table .points {
+    text-align: center;
+}
+
+table .team_name {
+    max-width: 20vw;
+}
+
+table .table_header td{
+    text-align: center;
+}
+
+table td {
+    border: solid 1px white;
 }
 /* END TEMP */
