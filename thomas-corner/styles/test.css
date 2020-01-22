@@ -12,7 +12,11 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #222226;
+    /*background-color: #22ba2226;*/
+    background-image: url(../images/tr_temp_background.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .header {
@@ -131,14 +135,15 @@ body {
     border: solid 2px white;
     color: gainsboro;
     margin: auto;
+    background-color: rgba(34, 34, 38, 0.8);
 }
 
-.tr_temp_content {
-    background-color: #222226;
+.rt_temp_content {
+    /*background-color: #222226;*/
 }
 
-.tr_temp_content h1 {
-    color: firebrick;
+.rt_temp_content h1 {
+    color: gainsboro;
     text-align: center;
     font-size: 70px;
     font-family: Mga;
