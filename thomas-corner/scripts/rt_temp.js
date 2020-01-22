@@ -33,8 +33,12 @@ window.onload = function () {
             team.total = 0;
 
             games.forEach(function (game) {
-                if(game.player_id == circle) {
-                    row += '<td class="points">' + game.score + '</td>';
+                if (game.player_id == circle) {
+                    if (game.score != 0) {
+                        row += '<td class="points">' + game.score + '</td>';
+                    } else {
+                        row += '<td></td>';     
+                    }
                     team.players[circle].total += game.score;
                 } else {
                     row += '<td></td>';
