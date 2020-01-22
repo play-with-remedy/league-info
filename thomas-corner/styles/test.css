@@ -12,7 +12,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: #222226;
 }
 
 .header {
@@ -129,12 +129,16 @@ body {
 
 .rt_temp_table {
     border: solid 2px white;
-    color: white;
+    color: gainsboro;
     margin: auto;
 }
 
+.tr_temp_content {
+    background-color: #222226;
+}
+
 .tr_temp_content h1 {
-    color: red;
+    color: firebrick;
     text-align: center;
     font-size: 70px;
     font-family: Mga;
@@ -156,6 +160,6 @@ table .table_header td{
 }
 
 table td {
-    border: solid 1px white;
+    border: solid 1px #777;
 }
 /* END TEMP */
