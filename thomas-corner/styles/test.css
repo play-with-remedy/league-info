@@ -134,7 +134,7 @@ body {
 .rt_temp_table {
     border: solid 2px white;
     color: gainsboro;
-    margin: auto;
+    margin: 0px auto 50px;
     background-color: rgba(34, 34, 38, 0.8);
 }
 
@@ -158,6 +158,9 @@ table .points {
 
 table .team_name {
     max-width: 20vw;
+    font-size: 1.5vw;
+    text-align: center;
+    font-weight: bold;
 }
 
 table .table_header td{
