@@ -1,4 +1,14 @@
+var teams;
+
 window.onload = function () {
+    getSortedTeams();
+    orderBy('total');
+    var table = buildTeams(getTableHeader());
+
+    $('.table').append(table);
+}
+
+function getTableHeader() {
     var table = '<table class="rt_temp_table" cellspacing="3" cellpadding="5">' +
                     '<tr class="table_header">' +
                         '<td>#</td>' +
@@ -17,8 +27,10 @@ window.onload = function () {
                         '<td>Total Player</td>' +
                         '<td>Total Team</td>' +
                     '</tr>';
-    
-    var teams = results.teams;
+    return table;
+}
+
+function buildTeams(table) {
     teams.forEach(function (team, index) {
         for (var circle = 0; circle < 3; circle++) {
             if (circle == 0) {
@@ -28,9 +40,7 @@ window.onload = function () {
             }
 
             row += '<td>' + team.players[circle].nickname + '</td>';
-
             var games = team.games;
-            team.total = 0;
 
             games.forEach(function (game) {
                 if (game.player_id == circle) {
@@ -43,7 +53,6 @@ window.onload = function () {
                 } else {
                     row += '<td></td>';
                 }
-                team.total += game.score;
             });
 
             row += '<td class="points">' + team.players[circle].total + '</td>';
@@ -56,8 +65,25 @@ window.onload = function () {
         }
         table += row;
     });
-
     table += '</table>';
+    return table;
+}
 
-    $('.table').append(table);
+function getSortedTeams() {
+    teams = results.teams;
+    teams.forEach(function (team, index) {
+        for (var circle = 0; circle < 3; circle++) {
+            var games = team.games;
+            team.total = 0;
+            games.forEach(function (game) {
+                team.total += game.score;
+            });
+        }
+    });
+}
+
+function orderBy(props) {
+    teams.sort(function (a, b) {
+        return b[props] - a[props];
+    });
 }

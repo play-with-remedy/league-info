@@ -26,8 +26,8 @@ var results = {
                     score: 21.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 22
                 },
                 {
                     player_id: 0,
@@ -85,8 +85,8 @@ var results = {
                     score: 29
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 1,
+                    score: 27.5
                 },
                 {
                     player_id: 0,
@@ -144,8 +144,8 @@ var results = {
                     score: 25
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 1,
+                    score: 24
                 },
                 {
                     player_id: 0,
@@ -203,8 +203,8 @@ var results = {
                     score: 28
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 1,
+                    score: 27.5
                 },
                 {
                     player_id: 0,
@@ -263,7 +263,7 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 27.5
                 },
                 {
                     player_id: 0,
@@ -321,8 +321,8 @@ var results = {
                     score: 23.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 19
                 },
                 {
                     player_id: 0,
@@ -380,8 +380,8 @@ var results = {
                     score: 32.5,
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 23
                 },
                 {
                     player_id: 0,
@@ -440,7 +440,7 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 30
                 },
                 {
                     player_id: 0,
@@ -498,8 +498,8 @@ var results = {
                     score: 16
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 1,
+                    score: 30
                 },
                 {
                     player_id: 0,
@@ -557,8 +557,8 @@ var results = {
                     score: 16
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 1,
+                    score: 33.5
                 },
                 {
                     player_id: 0,
