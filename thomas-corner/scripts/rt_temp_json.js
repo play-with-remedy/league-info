@@ -31,15 +31,15 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 34.5
                 },
                 {
-                    player_id: 0,
-                    score: 0 
+                    player_id: 2,
+                    score: 26.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 1,
+                    score: 20.5
                 },
                 {
                     player_id: 0,
@@ -89,16 +89,16 @@ var results = {
                     score: 27.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 25
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 21
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 23.5
                 },
                 {
                     player_id: 0,
@@ -148,16 +148,16 @@ var results = {
                     score: 24
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 29.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 29.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 25.5
                 },
                 {
                     player_id: 0,
@@ -207,16 +207,16 @@ var results = {
                     score: 27.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 20.5
+                },
+                {
+                    player_id: 2,
+                    score: 21
                 },
                 {
                     player_id: 0,
-                    score: 0
-                },
-                {
-                    player_id: 0,
-                    score: 0
+                    score: 34
                 },
                 {
                     player_id: 0,
@@ -266,16 +266,16 @@ var results = {
                     score: 27.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 1,
+                    score: 28
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 23.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 21
                 },
                 {
                     player_id: 0,
@@ -326,15 +326,15 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 27
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 1,
+                    score: 18.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 1,
+                    score: 21
                 },
                 {
                     player_id: 0,
@@ -385,15 +385,15 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 24.5
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 22.5
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 19.5
                 },
                 {
                     player_id: 0,
@@ -444,15 +444,15 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 32.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 1,
+                    score: 26.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 25
                 },
                 {
                     player_id: 0,
@@ -503,15 +503,15 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 16.5
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 21.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 22.5
                 },
                 {
                     player_id: 0,
@@ -562,15 +562,15 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 37
+                },
+                {
+                    player_id: 1,
+                    score: 24.5
                 },
                 {
                     player_id: 0,
-                    score: 0
-                },
-                {
-                    player_id: 0,
-                    score: 0
+                    score: 32.5
                 },
                 {
                     player_id: 0,
