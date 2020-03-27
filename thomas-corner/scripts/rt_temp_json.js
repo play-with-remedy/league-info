@@ -157,7 +157,7 @@ var results = {
                 },
                 {
                     player_id: 2,
-                    score: 25.5
+                    score: 26.5
                 },
                 {
                     player_id: 0,
@@ -216,7 +216,7 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 34
+                    score: 36.5
                 },
                 {
                     player_id: 0,
@@ -393,7 +393,7 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 19.5
+                    score: 18
                 },
                 {
                     player_id: 0,
@@ -570,7 +570,7 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 32.5
+                    score: 34
                 },
                 {
                     player_id: 0,
