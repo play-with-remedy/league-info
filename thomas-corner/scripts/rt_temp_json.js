@@ -43,7 +43,7 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 30
                 },
                 {
                     player_id: 0,
@@ -102,7 +102,7 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 33
                 },
                 {
                     player_id: 0,
@@ -161,7 +161,7 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 22.5
                 },
                 {
                     player_id: 0,
@@ -220,7 +220,7 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 24.5
                 },
                 {
                     player_id: 0,
@@ -278,8 +278,8 @@ var results = {
                     score: 21
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 1,
+                    score: 23.5
                 },
                 {
                     player_id: 0,
@@ -299,7 +299,7 @@ var results = {
             name: 'Расслабься и получай удовольствие',
             players: [
                 {
-                    nickname: 'Тихий (с)',
+                    nickname: 'Тихий/Печкин (с)',
                     total: 0
                 },
                 {
@@ -338,7 +338,7 @@ var results = {
                 },
                 {
                     player_id: 0,
-                    score: 0
+                    score: 21.5
                 },
                 {
                     player_id: 0,
@@ -396,8 +396,8 @@ var results = {
                     score: 18
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 1,
+                    score: 15
                 },
                 {
                     player_id: 0,
@@ -455,8 +455,8 @@ var results = {
                     score: 25
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 19
                 },
                 {
                     player_id: 0,
@@ -514,8 +514,8 @@ var results = {
                     score: 22.5
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 20.5
                 },
                 {
                     player_id: 0,
@@ -573,8 +573,8 @@ var results = {
                     score: 34
                 },
                 {
-                    player_id: 0,
-                    score: 0
+                    player_id: 2,
+                    score: 31.5
                 },
                 {
                     player_id: 0,
