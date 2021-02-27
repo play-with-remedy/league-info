@@ -17,7 +17,7 @@ window.onload = function () {
                 "<td><img src='" + PATH_TO_IMAGES + player.image + "' /></td>" +
                 "<td>" + player.name + "</td>" +
                 "<td>" + player.tournaments.length + "</td>" +
-                "<td>" + getPlayerPoints(player) + "</td>" +
+                "<td>" + getPlayerPoints(player) + getLastPoints(player) + "</td>" +
             "</tr>"
         });
 
@@ -45,4 +45,8 @@ function getPlayerPoints(player) {
     });
 
     return points;
+}
+
+function getLastPoints(player) {
+
 }

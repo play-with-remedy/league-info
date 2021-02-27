@@ -574,7 +574,7 @@ var results = {
                 },
                 {
                     player_id: 2,
-                    score: 31.5
+                    score: 31
                 },
                 {
                     player_id: 0,

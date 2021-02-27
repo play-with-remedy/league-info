@@ -83,6 +83,78 @@
                     "points" : 3
                 }
             ]
+        },
+        {
+            "name" : "Зодиак",
+            "image" : "zodiak.jpg",
+            "tournaments" : [
+                {
+                    "title" : "Frozen Throne",
+                    "link" : "",
+                    "place" : 9,
+                    "points" : 3
+                },
+                {
+                    "title" : "Shivering Isles",
+                    "link" : "",
+                    "place" : 13,
+                    "points" : 3
+                },
+                {
+                    "title" : "Maf Battle 2019",
+                    "link" : "",
+                    "place" : 9,
+                    "points" : 3
+                },
+                {
+                    "title" : "Antihype 2",
+                    "link" : "",
+                    "place" : 1,
+                    "points" : 10
+                },
+                {
+                    "title" : "Марафон 24",
+                    "link" : "",
+                    "place" : 9,
+                    "points" : 3
+                }
+            ]
+        },
+        {
+            "name" : "Зодиак",
+            "image" : "zodiak.jpg",
+            "tournaments" : [
+                {
+                    "title" : "Frozen Throne",
+                    "link" : "",
+                    "place" : 9,
+                    "points" : 3
+                },
+                {
+                    "title" : "Shivering Isles",
+                    "link" : "",
+                    "place" : 13,
+                    "points" : 3
+                },
+                {
+                    "title" : "Maf Battle 2019",
+                    "link" : "",
+                    "place" : 9,
+                    "points" : 3
+                },
+                {
+                    "title" : "Antihype 2",
+                    "link" : "",
+                    "place" : 1,
+                    "points" : 10
+                },
+                {
+                    "title" : "Марафон 24",
+                    "link" : "",
+                    "place" : 9,
+                    "points" : 3
+                }
+            ]
         }
     ]
 }
