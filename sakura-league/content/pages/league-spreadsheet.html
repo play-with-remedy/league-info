@@ -1,0 +1,24 @@
+<html data-ng-app="fantasyApp">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Sakura League Spreadsheet</title>
+        <link rel="shortcut icon" href="../../etc/images/sakura-icon.jpg" type="image/x-icon" />
+
+        <link rel="stylesheet" href="../../etc/styles/main.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+        <script type="text/javascript" src="../../etc/scripts/players.json.js"></script>
+        <script type="text/javascript" src="../../etc/scripts/fantasyLeagueController.js"></script>
+    
+    </head>
+    <body data-ng-controller="fantasyController"> 
+        <div class="player-list" data-ng-repeat="player in playerList">
+            <img data-ng-class="{'selected-player': player.isSelected, 'unavailable-player ': player.isUnavailable}" 
+                 data-ng-click="onImageClick(player)" class="player-list_image" src="{{player.imageUrl}}" />
+            <p>{{player.name}} - {{player.rating}}</p>
+        </div>
+        <div class="total-score">
+            <p>{{totalScore}}</p>
+        </div>
+    </body>
+</html>

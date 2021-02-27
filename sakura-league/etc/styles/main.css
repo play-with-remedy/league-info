@@ -1,0 +1,28 @@
+.player-list {
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+}
+
+.player-list_image {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.selected-player {
+  opacity: 0.2;
+  border: solid 3px green;
+}
+
+.unavailable-player {
+    pointer-events: none;
+    cursor: default;
+    border: solid 3px red;
+}
+
+.total-score {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+}
