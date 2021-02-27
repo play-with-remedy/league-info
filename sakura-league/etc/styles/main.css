@@ -15,14 +15,36 @@
   border: solid 3px green;
 }
 
+.selected-player_text {
+    color: green
+  }
+
 .unavailable-player {
     pointer-events: none;
     cursor: default;
     border: solid 3px red;
 }
 
+.unavailable-player_text {
+    color: red;
+}
+
 .total-score {
     display: inline-block;
     font-size: 25px;
     font-weight: bold;
+}
+
+.my-team {
+    text-align: center;
+}
+
+.my-team p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.my-team img {
+    width: 200px;
+    height: 200px;
 }

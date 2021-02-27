@@ -15,10 +15,22 @@
         <div class="player-list" data-ng-repeat="player in playerList">
             <img data-ng-class="{'selected-player': player.isSelected, 'unavailable-player ': player.isUnavailable}" 
                  data-ng-click="onImageClick(player)" class="player-list_image" src="{{player.imageUrl}}" />
-            <p>{{player.name}} - {{player.rating}}</p>
+            <p data-ng-class="{'selected-player_text': player.isSelected, 'unavailable-player_text': player.isUnavailable}">
+                {{player.name}} - {{player.rating}}
+            </p>
         </div>
         <div class="total-score">
-            <p>{{totalScore}}</p>
+            <p>Total Score: {{totalScore}}</p>
+        </div>
+
+        <div class="my-team">
+            <p>Your Team</p>
+            <div class="player-list" data-ng-repeat="player in playerList">
+                <div data-ng-if="player.isSelected">
+                    <img class="player-list_image" src="{{player.imageUrl}}" />
+                    <p>{{player.name}} - {{player.rating}}</p>
+                </div>
+            </div>
         </div>
     </body>
 </html>
