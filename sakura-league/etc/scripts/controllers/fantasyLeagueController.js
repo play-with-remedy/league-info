@@ -1,8 +1,13 @@
 var fantasyApp = angular.module("fantasyApp", []);
 
 fantasyApp.controller("fantasyController", function ($scope) {
+    $scope.playerList = [];
     $scope.totalScore = 8000;
-    $scope.playerList = json.players;
+    json.teams.forEach(team => {
+        team.players.forEach(player => {
+            $scope.playerList.push(player);
+        });
+    });
     
     $scope.onImageClick = function (player) {
         if (player.isSelected) {
@@ -13,11 +18,11 @@ fantasyApp.controller("fantasyController", function ($scope) {
             $scope.totalScore -= player.rating;
         }
 
-        $scope.playerList.forEach(element => {
-            if (element.rating > $scope.totalScore && !element.isSelected) {
-                element.isUnavailable = true;
+        $scope.playerList.forEach(player => {
+            if (player.rating > $scope.totalScore && !player.isSelected) {
+                player.isUnavailable = true;
             } else {
-                element.isUnavailable = false;
+                player.isUnavailable = false;
             }
         });
     }

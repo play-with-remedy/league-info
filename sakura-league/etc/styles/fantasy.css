@@ -1,3 +1,8 @@
+.player-list-wrapper {
+    width: 50%;
+    float: left;
+}
+
 .player-list {
     display: inline-block;
     padding: 10px;
@@ -8,10 +13,11 @@
     width: 100px;
     height: 100px;
     cursor: pointer;
+    border-radius: 90%;
+    border: solid 3px white;
 }
 
 .selected-player {
-  opacity: 0.2;
   border: solid 3px green;
 }
 
@@ -37,6 +43,8 @@
 
 .my-team {
     text-align: center;
+    display: inline-block;
+    width: 50%;
 }
 
 .my-team p {
