@@ -3,50 +3,59 @@ var fantasyApp = angular.module("fantasyApp", []);
 fantasyApp.controller("fantasyController", function ($scope) {
     $scope.playerList = [];
     $scope.totalScore = 20000;
-    let teamCounter = 0;
-    json.teams.forEach(team => {
-        team.players.forEach(player => {
-            $scope.playerList.push(player);
+    let localStorageTeam = JSON.parse(localStorage.getItem("team"));
+    let localStoragePlayers = JSON.parse(localStorage.getItem("players"));
+    let teamCounter = localStorageTeam ? localStorageTeam.length : 0;
+    if (localStoragePlayers) {
+        $scope.playerList = localStoragePlayers;
+        $scope.playerList.forEach(player => {
+            if (player.isSelected) {
+                $scope.totalScore -= parseInt(player.rating.replace(/ /g,''));
+            }
         });
-    });
+    } else {
+        json.teams.forEach(team => {
+            team.players.forEach(player => {
+                $scope.playerList.push(player);
+            });
+        });
+    }
 
-    var compare = madness();
-    $scope.playerList.sort(compare);
+    $scope.playerList.sort(function (a, b) {
+        return parseInt(b.rating.replace(/ /g,'')) - parseInt(a.rating.replace(/ /g,''));
+    });
     
     $scope.onImageClick = function (player) {
         if (player.isSelected) {
             player.isSelected = false;
-            $scope.totalScore += player.rating;
+            $scope.totalScore += parseInt(player.rating.replace(/ /g,''));
             teamCounter--;
         } else {
             player.isSelected = true;
-            $scope.totalScore -= player.rating;
+            $scope.totalScore -= parseInt(player.rating.replace(/ /g,''));
             teamCounter++;
+            
         }
 
+        resetLocalStorage();
+    };
+
+    $scope.removePlayerFromTeam = function (player) {
+        player.isSelected = false;
+        $scope.totalScore += parseInt(player.rating.replace(/ /g,''));
+        teamCounter--;
+        resetLocalStorage();
+    }
+
+    function resetLocalStorage () {
         $scope.playerList.forEach(player => {
-            if ((player.rating > $scope.totalScore || teamCounter === 4) && !player.isSelected) {
+            if ((parseInt(player.rating.replace(/ /g,'')) > $scope.totalScore || teamCounter === 4) && !player.isSelected) {
                 player.isUnavailable = true;
             } else {
                 player.isUnavailable = false;
             }
         });
-    };
 
-    function putToCache(elem, cache){
-        if(cache.indexOf(elem) != -1){
-            return;
-        }
-        var i = Math.floor(Math.random()*(cache.length + 1));
-        cache.splice(i, 0, elem);
-    }
-    
-    function madness(){
-        var cache = [];
-        return function(a, b){
-            putToCache(a, cache);
-            putToCache(b, cache);
-            return cache.indexOf(b) - cache.indexOf(a);
-        }
+        localStorage.setItem('players', JSON.stringify($scope.playerList));
     }
 });

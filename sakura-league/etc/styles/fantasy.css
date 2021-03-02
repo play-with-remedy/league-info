@@ -41,6 +41,21 @@ p {
     width: 150px;
 }
 
+.player-list p {
+    line-height: 1.5;
+}
+
+.player-list-wrapper > p {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin: 50px 0 80px;
+}
+
+.player-list_total-score {
+
+}
+
 .player-list img {
     width: 100px;
     height: 100px;
@@ -79,17 +94,17 @@ p {
     width: 40%;
 }
 
-.my-team > p,
-.player-list-wrapper > p {
+.my-team_title {
     font-size: 40px;
     font-weight: bold;
     color: white;
-    margin: 50px 0 80px;
+    margin: 50px 0 40px;
 }
 
 .my-team img {
     width: 200px;
     height: 200px;
+    cursor: pointer;
 }
 
 .team-list {
@@ -110,4 +125,5 @@ p {
     font-size: 25px;
     font-weight: bold;
     color: white;
+    line-height: 1.5;
 }
