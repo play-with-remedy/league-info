@@ -245,7 +245,7 @@ var json = {
                 {
                     nickname: 'BonAqua',
                     rating: 5000,
-                    imageUrl: '../../etc/images/players/BonAqua.jpg',
+                    imageUrl: '../../etc/images/players/Bonaqua.jpg',
                     game_1: 0,
                     game_2: 0, 
                     game_3: 0,
