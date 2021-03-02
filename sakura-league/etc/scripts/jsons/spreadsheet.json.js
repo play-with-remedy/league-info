@@ -6,7 +6,7 @@ var json = {
                 {
                     nickname: 'Маг',
                     imageUrl: '../../etc/images/players/Mag.jpg',
-                    rating: 2000,
+                    rating: 6500,
                     game_1: 0,
                     game_2: 0, 
                     game_3: 0,
@@ -26,7 +26,7 @@ var json = {
             players: [
                 {
                     nickname: 'Жнец',
-                    rating: 2000,
+                    rating: 9000,
                     imageUrl: '../../etc/images/players/Jnec.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -34,7 +34,7 @@ var json = {
                 },
                 {
                     nickname: 'Бон',
-                    rating: 5000,
+                    rating: 7000,
                     imageUrl: '../../etc/images/players/Bon.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -47,7 +47,7 @@ var json = {
             players: [
                 {
                     nickname: 'Мишок',
-                    rating: 5000,
+                    rating: 2000,
                     imageUrl: '../../etc/images/players/Mishok.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -55,7 +55,7 @@ var json = {
                 },
                 {
                     nickname: 'Таварес',
-                    rating: 5000,
+                    rating: 2000,
                     imageUrl: '../../etc/images/players/Tavares.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -68,7 +68,7 @@ var json = {
             players: [
                 {
                     nickname: 'Артик',
-                    rating: 5000,
+                    rating: 12000,
                     imageUrl: '../../etc/images/players/Artik.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -76,7 +76,7 @@ var json = {
                 },
                 {
                     nickname: 'Ylitko',
-                    rating: 5000,
+                    rating: 8000,
                     imageUrl: '../../etc/images/players/Ylitko.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -89,7 +89,7 @@ var json = {
             players: [
                 {
                     nickname: 'Remedy',
-                    rating: 5000,
+                    rating: 9000,
                     imageUrl: '../../etc/images/players/Remedy.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -97,7 +97,7 @@ var json = {
                 },
                 {
                     nickname: 'Криста',
-                    rating: 2000,
+                    rating: 4000,
                     imageUrl: '../../etc/images/players/Krista.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -110,7 +110,7 @@ var json = {
             players: [
                 {
                     nickname: 'Sky',
-                    rating: 5000,
+                    rating: 6500,
                     imageUrl: '../../etc/images/players/Sky.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -118,7 +118,7 @@ var json = {
                 },
                 {
                     nickname: 'Самаритянка',
-                    rating: 5000,
+                    rating: 4000,
                     imageUrl: '../../etc/images/players/Samka.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -131,7 +131,7 @@ var json = {
             players: [
                 {
                     nickname: 'NLIP',
-                    rating: 5000,
+                    rating: 10000,
                     imageUrl: '../../etc/images/players/Nlip.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -139,7 +139,7 @@ var json = {
                 },
                 {
                     nickname: 'Весна',
-                    rating: 5000,
+                    rating: 2000,
                     imageUrl: '../../etc/images/players/Vesna.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -152,7 +152,7 @@ var json = {
             players: [
                 {
                     nickname: 'Мориарти',
-                    rating: 5000,
+                    rating: 8000,
                     imageUrl: '../../etc/images/players/Moriarty.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -160,7 +160,7 @@ var json = {
                 },
                 {
                     nickname: 'Озб',
-                    rating: 5000,
+                    rating: 8000,
                     imageUrl: '../../etc/images/players/Ozb.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -173,7 +173,7 @@ var json = {
             players: [
                 {
                     nickname: 'Флэш',
-                    rating: 5000,
+                    rating: 11000,
                     imageUrl: '../../etc/images/players/Flash.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -181,7 +181,7 @@ var json = {
                 },
                 {
                     nickname: 'Сергеевна',
-                    rating: 5000,
+                    rating: 1500,
                     imageUrl: '../../etc/images/players/Sergeevna.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -190,11 +190,11 @@ var json = {
             ],
         },
         {
-            name: '',
+            name: 'Взрывные котята',
             players: [
                 {
                     nickname: 'Крис',
-                    rating: 5000,
+                    rating: 11000,
                     imageUrl: '../../etc/images/players/Kris.jpeg',
                     game_1: 0,
                     game_2: 0, 
@@ -202,7 +202,7 @@ var json = {
                 },
                 {
                     nickname: 'Интерактив',
-                    rating: 5000,
+                    rating: 2000,
                     imageUrl: '../../etc/images/players/Interaktiv.jpeg',
                     game_1: 0,
                     game_2: 0, 
@@ -215,7 +215,7 @@ var json = {
             players: [
                 {
                     nickname: 'Наполеон',
-                    rating: 5000,
+                    rating: 10000,
                     imageUrl: '../../etc/images/players/Napoleon.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -223,7 +223,7 @@ var json = {
                 },
                 {
                     nickname: 'Фифа',
-                    rating: 5000,
+                    rating: 4000,
                     imageUrl: '../../etc/images/players/Fifa.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -236,7 +236,7 @@ var json = {
             players: [
                 {
                     nickname: 'Natsy',
-                    rating: 5000,
+                    rating: 1000,
                     imageUrl: '../../etc/images/players/Natsy.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -244,7 +244,7 @@ var json = {
                 },
                 {
                     nickname: 'BonAqua',
-                    rating: 5000,
+                    rating: 1000,
                     imageUrl: '../../etc/images/players/Bonaqua.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -257,7 +257,7 @@ var json = {
             players: [
                 {
                     nickname: 'Юрия',
-                    rating: 5000,
+                    rating: 1500,
                     imageUrl: '../../etc/images/players/Yria.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -265,7 +265,7 @@ var json = {
                 },
                 {
                     nickname: 'Нефелим',
-                    rating: 5000,
+                    rating: 2000,
                     imageUrl: '../../etc/images/players/Nefelim.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -278,7 +278,7 @@ var json = {
             players: [
                 {
                     nickname: 'Yoda',
-                    rating: 5000,
+                    rating: 2500,
                     imageUrl: '../../etc/images/players/Yoda.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -286,7 +286,7 @@ var json = {
                 },
                 {
                     nickname: 'Лекса',
-                    rating: 5000,
+                    rating: 2000,
                     imageUrl: '../../etc/images/players/Leksa.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -299,7 +299,7 @@ var json = {
             players: [
                 {
                     nickname: 'DOCtoR',
-                    rating: 5000,
+                    rating: 7000,
                     imageUrl: '../../etc/images/players/Doctor.jpg',
                     game_1: 0,
                     game_2: 0, 
@@ -307,7 +307,7 @@ var json = {
                 },
                 {
                     nickname: 'Крестный отец',
-                    rating: 5000,
+                    rating: 6000,
                     imageUrl: '../../etc/images/players/Ko.jpg',
                     game_1: 0,
                     game_2: 0, 

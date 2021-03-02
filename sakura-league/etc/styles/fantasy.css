@@ -46,11 +46,11 @@ p {
     height: 100px;
     cursor: pointer;
     border-radius: 90%;
-    border: solid 3px white;
+    border: solid 2px white;
 }
 
 .selected-player {
-  border: solid 3px green !important;
+  border: solid 2px green !important;
 }
 
 .selected-player_text {
@@ -60,7 +60,7 @@ p {
 .unavailable-player {
     pointer-events: none;
     cursor: default;
-    border: solid 3px red !important;
+    border: solid 2px red !important;
 }
 
 .unavailable-player_text {
