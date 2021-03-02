@@ -64,7 +64,7 @@ var json = {
             ],
         },
         {
-            name: 'Лысеющие кабаны',
+            name: 'Лысеющий кабан',
             players: [
                 {
                     nickname: 'Артик',
@@ -117,7 +117,7 @@ var json = {
                     game_3: 0,
                 },
                 {
-                    nickname: 'Саморитянка',
+                    nickname: 'Самаритянка',
                     rating: 5000,
                     imageUrl: '../../etc/images/players/Samka.jpg',
                     game_1: 0,
@@ -195,7 +195,7 @@ var json = {
                 {
                     nickname: 'Крис',
                     rating: 5000,
-                    imageUrl: '../../etc/images/players/Kris.jpg',
+                    imageUrl: '../../etc/images/players/Kris.jpeg',
                     game_1: 0,
                     game_2: 0, 
                     game_3: 0,
@@ -203,7 +203,7 @@ var json = {
                 {
                     nickname: 'Интерактив',
                     rating: 5000,
-                    imageUrl: '../../etc/images/players/Interaktiv.jpg',
+                    imageUrl: '../../etc/images/players/Interaktiv.jpeg',
                     game_1: 0,
                     game_2: 0, 
                     game_3: 0,
@@ -211,7 +211,7 @@ var json = {
             ],
         },
         {
-            name: '',
+            name: 'Apple pay',
             players: [
                 {
                     nickname: 'Наполеон',

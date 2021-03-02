@@ -1,5 +1,5 @@
 .player-list-wrapper {
-    width: 50%;
+    width: 60%;
     float: left;
 }
 
@@ -44,7 +44,7 @@
 .my-team {
     text-align: center;
     display: inline-block;
-    width: 50%;
+    width: 35%;
 }
 
 .my-team p {
