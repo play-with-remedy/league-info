@@ -3,14 +3,14 @@ var fantasyApp = angular.module("fantasyApp", []);
 fantasyApp.controller("fantasyController", function ($scope) {
     $scope.playerList = [];
     $scope.totalScore = 20000;
-    let localStorageTeam = JSON.parse(localStorage.getItem("team"));
+    let teamCounter = 0;
     let localStoragePlayers = JSON.parse(localStorage.getItem("players"));
-    let teamCounter = localStorageTeam ? localStorageTeam.length : 0;
     if (localStoragePlayers) {
         $scope.playerList = localStoragePlayers;
         $scope.playerList.forEach(player => {
             if (player.isSelected) {
                 $scope.totalScore -= parseInt(player.rating.replace(/ /g,''));
+                teamCounter++;
             }
         });
     } else {
