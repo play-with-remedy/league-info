@@ -4,11 +4,6 @@
     src: url(../fonts/Copperplate.otf);
 }
 
-@font-face {
-    font-family: Mga;
-    src: url(../fonts/Mga.ttf);
-}
-
 body {
     margin: 0;
     padding: 0;
