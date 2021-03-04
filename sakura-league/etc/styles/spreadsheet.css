@@ -1,7 +1,12 @@
 /* Custom fonts */
 @font-face {
     font-family: Copperplate;
-    src: url(../fonts/Copperplate.otf);
+    src: url(../fonts/Mga.ttf);
+}
+
+@font-face {
+    font-family: Mga;
+    src: url(../fonts/Mga.ttf);
 }
 
 body {
