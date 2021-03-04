@@ -64,7 +64,7 @@ var json = {
             ],
         },
         {
-            name: 'Лысеющий кабан',
+            name: 'Тимон и Пумба',
             players: [
                 {
                     nickname: 'Артик',
@@ -148,7 +148,7 @@ var json = {
             ],
         },
         {
-            name: '',
+            name: 'Куличи без названия',
             players: [
                 {
                     nickname: 'Мориарти',

@@ -1,40 +1,43 @@
 <html data-ng-app="spreadsheetApp"></html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
         <title>Sakura League Spreadsheet</title>
         <link rel="shortcut icon" href="../../etc/images/sakura-icon.jpg" type="image/x-icon" />
+
+        <link rel="stylesheet" href="../../etc/styles/spreadsheet.css" />
+
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
         <script type="text/javascript" src="../../etc/scripts/jsons/spreadsheet.json.js"></script>
         <script type="text/javascript" src="../../etc/scripts/controllers/spreadsheetController.js"></script>
     </head>
 
     <body data-ng-controller="spreadsheetController">
-            <div class="player-list" data-ng-repeat="player in playerList">
-            </div>
-            <table class="rt_temp_table" cellspacing="3" cellpadding="5">
-                <tr class="table_header">
-                    <td>#</td><td>Team</td><td>Players</td><td>Round 1</td><td>Round 2</td><td>Round 3</td>
-                    <td>Total Player</td><td>Total Team</td>
+        <h1>Sakura League</h1>
+        <table class="sakura_table" cellspacing="3" cellpadding="5">
+            <tr class="table_header">
+                <td>#</td><td>Team</td><td>Players</td><td>Round 1</td><td>Round 2</td><td>Round 3</td>
+                <td>Total Player</td><td>Total Team</td>
+            </tr>
+            <tbody data-ng-repeat="team in teamList">
+                <tr >
+                    <td rowspan="3">{{$index + 1}}</td>
+                    <td rowspan="3" class="team_name">{{team.name}}</td>
+                    <td class="player_name">{{team.players[0].nickname}}</td>
+                    <td class="points">{{team.players[0].game_1}}</td>
+                    <td class="points">{{team.players[0].game_2}}</td>
+                    <td class="points">{{team.players[0].game_3}}</td>
+                    <td class="points">{{team.players[0].total}}</td>
+                    <td rowspan="3" class="points">{{team.total}}</td>
                 </tr>
-                <tbody data-ng-repeat="team in teamList">
-                    <tr >
-                        <td rowspan="3">{{$index + 1}}</td>
-                        <td rowspan="3" class="team_name">{{team.name}}</td>
-                        <td>{{team.players[0].nickname}}</td>
-                        <td class="points">{{team.players[0].game_1}}</td>
-                        <td class="points">{{team.players[0].game_2}}</td>
-                        <td class="points">{{team.players[0].game_3}}</td>
-                        <td class="points">{{team.players[0].total}}</td>
-                        <td rowspan="3" class="points">{{team.total}}</td>
-                    </tr>
-                    <tr>
-                        <td>{{team.players[1].nickname}}</td>
-                        <td class="points">{{team.players[1].game_1}}</td>
-                        <td class="points">{{team.players[1].game_2}}</td>
-                        <td class="points">{{team.players[1].game_3}}</td>
-                        <td class="points">{{team.players[1].total}}</td>
-                    </tr>
-                </tbody>
-            </table>
+                <tr>
+                    <td>{{team.players[1].nickname}}</td>
+                    <td class="points">{{team.players[1].game_1}}</td>
+                    <td class="points">{{team.players[1].game_2}}</td>
+                    <td class="points">{{team.players[1].game_3}}</td>
+                    <td class="points">{{team.players[1].total}}</td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>

@@ -1,0 +1,64 @@
+/* Custom fonts */
+@font-face {
+    font-family: Copperplate;
+    src: url(../fonts/Copperplate.otf);
+}
+
+@font-face {
+    font-family: Mga;
+    src: url(../fonts/Mga.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/main-background.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.sakura_table {
+    border: solid 2px white;
+    color: gainsboro;
+    margin: 0px auto 50px;
+    background-color: rgba(34, 34, 38, 0.8);
+}
+
+h1 {
+    color: azure;
+    text-align: center;
+    font-size: 70px;
+    font-family: Mga;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 50px 0px 30px;
+    text-shadow: 1px 1px 2px black, 0 0 1em red;
+}
+
+table .points {
+    text-align: center;
+}
+
+table .team_name {
+    max-width: 20vw;
+    width: 20vw;
+    font-size: 1.5vw;
+    text-align: center;
+    font-weight: bold;
+}
+
+table .player_name {
+    width: 10vw;
+    font-size: 18px;
+}
+
+table .table_header td{
+    text-align: center;
+}
+
+table td {
+    border: solid 1px #777;
+    text-align: center;
+}
+/* END TEMP */
