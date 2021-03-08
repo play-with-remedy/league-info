@@ -17,13 +17,17 @@
                 <div class="player-list-wrapper">
                     <p>Fantasy players</p>
                     <div class="player-list" data-ng-repeat="player in playerList">
-                        <img data-ng-class="{'selected-player': player.isSelected, 'unavailable-player ': player.isUnavailable}"
-                            data-ng-click="onImageClick(player)" src="{{player.imageUrl}}" />
+                        <img data-ng-click="onImageClick(player)" src="{{player.imageUrl}}" />
                         <p data-ng-class="{'selected-player_text': player.isSelected, 'unavailable-player_text': player.isUnavailable}">
                             {{player.nickname}}
                             </br>
                             {{player.rating}}
                         </p>
+                        <div data-ng-class="{'selected-player': player.isSelected}"
+                             data-ng-click="onImageClick(player)">
+                        </div>
+                        <div data-ng-class="{'unavailable-player': player.isUnavailable}">
+                        </div>
                     </div>
                 </div>
 

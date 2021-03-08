@@ -26,18 +26,19 @@ fantasyApp.controller("fantasyController", function ($scope) {
     });
     
     $scope.onImageClick = function (player) {
-        if (player.isSelected) {
-            player.isSelected = false;
-            $scope.totalScore += parseInt(player.rating.replace(/ /g,''));
-            teamCounter--;
-        } else {
-            player.isSelected = true;
-            $scope.totalScore -= parseInt(player.rating.replace(/ /g,''));
-            teamCounter++;
-            
-        }
+        if (!player.isUnavailable) {
+            if (player.isSelected) {
+                player.isSelected = false;
+                $scope.totalScore += parseInt(player.rating.replace(/ /g,''));
+                teamCounter--;
+            } else {
+                player.isSelected = true;
+                $scope.totalScore -= parseInt(player.rating.replace(/ /g,''));
+                teamCounter++;
+            }
 
-        resetLocalStorage();
+            resetLocalStorage();
+        }
     };
 
     $scope.removePlayerFromTeam = function (player) {
