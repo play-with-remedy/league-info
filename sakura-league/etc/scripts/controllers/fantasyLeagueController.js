@@ -2,7 +2,7 @@ var fantasyApp = angular.module("fantasyApp", []);
 
 fantasyApp.controller("fantasyController", function ($scope) {
     $scope.playerList = [];
-    $scope.totalScore = 20000;
+    $scope.totalScore = 28000;
     let teamCounter = 0;
     let localStoragePlayers = JSON.parse(localStorage.getItem("players"));
     if (localStoragePlayers) {
