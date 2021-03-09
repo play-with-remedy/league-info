@@ -77,7 +77,7 @@ p {
     border: solid 2px red;
     box-sizing: border-box;
     border-radius: 90%;
-    background-image: url(https://i.dlpng.com/static/png/6658483_preview.png);
+    background-image: url(../images/red-cross.png);
     background-size: 70px;
     background-repeat: no-repeat;
     background-position: center;
@@ -102,7 +102,7 @@ p {
     border: solid 2px limegreen;
     box-sizing: border-box;
     border-radius: 90%;
-    background-image: url(https://www.freeiconspng.com/thumbs/checkmark-png/checkmark-symbol-png-background-12.png);
+    background-image: url(../images/green-check.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;

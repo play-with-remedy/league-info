@@ -50,7 +50,11 @@ fantasyApp.controller("fantasyController", function ($scope) {
 
     function resetLocalStorage () {
         $scope.playerList.forEach(player => {
-            if ((parseInt(player.rating.replace(/ /g,'')) > $scope.totalScore || teamCounter === 4) && !player.isSelected) {
+            const playerRating = parseInt(player.rating.replace(/ /g,''));
+            if (((teamCounter === 1 && (playerRating + 10000) > $scope.totalScore) ||
+                  (teamCounter === 2 && (playerRating + 5000) > $scope.totalScore) ||
+                  (teamCounter === 3 && playerRating > $scope.totalScore) ||
+                  teamCounter === 4) && !player.isSelected) {
                 player.isUnavailable = true;
             } else {
                 player.isUnavailable = false;
