@@ -18,6 +18,10 @@ body {
     background-size: cover;
 }
 
+.fantasy-body {
+    background-image: url('https://pm1.narvii.com/6877/7b0d4136d6edc1c9635783ed4b11816243b051eer1-1500-900v2_hq.jpg');
+}
+
 .sakura_table {
     border: solid 2px white;
     color: gainsboro;
@@ -46,6 +50,19 @@ table .team_name {
     font-size: 1.5vw;
     text-align: center;
     font-weight: bold;
+}
+
+table .team_image {
+    width: 10vw;
+    font-size: 1.5vw;
+    text-align: left;
+}
+
+table .team_image img {
+    width: 60px;
+    border-radius: 90%;
+    vertical-align: middle;
+    margin: 5px 20px;
 }
 
 table .player_name {

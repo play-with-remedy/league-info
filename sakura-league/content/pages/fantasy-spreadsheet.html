@@ -1,0 +1,49 @@
+<html data-ng-app="fantasyApp">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Sakura League Spreadsheet</title>
+        <link rel="shortcut icon" href="../../etc/images/sakura-icon.jpg" type="image/x-icon" />
+
+        <link rel="stylesheet" href="../../etc/styles/spreadsheet.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+        <script type="text/javascript" src="../../etc/scripts/jsons/spreadsheet.json.js"></script>
+        <script type="text/javascript" src="../../etc/scripts/jsons/fantasyTeams.json.js"></script>
+        <script type="text/javascript" src="../../etc/scripts/controllers/fantasySpreadsheetController.js"></script>
+    </head>
+    <body class="fantasy-body" data-ng-controller="fantasySpreadsheetController">
+        <div>
+        <h1>Sakura Fantasy</h1>
+            <table class="sakura_table" cellspacing="3" cellpadding="5">
+                <tr class="table_header">
+                    <td>#</td><td>Player</td><td colspan="4">Team</td><td>Total Score</td>
+                </tr>
+                <tbody data-ng-repeat="player in fantasySpreadsheet">
+                    <tr>
+                        <td>{{$index + 1}}</td>
+                        <td class="team_name">{{player.name}}</td>
+                        <td class="team_image">
+                            <img src="{{player.team[0].imageUrl}}" />
+                            {{player.team[0].score}}
+                        </td>
+                        <td class="team_image">
+                            <img src="{{player.team[1].imageUrl}}" />
+                            {{player.team[1].score}}
+                        </td>
+                        <td class="team_image">
+                            <img src="{{player.team[2].imageUrl}}" />
+                            {{player.team[2].score}}
+                        </td>
+                        <td class="team_image">
+                            <img src="{{player.team[3].imageUrl}}" />
+                            {{player.team[3].score}}
+                        </td>
+                        <td class="team_name">{{player.team[0].score + player.team[1].score + 
+                                                player.team[2].score + player.team[3].score}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
