@@ -40,6 +40,10 @@ h1 {
     text-shadow: 1px 1px 2px black, 0 0 1em red;
 }
 
+.fantasy-body h1 {
+    text-shadow: 1px 1px 2px black, 0 0 1em blue;
+}
+
 table .points {
     text-align: center;
 }
@@ -53,16 +57,21 @@ table .team_name {
 }
 
 table .team_image {
+    width: 12vw;
+    font-size: 1.5vw;
+}
+
+table .team_total {
     width: 10vw;
     font-size: 1.5vw;
-    text-align: left;
+    text-align: center;
 }
 
 table .team_image img {
     width: 60px;
     border-radius: 90%;
     vertical-align: middle;
-    margin: 5px 20px;
+    margin: 5px 20px 5px 10px;
 }
 
 table .player_name {

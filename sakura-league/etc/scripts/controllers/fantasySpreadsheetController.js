@@ -15,11 +15,15 @@ fantasyApp.controller("fantasySpreadsheetController", function ($scope) {
                     playerRow.team.push(
                         { 
                             imageUrl: teamPlayer.imageUrl,
+                            rating: teamPlayer.rating,
                             score: (teamPlayer.game_1 + teamPlayer.game_2 + teamPlayer.game_3),
                         }
                     );
                 }
             });
+        });
+        playerRow.team.sort(function (a, b) {
+            return parseInt(b.rating.replace(/ /g,'')) - parseInt(a.rating.replace(/ /g,''));
         });
         $scope.fantasySpreadsheet.push(playerRow);
     });
