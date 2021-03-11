@@ -14,8 +14,7 @@
     <body class="fantasy-body" data-ng-controller="fantasySpreadsheetController">
         <div>
         <h1>Sakura Fantasy</h1>
-            <p class="filter" data-ng-if="filteredBy">Filter: <span>{{filteredBy}}</span>
-                <img data-ng-click="clearFilter()" src="../../etc/images/red-cross.png">
+            <p class="filter" data-ng-if="filteredBy">Filter: <span data-ng-click="clearFilter()">{{filteredBy}}</span>
             </p>
             <table class="sakura_table" cellspacing="3" cellpadding="5">
                 <tr class="table_header">
