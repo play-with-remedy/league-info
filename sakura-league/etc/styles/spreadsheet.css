@@ -40,6 +40,24 @@ h1 {
     text-shadow: 1px 1px 2px black, 0 0 1em red;
 }
 
+.filter {
+    font-size: 30px;
+    font-family: Mga;
+    font-weight: bold;
+    color: azure;
+    margin: 15px 85px;
+}
+
+.filter span {
+    color: cyan;
+}
+
+.filter img {
+    vertical-align: middle;
+    width: 18px;
+    cursor: pointer;
+}
+
 .fantasy-body h1 {
     text-shadow: 1px 1px 2px black, 0 0 1em blue;
 }
@@ -71,6 +89,7 @@ table .team_image img {
     border-radius: 90%;
     vertical-align: middle;
     margin: 5px 20px 5px 10px;
+    cursor: pointer;
 }
 
 table .player_name {
