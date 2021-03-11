@@ -16,7 +16,7 @@
         <h1>Sakura Fantasy</h1>
             <table class="sakura_table" cellspacing="3" cellpadding="5">
                 <tr class="table_header">
-                    <td>#</td><td>Player</td><td colspan="4">Team</td><td>Total Score</td>
+                    <td>#</td><td>Player</td><td colspan="4">Team</td><td>Total Score</td><td>Average Score</td>
                 </tr>
                 <tbody data-ng-repeat="player in fantasySpreadsheet">
                     <tr>
@@ -24,22 +24,23 @@
                         <td class="team_name">{{player.name}}</td>
                         <td class="team_image">
                             <img src="{{player.team[0].imageUrl}}" />
-                            {{player.team[0].score}}
+                            {{player.team[0].score}} ({{player.team[0].evenings}})
                         </td>
                         <td class="team_image">
                             <img src="{{player.team[1].imageUrl}}" />
-                            {{player.team[1].score}}
+                            {{player.team[1].score}} ({{player.team[1].evenings}})
                         </td>
                         <td class="team_image">
                             <img src="{{player.team[2].imageUrl}}" />
-                            {{player.team[2].score}}
+                            {{player.team[2].score}} ({{player.team[2].evenings}})
                         </td>
                         <td class="team_image">
                             <img src="{{player.team[3].imageUrl}}" />
-                            {{player.team[3].score}}
+                            {{player.team[3].score}} ({{player.team[3].evenings}})
                         </td>
-                        <td class="team_total">{{player.team[0].score + player.team[1].score +
-                                                player.team[2].score + player.team[3].score}}
+                        <td class="team_total">{{player.total}}
+                        </td>
+                        <td class="team_total">{{player.average}}
                         </td>
                     </tr>
                 </tbody>

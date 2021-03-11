@@ -57,12 +57,11 @@ table .team_name {
 }
 
 table .team_image {
-    width: 12vw;
+    width: 13vw;
     font-size: 1.5vw;
 }
 
 table .team_total {
-    width: 10vw;
     font-size: 1.5vw;
     text-align: center;
 }
