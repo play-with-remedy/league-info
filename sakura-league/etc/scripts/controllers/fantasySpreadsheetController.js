@@ -71,4 +71,10 @@ fantasyApp.controller("fantasySpreadsheetController", function ($scope) {
         $scope.filteredFantasySpreadsheet = fantasySpreadsheet;
         $scope.filteredBy = '';
     };
+
+    $scope.applySorting = function(param) {
+        $scope.filteredFantasySpreadsheet.sort(function (a, b) {
+            return b[param] - a[param];
+        });
+    };
 });

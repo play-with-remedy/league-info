@@ -93,6 +93,7 @@ table .player_name {
 
 table .table_header td{
     text-align: center;
+    cursor: pointer;
 }
 
 table td {

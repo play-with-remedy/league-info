@@ -18,7 +18,9 @@
             </p>
             <table class="sakura_table" cellspacing="3" cellpadding="5">
                 <tr class="table_header">
-                    <td>#</td><td>Player</td><td colspan="4">Team</td><td>Total Score</td><td>Average Score</td>
+                    <td>#</td><td>Player</td><td colspan="4">Team</td>
+                    <td data-ng-click="applySorting('total')">Total Score</td>
+                    <td data-ng-click="applySorting('average')" >Average Score</td>
                 </tr>
                 <tbody data-ng-repeat="player in filteredFantasySpreadsheet">
                     <tr>
