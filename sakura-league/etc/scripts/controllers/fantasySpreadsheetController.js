@@ -38,7 +38,7 @@ fantasyApp.controller("fantasySpreadsheetController", function ($scope) {
         }
 
         if (playerRow.evenings !== 0) {
-            playerRow.average = playerRow.total / playerRow.evenings;
+            playerRow.average = (playerRow.total / playerRow.evenings).toFixed(3);
         }
 
         playerRow.team.sort(function (a, b) {
@@ -46,6 +46,10 @@ fantasyApp.controller("fantasySpreadsheetController", function ($scope) {
         });
         fantasySpreadsheet.push(playerRow);
         $scope.filteredFantasySpreadsheet = fantasySpreadsheet;
+    });
+
+    $scope.filteredFantasySpreadsheet.sort(function (a, b) {
+        return b.average - a.average;
     });
 
     $scope.applyFilter = function(name) {

@@ -62,15 +62,14 @@ table .points {
 }
 
 table .team_name {
-    max-width: 20vw;
-    width: 20vw;
+    width: 19vw;
     font-size: 1.5vw;
     text-align: center;
     font-weight: bold;
 }
 
 table .team_image {
-    width: 13vw;
+    width: 15vw;
     font-size: 1.5vw;
 }
 

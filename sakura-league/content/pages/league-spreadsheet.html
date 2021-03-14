@@ -16,7 +16,7 @@
         <table class="sakura_table" cellspacing="3" cellpadding="5">
             <tr class="table_header">
                 <td>#</td><td>Team</td><td>Players</td><td>Round 1</td><td>Round 2</td><td>Round 3</td>
-                <td>Total Player</td><td>Total Team</td>
+                <td>Total Player</td><td>Total Team</td><td>Average Team</td>
             </tr>
             <tbody data-ng-repeat="team in teamList">
                 <tr >
@@ -28,6 +28,7 @@
                     <td class="points">{{team.players[0].game_3}}</td>
                     <td class="points">{{team.players[0].total}}</td>
                     <td rowspan="3" class="points">{{team.total}}</td>
+                    <td rowspan="3" class="points">{{team.average}}</td>
                 </tr>
                 <tr>
                     <td>{{team.players[1].nickname}}</td>
