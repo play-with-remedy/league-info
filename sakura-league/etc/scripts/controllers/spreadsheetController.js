@@ -19,4 +19,10 @@ spreadsheetApp.controller("spreadsheetController", function ($scope) {
     $scope.teamList.sort(function (a, b) {
         return b.average - a.average;
     });
+
+    $scope.applySorting = function(param) {
+        $scope.teamList.sort(function (a, b) {
+            return b[param] - a[param];
+        });
+    };
 });

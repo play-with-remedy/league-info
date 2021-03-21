@@ -16,7 +16,8 @@
         <table class="sakura_table" cellspacing="3" cellpadding="5">
             <tr class="table_header">
                 <td>#</td><td>Team</td><td>Players</td><td>Round 1</td><td>Round 2</td><td>Round 3</td>
-                <td>Total Player</td><td>Total Team</td><td>Average Team</td>
+                <td>Total Player</td><td data-ng-click="applySorting('total')">Total Team</td>
+                <td data-ng-click="applySorting('average')">Average Team</td>
             </tr>
             <tbody data-ng-repeat="team in teamList">
                 <tr >
