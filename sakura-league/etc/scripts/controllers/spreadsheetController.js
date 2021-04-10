@@ -13,7 +13,7 @@ spreadsheetApp.controller("spreadsheetController", function ($scope) {
             if (player.game_3 !== 0) evenings++;
         });
 
-        element.average = evenings !== 0 ? element.total / evenings : 0;
+        element.average = evenings !== 0 ? (element.total / evenings).toFixed(3) : 0;
     });
 
     $scope.teamList.sort(function (a, b) {
