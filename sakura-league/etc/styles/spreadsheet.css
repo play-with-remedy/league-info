@@ -9,6 +9,11 @@
     src: url(../fonts/Mga.ttf);
 }
 
+@font-face {
+    font-family: Special Elite;
+    src: url(../fonts/SpecialElite-Regular.ttf);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -71,6 +76,7 @@ table .team_name {
 table .team_image {
     width: 15vw;
     font-size: 1.5vw;
+    text-align: justify;
 }
 
 table .team_total {
@@ -100,4 +106,46 @@ table td {
     border: solid 1px #777;
     text-align: center;
 }
-/* END TEMP */
+
+.mvp-team_wrapper {
+    text-align: center;
+}
+
+.mvp-team_wrapper p {
+    color: white;
+    font-size: 20px;
+}
+
+.mvp-team p:first-of-type {
+    font-family: Special Elite;
+    font-size: 23px;
+    color: deepskyblue;
+    text-shadow: 1px 1px 2px black, 0 0 1em mediumblue;
+}
+
+.mvp-logo_wrapper {
+    display: inline-block;
+}
+
+.mvp-logo_wrapper p {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.mvp-logo {
+    width: 200px;
+    margin: 0 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.mvp-team {
+    display: inline-block;
+    margin: 50px 20px 10px;
+}
+
+.mvp-team img {
+    border-radius: 90%;
+    width: 100px;
+    cursor: pointer;
+}

@@ -48,6 +48,8 @@ fantasyApp.controller("fantasySpreadsheetController", function ($scope) {
         $scope.filteredFantasySpreadsheet = fantasySpreadsheet;
     });
 
+    calculateBestTeam();
+
     $scope.filteredFantasySpreadsheet.sort(function (a, b) {
         return b.average - a.average;
     });
@@ -77,4 +79,38 @@ fantasyApp.controller("fantasySpreadsheetController", function ($scope) {
             return b[param] - a[param];
         });
     };
+
+    function calculateBestTeam() {
+        let playerFantasyList = [];
+        let sum = 28000;
+        teams.forEach(team => {
+            team.players.forEach(player => {
+                player.total = player.game_1 + player.game_2 + player.game_3;
+                player.evenings = 0;
+                if (player.game_1 !== 0) player.evenings++;
+                if (player.game_2 !== 0) player.evenings++;
+                if (player.game_3 !== 0) player.evenings++;
+                player.average = player.evenings !== 0 ? (player.total / player.evenings).toFixed(2) : 0;
+                playerFantasyList.push(player);
+            });
+        });
+        playerFantasyList.sort(function (a, b) {
+            return b.average - a.average;
+        });
+
+        $scope.mvpList = [];
+        $scope.mvpListTotal = 0;
+        let mvpListevenings = 0;
+        playerFantasyList.forEach(player => {
+            const rating = parseInt(player.rating.replace(/ /g,''));
+            if ((sum -rating) >= 0) {
+                sum -= rating;
+                $scope.mvpList.push(player);
+                $scope.mvpListTotal += player.total;
+                mvpListevenings += player.evenings;
+            }
+        });
+
+        $scope.mvpListAverage = $scope.mvpListTotal / mvpListevenings;
+    }
 });

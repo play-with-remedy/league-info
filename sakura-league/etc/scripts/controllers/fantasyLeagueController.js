@@ -2,10 +2,10 @@ var fantasyApp = angular.module("fantasyApp", []);
 
 fantasyApp.controller("fantasyController", function ($scope) {
     const endDate = moment('March 14, 2021');
+
     if (!moment().isBefore(endDate)) {
         window.location.href = 'fantasy-spreadsheet.html';
     }
-
 
     $scope.playerList = [];
     $scope.totalScore = 28000;
