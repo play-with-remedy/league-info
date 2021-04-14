@@ -4,7 +4,7 @@ spreadsheetApp.controller("spreadsheetController", function ($scope) {
     $scope.teamList = json.teams;
     buildTeamTable();
     buildPlayerTable();
-    $scope.isTeamList = window.location.hash === '#teams';
+    $scope.isTeamList = !(window.location.hash === '#players');
 
     $scope.applySorting = function(param) {
         if ($scope.isTeamList) {
