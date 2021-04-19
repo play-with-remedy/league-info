@@ -103,7 +103,7 @@ fantasyApp.controller("fantasySpreadsheetController", function ($scope) {
         let mvpListevenings = 0;
         playerFantasyList.forEach(player => {
             const rating = parseInt(player.rating.replace(/ /g,''));
-            if ((sum -rating) >= 0) {
+            if ((sum - rating) >= 0) {
                 sum -= rating;
                 $scope.mvpList.push(player);
                 $scope.mvpListTotal += player.total;
