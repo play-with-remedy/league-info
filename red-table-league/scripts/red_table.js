@@ -366,7 +366,7 @@ var results = {
                     total: 0
                 },
                 {
-                    nickname: 'Лютер',
+                    nickname: 'Лютер / Интерактив',
                     total: 0
                 }
             ],
