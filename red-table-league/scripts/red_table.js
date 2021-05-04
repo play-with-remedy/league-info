@@ -4,11 +4,11 @@ var results = {
             name: 'Со смертью не играй глупец, а то маме расскажу',
             players: [
                 {
-                    nickname: 'Ворон (с)',
+                    nickname: 'Ворон (с) / Наполеон',
                     total: 0
                 },
                 {
-                    nickname: 'Кошка',
+                    nickname: 'Кошка / Озб',
                     total: 0
                 },
                 {
@@ -63,7 +63,7 @@ var results = {
             name: 'Канье Уэст',
             players: [
                 {
-                    nickname: 'Аврора (с)',
+                    nickname: 'Аврора (с) / awd2',
                     total: 0
                 },
                 {
@@ -126,7 +126,7 @@ var results = {
                     total: 0
                 },
                 {
-                    nickname: 'Пиковый Валет',
+                    nickname: 'Пиковый Валет / Есаул',
                     total: 0
                 },
                 {
@@ -299,7 +299,7 @@ var results = {
             name: 'Расслабься и получай удовольствие',
             players: [
                 {
-                    nickname: 'Тихий/Печкин (с)',
+                    nickname: 'Тихий (с) / Печкин / NLIP',
                     total: 0
                 },
                 {
@@ -476,7 +476,7 @@ var results = {
             name: 'КИМ Кардашьян',
             players: [
                 {
-                    nickname: 'Киндер (c)',
+                    nickname: 'Киндер (c) / ВБ',
                     total: 0
                 },
                 {
