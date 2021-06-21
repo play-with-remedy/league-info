@@ -303,7 +303,7 @@ var json = {
                     imageUrl: '../../etc/images/players/Doctor.jpg',
                     game_1: 30.5,
                     game_2: 27.5,
-                    game_3: 0,
+                    game_3: 27.5,
                 },
                 {
                     nickname: 'КO',
@@ -311,7 +311,7 @@ var json = {
                     imageUrl: '../../etc/images/players/Ko.jpg',
                     game_1: 26,
                     game_2: 22.5,
-                    game_3: 27.5,
+                    game_3: 0,
                 },
             ],
         },
