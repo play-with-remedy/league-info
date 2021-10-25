@@ -25,9 +25,10 @@ spreadsheetApp.controller("spreadsheetController", function ($scope) {
                 player.total = player.game_1 + player.game_2 + player.game_3;
                 element.total =  element.total ? element.total + player.total : player.total;
 
-                if (player.game_1 !== 0) evenings++;
-                if (player.game_2 !== 0) evenings++;
-                if (player.game_3 !== 0) evenings++;
+                // if (player.game_1 !== 0) evenings++;
+                // if (player.game_2 !== 0) evenings++;
+                // if (player.game_3 !== 0) evenings++;
+                evenings = +3;
             });
 
             element.average = evenings !== 0 ? (element.total / evenings).toFixed(3) : 0;
@@ -44,9 +45,10 @@ spreadsheetApp.controller("spreadsheetController", function ($scope) {
             team.players.forEach(player => {
                 player.total = player.game_1 + player.game_2 + player.game_3;
                 player.evenings = 0;
-                if (player.game_1 !== 0) player.evenings++;
-                if (player.game_2 !== 0) player.evenings++;
-                if (player.game_3 !== 0) player.evenings++;
+                // if (player.game_1 !== 0) player.evenings++;
+                // if (player.game_2 !== 0) player.evenings++;
+                // if (player.game_3 !== 0) player.evenings++;
+                player.evenings = +3;
                 player.average = player.evenings !== 0 ? (player.total / player.evenings).toFixed(2) : 0;
                 $scope.playerList.push(player);
             });

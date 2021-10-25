@@ -20,10 +20,10 @@ fantasyApp.controller("fantasySpreadsheetController", function ($scope) {
                         score: (teamPlayer.game_1 + teamPlayer.game_2 + teamPlayer.game_3),
                     };
 
-                    let evenings = 0;
-                    if (teamPlayer.game_1 !== 0)  evenings++;
-                    if (teamPlayer.game_2 !== 0)  evenings++;
-                    if (teamPlayer.game_3 !== 0)  evenings++;
+                    let evenings = 3;
+                    // if (teamPlayer.game_1 !== 0)  evenings++;
+                    // if (teamPlayer.game_2 !== 0)  evenings++;
+                    // if (teamPlayer.game_3 !== 0)  evenings++;
 
                     team.evenings = evenings;
 
@@ -86,11 +86,11 @@ fantasyApp.controller("fantasySpreadsheetController", function ($scope) {
         teams.forEach(team => {
             team.players.forEach(player => {
                 player.total = player.game_1 + player.game_2 + player.game_3;
-                player.evenings = 0;
-                if (player.game_1 !== 0) player.evenings++;
-                if (player.game_2 !== 0) player.evenings++;
-                if (player.game_3 !== 0) player.evenings++;
-                player.average = player.evenings !== 0 ? (player.total / player.evenings).toFixed(2) : 0;
+                player.evenings = 3;
+                // if (player.game_1 !== 0) player.evenings++;
+                // if (player.game_2 !== 0) player.evenings++;
+                // if (player.game_3 !== 0) player.evenings++;
+                // player.average = player.evenings !== 0 ? (player.total / player.evenings).toFixed(2) : 0;
                 playerFantasyList.push(player);
             });
         });
