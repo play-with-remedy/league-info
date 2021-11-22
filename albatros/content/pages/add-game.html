@@ -1,0 +1,51 @@
+<html data-ng-app="fantasyApp">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Sakura Fantasy Spreadsheet</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/exceljs@1.12.1/dist/exceljs.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="../../etc/scripts/controllers/gameController.js"></script>
+    </head>
+    <body data-ng-controller="gameController" data-ng-init="init()">
+        <input type="file" onchange="angular.element(this).scope().test(this)">
+        <div class="navigation_wrapper">
+            <div class="navigation" data-ng-click="showCompany()">
+                <p>Компании</p>
+            </div>
+            <div class="navigation" data-ng-click="showProduct()">
+                <p>Продукты</p>
+            </div>
+        </div>
+        <div class="items_wrapper">
+            <div data-ng-repeat="company in itemList">
+                {{company}}
+            </div>
+        </div>
+    </body>
+    <style>
+        input {
+            display: block;
+        }
+
+        .navigation_wrapper {
+            float: left
+        }
+
+        .navigation {
+            border: solid 1px black;
+            width: fit-content;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .items_wrapper {
+            display: inline-block;
+            padding: 8px;
+        }
+    </style>
+</html>
