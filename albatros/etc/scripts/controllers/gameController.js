@@ -1,62 +1,66 @@
 var fantasyApp = angular.module("fantasyApp", [])
 
 fantasyApp.controller("gameController", function ($scope) {
-  let companyList = [];
-  let rowObject;
+  let companyObjectList = [];
+  let productObjectList = [];
   let path = "https://play-with-remedy.github.io/league-info/albatros/etc/files/otgruzka_2021.xlsm";
   
   $scope.init = function () {
-    fetch(path)
-      .then((response) => {
-        alert('s');
-      })
-      .then((data) => {
-        console.log(data);
+    $scope.isLoaded = false;
+    let req = new XMLHttpRequest();
+    req.open("GET", path, true);
+    req.responseType = 'arraybuffer';
+
+    req.onload = function (e) {
+      const arraybuffer = req.response;
+      const data = new Uint8Array(arraybuffer);
+      const arr = new Array();
+
+      for(var i = 0; i != data.length; ++i)  {
+        arr[i] = String.fromCharCode(data[i]);
+      }
+      const bstr = arr.join("");
+
+      /* Call XLSX */
+      var workbook = XLSX.read(bstr, {type:"binary"});
+      const sheetName = workbook.SheetNames[0];
+      const xslmObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+
+      xslmObject.forEach(element => {
+        const otg_date = element['дата отгр'];
+        const date = otg_date ? otg_date.split(' ')[1] : undefined;
+        const company = Object.values(element)[1];
+        let total = parseInt(element['Итого']);
+
+        let sameElement = companyObjectList.find( object => object.name === company);
+        if (sameElement) {
+          total += sameElement.total;
+        }
+
+        if (company && total && date && !sameElement) {
+          companyObjectList.push({ name: company, total, month: date});
+        }
+
+        if (otg_date === 'ИТОГО') {
+          for (const [key, value] of Object.entries(element)) {
+            if (key !== 'дата отгр') productObjectList.push({name: key, total: parseInt(value.replace(/,/g, ''))});
+          }
+        }
       });
-  };
 
-  $scope.test = function (input) {
-      const file = input.files[0];
-      $scope.parseExcel(file);
-  };
-
-  $scope.parseExcel = function(file) {
-      const reader = new FileReader();
-  
-      reader.onload = function(e) {
-          const data = e.target.result;
-          const workbook = XLSX.read(data, {
-              type: 'binary'
-          });
-  
-          const sheetName = workbook.SheetNames[0];
-          const xslmObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
-          rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName], { header: 1 })[0];
-
-          xslmObject.forEach(element => {
-            const c = Object.values(element)[1];
-            if (c)
-            companyList.push(c);
-          });
-          companyList.splice(-1);
-          companyList = uniq = [...new Set(companyList)];
-          
-      };
-  
-      reader.onerror = function(ex) {
-        console.log(ex);
-      };
-  
-      reader.readAsBinaryString(file);
-    };
-
-    $scope.showCompany = function () {
-      $scope.itemList = companyList;
+      $scope.isLoaded = true;
+      $scope.$digest();
     }
 
-    $scope.showProduct = function () {
-      rowObject.splice(0, 2);
-      rowObject.splice(-2);
-      $scope.itemList = uniq = [...new Set(rowObject)];;
-    }
+    req.send();
+
+  };
+
+  $scope.showCompany = function () {
+    $scope.itemList = companyObjectList;
+  }
+
+  $scope.showProduct = function () {
+    $scope.itemList = productObjectList;
+  }
 });
