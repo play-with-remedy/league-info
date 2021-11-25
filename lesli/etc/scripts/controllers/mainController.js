@@ -1,9 +1,9 @@
 var fantasyApp = angular.module("fantasyApp", [])
 
-fantasyApp.controller("gameController", function ($scope) {
+fantasyApp.controller("mainController", function ($scope) {
   let companyObjectList = [];
   let productObjectList = [];
-  let path = "https://play-with-remedy.github.io/league-info/albatros/etc/files/otgruzka_2021.xlsm";
+  let path = "https://play-with-remedy.github.io/league-info/lesli/etc/files/otgruzka_2021.xlsm";
   
   $scope.init = function () {
     $scope.isLoaded = false;
