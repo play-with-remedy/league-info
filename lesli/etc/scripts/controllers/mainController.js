@@ -27,25 +27,34 @@ fantasyApp.controller("mainController", function ($scope) {
       const sheetName = workbook.SheetNames[0];
       const xslmObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
 
+      let products = xslmObject.find( object => object['дата отгр'] === 'ИТОГО');
+      for (const [key, value] of Object.entries(products)) {
+        if (key !== 'дата отгр') productObjectList.push({name: key, total: 0});
+      }
+
       xslmObject.forEach(element => {
         const otg_date = element['дата отгр'];
         const date = otg_date ? otg_date.split(' ')[1] : undefined;
+
+        for (const [key, value] of Object.entries(element)) {
+          let product = productObjectList.find(object => object.name === key);
+          if (date && product) {
+            product[date] = product[date] ? product[date] + parseInt(value) : parseInt(value);
+            product.total = product.total + parseInt(value);
+          }
+        }
+
         const company = Object.values(element)[1];
         let total = parseInt(element['Итого']);
 
         let sameElement = companyObjectList.find( object => object.name === company);
         if (sameElement) {
-          total += sameElement.total;
+          sameElement[date] = sameElement[date] ? sameElement[date] + total : total;
+          sameElement.total += total;
         }
 
         if (company && total && date && !sameElement) {
-          companyObjectList.push({ name: company, total, month: date});
-        }
-
-        if (otg_date === 'ИТОГО') {
-          for (const [key, value] of Object.entries(element)) {
-            if (key !== 'дата отгр') productObjectList.push({name: key, total: parseInt(value.replace(/,/g, ''))});
-          }
+          companyObjectList.push({ name: company, [date]: total, total});
         }
       });
 
