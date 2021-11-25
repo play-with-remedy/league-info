@@ -7,6 +7,7 @@ fantasyApp.controller("mainController", function ($scope) {
   
   $scope.init = function () {
     $scope.isLoaded = false;
+    $scope.activeTab = 'company';
     let req = new XMLHttpRequest();
     req.open("GET", path, true);
     req.responseType = 'arraybuffer';
@@ -48,6 +49,7 @@ fantasyApp.controller("mainController", function ($scope) {
         }
       });
 
+      $scope.showCompany();
       $scope.isLoaded = true;
       $scope.$digest();
     }
@@ -57,10 +59,12 @@ fantasyApp.controller("mainController", function ($scope) {
   };
 
   $scope.showCompany = function () {
+    $scope.activeTab = 'company';
     $scope.itemList = companyObjectList;
   }
 
   $scope.showProduct = function () {
+    $scope.activeTab = 'product';
     $scope.itemList = productObjectList;
   }
 });
