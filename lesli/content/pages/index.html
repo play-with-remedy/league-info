@@ -8,6 +8,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/exceljs@1.12.1/dist/exceljs.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="../../etc/scripts/controllers/mainController.js"></script>
     </head>
@@ -23,7 +24,7 @@
                 <div data-ng-class="{'active': activeTab === 'product'}" class="navigation" data-ng-click="showProduct()">
                     <p>Продукты</p>
                 </div>
-                <div class="navigation inactive">
+                <div data-ng-class="{'active': activeTab === 'stats'}" class="navigation" data-ng-click="showStats()">
                     <p>Статистика</p>
                 </div>
                 <div class="navigation inactive">
@@ -39,13 +40,13 @@
                     <p>Обновление</p>
                 </div>
             </div>
-            <div data-ng-if="itemList" class="items_wrapper">
+            <div data-ng-if="itemList && (activeTab === 'company' || activeTab === 'product')" class="items_wrapper">
                 <div>
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th data-ng-click="orderByField='name'; reverseSort = !reverseSort">Компания</th>
+                                <th data-ng-click="orderByField='name'; reverseSort = !reverseSort">{{title}}</th>
                                 <th data-ng-click="orderByField='Jan'; reverseSort = !reverseSort">Jan</th>
                                 <th data-ng-click="orderByField='Feb'; reverseSort = !reverseSort">Feb</th>
                                 <th data-ng-click="orderByField='Mar'; reverseSort = !reverseSort">Mar</th>
@@ -81,6 +82,7 @@
                     </table>
                 </div>
             </div>
+            <div data-ng-show="activeTab === 'stats'" id="chartContainer"></div>
         </div>
     </body>
     <style>
@@ -122,8 +124,9 @@
         }
 
         .items_wrapper {
-            display: inline-block;
             width: 86%;
+            display: grid;
+            margin: auto;
         }
 
         .items_wrapper div {
@@ -273,6 +276,10 @@
             50% {
                 transform: scale(1.5);
             }
+        }
+
+        .canvasjs-chart-credit {
+            display: none;
         }
     </style>
 </html>

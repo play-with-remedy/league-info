@@ -27,7 +27,7 @@ fantasyApp.controller("mainController", function ($scope) {
       const sheetName = workbook.SheetNames[0];
       const xslmObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
 
-      let products = xslmObject.find( object => object['дата отгр'] === 'ИТОГО');
+      let products = xslmObject.find(object => object['дата отгр'] === 'ИТОГО');
       for (const [key, value] of Object.entries(products)) {
         if (key !== 'дата отгр') productObjectList.push({name: key, total: 0});
       }
@@ -47,7 +47,7 @@ fantasyApp.controller("mainController", function ($scope) {
         const company = Object.values(element)[1];
         let total = parseInt(element['Итого']);
 
-        let sameElement = companyObjectList.find( object => object.name === company);
+        let sameElement = companyObjectList.find(object => object.name === company);
         if (sameElement) {
           sameElement[date] = sameElement[date] ? sameElement[date] + total : total;
           sameElement.total += total;
@@ -69,11 +69,64 @@ fantasyApp.controller("mainController", function ($scope) {
 
   $scope.showCompany = function () {
     $scope.activeTab = 'company';
+    $scope.title = "Компания";
     $scope.itemList = companyObjectList;
-  }
+  };
 
   $scope.showProduct = function () {
     $scope.activeTab = 'product';
+    $scope.title = "Продукт";
     $scope.itemList = productObjectList;
-  }
+  };
+
+  $scope.showStats = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      width: 900,
+      heught: 450,
+      title:{
+        text: "Статистика"
+      },
+      axisX:{  
+//Try Changing to MMMM
+        valueFormatString: "MMM"
+      },
+
+      axisY: {
+              valueFormatString: "0.0#"
+      },
+      
+      data: [
+        {        
+          type: "line",
+          lineThickness: 1,
+          dataPoints: [
+            { x: new Date(2021,0), y: $scope.sum(productObjectList, 'Jan') },
+            { x: new Date(2021,1), y: $scope.sum(productObjectList, 'Feb') },
+            { x: new Date(2021,2), y: $scope.sum(productObjectList, 'Mar') },
+            { x: new Date(2021,3), y: $scope.sum(productObjectList, 'Apr') },
+            { x: new Date(2021,4), y: $scope.sum(productObjectList, 'May') },
+            { x: new Date(2021,5), y: $scope.sum(productObjectList, 'Jun') },
+            { x: new Date(2021,6), y: $scope.sum(productObjectList, 'Jul') },
+            { x: new Date(2021,7), y: $scope.sum(productObjectList, 'Aug') },
+            { x: new Date(2021,8), y: $scope.sum(productObjectList, 'Sep') },
+            { x: new Date(2021,9), y: $scope.sum(productObjectList, 'Oct') },
+            { x: new Date(2021,10), y: $scope.sum(productObjectList, 'Nov') },
+            { x: new Date(2021,11), y: $scope.sum(productObjectList, 'Dec') }
+          ]
+        }    
+      ]
+    });
+
+    chart.render();
+    $scope.activeTab = 'stats';
+
+  };
+
+  $scope.sum = function(items, prop){
+    return items.reduce( function(a, b) {
+        const t = b[prop] ? b[prop] : 0;
+        return a + t;
+    }, 0);
+  };
 });
