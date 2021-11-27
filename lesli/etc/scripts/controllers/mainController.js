@@ -133,45 +133,38 @@ fantasyApp.controller("mainController", function ($scope) {
   };
 
   $scope.showStats = function () {
-    var chart = new CanvasJS.Chart("chartContainer",
-    {
-      width: 900,
-      heught: 450,
-      title:{
-        text: "Статистика"
-      },
-      axisX:{
-        valueFormatString: "MMM"
-      },
-
-      axisY: {
-              valueFormatString: "0.0#"
-      },
-      
-      data: [
-        {        
-          type: "line",
-          lineThickness: 1,
-          dataPoints: [
-            { x: new Date(2021,0), y: $scope.sum(productObjectList, 'Jan') },
-            { x: new Date(2021,1), y: $scope.sum(productObjectList, 'Feb') },
-            { x: new Date(2021,2), y: $scope.sum(productObjectList, 'Mar') },
-            { x: new Date(2021,3), y: $scope.sum(productObjectList, 'Apr') },
-            { x: new Date(2021,4), y: $scope.sum(productObjectList, 'May') },
-            { x: new Date(2021,5), y: $scope.sum(productObjectList, 'Jun') },
-            { x: new Date(2021,6), y: $scope.sum(productObjectList, 'Jul') },
-            { x: new Date(2021,7), y: $scope.sum(productObjectList, 'Aug') },
-            { x: new Date(2021,8), y: $scope.sum(productObjectList, 'Sep') },
-            { x: new Date(2021,9), y: $scope.sum(productObjectList, 'Oct') },
-            { x: new Date(2021,10), y: $scope.sum(productObjectList, 'Nov') },
-            { x: new Date(2021,11), y: $scope.sum(productObjectList, 'Dec') }
-          ]
-        }    
-      ]
-    });
-
-    chart.render();
     $scope.activeTab = 'stats';
+    
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Месяц', 'Товар, кг'],
+        ['Jan',  $scope.sum(productObjectList, 'Jan')],
+        ['Feb',  $scope.sum(productObjectList, 'Feb')],
+        ['Mar',  $scope.sum(productObjectList, 'Mar')],
+        ['Apr',  $scope.sum(productObjectList, 'Apr')],
+        ['May',  $scope.sum(productObjectList, 'May')],
+        ['Jun',  $scope.sum(productObjectList, 'Jun')],
+        ['Jul',  $scope.sum(productObjectList, 'Jul')],
+        ['Aug',  $scope.sum(productObjectList, 'Aug')],
+        ['Sep',  $scope.sum(productObjectList, 'Sep')],
+        ['Oct',  $scope.sum(productObjectList, 'Oct')],
+        ['Now',  $scope.sum(productObjectList, 'Nov')],
+        ['Dec',  $scope.sum(productObjectList, 'Dec')],
+      ]);
+
+      var options = {
+        title: 'Company Performance',
+        curveType: 'line',
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
   };
 
   $scope.sum = function(items, prop){

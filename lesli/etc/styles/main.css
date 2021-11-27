@@ -51,3 +51,10 @@ body {
 .items_wrapper div {
     margin: 10px;
 }
+
+.curveChart {
+    width: 86%;
+    height: 600px;
+    display: flex;
+    margin: auto;
+}
