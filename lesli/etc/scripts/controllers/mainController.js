@@ -2,6 +2,9 @@ const fantasyApp = angular.module("fantasyApp", [])
 
 fantasyApp.controller("mainController", function ($scope) {
   const path = "https://play-with-remedy.github.io/league-info/lesli/etc/files/otgruzka_2021.xlsm";
+  const path1 = "https://play-with-remedy.github.io/league-info/lesli/etc/files/otgruzka_2020.xlsm";
+  const path2 = "https://play-with-remedy.github.io/league-info/lesli/etc/files/otgruzka_2019.xlsm";
+
 
   let companyObjectList = [];
   let productObjectList = [];
@@ -11,6 +14,7 @@ fantasyApp.controller("mainController", function ($scope) {
     $scope.activeTab = 'company';
     $scope.isDescOrder = true;
     $scope.currentOrderName;
+    $scope.quantity = 500;
 
     let xmlHttpRequest = new XMLHttpRequest();
     xmlHttpRequest.open("GET", path, true);
@@ -86,9 +90,20 @@ fantasyApp.controller("mainController", function ($scope) {
   $scope.showCompany = function () {
     $scope.currentOrderName = null;
     $scope.activeTab = 'company';
+    $scope.quantity = 500;
     $scope.title = "Компания";
     $scope.itemList = companyObjectList;
   };
+
+  $scope.showTopCompany = function () {
+    $scope.currentOrderName = null;
+    $scope.activeTab = 'topCompany';
+    $scope.title = "Компания";
+    $scope.quantity = 10;
+    $scope.isDescOrder = true;
+    $scope.orderByField('total');
+    $scope.itemList = companyObjectList;
+  }
 
   $scope.showProduct = function () {
     $scope.currentOrderName = null;
@@ -103,11 +118,11 @@ fantasyApp.controller("mainController", function ($scope) {
     }
     $scope.currentOrderName = field;
 
-    if ($scope.activeTab === 'product') {
+    if ($scope.activeTab === 'product' || $scope.activeTab === 'topProduct') {
       productObjectList.sort(function (a, b) {
         return sort(a, b);
       });
-    } else if ($scope.activeTab === 'company') {
+    } else if ($scope.activeTab === 'company' || $scope.activeTab === 'topCompany') {
       companyObjectList.sort(function (a, b) {
           return sort(a, b);
       });

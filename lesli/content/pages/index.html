@@ -30,7 +30,7 @@
                 <div data-ng-class="{'active': activeTab === 'stats'}" class="navigation" data-ng-click="showStats()">
                     <p>Статистика</p>
                 </div>
-                <div class="navigation inactive">
+                <div data-ng-class="{'active': activeTab === 'topCompany'}" class="navigation" data-ng-click="showTopCompany()">
                     <p>Топ 10 Клиентов</p>
                 </div>
                 <div class="navigation inactive">
@@ -43,7 +43,7 @@
                     <p>Обновление</p>
                 </div>
             </div>
-            <div data-ng-if="activeTab === 'company' || activeTab === 'product'" class="items_wrapper">
+            <div data-ng-if="activeTab !== 'stats'" class="items_wrapper">
                 <div>
                     <table class="table">
                         <thead>
@@ -107,7 +107,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tr data-ng-repeat="object in itemList">
+                        <tr data-ng-repeat="object in itemList | limitTo:quantity">
                             <td>{{$index + 1}}</td>
                             <td>{{object.name}}</td>
                             <td>{{object.Jan}}</td>
