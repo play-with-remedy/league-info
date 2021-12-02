@@ -1,91 +1,128 @@
 const fantasyApp = angular.module("fantasyApp", [])
 
-fantasyApp.controller("mainController", function ($scope) {
-  const path = "https://play-with-remedy.github.io/league-info/lesli/etc/files/otgruzka_2021.xlsm";
-  const path1 = "https://play-with-remedy.github.io/league-info/lesli/etc/files/otgruzka_2020.xlsm";
-  const path2 = "https://play-with-remedy.github.io/league-info/lesli/etc/files/otgruzka_2019.xlsm";
-
-
+fantasyApp.controller("mainController", function ($scope, $q) {
   let companyObjectList = [];
-  let productObjectList = [];
-  let xslmObject;
+  let productObjectMap = {};
+  let xslmObjects = [];
+
+  $scope.items = [
+    { id: 1, name: 'foo' },
+    { id: 2, name: 'bar' },
+    { id: 3, name: 'blah' }
+  ];
   
   $scope.init = function () {
     $scope.activeTab = 'company';
+    $scope.activeYear = 1;
     $scope.isDescOrder = true;
     $scope.currentOrderName;
+    $scope.currentOrderYear;
     $scope.quantity = 500;
+
+    sendRequestByUrl('2021').then(function success(response) {
+      $scope.isLoaded = response;
+      $scope.showCompany();
+    });
+  };
+
+  function sendRequestByUrl(year) {
+    const deferred = $q.defer();
+    const path = `https://play-with-remedy.github.io/league-info/lesli/etc/files/otgruzka_${year}.xlsm`;
 
     let xmlHttpRequest = new XMLHttpRequest();
     xmlHttpRequest.open("GET", path, true);
     xmlHttpRequest.responseType = 'arraybuffer';
 
     xmlHttpRequest.onload = function () {
-      buildXslmObject();
-      buildProductObject();
-      buildCompanyObjectList();
+      buildXslmObject(xmlHttpRequest, year);
+      buildProductObject(year);
+      buildCompanyObjectList(year);
 
-      $scope.showCompany();
-
-      $scope.isLoaded = true;
-      $scope.$digest();
+      deferred.resolve(true);
     }
 
     xmlHttpRequest.send();
+    return deferred.promise;
+  }
 
-    function buildXslmObject() {
-      const arrayBuffer = xmlHttpRequest.response;
-      const data = new Uint8Array(arrayBuffer);
-      const dataArray = new Array();
+  function buildXslmObject(xmlHttpRequest, year) {
+    const arrayBuffer = xmlHttpRequest.response;
+    const data = new Uint8Array(arrayBuffer);
+    const dataArray = new Array();
 
-      for(let i = 0; i != data.length; ++i)  {
-        dataArray[i] = String.fromCharCode(data[i]);
-      } 
-      const binaryDataString = dataArray.join("");
-      const workbook = XLSX.read(binaryDataString, { type:"binary" });
-      const sheetName = workbook.SheetNames[0];
-      
-      xslmObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
-    }
+    for(let i = 0; i != data.length; ++i)  {
+      dataArray[i] = String.fromCharCode(data[i]);
+    } 
+    const binaryDataString = dataArray.join("");
+    const workbook = XLSX.read(binaryDataString, { type:"binary" });
+    const sheetName = workbook.SheetNames[0];
+    
+    xslmObjects[year] = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+  }
 
 
-    function buildProductObject() {
-      let products = xslmObject.find(object => object['дата отгр'] === 'ИТОГО');
-      for (const key of Object.keys(products)) {
-        if (key !== 'дата отгр') {
-          productObjectList.push({name: key, total: 0});
-        }
+  function buildProductObject(year) {
+    let productObjectList = [];
+    let products = xslmObjects[year].find(object => object['дата отгр'] === 'ИТОГО');
+    for (const key of Object.keys(products)) {
+      if (key !== 'дата отгр') {
+        productObjectList.push({name: key, total: 0});
       }
     }
 
-    function buildCompanyObjectList() {
-      xslmObject.forEach(element => {
-        const otg_date = element['дата отгр'];
-        const date = otg_date ? otg_date.split(' ')[1] : undefined;
+    productObjectMap[year] = productObjectList;
+  }
 
-        for (const [key, value] of Object.entries(element)) {
-          let product = productObjectList.find(object => object.name === key);
-          if (date && product) {
-            product[date] = product[date] ? product[date] + parseInt(value) : parseInt(value);
-            product.total = product.total + parseInt(value);
-          }
+  function buildCompanyObjectList(year) {
+    xslmObjects[year].forEach(element => {
+      const otg_date = element['дата отгр'];
+      const date = otg_date ? otg_date.split(' ')[1] : undefined;
+
+      for (const [key, value] of Object.entries(element)) {
+        let product = productObjectMap[year].find(object => object.name === key);
+        if (date && product) {
+          product[date] = product[date] ? product[date] + parseInt(value) : parseInt(value);
+          product.total = product.total + parseInt(value);
         }
+      }
 
-        const company = Object.values(element)[1];
-        let total = parseInt(element['Итого']);
+      const company = Object.values(element)[1];
+      let total = parseInt(element['Итого']);
+      let sameElement = companyObjectList.find(object => object.name === company);
 
-        let sameElement = companyObjectList.find(object => object.name === company);
-        if (sameElement) {
-          sameElement[date] = sameElement[date] ? sameElement[date] + total : total;
-          sameElement.total += total;
+      if (sameElement) {
+        if (!sameElement.data[year]) {
+          sameElement.data[year] = {};
+          sameElement.data[year].total = 0;
         }
+        sameElement.data[year][date] = sameElement.data[year][date] ? sameElement.data[year][date] + total : total;
+        sameElement.data[year].total += total;
+        sameElement.total += total;
+      }
 
-        if (company && total && date && !sameElement) {
-          companyObjectList.push({ name: company, [date]: total, total});
-        }
-      });
+      if (company && total && date && !sameElement) {
+        companyObjectList.push({ name: company, data: { [year]: { [date]: total, total } }, total});
+      }
+    });
+  }
+
+  $scope.setYear = function (year) {
+    $scope.activeYear = year;
+    
+    if(year === 3) {
+      if (Object.keys(xslmObjects).length !== 3) {
+        $scope.isLoaded = false;
+        sendRequestByUrl('2020').then(function success(response) {
+          if (response) {
+            sendRequestByUrl('2019').then(function success(response) {
+              $scope.isLoaded = response;
+              $scope.showCompany();
+            });
+          } 
+        });
+      }
     }
-  };
+  }
 
   $scope.showCompany = function () {
     $scope.currentOrderName = null;
@@ -112,14 +149,15 @@ fantasyApp.controller("mainController", function ($scope) {
     $scope.itemList = productObjectList;
   };
 
-  $scope.orderByField = function (field) {
-    if ($scope.currentOrderName === field) {
+  $scope.orderByField = function (field, year) {
+    if ($scope.currentOrderName === field && $scope.currentOrderYear === year) {
       $scope.isDescOrder = !$scope.isDescOrder;
     }
     $scope.currentOrderName = field;
+    $scope.currentOrderYear = year;
 
     if ($scope.activeTab === 'product' || $scope.activeTab === 'topProduct') {
-      productObjectList.sort(function (a, b) {
+      productObjectMap['2021'].sort(function (a, b) {
         return sort(a, b);
       });
     } else if ($scope.activeTab === 'company' || $scope.activeTab === 'topCompany') {
@@ -129,26 +167,27 @@ fantasyApp.controller("mainController", function ($scope) {
     }
 
     function sort(a, b) {
-      if (a[field] === b[field]) {
+      if (a.data[year] === undefined || a.data[year][field] === undefined) {
+          return 1;
+      }
+      else if (b.data[year] === undefined || b.data[year][field] === undefined) {
+          return -1;
+      }
+      else if (a.data[year][field] === b.data[year][field]) {
             return 0;
-        }
-        else if (a[field] === undefined) {
-            return 1;
-        }
-        else if (b[field] === undefined) {
-            return -1;
-        }
-        else if ($scope.isDescOrder) {
-            return a[field] < b[field] ? 1 : -1;
-        }
-        else { 
-            return a[field] < b[field] ? -1 : 1;
-        }
+      }
+      else if ($scope.isDescOrder) {
+          return a.data[year][field] < b.data[year][field] ? 1 : -1;
+      }
+      else { 
+          return a.data[year][field] < b.data[year][field] ? -1 : 1;
+      }
     }
   };
 
   $scope.showStats = function () {
     $scope.activeTab = 'stats';
+    let productObjectList = productObjectMap['2021'];
     
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
