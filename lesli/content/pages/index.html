@@ -36,10 +36,10 @@
                 <div class="navigation" data-ng-click="showCompany()">
                     <p data-ng-class="{'active': activeTab === 'company'}">Компании</p>
                 </div>
-                <div class="navigation inactive" data-ng-click="showProduct1()">
+                <div class="navigation" data-ng-click="showProduct()">
                     <p data-ng-class="{'active': activeTab === 'product'}">Продукты</p>
                 </div>
-                <div class="navigation inactive" data-ng-click="showStats1()">
+                <div class="navigation" data-ng-click="showStats()">
                     <p data-ng-class="{'active': activeTab === 'stats'}">Статистика</p>
                 </div>
                 <div class="navigation inactive" data-ng-click="showTopCompany1()">
@@ -257,7 +257,7 @@
                     </table>
                 </div>
             </div>
-            <div data-ng-show="activeTab === 'stats'" id="curve_chart" class="curveChart"></div>
+            <div data-ng-show="activeTab === 'stats' && isLoaded" id="curve_chart" class="curveChart"></div>
         </div>
     </body>
 </html>
