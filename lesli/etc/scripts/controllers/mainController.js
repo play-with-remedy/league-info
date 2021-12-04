@@ -11,7 +11,7 @@ fantasyApp.controller("mainController", function ($scope, $q) {
     $scope.isDescOrder = true;
     $scope.currentOrderName;
     $scope.currentOrderYear;
-    $scope.quantity = 500;
+    $scope.quantity = 1000;
 
     sendRequestByUrl('2021').then(function success(response) {
       $scope.isLoaded = response;
@@ -113,8 +113,8 @@ fantasyApp.controller("mainController", function ($scope, $q) {
     if (year !== 3) {
       if ($scope.activeTab === 'stats') {
         $scope.showStats();
-        $scope.isLoaded = true;
       }
+      $scope.isLoaded = true;
     }
     
     if (year === 3) {
@@ -132,8 +132,8 @@ fantasyApp.controller("mainController", function ($scope, $q) {
       } else {
         if ($scope.activeTab === 'stats') {
           $scope.showStats();
-          $scope.isLoaded = true;
         }
+        $scope.isLoaded = true;
       }
     }
   }
@@ -141,7 +141,7 @@ fantasyApp.controller("mainController", function ($scope, $q) {
   $scope.showCompany = function () {
     $scope.currentOrderName = null;
     $scope.activeTab = 'company';
-    $scope.quantity = 500;
+    $scope.quantity = 1000;
     $scope.title = "Компания";
     $scope.itemList = companyObjectList;
   };
