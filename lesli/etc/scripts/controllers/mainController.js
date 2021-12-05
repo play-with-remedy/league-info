@@ -165,6 +165,7 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
   $scope.showProduct = function () {
     $scope.currentOrderName = null;
     $scope.activeTab = 'product';
+    $scope.quantity = 1000;
     $scope.title = "Продукт";
     $scope.itemList = productObjectList;
   };
