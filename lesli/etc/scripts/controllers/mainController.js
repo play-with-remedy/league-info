@@ -1,6 +1,6 @@
 const fantasyApp = angular.module("fantasyApp", [])
 
-fantasyApp.controller("mainController", function ($scope, $q) {
+fantasyApp.controller("mainController", function ($scope, $q, $parse) {
   let companyObjectList = [];
   let productObjectList = [];
   let xslmObjects = [];
@@ -10,7 +10,6 @@ fantasyApp.controller("mainController", function ($scope, $q) {
     $scope.activeYear = 1;
     $scope.isDescOrder = true;
     $scope.currentOrderName;
-    $scope.currentOrderYear;
     $scope.quantity = 1000;
 
     sendRequestByUrl('2021').then(function success(response) {
@@ -59,7 +58,10 @@ fantasyApp.controller("mainController", function ($scope, $q) {
     let products = xslmObjects[year].find(object => object['дата отгр'] === 'ИТОГО');
     for (const key of Object.keys(products)) {
       if (key !== 'дата отгр') {
-        productObjectList.push({name: key, data: { [year]: { total: 0}}, total: 0});
+        let product = productObjectList.find(object => object.name === key);
+        if (!product) {
+          productObjectList.push({name: key, data: { [year]: { total: 0}}, total: 0});
+        }
       }
     }
   }
@@ -163,13 +165,11 @@ fantasyApp.controller("mainController", function ($scope, $q) {
     $scope.itemList = productObjectList;
   };
 
-  $scope.orderByField = function (field, year) {
-    if ($scope.currentOrderName === field && $scope.currentOrderYear === year) {
+  $scope.orderByField = function (field) {
+    if ($scope.currentOrderName === field) {
       $scope.isDescOrder = !$scope.isDescOrder;
     }
     $scope.currentOrderName = field;
-    $scope.currentOrderYear = year;
-
     if ($scope.activeTab === 'product' || $scope.activeTab === 'topProduct') {
       productObjectList.sort(function (a, b) {
         return sort(a, b);
@@ -181,20 +181,24 @@ fantasyApp.controller("mainController", function ($scope, $q) {
     }
 
     function sort(a, b) {
-      if (a.data[year] === undefined || a.data[year][field] === undefined) {
+      const getter = $parse(field);
+      const firstValue = getter(a);
+      const secondValue = getter(b);
+
+      if (firstValue === undefined) {
           return 1;
       }
-      else if (b.data[year] === undefined || b.data[year][field] === undefined) {
+      else if (secondValue === undefined) {
           return -1;
       }
-      else if (a.data[year][field] === b.data[year][field]) {
+      else if (firstValue === secondValue) {
             return 0;
       }
       else if ($scope.isDescOrder) {
-          return a.data[year][field] < b.data[year][field] ? 1 : -1;
+          return firstValue < secondValue ? 1 : -1;
       }
       else { 
-          return a.data[year][field] < b.data[year][field] ? -1 : 1;
+          return firstValue < secondValue ? -1 : 1;
       }
     }
   };
