@@ -81,9 +81,9 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
               product.data[year].total = 0;
             }
 
-            product.data[year][date] = product.data[year][date] ? round(product.data[year][date], total) : total;
-            product.data[year].total = round(product.data[year].total, total);
-            product.total = round(product.total, total);
+            product.data[year][date] = product.data[year][date] ? $scope.round(product.data[year][date], total) : total;
+            product.data[year].total = $scope.round(product.data[year].total, total);
+            product.total = $scope.round(product.total, total);
           }
         }
       }
@@ -97,9 +97,9 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
           sameElement.data[year] = {};
           sameElement.data[year].total = 0;
         }
-        sameElement.data[year][date] = sameElement.data[year][date] ? round(sameElement.data[year][date], total) : total;
-        sameElement.data[year].total = round(sameElement.data[year].total, total);
-        sameElement.total = round(sameElement.total, total);
+        sameElement.data[year][date] = sameElement.data[year][date] ? $scope.round(sameElement.data[year][date], total) : total;
+        sameElement.data[year].total = $scope.round(sameElement.data[year].total, total);
+        sameElement.total = $scope.round(sameElement.total, total);
       }
 
       if (company && total && date && !sameElement) {
@@ -126,6 +126,10 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
             sendRequestByUrl('2019').then(function success(response) {
               if ($scope.activeTab === 'stats') {
                 $scope.showStats();
+              } else if ($scope.activeTab === 'topCompany') {
+                $scope.showTopCompany();
+              } else if ($scope.activeTab === 'topProduct') {
+                $scope.showTopProduct();
               }
               $scope.isLoaded = response;
             });
@@ -164,6 +168,16 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
     $scope.title = "Продукт";
     $scope.itemList = productObjectList;
   };
+
+  $scope.showTopProduct = function () {
+    $scope.currentOrderName = null;
+    $scope.activeTab = 'topProduct';
+    $scope.title = "Продукт";
+    $scope.quantity = 10;
+    $scope.isDescOrder = true;
+    $scope.orderByField('total');
+    $scope.itemList = productObjectList;
+  }
 
   $scope.orderByField = function (field) {
     if ($scope.currentOrderName === field) {
@@ -278,11 +292,11 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
   function sum(items, prop, year){
     return items.reduce(function(a, b) {
         const t = b.data[year] && b.data[year][prop] ? b.data[year][prop] : 0;
-        return round(a, t);
+        return $scope.round(a, t);
     }, 0);
   };
 
-  function round(firstValue, secondValue) {
+  $scope.round = function (firstValue, secondValue) {
     if (!secondValue) secondValue = 0;
     return Math.round((firstValue + secondValue) * 10) / 10;
   }

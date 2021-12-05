@@ -42,11 +42,11 @@
                 <div class="navigation" data-ng-click="showStats()">
                     <p data-ng-class="{'active': activeTab === 'stats'}">Статистика</p>
                 </div>
-                <div class="navigation inactive" data-ng-click="showTopCompany1()">
+                <div class="navigation" data-ng-click="showTopCompany()">
                     <p data-ng-class="{'active': activeTab === 'topCompany'}">Топ 10 Клиентов</p>
                 </div>
-                <div class="navigation inactive">
-                    <p>Топ 10 Товаров</p>
+                <div class="navigation" data-ng-click="showTopProduct()">
+                    <p data-ng-class="{'active': activeTab === 'topProduct'}">Топ 10 Продуктов</p>
                 </div>
                 <div class="navigation inactive">
                     <p>Анализ</p>
@@ -55,7 +55,7 @@
                     <p>Обновление</p>
                 </div>
             </div>
-            <div data-ng-if="activeTab !== 'stats' && isLoaded" class="items_wrapper">
+            <div data-ng-if="activeTab === 'product' || activeTab === 'company' && isLoaded" class="items_wrapper">
                 <div class="table_scroll">
                     <table class="table">
                         <thead>
@@ -228,6 +228,46 @@
                             <td>{{object.data['2021'].Nov}}</td>
                             <td>{{object.data['2021'].Dec}}</td>
                             <td>{{object.data['2021'].total}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div data-ng-if="(activeTab === 'topProduct' || activeTab === 'topCompany') && isLoaded" class="items_wrapper">
+                <div class="table_scroll">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>{{title}}</th>
+                                <th data-ng-if="activeYear === 3"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2019].total'}"
+                                    data-ng-click="orderByField('data[2019].total')">2019
+                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
+                                </th>
+                                <th data-ng-if="activeYear === 3"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].total'}"
+                                    data-ng-click="orderByField('data[2020].total')">2020
+                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].total'}"
+                                    data-ng-click="orderByField('data[2021].total')">2021
+                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'total'}"
+                                    data-ng-click="orderByField('total')">Итого
+                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr data-ng-repeat="object in itemList | limitTo:quantity">
+                            <td>{{$index + 1}}</td>
+                            <td>{{object.name}}</td>
+                            <td data-ng-if="activeYear === 3">{{object.data['2019'].total}}</td>
+                            <td data-ng-if="activeYear === 3">{{object.data['2020'].total}}</td>
+                            <td>{{object.data['2021'].total}}</td>
+                            <td data-ng-if="activeYear === 1">{{object.data['2021'].total}}</td>
+                            <td data-ng-if="activeYear === 3">{{round(object.data['2019'].total + object.data['2020'].total + object.data['2021'].total)}}</td>
+                            <td data-ng-if="activeYear === 5">{{object.data['2019'].total + object.data['2020'].total + object.data['2021'].total}}</td>
                         </tr>
                     </table>
                 </div>
