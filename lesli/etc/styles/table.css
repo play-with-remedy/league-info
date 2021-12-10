@@ -10,25 +10,6 @@
     border-collapse: separate;
 }
 
-.activeOrderField .arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 2px;
-}
-
-.activeOrderField .up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-    margin: 0px 0px -1px 2px;
-}
-
-.activeOrderField .down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    margin: 0px 0px 2px 2px;
-}
-
 .activeOrderField {
     color: darkred;
 }
