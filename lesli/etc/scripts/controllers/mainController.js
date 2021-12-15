@@ -112,37 +112,49 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
     $scope.isLoaded = false;
     $scope.activeYear = year;
 
+    switch (year) {
+      case 1:
+      case 5:
+        if ($scope.activeTab === 'stats') {
+          $scope.showStats();
+        }
+        $scope.isLoaded = true;
+        break;
+      case 3:
+        if (Object.keys(xslmObjects).length !== 3) {
+          sendRequestByUrl('2020').then(function success(response) {
+            if (response) {
+              sendRequestByUrl('2019').then(function success(response) {
+                if ($scope.activeTab === 'stats') {
+                  $scope.showStats();
+                } else if ($scope.activeTab === 'topCompany') {
+                  $scope.showTopCompany();
+                } else if ($scope.activeTab === 'topProduct') {
+                  $scope.showTopProduct();
+                } else if ($scope.activeTab === 'analysis') {
+                  buildAnalysis();
+                }
+                $scope.isLoaded = response;
+              });
+            } 
+          });
+        } else {
+          if ($scope.activeTab === 'stats') {
+            $scope.showStats();
+          }
+          $scope.isLoaded = true;
+        }
+        break;
+      default:
+    }
+
     if (year !== 3) {
       if ($scope.activeTab === 'stats') {
         $scope.showStats();
       }
       $scope.isLoaded = true;
     }
-    
-    if (year === 3) {
-      if (Object.keys(xslmObjects).length !== 3) {
-        sendRequestByUrl('2020').then(function success(response) {
-          if (response) {
-            sendRequestByUrl('2019').then(function success(response) {
-              if ($scope.activeTab === 'stats') {
-                $scope.showStats();
-              } else if ($scope.activeTab === 'topCompany') {
-                $scope.showTopCompany();
-              } else if ($scope.activeTab === 'topProduct') {
-                $scope.showTopProduct();
-              }
-              $scope.isLoaded = response;
-            });
-          } 
-        });
-      } else {
-        if ($scope.activeTab === 'stats') {
-          $scope.showStats();
-        }
-        $scope.isLoaded = true;
-      }
-    }
-  }
+  };
 
   $scope.showCompany = function () {
     $scope.currentOrderName = null;
@@ -290,15 +302,77 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
     }
   };
 
+  $scope.round = function (firstValue, secondValue) {
+    if (!secondValue) secondValue = 0;
+    return Math.round((firstValue + secondValue) * 10) / 10;
+  }
+
+
+  $scope.showAnalysis = function() {
+    $scope.activeTab = 'analysis';
+    $scope.setYear(3);
+  }
+
+  function buildAnalysis () {
+    let analysisList = [];
+    xslmObjects[2021].forEach(element => {
+      const companyName = element["  Клиент "];
+      Object.keys(element).forEach(key => {
+        if (key !== 'дата отгр' && key !== '  Клиент ' && key !== 'Итого' && key !== 'вид товара') { 
+          const productName = key;
+          const total = parseFloat(element[productName]);
+
+          let existedObject = analysisList.find(object => object.companyName === companyName && object.productName === productName);
+          if (existedObject){
+            existedObject['2021'] = $scope.round(existedObject['2021'], total);
+          }
+
+          if (companyName && key !== 'ИТОГО' && total && !existedObject) {
+            analysisList.push({companyName, productName, '2021': total})
+          }
+        }
+      });
+    });
+
+    
+    xslmObjects[2020].forEach(element => {
+      const companyName = Object.values(element)[1];
+      Object.keys(element).forEach(key => {
+        if (key !== 'дата отгр' && key !== '   ' && key !== 'Итого' && key !== 'вид товара') { 
+          const productName = key;
+          const total = parseFloat(element[productName]);
+
+          let existedObject = analysisList.find(object => object.companyName === companyName && object.productName === productName);
+          if (existedObject) {
+            existedObject['2020'] = $scope.round(total, existedObject['2020']);
+          }
+
+          if (companyName && key !== 'ИТОГО' && total && !existedObject) {
+            analysisList.push({companyName, productName, '2020': total})
+          }
+        }
+      });
+    });
+
+    let resultList = [];
+    analysisList.forEach(element => {
+      if (element[2020]) {
+        const t21 = element[2021] ? element[2021] : 0;
+        const t20 = element[2020];
+        element.percent = $scope.round((t21 - t20) * 100 / t20);
+        if (element.percent <= -25 ) {
+          resultList.push(element);
+        }
+      }
+    });
+
+    $scope.analysisList = resultList;
+  }
+
   function sum(items, prop, year){
     return items.reduce(function(a, b) {
         const t = b.data[year] && b.data[year][prop] ? b.data[year][prop] : 0;
         return $scope.round(a, t);
     }, 0);
   };
-
-  $scope.round = function (firstValue, secondValue) {
-    if (!secondValue) secondValue = 0;
-    return Math.round((firstValue + secondValue) * 10) / 10;
-  }
 });

@@ -48,14 +48,11 @@
                 <div class="navigation" data-ng-click="showTopProduct()">
                     <p data-ng-class="{'active': activeTab === 'topProduct'}">Топ 10 Продуктов</p>
                 </div>
-                <div class="navigation inactive">
-                    <p>Анализ</p>
-                </div>
-                <div class="navigation inactive">
-                    <p>Обновление</p>
+                <div class="navigation" data-ng-click="showAnalysis()">
+                    <p data-ng-class="{'active': activeTab === 'analysis'}">Анализ</p>
                 </div>
             </div>
-            <div data-ng-if="activeTab === 'product' || activeTab === 'company' && isLoaded" class="items_wrapper">
+            <div data-ng-if="(activeTab === 'product' || activeTab === 'company') && isLoaded" class="items_wrapper">
                 <div class="table_scroll">
                     <table class="table">
                         <thead>
@@ -82,119 +79,93 @@
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Jan'}"
                                     data-ng-click="orderByField('data[2020].Jan')">Jan
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Feb'}"
                                     data-ng-click="orderByField('data[2020].Feb')">Feb
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Mar'}"
                                     data-ng-click="orderByField('data[2020].Mar')">Mar
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Apr'}"
                                     data-ng-click="orderByField('data[2020].Apr')">Apr
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].May'}"
                                     data-ng-click="orderByField('data[2020].May')">May
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Jun'}"
                                     data-ng-click="orderByField('data[2020].Jun')">Jun
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Jul'}"
                                     data-ng-click="orderByField('data[2020].Jul')">Jul
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Aug'}"
                                     data-ng-click="orderByField('data[2020].Aug')">Aug
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Sep'}"
                                     data-ng-click="orderByField('data[2020].Sep')">Sep
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Oct'}"
                                     data-ng-click="orderByField('data[2020].Oct')">Oct
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Nov'}"
                                     data-ng-click="orderByField('data[2020].Nov')">Nov
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Dec'}"
                                     data-ng-click="orderByField('data[2020].Dec')">Dec
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].total'}"
                                     data-ng-click="orderByField('data[2020].total')">Итого
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Jan'}"
                                     data-ng-click="orderByField('data[2021].Jan')">Jan
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Feb'}"
                                     data-ng-click="orderByField('data[2021].Feb')">Feb
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Mar'}"
                                     data-ng-click="orderByField('data[2021].Mar')">Mar
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Apr'}"
                                     data-ng-click="orderByField('data[2021].Apr')">Apr
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].May'}"
                                     data-ng-click="orderByField('data[2021].May')">May
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Jun'}"
                                     data-ng-click="orderByField('data[2021].Jun')">Jun
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Jul'}"
                                     data-ng-click="orderByField('data[2021].Jul')">Jul
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Aug'}"
                                     data-ng-click="orderByField('data[2021].Aug')">Aug
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Sep'}"
                                     data-ng-click="orderByField('data[2021].Sep')">Sep
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Oct'}"
                                     data-ng-click="orderByField('data[2021].Oct')">Oct
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Nov'}"
                                     data-ng-click="orderByField('data[2021].Nov')">Nov
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Dec'}"
                                     data-ng-click="orderByField('data[2021].Dec')">Dec
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].total'}"
                                     data-ng-click="orderByField('data[2021].total')">Итого
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                             </tr>
                         </thead>
@@ -242,20 +213,16 @@
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2019].total'}"
                                     data-ng-click="orderByField('data[2019].total')">2019
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].total'}"
                                     data-ng-click="orderByField('data[2020].total')">2020
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].total'}"
                                     data-ng-click="orderByField('data[2021].total')">2021
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'total'}"
                                     data-ng-click="orderByField('total')">Итого
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
                                 </th>
                             </tr>
                         </thead>
@@ -272,6 +239,30 @@
                     </table>
                 </div>
             </div>
+            <div data-ng-if="(activeTab === 'analysis') && isLoaded" class="items_wrapper">
+                    <div class="table_scroll">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Компания</th>
+                                    <th>Продукт</th>
+                                    <th>2020</th>
+                                    <th>2021</th>
+                                    <th>Процент</th>
+                                </tr>
+                            </thead>
+                            <tr data-ng-repeat="object in analysisList">
+                                <td>{{$index + 1}}</td>
+                                <td>{{object.companyName}}</td>
+                                <td>{{object.productName}}</td>
+                                <td>{{object[2020]}}</td>
+                                <td>{{object[2021]}}</td>
+                                <td>{{object.percent}}%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             <div data-ng-show="activeTab === 'stats' && isLoaded" id="curve_chart" class="curveChart"></div>
         </div>
     </body>
