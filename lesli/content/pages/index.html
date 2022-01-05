@@ -66,6 +66,16 @@
                                 <th rowspan="2"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'name'}"
                                     data-ng-click="orderByField('name')">{{title}}</th>
+                                <th data-ng-if="activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2017].total'}"
+                                    data-ng-click="orderByField('data[2017].total')"
+                                    rowspan="2">
+                                    2017
+                                <th data-ng-if="activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2018].total'}"
+                                    data-ng-click="orderByField('data[2018].total')"
+                                    rowspan="2">
+                                    2018
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2019].total'}"
                                     data-ng-click="orderByField('data[2019].total')"
@@ -172,6 +182,8 @@
                         <tr data-ng-repeat="object in itemList | limitTo:quantity">
                             <td>{{$index + 1}}</td>
                             <td>{{object.name}}</td>
+                            <td data-ng-if="activeYear === 5">{{object.data['2017'].total}}</td>
+                            <td data-ng-if="activeYear === 5">{{object.data['2018'].total}}</td>
                             <td data-ng-if="activeYear === 3">{{object.data['2019'].total}}</td>
                             <td data-ng-if="activeYear === 3">{{object.data['2020'].Jan}}</td>
                             <td data-ng-if="activeYear === 3">{{object.data['2020'].Feb}}</td>
@@ -210,6 +222,12 @@
                             <tr>
                                 <th>#</th>
                                 <th>{{title}}</th>
+                                <th data-ng-if="activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2017].total'}"
+                                    data-ng-click="orderByField('data[2017].total')">2017
+                                <th data-ng-if="activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2018].total'}"
+                                    data-ng-click="orderByField('data[2018].total')">2018
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2019].total'}"
                                     data-ng-click="orderByField('data[2019].total')">2019
@@ -229,12 +247,14 @@
                         <tr data-ng-repeat="object in itemList | limitTo:quantity">
                             <td>{{$index + 1}}</td>
                             <td>{{object.name}}</td>
+                            <td data-ng-if="activeYear === 5">{{object.data['2017'].total}}</td>
+                            <td data-ng-if="activeYear === 5">{{object.data['2018'].total}}</td>
                             <td data-ng-if="activeYear === 3">{{object.data['2019'].total}}</td>
                             <td data-ng-if="activeYear === 3">{{object.data['2020'].total}}</td>
                             <td>{{object.data['2021'].total}}</td>
                             <td data-ng-if="activeYear === 1">{{object.data['2021'].total}}</td>
                             <td data-ng-if="activeYear === 3">{{round(object.data['2019'].total + object.data['2020'].total + object.data['2021'].total)}}</td>
-                            <td data-ng-if="activeYear === 5">{{object.data['2019'].total + object.data['2020'].total + object.data['2021'].total}}</td>
+                            <td data-ng-if="activeYear === 5">{{round(object.data['2017'].total + object.data['2018'].total + object.data['2019'].total + object.data['2020'].total + object.data['2021'].total)}}</td>
                         </tr>
                     </table>
                 </div>
