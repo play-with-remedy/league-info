@@ -110,75 +110,75 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
     }
 
     $scope.setYear = function (year) {
-    $scope.isLoaded = false;
-    $scope.activeYear = year;
+        $scope.isLoaded = false;
+        $scope.activeYear = year;
 
-    switch (year) {
-        case 1:
-            if ($scope.activeTab === 'stats') {
-              $scope.showStats();
-            }
-            $scope.isLoaded = true;
-            break;
-        case 3:
-            if (Object.keys(xslmObjects).length !== 3) {
-                sendRequestByUrl('2020').then(function success(response) {
-                    if (response) {
-                        sendRequestByUrl('2019').then(function success(response) {
-                            if ($scope.activeTab === 'stats') {
-                              $scope.showStats();
-                            } else if ($scope.activeTab === 'topCompany') {
-                              $scope.showTopCompany();
-                            } else if ($scope.activeTab === 'topProduct') {
-                              $scope.showTopProduct();
-                            } else if ($scope.activeTab === 'analysis') {
-                              buildAnalysis();
-                            }
-                            $scope.isLoaded = response;
-                        });
-                    }
-                });
-            } else {
+        switch (year) {
+            case 1:
                 if ($scope.activeTab === 'stats') {
-                    $scope.showStats();
+                  $scope.showStats();
                 }
                 $scope.isLoaded = true;
-            }
-            break;
-        case 5:
-            if (Object.keys(xslmObjects).length !== 3) {
-                sendRequestByUrl('2018').then(function success(response) {
-                    if (response) {
-                        sendRequestByUrl('2017').then(function success(response) {
-                            if ($scope.activeTab === 'stats') {
-                              $scope.showStats();
-                            } else if ($scope.activeTab === 'topCompany') {
-                              $scope.showTopCompany();
-                            } else if ($scope.activeTab === 'topProduct') {
-                              $scope.showTopProduct();
-                            } else if ($scope.activeTab === 'analysis') {
-                              buildAnalysis();
-                            }
-                            $scope.isLoaded = response;
-                        });
+                break;
+            case 3:
+                if (Object.keys(xslmObjects).length !== 3) {
+                    sendRequestByUrl('2020').then(function success(response) {
+                        if (response) {
+                            sendRequestByUrl('2019').then(function success(response) {
+                                if ($scope.activeTab === 'stats') {
+                                  $scope.showStats();
+                                } else if ($scope.activeTab === 'topCompany') {
+                                  $scope.showTopCompany();
+                                } else if ($scope.activeTab === 'topProduct') {
+                                  $scope.showTopProduct();
+                                } else if ($scope.activeTab === 'analysis') {
+                                  buildAnalysis();
+                                }
+                                $scope.isLoaded = response;
+                            });
+                        }
+                    });
+                } else {
+                    if ($scope.activeTab === 'stats') {
+                        $scope.showStats();
                     }
-                });
-            } else {
-                if ($scope.activeTab === 'stats') {
-                    $scope.showStats();
+                    $scope.isLoaded = true;
                 }
-                $scope.isLoaded = true;
-            }
-            break;
-      default:
-    }
+                break;
+            case 5:
+                if (Object.keys(xslmObjects).length !== 5) {
+                    sendRequestByUrl('2018').then(function success(response) {
+                        if (response) {
+                            sendRequestByUrl('2017').then(function success(response) {
+                                if ($scope.activeTab === 'stats') {
+                                  $scope.showStats();
+                                } else if ($scope.activeTab === 'topCompany') {
+                                  $scope.showTopCompany();
+                                } else if ($scope.activeTab === 'topProduct') {
+                                  $scope.showTopProduct();
+                                } else if ($scope.activeTab === 'analysis') {
+                                  buildAnalysis();
+                                }
+                                $scope.isLoaded = response;
+                            });
+                        }
+                    });
+                } else {
+                    if ($scope.activeTab === 'stats') {
+                        $scope.showStats();
+                    }
+                    $scope.isLoaded = true;
+                }
+                break;
+          default:
+        }
 
-    if (year !== 3) {
-      if ($scope.activeTab === 'stats') {
-        $scope.showStats();
-      }
-      $scope.isLoaded = true;
-    }
+        if (year !== 3) {
+          if ($scope.activeTab === 'stats') {
+            $scope.showStats();
+          }
+          $scope.isLoaded = true;
+        }
     };
 
     $scope.showCompany = function () {
