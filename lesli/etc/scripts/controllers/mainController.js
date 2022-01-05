@@ -13,8 +13,16 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
         $scope.quantity = 1000;
 
         sendRequestByUrl('2021').then(function success(response) {
-            $scope.isLoaded = response;
-            $scope.showCompany();
+            if (response) {
+                sendRequestByUrl('2020').then(function success(response) {
+                    if (response) {
+                        sendRequestByUrl('2019').then(function success(response) {
+                            $scope.isLoaded = response;
+                            $scope.showCompany();
+                        });
+                    }
+                });
+            }
         });
     };
 
@@ -112,7 +120,6 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
     $scope.setYear = function (year) {
         $scope.isLoaded = false;
         $scope.activeYear = year;
-
         switch (year) {
             case 1:
                 if ($scope.activeTab === 'stats') {
@@ -121,45 +128,14 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
                 $scope.isLoaded = true;
                 break;
             case 3:
-                if (Object.keys(xslmObjects).length !== 3) {
-                    sendRequestByUrl('2020').then(function success(response) {
-                        if (response) {
-                            sendRequestByUrl('2019').then(function success(response) {
-                                if ($scope.activeTab === 'stats') {
-                                  $scope.showStats();
-                                } else if ($scope.activeTab === 'topCompany') {
-                                  $scope.showTopCompany();
-                                } else if ($scope.activeTab === 'topProduct') {
-                                  $scope.showTopProduct();
-                                } else if ($scope.activeTab === 'analysis') {
-                                  buildAnalysis();
-                                }
-                                $scope.isLoaded = response;
-                            });
-                        }
-                    });
-                } else {
-                    if ($scope.activeTab === 'stats') {
-                        $scope.showStats();
-                    }
-                    $scope.isLoaded = true;
-                }
+                showYearData(true);
                 break;
             case 5:
-                if (Object.keys(xslmObjects).length !== 5) {
+                if (Object.keys(xslmObjects).length < 5) {
                     sendRequestByUrl('2018').then(function success(response) {
                         if (response) {
                             sendRequestByUrl('2017').then(function success(response) {
-                                if ($scope.activeTab === 'stats') {
-                                  $scope.showStats();
-                                } else if ($scope.activeTab === 'topCompany') {
-                                  $scope.showTopCompany();
-                                } else if ($scope.activeTab === 'topProduct') {
-                                  $scope.showTopProduct();
-                                } else if ($scope.activeTab === 'analysis') {
-                                  buildAnalysis();
-                                }
-                                $scope.isLoaded = response;
+                                showYearData(response);
                             });
                         }
                     });
@@ -173,11 +149,17 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
           default:
         }
 
-        if (year !== 3) {
-          if ($scope.activeTab === 'stats') {
-            $scope.showStats();
-          }
-          $scope.isLoaded = true;
+        function showYearData(response) {
+            if ($scope.activeTab === 'stats') {
+                $scope.showStats();
+            } else if ($scope.activeTab === 'topCompany') {
+                $scope.showTopCompany();
+            } else if ($scope.activeTab === 'topProduct') {
+                 $scope.showTopProduct();
+            } else if ($scope.activeTab === 'analysis') {
+                buildAnalysis();
+            }
+            $scope.isLoaded = response;
         }
     };
 
@@ -310,8 +292,40 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
                 ['',  sum(productObjectList, 'Dec', '2020')]
             ];
 
+            let chartDataArray20172018 = [
+                ['Jan', sum(productObjectList, 'Jan', '2017')],
+                ['', sum(productObjectList, 'Feb', '2017')],
+                ['Mar',  sum(productObjectList, 'Mar', '2017')],
+                ['',  sum(productObjectList, 'Apr', '2017')],
+                ['May',  sum(productObjectList, 'May', '2017')],
+                ['2017',  sum(productObjectList, 'Jun', '2017')],
+                ['Jul',  sum(productObjectList, 'Jul', '2017')],
+                ['',  sum(productObjectList, 'Aug', '2017')],
+                ['Sep',  sum(productObjectList, 'Sep', '2017')],
+                ['',  sum(productObjectList, 'Oct', '2017')],
+                ['Nov',  sum(productObjectList, 'Nov', '2017')],
+                ['',  sum(productObjectList, 'Dec', '2017')],
+                ['Jan',  sum(productObjectList, 'Jan', '2018')],
+                ['',  sum(productObjectList, 'Feb', '2018')],
+                ['Mar',  sum(productObjectList, 'Mar', '2018')],
+                ['',  sum(productObjectList, 'Apr', '2018')],
+                ['May',  sum(productObjectList, 'May', '2018')],
+                ['2018',  sum(productObjectList, 'Jun', '2018')],
+                ['Jul',  sum(productObjectList, 'Jul', '2018')],
+                ['',  sum(productObjectList, 'Aug', '2018')],
+                ['Sep',  sum(productObjectList, 'Sep', '2018')],
+                ['',  sum(productObjectList, 'Oct', '2018')],
+                ['Nov',  sum(productObjectList, 'Nov', '2018')],
+                ['',  sum(productObjectList, 'Dec', '2018')]
+            ];
+
             if ($scope.activeYear === 3) {
                 chartDataArray2021 = chartDataArray20192020.concat(chartDataArray2021);
+            }
+
+            if ($scope.activeYear === 5) {
+                chartDataArray2021 = chartDataArray20192020.concat(chartDataArray2021);
+                chartDataArray2021 = chartDataArray20172018.concat(chartDataArray2021);
             }
 
             chartData = chartData.concat(chartDataArray2021);
