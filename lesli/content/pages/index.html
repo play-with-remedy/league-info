@@ -52,7 +52,9 @@
                     <p data-ng-class="{'active': activeTab === 'analysis'}">Анализ</p>
                 </div>
                 <div class="search-navigation">
-                    <input data-ng-change="search(searchValue)" data-ng-model="searchValue" type="search" class="search-input" placeholder="Search..." aria-label="Search" />
+                    <input data-ng-change="search(searchValue)" data-ng-model="searchValue" type="search"
+                           class="search-input" placeholder="Search..." aria-label="Search"
+                           data-ng-class="{'enabled': activeTab === 'company' || activeTab === 'product'}"/>
                 </div>
             </div>
             <div data-ng-if="(activeTab === 'product' || activeTab === 'company') && isLoaded" class="items_wrapper">
