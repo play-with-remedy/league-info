@@ -64,3 +64,17 @@ body {
     display: flex;
     margin: auto;
 }
+
+.search-navigation {
+    float: right;
+    margin: 10px;
+}
+
+.search-input {
+    height: 34px;
+    border-radius: 5px;
+    border: solid 1px black;
+    padding: 10px;
+    outline: none;
+    font-family: 'Roboto';
+}

@@ -51,6 +51,9 @@
                 <div class="navigation" data-ng-click="showAnalysis()">
                     <p data-ng-class="{'active': activeTab === 'analysis'}">Анализ</p>
                 </div>
+                <div class="search-navigation">
+                    <input data-ng-change="search(searchValue)" data-ng-model="searchValue" type="search" class="search-input" placeholder="Search..." aria-label="Search" />
+                </div>
             </div>
             <div data-ng-if="(activeTab === 'product' || activeTab === 'company') && isLoaded" class="items_wrapper">
                 <div class="table_scroll">
@@ -64,16 +67,11 @@
                                 <th data-ng-if="activeYear === 3"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2019].total'}"
                                     data-ng-click="orderByField('data[2019].total')"
-                                    rowspan="2">2019
-                                    <i data-ng-class="{'down': isDescOrder,  'up': !isDescOrder}" class="arrow"></i>
+                                    rowspan="2">
+                                    2019
                                 </th>
-                                <th data-ng-if="activeYear === 3"
-                                    colspan="13">
-                                    2020
-                                </th>
-                                <th colspan="13">
-                                    2021
-                                </th>
+                                <th data-ng-if="activeYear === 3" colspan="13">2020</th>
+                                <th colspan="13">2021</th>
                             </tr>
                             <tr>
                                 <th data-ng-if="activeYear === 3"

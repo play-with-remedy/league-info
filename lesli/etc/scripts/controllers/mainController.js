@@ -157,14 +157,17 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
   };
 
   $scope.showCompany = function () {
+    clearSearch();
     $scope.currentOrderName = null;
     $scope.activeTab = 'company';
     $scope.quantity = 1000;
     $scope.title = "Компания";
     $scope.itemList = companyObjectList;
+    $scope.copyItemList = companyObjectList;
   };
 
   $scope.showTopCompany = function () {
+    clearSearch();
     $scope.currentOrderName = null;
     $scope.activeTab = 'topCompany';
     $scope.title = "Компания";
@@ -175,14 +178,17 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
   }
 
   $scope.showProduct = function () {
+    clearSearch();
     $scope.currentOrderName = null;
     $scope.activeTab = 'product';
     $scope.quantity = 1000;
     $scope.title = "Продукт";
     $scope.itemList = productObjectList;
+    $scope.copyItemList = productObjectList;
   };
 
   $scope.showTopProduct = function () {
+    clearSearch();
     $scope.currentOrderName = null;
     $scope.activeTab = 'topProduct';
     $scope.title = "Продукт";
@@ -197,15 +203,9 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
       $scope.isDescOrder = !$scope.isDescOrder;
     }
     $scope.currentOrderName = field;
-    if ($scope.activeTab === 'product' || $scope.activeTab === 'topProduct') {
-      productObjectList.sort(function (a, b) {
-        return sort(a, b);
-      });
-    } else if ($scope.activeTab === 'company' || $scope.activeTab === 'topCompany') {
-      companyObjectList.sort(function (a, b) {
-        return sort(a, b);
-      });
-    }
+    $scope.itemList.sort(function (a, b) {
+      return sort(a, b);
+    });
 
     function sort(a, b) {
       const getter = $parse(field);
@@ -231,6 +231,7 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
   };
 
   $scope.showStats = function () {
+    clearSearch();
     $scope.activeTab = 'stats';
     
     google.charts.load('current', {'packages':['corechart']});
@@ -308,7 +309,8 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
   }
 
 
-  $scope.showAnalysis = function() {
+  $scope.showAnalysis = function () {
+    clearSearch();
     $scope.activeTab = 'analysis';
     $scope.setYear(3);
   }
@@ -367,6 +369,28 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
     });
 
     $scope.analysisList = resultList;
+  }
+
+  $scope.search = function (searchValue) {
+    if (searchValue) {
+      let filteredItemList = [];
+
+      $scope.copyItemList.forEach(item => {
+        if (item.name.toLowerCase().includes(searchValue.toLowerCase())) {
+            filteredItemList.push(item);
+            return;
+        }
+      });
+
+      $scope.itemList = filteredItemList;
+    } else {
+      $scope.itemList = $scope.copyItemList;
+    }
+  };
+
+  function clearSearch() {
+    $scope.searchValue = '';
+    $scope.itemList = $scope.copyItemList;
   }
 
   function sum(items, prop, year){
