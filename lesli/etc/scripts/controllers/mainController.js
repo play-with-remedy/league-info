@@ -12,11 +12,11 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
         $scope.currentOrderName;
         $scope.quantity = 1000;
 
-        sendRequestByUrl('2021').then(function success(response) {
+        sendRequestByUrl('2022').then(function success(response) {
             if (response) {
-                sendRequestByUrl('2020').then(function success(response) {
+                sendRequestByUrl('2021').then(function success(response) {
                     if (response) {
-                        sendRequestByUrl('2019').then(function success(response) {
+                        sendRequestByUrl('2020').then(function success(response) {
                             $scope.isLoaded = response;
                             $scope.showCompany();
                         });
@@ -132,9 +132,9 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
                 break;
             case 5:
                 if (Object.keys(xslmObjects).length < 5) {
-                    sendRequestByUrl('2018').then(function success(response) {
+                    sendRequestByUrl('2019').then(function success(response) {
                         if (response) {
-                            sendRequestByUrl('2017').then(function success(response) {
+                            sendRequestByUrl('2018').then(function success(response) {
                                 showYearData(response);
                             });
                         }
@@ -171,7 +171,7 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
         $scope.title = "Компания";
         $scope.itemList = companyObjectList;
         $scope.copyItemList = companyObjectList;
-        };
+    };
 
     $scope.showTopCompany = function () {
         clearSearch();
@@ -250,7 +250,34 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
                 ['Месяц', 'Товар, кг']
             ]
 
-            let chartDataArray2021 = [
+            let chartDataArray2022 = [
+                ['Jan',  sum(productObjectList, 'Jan', '2022')],
+                ['',  sum(productObjectList, 'Feb', '2022')],
+                ['Mar',  sum(productObjectList, 'Mar', '2022')],
+                ['',  sum(productObjectList, 'Apr', '2022')],
+                ['May',  sum(productObjectList, 'May', '2022')],
+                ['2022',  sum(productObjectList, 'Jun', '2022')],
+                ['Jul',  sum(productObjectList, 'Jul', '2022')],
+                ['',  sum(productObjectList, 'Aug', '2022')],
+                ['Sep',  sum(productObjectList, 'Sep', '2022')],
+                ['',  sum(productObjectList, 'Oct', '2022')],
+                ['Nov',  sum(productObjectList, 'Nov', '2022')],
+                ['',  sum(productObjectList, 'Dec', '2022')]
+            ];
+
+            let chartDataArray20202021 = [
+                ['Jan', sum(productObjectList, 'Jan', '2020')],
+                ['', sum(productObjectList, 'Feb', '2020')],
+                ['Mar',  sum(productObjectList, 'Mar', '2020')],
+                ['',  sum(productObjectList, 'Apr', '2020')],
+                ['May',  sum(productObjectList, 'May', '2020')],
+                ['2020',  sum(productObjectList, 'Jun', '2020')],
+                ['Jul',  sum(productObjectList, 'Jul', '2020')],
+                ['',  sum(productObjectList, 'Aug', '2020')],
+                ['Sep',  sum(productObjectList, 'Sep', '2020')],
+                ['',  sum(productObjectList, 'Oct', '2020')],
+                ['Nov',  sum(productObjectList, 'Nov', '2020')],
+                ['',  sum(productObjectList, 'Dec', '2020')],
                 ['Jan',  sum(productObjectList, 'Jan', '2021')],
                 ['',  sum(productObjectList, 'Feb', '2021')],
                 ['Mar',  sum(productObjectList, 'Mar', '2021')],
@@ -265,48 +292,9 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
                 ['',  sum(productObjectList, 'Dec', '2021')]
             ];
 
-            let chartDataArray20192020 = [
-                ['Jan', sum(productObjectList, 'Jan', '2019')],
-                ['', sum(productObjectList, 'Feb', '2019')],
-                ['Mar',  sum(productObjectList, 'Mar', '2019')],
-                ['',  sum(productObjectList, 'Apr', '2019')],
-                ['May',  sum(productObjectList, 'May', '2019')],
-                ['2019',  sum(productObjectList, 'Jun', '2019')],
-                ['Jul',  sum(productObjectList, 'Jul', '2019')],
-                ['',  sum(productObjectList, 'Aug', '2019')],
-                ['Sep',  sum(productObjectList, 'Sep', '2019')],
-                ['',  sum(productObjectList, 'Oct', '2019')],
-                ['Nov',  sum(productObjectList, 'Nov', '2019')],
-                ['',  sum(productObjectList, 'Dec', '2019')],
-                ['Jan',  sum(productObjectList, 'Jan', '2020')],
-                ['',  sum(productObjectList, 'Feb', '2020')],
-                ['Mar',  sum(productObjectList, 'Mar', '2020')],
-                ['',  sum(productObjectList, 'Apr', '2020')],
-                ['May',  sum(productObjectList, 'May', '2020')],
-                ['2020',  sum(productObjectList, 'Jun', '2020')],
-                ['Jul',  sum(productObjectList, 'Jul', '2020')],
-                ['',  sum(productObjectList, 'Aug', '2020')],
-                ['Sep',  sum(productObjectList, 'Sep', '2020')],
-                ['',  sum(productObjectList, 'Oct', '2020')],
-                ['Nov',  sum(productObjectList, 'Nov', '2020')],
-                ['',  sum(productObjectList, 'Dec', '2020')]
-            ];
-
-            let chartDataArray20172018 = [
-                ['Jan', sum(productObjectList, 'Jan', '2017')],
-                ['', sum(productObjectList, 'Feb', '2017')],
-                ['Mar',  sum(productObjectList, 'Mar', '2017')],
-                ['',  sum(productObjectList, 'Apr', '2017')],
-                ['May',  sum(productObjectList, 'May', '2017')],
-                ['2017',  sum(productObjectList, 'Jun', '2017')],
-                ['Jul',  sum(productObjectList, 'Jul', '2017')],
-                ['',  sum(productObjectList, 'Aug', '2017')],
-                ['Sep',  sum(productObjectList, 'Sep', '2017')],
-                ['',  sum(productObjectList, 'Oct', '2017')],
-                ['Nov',  sum(productObjectList, 'Nov', '2017')],
-                ['',  sum(productObjectList, 'Dec', '2017')],
-                ['Jan',  sum(productObjectList, 'Jan', '2018')],
-                ['',  sum(productObjectList, 'Feb', '2018')],
+            let chartDataArray20182019 = [
+                ['Jan', sum(productObjectList, 'Jan', '2018')],
+                ['', sum(productObjectList, 'Feb', '2018')],
                 ['Mar',  sum(productObjectList, 'Mar', '2018')],
                 ['',  sum(productObjectList, 'Apr', '2018')],
                 ['May',  sum(productObjectList, 'May', '2018')],
@@ -316,19 +304,31 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
                 ['Sep',  sum(productObjectList, 'Sep', '2018')],
                 ['',  sum(productObjectList, 'Oct', '2018')],
                 ['Nov',  sum(productObjectList, 'Nov', '2018')],
-                ['',  sum(productObjectList, 'Dec', '2018')]
+                ['',  sum(productObjectList, 'Dec', '2018')],
+                ['Jan',  sum(productObjectList, 'Jan', '2019')],
+                ['',  sum(productObjectList, 'Feb', '2019')],
+                ['Mar',  sum(productObjectList, 'Mar', '2019')],
+                ['',  sum(productObjectList, 'Apr', '2019')],
+                ['May',  sum(productObjectList, 'May', '2019')],
+                ['2019',  sum(productObjectList, 'Jun', '2019')],
+                ['Jul',  sum(productObjectList, 'Jul', '2019')],
+                ['',  sum(productObjectList, 'Aug', '2019')],
+                ['Sep',  sum(productObjectList, 'Sep', '2019')],
+                ['',  sum(productObjectList, 'Oct', '2019')],
+                ['Nov',  sum(productObjectList, 'Nov', '2019')],
+                ['',  sum(productObjectList, 'Dec', '2019')]
             ];
 
             if ($scope.activeYear === 3) {
-                chartDataArray2021 = chartDataArray20192020.concat(chartDataArray2021);
+                chartDataArray2022 = chartDataArray20202021.concat(chartDataArray2022);
             }
 
             if ($scope.activeYear === 5) {
-                chartDataArray2021 = chartDataArray20192020.concat(chartDataArray2021);
-                chartDataArray2021 = chartDataArray20172018.concat(chartDataArray2021);
+                chartDataArray2022 = chartDataArray20202021.concat(chartDataArray2022);
+                chartDataArray2022 = chartDataArray20182019.concat(chartDataArray2022);
             }
 
-            chartData = chartData.concat(chartDataArray2021);
+            chartData = chartData.concat(chartDataArray2022);
             const data = google.visualization.arrayToDataTable(chartData);
 
             const options = {
@@ -355,26 +355,26 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
 
     function buildAnalysis () {
         let analysisList = [];
-        xslmObjects[2021].forEach(element => {
-            const companyName = element["  Клиент "];
+        xslmObjects[2022].forEach(element => {
+            const companyName = element['Компания'];
             Object.keys(element).forEach(key => {
-                if (key !== 'дата отгр' && key !== '  Клиент ' && key !== 'Итого' && key !== 'вид товара') {
+                if (key !== 'дата отгр' && key !== 'Компания' && key !== 'Итого' && key !== 'вид товара') {
                     const productName = key;
                     const total = parseFloat(element[productName]);
 
                     let existedObject = analysisList.find(object => object.companyName === companyName && object.productName === productName);
                     if (existedObject){
-                        existedObject['2021'] = $scope.round(existedObject['2021'], total);
+                        existedObject['2022'] = $scope.round(existedObject['2022'], total);
                     }
 
                     if (companyName && key !== 'ИТОГО' && total && !existedObject) {
-                        analysisList.push({companyName, productName, '2021': total})
+                        analysisList.push({companyName, productName, '2022': total})
                     }
                 }
             });
         });
 
-        xslmObjects[2020].forEach(element => {
+        xslmObjects[2021].forEach(element => {
           const companyName = Object.values(element)[1];
           Object.keys(element).forEach(key => {
             if (key !== 'дата отгр' && key !== '   ' && key !== 'Итого' && key !== 'вид товара') {
@@ -383,11 +383,11 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
 
               let existedObject = analysisList.find(object => object.companyName === companyName && object.productName === productName);
               if (existedObject) {
-                existedObject['2020'] = $scope.round(total, existedObject['2020']);
+                existedObject['2021'] = $scope.round(total, existedObject['2021']);
               }
 
               if (companyName && key !== 'ИТОГО' && total && !existedObject) {
-                analysisList.push({companyName, productName, '2020': total})
+                analysisList.push({companyName, productName, '2021': total})
               }
             }
           });
@@ -395,10 +395,10 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
 
         let resultList = [];
         analysisList.forEach(element => {
-          if (element[2020]) {
-            const t21 = element[2021] ? element[2021] : 0;
-            const t20 = element[2020];
-            element.percent = $scope.round((t21 - t20) * 100 / t20);
+          if (element[2021]) {
+            const t22 = element[2022] ? element[2022] : 0;
+            const t21 = element[2021];
+            element.percent = $scope.round((t22 - t21) * 100 / t21);
             if (element.percent <= -25 ) {
               resultList.push(element);
             }
@@ -424,6 +424,48 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
             $scope.itemList = $scope.copyItemList;
         }
     };
+
+    $scope.showDetails = function (detailName, month, year) {
+        $scope.details = {name: detailName, month, items: []};
+        xslmObjects[year].forEach(element => {
+            switch($scope.activeTab) {
+            case 'product':
+
+                if (element[detailName] && element['дата отгр'].includes(month)) {
+                    let item = $scope.details.items.find((item) => item.name === element['Компания']);
+                    if (item) {
+                        item.value = $scope.round(parseFloat(item.value), parseFloat(element[detailName]))
+                    } else {
+                        $scope.details.items.push({ name: element['Компания'], value: element[detailName] });
+                    }
+                }
+
+                break;
+            case 'company':
+
+                if (element['Компания'] === detailName && element['дата отгр'].includes(month)) {
+                    Object.keys(element).forEach(key => {
+                        if (key !== 'дата отгр' && key !== 'Итого' && key !== 'Компания') {
+                            let item = $scope.details.items.find((item) => item.name === key);
+                            if (item) {
+                                item.value = $scope.round(parseFloat(item.value), parseFloat(element[key]))
+                            } else {
+                                $scope.details.items.push({ name: key, value: element[key] });
+                            }
+                        }
+                    });
+                }
+
+                break;
+            }
+        });
+
+        $('#detailsPopup').show();
+    };
+
+    $scope.closeDetailsPopup = function () {
+        $('#detailsPopup').hide();
+    }
 
     function clearSearch() {
         $scope.searchValue = '';

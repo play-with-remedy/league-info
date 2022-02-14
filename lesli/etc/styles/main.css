@@ -84,3 +84,41 @@ body {
     opacity: 1;
     pointer-events: all;
 }
+
+#detailsPopup {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background: rgba(255,255,255, 1);
+    padding: 20px 0px 10px 25px;
+    z-index: 999;
+    border: double 1px black;
+}
+
+.detailsName {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.detailsImage {
+    width: 25px;
+    vertical-align: sub;
+}
+
+.detailsMonth {
+    font-size: 20px;
+    display: inline-block;
+}
+
+.detailsClose {
+    width: 14px;
+    float: right;
+    padding: 0px 14px;
+    cursor: pointer;
+}

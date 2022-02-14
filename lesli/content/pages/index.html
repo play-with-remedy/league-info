@@ -67,150 +67,150 @@
                                     data-ng-class="{'activeOrderField': currentOrderName === 'name'}"
                                     data-ng-click="orderByField('name')">{{title}}</th>
                                 <th data-ng-if="activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2017].total'}"
-                                    data-ng-click="orderByField('data[2017].total')"
-                                    rowspan="2">
-                                    2017
-                                <th data-ng-if="activeYear === 5"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2018].total'}"
                                     data-ng-click="orderByField('data[2018].total')"
                                     rowspan="2">
                                     2018
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                <th data-ng-if="activeYear === 5"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2019].total'}"
                                     data-ng-click="orderByField('data[2019].total')"
                                     rowspan="2">
-                                    2019
+                                2019
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].total'}"
+                                    data-ng-click="orderByField('data[2020].total')"
+                                    rowspan="2">
+                                2020
                                 </th>
-                                <th class="long_year" data-ng-if="activeYear === 3 || activeYear === 5" colspan="13">2020</th>
-                                <th class="long_year" colspan="13">2021</th>
+                                <th class="long_year" data-ng-if="activeYear === 3 || activeYear === 5" colspan="13">2021</th>
+                                <th class="long_year" colspan="13">2022</th>
                             </tr>
                             <tr>
                                 <th data-ng-if="activeYear === 3 || activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Jan'}"
-                                    data-ng-click="orderByField('data[2020].Jan')">Jan
-                                </th>
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Feb'}"
-                                    data-ng-click="orderByField('data[2020].Feb')">Feb
-                                </th>
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Mar'}"
-                                    data-ng-click="orderByField('data[2020].Mar')">Mar
-                                </th>
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Apr'}"
-                                    data-ng-click="orderByField('data[2020].Apr')">Apr
-                                </th>
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].May'}"
-                                    data-ng-click="orderByField('data[2020].May')">May
-                                </th>
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Jun'}"
-                                    data-ng-click="orderByField('data[2020].Jun')">Jun
-                                </th>
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Jul'}"
-                                    data-ng-click="orderByField('data[2020].Jul')">Jul
-                                </th>
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Aug'}"
-                                    data-ng-click="orderByField('data[2020].Aug')">Aug
-                                </th>
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Sep'}"
-                                    data-ng-click="orderByField('data[2020].Sep')">Sep
-                                </th>
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Oct'}"
-                                    data-ng-click="orderByField('data[2020].Oct')">Oct
-                                </th>
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Nov'}"
-                                    data-ng-click="orderByField('data[2020].Nov')">Nov
-                                </th>
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].Dec'}"
-                                    data-ng-click="orderByField('data[2020].Dec')">Dec
-                                </th>
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].total'}"
-                                    data-ng-click="orderByField('data[2020].total')">Итого
-                                </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Jan'}"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Jan'}"
                                     data-ng-click="orderByField('data[2021].Jan')">Jan
                                 </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Feb'}"
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Feb'}"
                                     data-ng-click="orderByField('data[2021].Feb')">Feb
                                 </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Mar'}"
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Mar'}"
                                     data-ng-click="orderByField('data[2021].Mar')">Mar
                                 </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Apr'}"
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Apr'}"
                                     data-ng-click="orderByField('data[2021].Apr')">Apr
                                 </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].May'}"
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].May'}"
                                     data-ng-click="orderByField('data[2021].May')">May
                                 </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Jun'}"
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Jun'}"
                                     data-ng-click="orderByField('data[2021].Jun')">Jun
                                 </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Jul'}"
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Jul'}"
                                     data-ng-click="orderByField('data[2021].Jul')">Jul
                                 </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Aug'}"
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Aug'}"
                                     data-ng-click="orderByField('data[2021].Aug')">Aug
                                 </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Sep'}"
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Sep'}"
                                     data-ng-click="orderByField('data[2021].Sep')">Sep
                                 </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Oct'}"
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Oct'}"
                                     data-ng-click="orderByField('data[2021].Oct')">Oct
                                 </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Nov'}"
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Nov'}"
                                     data-ng-click="orderByField('data[2021].Nov')">Nov
                                 </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Dec'}"
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].Dec'}"
                                     data-ng-click="orderByField('data[2021].Dec')">Dec
                                 </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].total'}"
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].total'}"
                                     data-ng-click="orderByField('data[2021].total')">Итого
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].Jan'}"
+                                    data-ng-click="orderByField('data[2022].Jan')">Jan
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].Feb'}"
+                                    data-ng-click="orderByField('data[2022].Feb')">Feb
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].Mar'}"
+                                    data-ng-click="orderByField('data[2022].Mar')">Mar
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].Apr'}"
+                                    data-ng-click="orderByField('data[2022].Apr')">Apr
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].May'}"
+                                    data-ng-click="orderByField('data[2021].May')">May
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].Jun'}"
+                                    data-ng-click="orderByField('data[2022].Jun')">Jun
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].Jul'}"
+                                    data-ng-click="orderByField('data[2022].Jul')">Jul
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].Aug'}"
+                                    data-ng-click="orderByField('data[2022].Aug')">Aug
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].Sep'}"
+                                    data-ng-click="orderByField('data[2022].Sep')">Sep
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].Oct'}"
+                                    data-ng-click="orderByField('data[2022].Oct')">Oct
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].Nov'}"
+                                    data-ng-click="orderByField('data[2022].Nov')">Nov
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].Dec'}"
+                                    data-ng-click="orderByField('data[2022].Dec')">Dec
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].total'}"
+                                    data-ng-click="orderByField('data[2022].total')">Итого
                                 </th>
                             </tr>
                         </thead>
                         <tr data-ng-repeat="object in itemList | limitTo:quantity">
                             <td>{{$index + 1}}</td>
                             <td>{{object.name}}</td>
-                            <td data-ng-if="activeYear === 5">{{object.data['2017'].total}}</td>
                             <td data-ng-if="activeYear === 5">{{object.data['2018'].total}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2019'].total}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].Jan}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].Feb}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].Mar}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].Apr}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].May}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].Jun}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].Jul}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].Aug}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].Sep}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].Oct}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].Nov}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].Dec}}</td>
+                            <td data-ng-if="activeYear === 5">{{object.data['2019'].total}}</td>
                             <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].total}}</td>
-                            <td>{{object.data['2021'].Jan}}</td>
-                            <td>{{object.data['2021'].Feb}}</td>
-                            <td>{{object.data['2021'].Mar}}</td>
-                            <td>{{object.data['2021'].Apr}}</td>
-                            <td>{{object.data['2021'].May}}</td>
-                            <td>{{object.data['2021'].Jun}}</td>
-                            <td>{{object.data['2021'].Jul}}</td>
-                            <td>{{object.data['2021'].Aug}}</td>
-                            <td>{{object.data['2021'].Sep}}</td>
-                            <td>{{object.data['2021'].Oct}}</td>
-                            <td>{{object.data['2021'].Nov}}</td>
-                            <td>{{object.data['2021'].Dec}}</td>
-                            <td>{{object.data['2021'].total}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].Jan}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].Feb}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].Mar}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].Apr}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].May}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].Jun}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].Jul}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].Aug}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].Sep}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].Oct}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].Nov}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].Dec}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].total}}</td>
+                            <td style="cursor: pointer" data-ng-click="showDetails(object.name, 'Jan', 2022)">{{object.data['2022'].Jan}}</td>
+                            <td>{{object.data['2022'].Feb}}</td>
+                            <td>{{object.data['2022'].Mar}}</td>
+                            <td>{{object.data['2022'].Apr}}</td>
+                            <td>{{object.data['2022'].May}}</td>
+                            <td>{{object.data['2022'].Jun}}</td>
+                            <td>{{object.data['2022'].Jul}}</td>
+                            <td>{{object.data['2022'].Aug}}</td>
+                            <td>{{object.data['2022'].Sep}}</td>
+                            <td>{{object.data['2022'].Oct}}</td>
+                            <td>{{object.data['2022'].Nov}}</td>
+                            <td>{{object.data['2022'].Dec}}</td>
+                            <td>{{object.data['2022'].total}}</td>
                         </tr>
                     </table>
                 </div>
@@ -223,21 +223,21 @@
                                 <th>#</th>
                                 <th>{{title}}</th>
                                 <th data-ng-if="activeYear === 5"
-                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2017].total'}"
-                                    data-ng-click="orderByField('data[2017].total')">2017
-                                <th data-ng-if="activeYear === 5"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2018].total'}"
                                     data-ng-click="orderByField('data[2018].total')">2018
-                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                <th data-ng-if="activeYear === 5"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2019].total'}"
                                     data-ng-click="orderByField('data[2019].total')">2019
-                                </th>
                                 <th data-ng-if="activeYear === 3 || activeYear === 5"
                                     data-ng-class="{'activeOrderField': currentOrderName === 'data[2020].total'}"
                                     data-ng-click="orderByField('data[2020].total')">2020
                                 </th>
-                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].total'}"
+                                <th data-ng-if="activeYear === 3 || activeYear === 5"
+                                    data-ng-class="{'activeOrderField': currentOrderName === 'data[2021].total'}"
                                     data-ng-click="orderByField('data[2021].total')">2021
+                                </th>
+                                <th data-ng-class="{'activeOrderField': currentOrderName === 'data[2022].total'}"
+                                    data-ng-click="orderByField('data[2022].total')">2022
                                 </th>
                                 <th data-ng-class="{'activeOrderField': currentOrderName === 'total'}"
                                     data-ng-click="orderByField('total')">Итого
@@ -247,14 +247,14 @@
                         <tr data-ng-repeat="object in itemList | limitTo:quantity">
                             <td>{{$index + 1}}</td>
                             <td>{{object.name}}</td>
-                            <td data-ng-if="activeYear === 5">{{object.data['2017'].total}}</td>
                             <td data-ng-if="activeYear === 5">{{object.data['2018'].total}}</td>
-                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2019'].total}}</td>
+                            <td data-ng-if="activeYear === 5">{{object.data['2019'].total}}</td>
                             <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2020'].total}}</td>
-                            <td>{{object.data['2021'].total}}</td>
-                            <td data-ng-if="activeYear === 1">{{object.data['2021'].total}}</td>
-                            <td data-ng-if="activeYear === 3">{{round(object.data['2019'].total + object.data['2020'].total + object.data['2021'].total)}}</td>
-                            <td data-ng-if="activeYear === 5">{{round(object.data['2017'].total + object.data['2018'].total + object.data['2019'].total + object.data['2020'].total + object.data['2021'].total)}}</td>
+                            <td data-ng-if="activeYear === 3 || activeYear === 5">{{object.data['2021'].total}}</td>
+                            <td>{{object.data['2022'].total}}</td>
+                            <td data-ng-if="activeYear === 1">{{object.data['2022'].total}}</td>
+                            <td data-ng-if="activeYear === 3">{{round(object.data['2020'].total + object.data['2021'].total + object.data['2022'].total)}}</td>
+                            <td data-ng-if="activeYear === 5">{{round(object.data['2018'].total + object.data['2019'].total + object.data['2020'].total + object.data['2021'].total + object.data['2022'].total)}}</td>
                         </tr>
                     </table>
                 </div>
@@ -267,8 +267,8 @@
                                     <th>#</th>
                                     <th>Компания</th>
                                     <th>Продукт</th>
-                                    <th>2020</th>
                                     <th>2021</th>
+                                    <th>2022</th>
                                     <th>Процент</th>
                                 </tr>
                             </thead>
@@ -276,14 +276,36 @@
                                 <td>{{$index + 1}}</td>
                                 <td>{{object.companyName}}</td>
                                 <td>{{object.productName}}</td>
-                                <td>{{object[2020]}}</td>
                                 <td>{{object[2021]}}</td>
+                                <td>{{object[2022]}}</td>
                                 <td>{{object.percent}}%</td>
                             </tr>
                         </table>
                     </div>
                 </div>
             <div data-ng-show="activeTab === 'stats' && isLoaded" id="curve_chart" class="curveChart"></div>
+        </div>
+        <div id="detailsPopup" style="display: none">
+            <p class="detailsName">{{details.name}}</p>
+            <img class="detailsImage" src="https://cdn-icons-png.flaticon.com/512/567/567014.png"/>
+            <p class="detailsMonth">{{details.month}}</p>
+            <img class="detailsClose" data-ng-click="closeDetailsPopup()" src="https://www.pngall.com/wp-content/uploads/4/Cancel-PNG-Clipart.png"/>
+            <div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Продукт</th>
+                        <th>Кол-во, кг</th>
+                    </tr>
+                    </thead>
+                    <tr data-ng-repeat="item in details.items">
+                        <td>{{$index + 1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.value}}</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </body>
 </html>
