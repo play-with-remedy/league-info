@@ -430,7 +430,6 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
         xslmObjects[year].forEach(element => {
             switch($scope.activeTab) {
             case 'product':
-
                 if (element[detailName] && element['дата отгр'].includes(month)) {
                     let item = $scope.details.items.find((item) => item.name === element['Компания']);
                     if (item) {
@@ -442,7 +441,6 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
 
                 break;
             case 'company':
-
                 if (element['Компания'] === detailName && element['дата отгр'].includes(month)) {
                     Object.keys(element).forEach(key => {
                         if (key !== 'дата отгр' && key !== 'Итого' && key !== 'Компания') {
