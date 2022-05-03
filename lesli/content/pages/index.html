@@ -285,10 +285,10 @@
                 </div>
             <div data-ng-show="activeTab === 'stats' && isLoaded" id="curve_chart" class="curveChart"></div>
         </div>
-        <div id="detailsPopup" style="display: none">
+        <div id="detailsPopup">
             <p class="detailsName">{{details.name}}</p>
             <img class="detailsImage" src="../../etc/images/timetable.png"/>
-            <p class="detailsMonth">{{details.month}}</p>
+            <p class="detailsMonth">{{details.month}} {{details.year}}</p>
             <img class="detailsClose" data-ng-click="closeDetailsPopup()" src="../../etc/images/cancel.png"/>
             <div>
                 <table class="table">

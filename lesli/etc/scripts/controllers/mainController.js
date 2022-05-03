@@ -426,7 +426,7 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
     };
 
     $scope.showDetails = function (detailName, month, year) {
-        $scope.details = {name: detailName, month, items: []};
+        $scope.details = {name: detailName, month, year, items: []};
         xslmObjects[year].forEach(element => {
             switch($scope.activeTab) {
             case 'product':
