@@ -125,4 +125,6 @@ body {
 
 #detailsPopup {
     display: none;
+    max-height: 480px;
+    overflow: auto;
 }

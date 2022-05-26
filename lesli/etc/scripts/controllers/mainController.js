@@ -436,7 +436,7 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
                     let item = $scope.details.items.find((item) => item.name === element['Компания']);
                     if (item) {
                         item.value = $scope.round(parseFloat(item.value), parseFloat(element[detailName]))
-                    } else {
+                    } else if (element['Компания']) {
                         $scope.details.items.push({ name: element['Компания'], value: element[detailName] });
                     }
                 }
