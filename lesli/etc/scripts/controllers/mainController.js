@@ -180,8 +180,9 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
         $scope.title = "Компания";
         $scope.quantity = 10;
         $scope.isDescOrder = true;
-        $scope.orderByField('total');
         $scope.itemList = companyObjectList;
+        $scope.orderByField('data[2022].total');
+
     }
 
     $scope.showProduct = function () {
@@ -201,8 +202,8 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
         $scope.title = "Продукт";
         $scope.quantity = 10;
         $scope.isDescOrder = true;
-        $scope.orderByField('total');
         $scope.itemList = productObjectList;
+        $scope.orderByField('data[2022].total');
     }
 
     $scope.orderByField = function (field) {
@@ -429,38 +430,53 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
 
     $scope.showDetails = function (detailName, month, year) {
         $scope.details = {name: detailName, month, year, items: []};
-        xslmObjects[year].forEach(element => {
-            switch($scope.activeTab) {
-            case 'product':
-                if (element[detailName] && (month === 'Итог' || element['дата отгр'].includes(month))) {
-                    let item = $scope.details.items.find((item) => item.name === element['Компания']);
-                    if (item) {
-                        item.value = $scope.round(parseFloat(item.value), parseFloat(element[detailName]))
-                    } else if (element['Компания']) {
-                        $scope.details.items.push({ name: element['Компания'], value: element[detailName] });
-                    }
-                }
-
-                break;
-            case 'company':
-                if (element['Компания'] === detailName && (month === 'Итог' || element['дата отгр'].includes(month))) {
-                    Object.keys(element).forEach(key => {
-                        if (key !== 'дата отгр' && key !== 'Итого' && key !== 'Компания') {
-                            let item = $scope.details.items.find((item) => item.name === key);
-                            if (item) {
-                                item.value = $scope.round(parseFloat(item.value), parseFloat(element[key]))
-                            } else {
-                                $scope.details.items.push({ name: key, value: element[key] });
-                            }
-                        }
-                    });
-                }
-
-                break;
-            }
-        });
+        if (year) {
+            xslmObjects[year].forEach(element => {
+                buildDetailsJson(element);
+            });
+        } else {
+            xslmObjects.forEach((yearElement, index) => {
+                if ($scope.activeYear === 5 || ($scope.activeYear === 3 && index >= 2020))
+                yearElement.forEach(element => {
+                    buildDetailsJson(element);
+                });
+            });
+        }
 
         $('#detailsPopup').show();
+
+        function buildDetailsJson(element) {
+            switch($scope.activeTab) {
+                case 'topProduct':
+                case 'product':
+                    if (element[detailName] && (month === 'Итог' || element['дата отгр'].includes(month))) {
+                        let item = $scope.details.items.find((item) => item.name === element['Компания']);
+                        if (item) {
+                            item.value = $scope.round(parseFloat(item.value), parseFloat(element[detailName]))
+                        } else if (element['Компания']) {
+                            $scope.details.items.push({ name: element['Компания'], value: element[detailName] });
+                        }
+                    }
+
+                    break;
+                case 'topCompany':
+                case 'company':
+                    if (element['Компания'] === detailName && (month === 'Итог' || element['дата отгр'].includes(month))) {
+                        Object.keys(element).forEach(key => {
+                            if (key !== 'дата отгр' && key !== 'Итого' && key !== 'Компания') {
+                                let item = $scope.details.items.find((item) => item.name === key);
+                                if (item) {
+                                    item.value = $scope.round(parseFloat(item.value), parseFloat(element[key]))
+                                } else {
+                                    $scope.details.items.push({ name: key, value: element[key] });
+                                }
+                            }
+                        });
+                    }
+
+                    break;
+            }
+        }
     };
 
     $scope.closeDetailsPopup = function () {
