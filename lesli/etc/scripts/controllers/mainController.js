@@ -359,23 +359,24 @@ fantasyApp.controller("mainController", function ($scope, $q, $parse) {
     }
 
     function buildAnalysis() {
+        const periodList = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
         let analysisList = [];
         analysisList = buildAnalysisList(2022, analysisList);
         analysisList = buildAnalysisList(2021, analysisList);
 
         let resultList = [];
         analysisList.forEach(element => {
-            if (element[2021] && element[2022]) {
-                for (const [key, value] of Object.entries(element[2021])) {
-                    if (element[2022][key]) {
-                        const currentYearMonthValue = element[2022][key] ? element[2022][key] : 0;
-                        const previousYearMonthValue = value;
-                        element.percent = $scope.round((currentYearMonthValue - previousYearMonthValue) * 100 / previousYearMonthValue);
-                        if (element.percent <= -25) {
-                            resultList.push({ productName: element.productName, companyName: element.companyName, month: key, percent: element.percent, '2021': previousYearMonthValue, '2022': currentYearMonthValue});
-                        }
-                    }
-                }
+            let currentYearPeriodValue = 0;
+            let previousYearPeriodValue = 0;
+            if (element[2021]) {
+                periodList.forEach((month) => {
+                    currentYearPeriodValue += element[2022]?.[month] ? element[2022][month] : 0;
+                    previousYearPeriodValue += element[2021][month] ? element[2021][month] : 0;
+                });
+            }
+            element.percent = $scope.round((currentYearPeriodValue - previousYearPeriodValue) * 100 / previousYearPeriodValue);
+            if (element.percent <= -25) {
+                resultList.push({ productName: element.productName, companyName: element.companyName, percent: element.percent, '2021': Math.round(previousYearPeriodValue * 10) / 10, '2022': Math.round(currentYearPeriodValue * 10) / 10 });
             }
         });
 
