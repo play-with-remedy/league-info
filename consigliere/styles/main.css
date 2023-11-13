@@ -6,25 +6,32 @@ body {
 h1 {
     color: white;
     font-size: 90px;
-    font-family: Calisto MT;
+    font-family: serif;
 }
 
 table {
     border: solid 2px white;
     color: white;
-    font-family: Calisto MT;
+    font-family: serif;
     font-size: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+    table {
+      font-size: 50px;
+    }
 }
 
 
 td {
     border: dashed 1px white;
-    padding: 10px;
+    padding: 20px;
+    text-align: center;
 }
 
 .mafia-table {
     display: inline-block;
-    padding: 0px 100px 50px 0px;
+    padding: 0px 90px 50px 0px;
 }
 
 .mafia-table p {
