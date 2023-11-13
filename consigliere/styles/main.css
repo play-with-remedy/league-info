@@ -1,0 +1,46 @@
+body {
+    background: url(../images/background.jpg);
+    padding: 30px 0 0 15%;
+}
+
+h1 {
+    color: white;
+    font-size: 90px;
+    font-family: Calisto MT;
+}
+
+table {
+    border: solid 2px white;
+    color: white;
+    font-family: Calisto MT;
+    font-size: 25px;
+}
+
+
+td {
+    border: dashed 1px white;
+    padding: 10px;
+}
+
+.mafia-table {
+    display: inline-block;
+    padding: 0px 100px 50px 0px;
+}
+
+.mafia-table p {
+    font-family: Calisto MT;
+    font-size: 25px !important;
+    color: white;
+    border-bottom: none !important;
+}
+
+.game {
+    padding-right: 15%;
+}
+
+.game p {
+    color: white;
+    font-size: 35px;
+    border-bottom: solid 3px white;
+    padding-bottom: 20px;
+}
