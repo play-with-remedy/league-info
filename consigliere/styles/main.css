@@ -6,6 +6,10 @@ body {
     padding: 30px 15% 0 15%;
 }
 
+.total-wrapper {
+    padding: 30px 5% 0 5%;
+}
+
 .header {
     text-align: center;
 }
@@ -21,7 +25,14 @@ h1 {
     margin-top: 35px;
 }
 
-table {
+.total table {
+    border: solid 2px white;
+    color: white;
+    font-family: serif;
+    font-size: 30px;
+}
+
+.game table {
     border: solid 2px white;
     color: white;
     font-family: serif;
@@ -40,6 +51,20 @@ td {
 }
 
 .mafia-table p {
+    font-family: Calisto MT;
+    font-size: 50px !important;
+    color: white;
+    border-bottom: none !important;
+    margin: 20px 0;
+}
+
+.total-mafia-table {
+    padding-bottom: 50px;
+    overflow-x:scroll;
+    white-space: nowrap;
+}
+
+.total-mafia-table p {
     font-family: Calisto MT;
     font-size: 50px !important;
     color: white;
@@ -70,6 +95,13 @@ td {
     color: white;
     font-size: 70px;
     border-bottom: solid 3px white;
+    padding: 50px 0 20px;
+    margin: 20px 0;
+}
+
+.total p {
+    color: white;
+    font-size: 70px;
     padding: 50px 0 20px;
     margin: 20px 0;
 }
