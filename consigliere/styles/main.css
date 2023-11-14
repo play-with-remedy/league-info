@@ -11,18 +11,14 @@ body {
 }
 
 .header img {
-    width: 100px;
-    position: relative;
-    right: 20px;
-    top: 25px;
+    width: 200px;
 }
 
 h1 {
     color: white;
-    font-size: 70px;
+    font-size: 85px;
     font-family: serif;
-    margin-top: 20px;
-    display: inline-block;
+    margin-top: 35px;
 }
 
 table {
