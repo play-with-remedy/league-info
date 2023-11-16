@@ -412,8 +412,8 @@ $(document).ready(function() {
             table += '<td>' + game.totalScore.toFixed(2) + '</td>';
         });
 
-        table += '</tr>'
+        table += '</tr>';
     });
-    table += "</table>"
+    table += "</table>";
     $('.total-mafia-table').append(table);
 });
