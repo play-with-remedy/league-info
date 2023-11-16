@@ -415,5 +415,6 @@ $(document).ready(function() {
         table += '</tr>'
     });
     table += "</table>"
+
     $('.total-mafia-table').append(table);
 });
