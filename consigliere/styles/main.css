@@ -51,7 +51,7 @@ td {
 }
 
 .mafia-table {
-    display: inline-block;
+    display: grid;
     padding-bottom: 50px;
 }
 
