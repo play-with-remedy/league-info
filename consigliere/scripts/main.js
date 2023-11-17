@@ -247,7 +247,7 @@ const teamList = [
         ],
     },
     {
-        teamName: "Ведьмы", totalScore: 0, additionScore: 0, ci: 0,
+        teamName: "The Witches", totalScore: 0, additionScore: 0, ci: 0,
         games: [
             { game: 1, score: 0, additionScore: 0, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
