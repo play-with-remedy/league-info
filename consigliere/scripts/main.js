@@ -182,7 +182,7 @@ const teamList = [
         ],
     },
     {
-        teamName: "И. С. К.", totalScore: 0, additionScore: 0, ci: 0,
+        teamName: "Мы спалим твою овцу", totalScore: 0, additionScore: 0, ci: 0,
         games: [
             { game: 1, score: 0, additionScore: 0, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
@@ -234,7 +234,7 @@ const teamList = [
         ],
     },
     {
-        teamName: "Пёс да Лис 2.1", totalScore: 0, additionScore: 0, ci: 0,
+        teamName: "Пёс да Лис 2.0", totalScore: 0, additionScore: 0, ci: 0,
         games: [
             { game: 1, score: 0, additionScore: 0, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
