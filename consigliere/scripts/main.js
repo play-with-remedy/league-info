@@ -2,7 +2,7 @@ const teamList = [
     {
         teamName: "Креветки из Инетки", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0.3, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -41,7 +41,7 @@ const teamList = [
     {
         teamName: "Светик-Правдоцветик", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0.2, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -78,7 +78,7 @@ const teamList = [
         ],
     },
     {
-        teamName: "Easy Win", totalScore: 0, additionScore: 0, ci: 0,
+        teamName: "Easy Win", totalScore: 0, additionScore: 0, ci: 0.0,
         games: [
             { game: 1, score: 0, additionScore: 0, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
@@ -93,7 +93,7 @@ const teamList = [
     {
         teamName: "Лучшие пупсики на вашу вечеринку", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0.5, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -132,7 +132,7 @@ const teamList = [
     {
         teamName: "DDniwe", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0.4, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -143,9 +143,9 @@ const teamList = [
         ],
     },
     {
-        teamName: "Бандюги", totalScore: 0, additionScore: 0, ci: 0,
+        teamName: "Бандюги", totalScore: 0, additionScore: 0, ci: 0.25,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -158,7 +158,7 @@ const teamList = [
     {
         teamName: "KOD", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0.2, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -184,7 +184,7 @@ const teamList = [
     {
         teamName: "Мы спалим твою овцу", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0.1, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -197,7 +197,7 @@ const teamList = [
     {
         teamName: "OCISLY", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -210,7 +210,7 @@ const teamList = [
     {
         teamName: "Black hole", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0.2, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -223,7 +223,7 @@ const teamList = [
     {
         teamName: "Клан Бомбино", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0.4, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -260,9 +260,9 @@ const teamList = [
         ],
     },
     {
-        teamName: "Хочу тебя обнимать", totalScore: 0, additionScore: 0, ci: 0,
+        teamName: "Хочу тебя обнимать", totalScore: 0, additionScore: 0, ci: 0.25,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -275,7 +275,7 @@ const teamList = [
     {
         teamName: "Руками не трогать, замечаний не делать", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -314,7 +314,7 @@ const teamList = [
     {
         teamName: "Интроверты", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0.2, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -327,7 +327,7 @@ const teamList = [
     {
         teamName: "Крут и пряник", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -353,7 +353,7 @@ const teamList = [
     {
         teamName: "Mafia House", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0.3, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -366,7 +366,7 @@ const teamList = [
     {
         teamName: "Брестолочи", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0.3, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
@@ -379,7 +379,7 @@ const teamList = [
     {
         teamName: "Давай по новой, Миша", totalScore: 0, additionScore: 0, ci: 0,
         games: [
-            { game: 1, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 1, score: 1, additionScore: 0.2, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
