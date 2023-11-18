@@ -240,7 +240,7 @@ const teamList = [
             { game: 2, score: 1, additionScore: 0, totalScore: 0 },
             { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0.2, totalScore: 0 },
-            { game: 5, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 5, score: 1, additionScore: 0.2, totalScore: 0 },
             { game: 6, score: 0, additionScore: 0, totalScore: 0 },
             { game: 7, score: 0, additionScore: 0, totalScore: 0 },
             { game: 8, score: 0, additionScore: 0, totalScore: 0 },
