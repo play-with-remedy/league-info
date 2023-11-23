@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+}
+
+.item-pair {
+    justify-content: space-between;
+    width: 500px;
+    margin: auto;
+    display: flex;
+}
+
+.item-pair p {
+    text-align: center;
+    min-width: 200px;
+    cursor: pointer;
+    border: solid 1px black;
+    padding: 10px;
+}
