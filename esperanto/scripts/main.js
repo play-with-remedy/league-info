@@ -6,7 +6,7 @@ const dictionary = [
     { russian: "Она", esperanto: "Si", },
     { russian: "Иметь", esperanto: "Havas", },
     { russian: "Идти", esperanto: "Iras", },
-    { russian: "Пить", esperanto: "Trinkas", },
+    { russian: "Девушка", esperanto: "Virino", },
     { russian: "Хорошо", esperanto: "Bona", },
     { russian: "Утро", esperanto: "Mateno", },
 ];

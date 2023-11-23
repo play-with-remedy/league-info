@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ae4a503-acd3-4fe8-bdb1-75c95e2e3871" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/esperanto/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/esperanto/scripts/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/esperanto/styles/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/esperanto/scripts/main.js" afterPath="$PROJECT_DIR$/esperanto/scripts/main.js" />
     </list>
     <ignored path="league-info.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/esperanto/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+            <state vertical-scroll-proportion="-10.461538">
+              <caret line="16" column="38" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -39,8 +37,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/esperanto/scripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3847242">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.33663365">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -81,8 +79,8 @@
         <option value="$PROJECT_DIR$/esperanto/index1.html" />
         <option value="$PROJECT_DIR$/esperanto/script/main.js" />
         <option value="$PROJECT_DIR$/esperanto/resources/dictionary.js" />
-        <option value="$PROJECT_DIR$/esperanto/index.html" />
         <option value="$PROJECT_DIR$/esperanto/styles/main.css" />
+        <option value="$PROJECT_DIR$/esperanto/index.html" />
         <option value="$PROJECT_DIR$/esperanto/scripts/main.js" />
       </list>
     </option>
@@ -764,7 +762,19 @@
       <option name="project" value="LOCAL" />
       <updated>1700232690969</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="[ES] Basic html was created">
+      <created>1700737055389</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1700737055389</updated>
+    </task>
+    <task id="LOCAL-00046" summary="[ES] Version 0.1.0 was created">
+      <created>1700740012363</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1700740012363</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -773,6 +783,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -785,7 +796,6 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -807,8 +817,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[VP] 5 years old data was added files names was fixed" />
-    <MESSAGE value="[VP] 5 years old data was added for all categories" />
     <MESSAGE value="[VP] 2021 and 2022 files were added" />
     <MESSAGE value="[VP] Details lists were created for company and products" />
     <MESSAGE value="[VP] doc 2022 was udpdated" />
@@ -832,7 +840,9 @@
     <MESSAGE value="[C] Timetable was fully updated" />
     <MESSAGE value="[C] Total table  was fully updated" />
     <MESSAGE value="[C] Team names was updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="[C] Team names was updated" />
+    <MESSAGE value="[ES] Basic html was created" />
+    <MESSAGE value="[ES] Version 0.1.0 was created" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ES] Version 0.1.0 was created" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1038,16 +1048,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/esperanto/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/esperanto/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3847242">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.33663365">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
           <folding />
         </state>
       </provider>
