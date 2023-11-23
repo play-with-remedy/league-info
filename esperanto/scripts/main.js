@@ -12,23 +12,45 @@ const dictionary = [
 ];
 
 $(document).ready(function() {
-    let content = "<div>"
+    let russianDisplay = "";
+    let esperantoDisplay = ""
 
-    dictionary.forEach((item) => {
-        content += "<div class='item-pair'>";
-        content += "<p class='russian'>" + item.russian + "</p>" + "<p class='esperanto'>" + item.esperanto + "</p>";
-        content += "</div>";
+    let esperantoArray = [];
+    let russianArray = [];
+
+    let displayedArray = _.shuffle(dictionary).slice(0, 5);
+
+    displayedArray.forEach((item) => {
+        esperantoArray.push(item.esperanto);
+        russianArray.push(item.russian);
     });
-    content += "</div>"
 
-    $('.content').append(content);
+    esperantoArray = _.shuffle(esperantoArray);
+    russianArray = _.shuffle(russianArray);
+
+    for(let i = 0; i < 5; i++) {
+        russianDisplay += "<p class='russian-word'>" + russianArray[i] + "</p>";
+        esperantoDisplay += "<p class='esperanto-word'>" + esperantoArray[i] + "</p>";
+    }
+
+    $('.russian-item').append(russianDisplay);
+    $('.esperanto-item').append(esperantoDisplay);
 
     let pair = {};
 
 
-    $('.russian').click(function(event){
+    $('.russian-word').click(function(event){
         const target = event.target;
         const word = $(target).text();
+
+        if (pair.esperanto) {
+            const item = dictionary.find((item) => item.russian === word);
+            if (item.esperanto === $(pair.esperanto).text()) {
+                $(pair.esperanto).hide();
+                $(target).hide();
+            }
+        }
+
         const color = target.style.backgroundColor;
         if (!color) {
             if (pair.russian) {
@@ -42,7 +64,7 @@ $(document).ready(function() {
         pair.russian = target;
     });
 
-    $('.esperanto').click(function(event){
+    $('.esperanto-word').click(function(event){
         const target = event.target;
         const word = $(target).text();
 
