@@ -12,8 +12,22 @@ const dictionary = [
 ];
 
 $(document).ready(function() {
+    initStage();
+
+    $('.try-again').click(function(event) {
+        initStage();
+    });
+});
+
+function initStage() {
+    let pair = {};
+    let counter = 0;
+    $('.congratulation').hide();
+    $('.russian-item').append();
+    $('.esperanto-item').append();
+
     let russianDisplay = "";
-    let esperantoDisplay = ""
+    let esperantoDisplay = "";
 
     let esperantoArray = [];
     let russianArray = [];
@@ -36,10 +50,7 @@ $(document).ready(function() {
     $('.russian-item').append(russianDisplay);
     $('.esperanto-item').append(esperantoDisplay);
 
-    let pair = {};
-
-
-    $('.russian-word').click(function(event){
+    $('.russian-word').click(function(event) {
         const target = event.target;
         const word = $(target).text();
 
@@ -48,7 +59,12 @@ $(document).ready(function() {
             if (item.esperanto === $(pair.esperanto).text()) {
                 $(pair.esperanto).hide();
                 $(target).hide();
+                counter++;
             }
+        }
+
+        if (counter === 5) {
+            $('.congratulation').show();
         }
 
         const color = target.style.backgroundColor;
@@ -64,7 +80,7 @@ $(document).ready(function() {
         pair.russian = target;
     });
 
-    $('.esperanto-word').click(function(event){
+    $('.esperanto-word').click(function(event) {
         const target = event.target;
         const word = $(target).text();
 
@@ -73,7 +89,12 @@ $(document).ready(function() {
             if (item.russian === $(pair.russian).text()) {
                 $(pair.russian).hide();
                 $(target).hide();
+                counter++;
             }
+        }
+
+        if (counter === 5) {
+            $('.congratulation').show();
         }
 
         const color = target.style.backgroundColor;
@@ -88,4 +109,4 @@ $(document).ready(function() {
 
         pair.esperanto = target;
     });
-});
+}
