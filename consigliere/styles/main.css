@@ -116,5 +116,6 @@ a {
     text-decoration: underline;
     font-family: serif;
     font-size: 27px;
-    margin: 0 20px;
+    margin: 20px;
+    display: inline-block;
 }
