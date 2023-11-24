@@ -3,7 +3,7 @@ const dictionary = [
     { russian: "Пить", esperanto: "Trinkas", },
     { russian: "Молоко", esperanto: "Lakto", },
     { russian: "Он", esperanto: "Li", },
-    { russian: "Она", esperanto: "Si", },
+    { russian: "Она", esperanto: "Ŝi", },
     { russian: "Иметь", esperanto: "Havas", },
     { russian: "Идти", esperanto: "Iras", },
     { russian: "Девушка", esperanto: "Virino", },
@@ -23,8 +23,9 @@ function initStage() {
     let pair = {};
     let counter = 0;
     $('.congratulation').hide();
-    $('.russian-item').append();
-    $('.esperanto-item').append();
+
+    $('.russian-item').empty();
+    $('.esperanto-item').empty();
 
     let russianDisplay = "";
     let esperantoDisplay = "";
@@ -57,8 +58,8 @@ function initStage() {
         if (pair.esperanto) {
             const item = dictionary.find((item) => item.russian === word);
             if (item.esperanto === $(pair.esperanto).text()) {
-                $(pair.esperanto).hide();
-                $(target).hide();
+                $(pair.esperanto).addClass("word--inactive");
+                $(target).addClass("word--inactive");
                 counter++;
             }
         }
@@ -67,14 +68,13 @@ function initStage() {
             $('.congratulation').show();
         }
 
-        const color = target.style.backgroundColor;
-        if (!color) {
+        if (!$(target).hasClass("word--selected")) {
             if (pair.russian) {
-                pair.russian.style.backgroundColor = '';
+                $(pair.russian).removeClass("word--selected");
             }
-            target.style.backgroundColor = 'green';
+            $(target).addClass("word--selected");
         } else {
-            target.style.backgroundColor = '';
+            $(target).removeClass("word--selected");
         }
 
         pair.russian = target;
@@ -87,8 +87,8 @@ function initStage() {
         if (pair.russian) {
             const item = dictionary.find((item) => item.esperanto === word);
             if (item.russian === $(pair.russian).text()) {
-                $(pair.russian).hide();
-                $(target).hide();
+                $(pair.russian).addClass("word--inactive");
+                $(target).addClass("word--inactive");
                 counter++;
             }
         }
@@ -97,14 +97,13 @@ function initStage() {
             $('.congratulation').show();
         }
 
-        const color = target.style.backgroundColor;
-        if (!color) {
+        if (!$(target).hasClass("word--selected")) {
             if (pair.esperanto) {
-                pair.esperanto.style.backgroundColor = '';
+                $(pair.esperanto).removeClass("word--selected");
             }
-            target.style.backgroundColor = 'red';
+            $(target).addClass("word--selected");
         } else {
-            target.style.backgroundColor = '';
+            $(target).removeClass("word--selected");
         }
 
         pair.esperanto = target;
