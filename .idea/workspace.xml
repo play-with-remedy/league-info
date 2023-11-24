@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ae4a503-acd3-4fe8-bdb1-75c95e2e3871" name="Default" comment="">
+    <list default="true" id="5ae4a503-acd3-4fe8-bdb1-75c95e2e3871" name="Default" comment="[ES] Version 0.1.2 -mobile design and style updated">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/esperanto/scripts/main.js" afterPath="$PROJECT_DIR$/esperanto/scripts/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/esperanto/styles/main.css" afterPath="$PROJECT_DIR$/esperanto/styles/main.css" />
     </list>
     <ignored path="league-info.iws" />
@@ -34,21 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/esperanto/scripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="10" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.7213578">
+              <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/esperanto/styles/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6930693">
-              <caret line="83" column="18" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -80,8 +81,8 @@
         <option value="$PROJECT_DIR$/esperanto/script/main.js" />
         <option value="$PROJECT_DIR$/esperanto/resources/dictionary.js" />
         <option value="$PROJECT_DIR$/esperanto/index.html" />
-        <option value="$PROJECT_DIR$/esperanto/scripts/main.js" />
         <option value="$PROJECT_DIR$/esperanto/styles/main.css" />
+        <option value="$PROJECT_DIR$/esperanto/scripts/main.js" />
       </list>
     </option>
   </component>
@@ -508,12 +509,6 @@
       <option name="number" value="Default" />
       <updated>1641375121321</updated>
     </task>
-    <task id="LOCAL-00001" summary="[VP] Search input was hidden for not used tabs">
-      <created>1641392962214</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1641392962215</updated>
-    </task>
     <task id="LOCAL-00002" summary="[VP] Border was improoved accordind to the site review">
       <created>1641397259479</created>
       <option name="number" value="00002" />
@@ -802,7 +797,13 @@
       <option name="project" value="LOCAL" />
       <updated>1700837233847</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="[ES] Version 0.1.2 -mobile design and style updated">
+      <created>1700838571514</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1700838571515</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1133,6 +1134,14 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/esperanto/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/esperanto/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.807693">
@@ -1143,16 +1152,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/esperanto/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="10" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/esperanto/styles/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6930693">
-          <caret line="83" column="18" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.7213578">
+          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
           <folding />
         </state>
       </provider>

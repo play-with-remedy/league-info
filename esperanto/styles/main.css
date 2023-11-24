@@ -3,6 +3,11 @@
     src: url(fonts/skellyman.ttf);
 }
 
+body {
+    width: 90%;
+    margin: auto;
+}
+
 .header-image {
     margin: auto;
     display: block;
@@ -77,7 +82,7 @@
   }
 
   .item-pair {
-    width: 400px;
+    width: 100%;
   }
 
   .item-pair p {
