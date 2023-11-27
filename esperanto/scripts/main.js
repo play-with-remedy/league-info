@@ -105,10 +105,6 @@ const dictionary = [
 
 $(document).ready(function() {
     initStage();
-
-    $('.try-again').click(function(event) {
-        initStage();
-    });
 });
 
 function initStage() {
@@ -156,6 +152,7 @@ function initStage() {
                 delete pair.esperanto;
                 isError = true;
                 counter++;
+                $('#counter-word').text(parseInt($('#counter-word').text())+1)
             } else {
                 $(target).addClass("word--incorrect");
                 $(pair.esperanto).addClass("word--incorrect");
@@ -165,6 +162,7 @@ function initStage() {
                     $(pair.esperanto).removeClass("word--selected");
                     $(pair.esperanto).removeClass("word--incorrect");
                     delete pair.esperanto;
+                    $('#counter-error').text(parseInt($('#counter-error').text())+1);
                 }, 300);
             }
         }
@@ -183,7 +181,7 @@ function initStage() {
         }
 
         if (counter === 5) {
-            $('.congratulation').show();
+            initStage();
         }
     });
 
@@ -200,6 +198,7 @@ function initStage() {
                 delete pair.russian;
                 isError = true;
                 counter++;
+                $('#counter-word').text(parseInt($('#counter-word').text())+1);
             } else {
                 $(target).addClass("word--incorrect");
                 $(pair.russian).addClass("word--incorrect");
@@ -209,6 +208,7 @@ function initStage() {
                     $(pair.russian).removeClass("word--selected");
                     $(pair.russian).removeClass("word--incorrect");
                     delete pair.russian;
+                    $('#counter-error').text(parseInt($('#counter-error').text())+1);
                 }, 300);
             }
         }
@@ -227,7 +227,7 @@ function initStage() {
         }
 
         if (counter === 5) {
-            $('.congratulation').show();
+            initStage();
         }
     });
 }

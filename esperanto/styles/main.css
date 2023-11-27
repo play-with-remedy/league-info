@@ -15,7 +15,7 @@ body {
 }
 
 .content {
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .item-pair {
@@ -57,49 +57,50 @@ body {
     pointer-events: none;
 }
 
-.congratulation {
-    display: none;
-    margin: 50px;
+.counter {
+    justify-content: space-between;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    font-family: Skellyman;
+    font-weight: bold;
 }
 
-.congratulation-info {
-    font-family: cursive;
+.counter-word {
+    min-width: 250px;
     text-align: center;
-    font-size: 100px;
-    color: hotpink;
-    margin: 0;
 }
 
-.try-again {
-    font-family: cursive;
+.counter-error {
+    min-width: 250px;
     text-align: center;
-    font-size: 30px;
-    color: green;
-    margin: 0;
-    text-decoration: underline;
-    cursor: pointer;
+    color: red;
 }
 
 @media (max-width: 767px) {
-  .header-image {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-  }
+    .header-image {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
 
-  .item-pair {
-    width: 100%;
-  }
+    .item-pair {
+        width: 100%;
+    }
 
-  .item-pair p {
-    min-width: 130px;
-  }
+    .item-pair p {
+        min-width: 130px;
+    }
 
-  .congratulation-info {
-      font-size: 70px;
-  }
+    .counter {
+        width: 100%;
+    }
 
-  .try-again {
-      font-size: 25px;
-  }
+    .counter-word {
+        min-width: 130px;
+    }
+
+    .counter-error {
+        min-width: 130px;
+    }
 }
