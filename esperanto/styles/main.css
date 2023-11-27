@@ -77,6 +77,13 @@ body {
     color: red;
 }
 
+.refresh-link {
+    display: block;
+    margin: 50px auto;
+    width: 100px;
+    cursor: pointer;
+}
+
 @media (max-width: 767px) {
     .header-image {
         width: 100%;

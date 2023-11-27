@@ -230,4 +230,10 @@ function initStage() {
             initStage();
         }
     });
+
+    $('.refresh-link').click(function(event) {
+        $('#counter-word').text(0);
+        $('#counter-error').text(0);
+        initStage();
+    });
 }
