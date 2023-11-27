@@ -91,6 +91,10 @@ body {
         padding: 10px;
     }
 
+    .content {
+        margin-top: 20px;
+    }
+
     .item-pair {
         width: 100%;
     }
@@ -110,4 +114,7 @@ body {
     .counter-error {
         min-width: 130px;
     }
+
+    .refresh-link {
+        margin: 20px auto;
 }
