@@ -79,7 +79,7 @@ const dictionary = [
     { russian: "Холодный", esperanto: "Malvarma", },
     { russian: "День", esperanto: "Tago", },
     { russian: "Шоколад", esperanto: "Ĉokolado", },
-    { russian: "Рабоать", esperanto: "Laboras", },
+    { russian: "Работать", esperanto: "Laboras", },
     { russian: "Мальчик", esperanto: "Knabo", },
     { russian: "Девочка", esperanto: "Knabino", },
     { russian: "Встретились", esperanto: "Renkontigas", },
@@ -105,6 +105,12 @@ const dictionary = [
 
 $(document).ready(function() {
     initStage();
+
+    $('.refresh-link').click(function(event) {
+        $('#counter-word').text(0);
+        $('#counter-error').text(0);
+        initStage();
+    });
 });
 
 function initStage() {
@@ -229,11 +235,5 @@ function initStage() {
         if (counter === 5) {
             initStage();
         }
-    });
-
-    $('.refresh-link').click(function(event) {
-        $('#counter-word').text(0);
-        $('#counter-error').text(0);
-        initStage();
     });
 }
