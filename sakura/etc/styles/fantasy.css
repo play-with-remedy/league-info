@@ -1,0 +1,19 @@
+.main {
+    text-align: center;
+}
+
+.player-wrapper {
+    display: inline-block; 
+    margin: 25px;
+    text-align: center;
+}
+
+.player {
+    width: 200px;
+    height: 200px;
+    background-image: url(https://static3.depositphotos.com/1000819/143/i/450/depositphotos_1434813-stock-photo-gothic-fire-font-letter-f.jpg);
+    background-position: center;
+    background-size: contain;
+    border: solid 1px black;
+    border-radius: 90%;
+}
