@@ -1,10 +1,31 @@
+@font-face {
+    font-family: Hanzi;
+    src: url(../fonts/HanZi.ttf);
+}
+
+@font-face {
+    font-family: Mandarinc;
+    src: url(../fonts/mandarinc.ttf);
+}
+
+@font-face {
+    font-family: Kashima;
+    src: url(../fonts/Kashima+RUS.otf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .main {
     text-align: center;
+    background-color: rgba(0,00,00,0.85);
 }
 
 .player-wrapper {
     display: inline-block; 
-    margin: 25px;
+    padding: 25px;
     text-align: center;
 }
 
@@ -16,4 +37,10 @@
     background-size: contain;
     border: solid 1px black;
     border-radius: 90%;
+}
+
+.player-wrapper p {
+    font-size: 18px;
+    font-family: Hanzi;
+    color: lightpink;
 }
