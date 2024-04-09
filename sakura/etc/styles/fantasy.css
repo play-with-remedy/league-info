@@ -16,31 +16,60 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: rgba(0,00,00,0.85);
+}
+
+h1 {
+    color: lightpink;
+    text-align: center;
+    font-size: 100px;
+    font-family: Hanzi;
+    padding: 30px;
+    margin: 0;
+
 }
 
 .main {
     text-align: center;
-    background-color: rgba(0,00,00,0.85);
 }
 
 .player-wrapper {
     display: inline-block; 
     padding: 25px;
     text-align: center;
+    cursor: pointer;
 }
 
 .player {
     width: 200px;
-    height: 200px;
-    background-image: url(https://static3.depositphotos.com/1000819/143/i/450/depositphotos_1434813-stock-photo-gothic-fire-font-letter-f.jpg);
-    background-position: center;
-    background-size: contain;
-    border: solid 1px black;
+    height: 200px;background-position: center;
+    background-size: cover;
     border-radius: 90%;
+    border: solid 1px rgba(0,00,00,0.85);
 }
 
 .player-wrapper p {
     font-size: 18px;
     font-family: Hanzi;
     color: lightpink;
+}
+
+.selected p {
+    color: green !important;
+}
+
+.selected div {
+    border: solid 1px green !important;
+}
+
+.no-select {
+    cursor: default;
+}
+
+.no-select div {
+    border: solid 1px red;
+}
+
+.no-select p {
+    color: red;
 }
