@@ -38,6 +38,7 @@ h1 {
     padding: 25px;
     text-align: center;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .player {
