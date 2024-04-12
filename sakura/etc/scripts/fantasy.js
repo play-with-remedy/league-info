@@ -44,6 +44,8 @@ $(document).ready(function() {
     });
 
     $('.team-button').click(function(event) {
-        alert(JSON.stringify(array));
+        $('.team-button').text("Created!");
+        $('.team-button').css("color", "green");
+        navigator.clipboard.writeText(JSON.stringify(array));
     });
 });
