@@ -7,34 +7,43 @@ $(document).ready(function() {
     $('.player-wrapper').click(function(event) {
         if (!event.currentTarget.classList.contains("no-select")) {
             const children = event.currentTarget.children;
-            const pImg = children[0];
             const pName = children[1].innerText;
             const pCost = children[2].innerText.replace(" ", "");
-            
-            const arrLength = Object.keys(array).length;
 
             
             event.currentTarget.classList.toggle("selected");
             if (event.currentTarget.classList.contains("selected")) {
-                array[pName] = { name: pName, const: pCost };
+                array[pName] = { name: pName, cost: pCost};
                 sum += parseInt(pCost);
+                $('.user-points').text(sum);
             } else {
                 delete array[pName];
                 sum -= parseInt(pCost);
+                $('.user-points').text(sum);
             }
 
-            
+            const arrLength = Object.keys(array).length;
             $('.player-wrapper').each(function() {
-                if(!$(this).hasClass("selected")) {
+                if (!$(this).hasClass("selected")) {
                     const ost = MAX_SUM - sum;
                     const cost = $(this).children().eq(2).text().replace(" ", "");;
-                    if (ost < parseInt(cost)) {
+                    if (ost < parseInt(cost) || arrLength === 4) {
                         $(this).addClass("no-select");
                     } else {
                         $(this).removeClass("no-select");
                     }
                 }
             });
+
+            if (arrLength === 4) {
+                $('.team-button').css("display", "block");
+            } else {
+                $('.team-button').css("display", "none");
+            }
         }
+    });
+
+    $('.team-button').click(function(event) {
+        alert(JSON.stringify(array));
     });
 });
