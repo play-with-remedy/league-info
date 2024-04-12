@@ -16,7 +16,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgba(0,00,00,0.85);
+    background-color: rgb(35,43,43);
 }
 
 h1 {
@@ -94,4 +94,16 @@ h1 {
     font-size: 27px;
     color: lightpink;
     font-family: 'Hanzi';
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(35,43,43);
+    border-bottom: solid 1px white;
+}
+  
+.sticky + .main {
+    padding-top: 280px;
 }
