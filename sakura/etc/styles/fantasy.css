@@ -109,3 +109,44 @@ h1 {
 .sticky + .main {
     padding-top: 280px;
 }
+
+.main-fanstasy-table {
+    overflow-x: scroll;
+
+}
+
+.main-fanstasy-table-player-img {
+    width: 130px;
+    height: 130px;
+    background-size: cover;
+    border-radius: 90%;
+}
+
+table {
+    margin: 20px auto;
+}
+
+table th {
+    border: solid 1px white;
+    font-size: 24px;
+    font-family: 'Hanzi';
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+table td {
+    border: solid 1px white;
+    color: white;
+    font-size: 20px;
+    font-family: 'Hanzi';
+    padding: 15px;
+    text-align: center;
+}
+
+td.player-name {
+    min-width: 200px;
+}
+
+td.score {
+    min-width: 50px;
+}
