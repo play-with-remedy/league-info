@@ -133,7 +133,7 @@ const data = {
     "Teslex": [
         "Пчела", "Весна", "Rocket Woman", "Джейн",
     ],
-    "Remedy Wins": [
+    "Sni Wy Demer": [
         "Архи", "Артик", "Интерактив", "Сергеевна",
     ],
     "Remedy": [
