@@ -152,6 +152,9 @@ const data = {
     "Интерактив": [
         "Интерактив", "Gadfour", "Марго", "Манекен",
     ],
+    "Yesterday": [
+        "Интерактив", "Michael", "Rocket Woman", "Манекен",
+    ],
 };
 
 $(document).ready(function() {
