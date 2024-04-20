@@ -159,7 +159,7 @@ const data = {
 
 $(document).ready(function() {
     let table = "<table>";
-    table += "<tr><th>#</th><th>Player</th><th colspan='4'>Team</th><th>Sum</th><th>Avg</th></tr>";
+    table += "<tr><th>#</th><th>Игрок</th><th colspan='4'>Команда</th><th>Итог</th><th>Ср. зн.</th></tr>";
     Object.keys(data).forEach((fpsPlayerName, index) => {
         table += "<tr><td>" + (index + 1) + "</td><td class='player-name'>" + fpsPlayerName + "</td>"
         let totalScore = 0;
