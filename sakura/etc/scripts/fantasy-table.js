@@ -157,31 +157,72 @@ const data = {
     ],
 };
 
+let fanTable = [];
+
 $(document).ready(function() {
-    let table = "<table>";
-    table += "<tr><th>#</th><th>Игрок</th><th colspan='4'>Команда</th><th>Итог</th><th>Ср. зн.</th></tr>";
     Object.keys(data).forEach((fpsPlayerName, index) => {
-        table += "<tr><td>" + (index + 1) + "</td><td class='player-name'>" + fpsPlayerName + "</td>"
+        let playerObject = { "playerName" : fpsPlayerName, "team": [], };
         let totalScore = 0;
         let totalTours = 0;
         data[fpsPlayerName].forEach(player => {
             const playerScore = tableData[player].score;
             const playerTours = tableData[player].tours;
             const playerImg = tableData[player].img;
-            table += "<td><div class='main-fanstasy-table-player-img' style='background-image: url(" + playerImg + ")'></div>" 
-                    + "<p>" + playerScore + "</p></td>";
+            playerObject.team.push( {"playerImg": playerImg, "playerScore": playerScore} );
             totalScore += playerScore;
             totalTours += playerTours;
         });
-        table += "<td class='score'>" + totalScore + "</td>";
-        if (totalTours !== 0) {
-            table += "<td class='score'>" + (totalScore / totalTours).toFixed(2) + "</td>";
-        } else {
-            table += "<td class='score'>0</td>";
-        }
-        table += "</tr>";
-    });
-    table += "</table>"
-    $('.main-fanstasy-table').append(table);
 
+        playerObject.totalScore = totalScore;
+        if (totalTours !== 0) {
+            let avg = (totalScore / totalTours).toFixed(2);
+            playerObject.averageScore = avg;
+        } else {
+            playerObject.averageScore = 0;
+        }
+        fanTable.push(playerObject);
+    });
+
+    sortFantasy("totalScore");
 });
+
+function sortFantasy(param) {
+    fanTable.sort((a, b) => {
+        if (a[param] < b[param]) {
+            return 1;
+        }
+        if (a[param] > b[param]) {
+            return -1;
+        }
+        return 0;
+    });
+
+    buildTable();
+}
+
+function buildTable() {
+    $('.main-fanstasy-table').empty();
+    let t = "<table><tr><th>#</th><th>Игрок</th><th colspan='4'>Команда</th><th id='total'>Итог</th><th id='average'>Ср. зн.</th></tr>";
+    fanTable.forEach((row, index) => {
+        t += "<tr><td>" + (index + 1) + "</td><td class='player-name'>" + row.playerName + "</td>";
+        row.team.forEach(team => {
+            t += "<td><div name='" + row.playerName + "'class='main-fanstasy-table-player-img' style='background-image: url(" + team.playerImg + ")'></div>" 
+                    + "<p>" + team.playerScore + "</p></td>";
+        });
+        t += "<td class='score'>" + row.totalScore + "</td>";
+        t += "<td class='score'>" + row.averageScore + "</td>";
+        t += "</tr>";
+    });
+
+
+    t += "</table>";
+    $('.main-fanstasy-table').append(t);
+
+    $('#total').click(function() {
+        sortFantasy("totalScore");
+    });
+
+    $('#average').click(function(event) {
+        sortFantasy("averageScore");
+    });
+}

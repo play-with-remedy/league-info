@@ -122,6 +122,12 @@ h1 {
     height: 130px;
     background-size: cover;
     border-radius: 90%;
+    cursor: pointer;
+    border: solid 2px transparent;
+}
+
+.main-fanstasy-table-player-img.selected {
+    border: solid 2px aliceblue;
 }
 
 table {
@@ -132,23 +138,24 @@ table th {
     border: solid 1px white;
     font-size: 24px;
     font-family: 'Hanzi';
-    background-color: antiquewhite;
+    background-color: aliceblue;
     padding: 20px;
+    cursor: pointer;
 }
 
 .main-table th {
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px;
 }
 
 .main-table td {
-    border: dotted 1px white;
+    border: double 1px cadetblue;
     font-size: 12px;
     padding: 10px;
 }
 
 table td {
-    border: solid 1px white;
+    border: solid 1px cadetblue;
     color: white;
     font-size: 20px;
     font-family: 'Hanzi';
@@ -162,6 +169,8 @@ td.player-name {
 
 td.score {
     min-width: 50px;
+    font-family: 'Mandarinc';
+    font-size: 30px;
 }
 
 .solo-player {
@@ -180,6 +189,16 @@ td.score {
     display: none;
 }
 
+.solo-table .avg-score {
+    font-family: 'Mandarinc';
+    font-size: 30px;
+}
+
+.main-table .total-score {
+    font-family: 'Mandarinc';
+    font-size: 20px;
+}
+
 .divisions {
     text-align: center;
 }
@@ -188,7 +207,7 @@ td.score {
     display: inline-block;
     font-size: 20px;
     font-family: 'Hanzi';
-    color: antiquewhite;
+    color: aliceblue;
     padding: 20px;
     text-decoration: underline;
     cursor: pointer;

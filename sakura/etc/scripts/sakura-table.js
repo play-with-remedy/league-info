@@ -20,8 +20,8 @@ const tableData = {
         img: "../etc/images/players/Sergeevna.jpeg",
     },
     "Боня": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 26.5,
         img: "../etc/images/players/Bonya.jpeg",
     },
     "SOVEST": {
@@ -35,23 +35,23 @@ const tableData = {
         img: "../etc/images/players/Jnec.jpeg",
     },
     "Young": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 21,
         img: "../etc/images/players/Young.jpeg",
     },
     "Юрия": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 22.5,
         img: "../etc/images/players/Yria.jpeg",
     },
     "Скарлетт": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 25.5,
         img: "../etc/images/players/Skarlet.jpeg",
     },
     "Пчела": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 28,
         img: "../etc/images/players/Pcela.jpeg",
     },
     "Мориарти": {
@@ -60,8 +60,8 @@ const tableData = {
         img: "../etc/images/players/Moriarti.jpeg",
     },
     "Саранча": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 19.5,
         img: "../etc/images/players/Sarancha.jpeg",
     },
     "Весна": {
@@ -70,18 +70,18 @@ const tableData = {
         img: "../etc/images/players/Vesna.jpeg",
     },
     "Michael": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 23,
         img: "../etc/images/players/Michael.jpeg",
     },
     "Gadfour": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 27.25,
         img: "../etc/images/players/Gadfour.jpeg",
     },
     "Лекса": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 26,
         img: "../etc/images/players/Leksa.jpeg",
     },
     "Lina": {
@@ -110,8 +110,8 @@ const tableData = {
         img: "../etc/images/players/Sponjik.jpeg",
     },
     "Бестия": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 32.5,
         img: "../etc/images/players/Bestia.jpeg",
     },
     "Cherry Pick": {
@@ -157,102 +157,70 @@ const teamDate = {
         {
             "teamName": "Ну мёд, медятина!",
             "games": [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                28, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Понапикали!",
             "games": [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                22.25, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Япона Мать",
             "games": [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                26, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Город-герой и 2 героини",
             "games": [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                25.5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
-            "teamName": "Не Ангелы!",
+            "teamName": "Не Ангелы",
             "games": [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                26.5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "С кем я мафия?!",
             "games": [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                21, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Под(д)ержим Ремчика!",
             "games": [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                27.25, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Ночная Фурия",
             "games": [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                32.5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "ЗПГ",
             "games": [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            19.5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Банда экстремистов",
             "games": [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                23, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
     ],
 };
 
 $(document).ready(function() {
-    let table = "<table>";
-    table += "<tr><th>#</th><th>Команда</th><th>Серия 1</th><th>Серия 2</th><th>Серия 3</th><th>Серия 4</th><th>Серия 5</th>" + 
-             "<th>Серия 6</th><th>Серия 7</th><th>Серия 8</th><th>Серия 9</th><th>Серия 10</th><th>Итог</th><th>Ср. зн.</th></tr>";
+    applyTeamTable();
+    applySoloTable();
 
-    teamDate.teams.forEach((team, index) => {
-        let total = 0;
-        let games = 0;
-        table += "<tr><td>" + (index + 1) + "</td><td>" + team.teamName + "</td>";
-        team.games.forEach((gameScore) => {
-            table += gameScore !== 0 ? "<td>" + gameScore + "</td>" : "<td></td>";
-            games += gameScore !== 0 ? 1 : 0;
-            total += gameScore;
-        });
-        table += "<td>" + total + "</td>"
-
-        const avg = games !== 0 ? (total / games) : ""; 
-        table += "<td>" + avg + "</td>"
-
-        table += "</tr>";
-    });
-
-    table += "</table>"
-    $('.main-table').append(table);
-
-    let soloTable = "<table>";
-    soloTable += "<tr><th>#</th><th>Игрок</th><th>Итог (Ср. зн.)</th></tr>";
-    Object.keys(tableData).forEach((playerName, index) => {
-        soloTable += "<tr><td>" + (index + 1) + "</td><td class='solo-player'> <img src='" + tableData[playerName].img + "' />" + playerName + "</td>";
-        const tours = tableData[playerName].tours;
-        const avg = tours !== 0 ? (tableData[playerName].score / tours) : 0;
-        soloTable += "<td>" + avg + "</td></tr>"
-    });
-
-    soloTable += "</table>"
-    $('.solo-table').append(soloTable);
 
     $('#teams').click(function(event) {
         $('.solo-table').hide();
@@ -269,3 +237,70 @@ $(document).ready(function() {
         $('#teams').css("color", "antiquewhite");
     });
 });
+
+function applyTeamTable() {
+    let table = "<table>";
+    table += "<tr><th>#</th><th>Команда</th><th>Серия 1</th><th>Серия 2</th><th>Серия 3</th><th>Серия 4</th><th>Серия 5</th>" + 
+             "<th>Серия 6</th><th>Серия 7</th><th>Серия 8</th><th>Серия 9</th><th>Серия 10</th><th>Итог</th></tr>";
+
+    teamDate.teams.sort((a, b) => {
+        let total1 = 0;
+        let total2 = 0;
+
+        a.games.forEach((gameScore) => {
+            total1 += gameScore;
+        });
+        b.games.forEach((gameScore) => {
+            total2 += gameScore;
+        });
+
+        if (total1 < total2) {
+            return 1;
+        }
+        if (total1 > total2) {
+            return -1;
+        }
+        return 0;
+    });
+
+    teamDate.teams.forEach((team, index) => {
+        let total = 0;
+        let games = 0;
+        table += "<tr><td>" + (index + 1) + "</td><td>" + team.teamName + "</td>";
+        team.games.forEach((gameScore) => {
+            table += gameScore !== 0 ? "<td>" + gameScore + "</td>" : "<td></td>";
+            games += gameScore !== 0 ? 1 : 0;
+            total += gameScore;
+        });
+        table += "<td class='total-score'>" + total + "</td></tr>";
+    });
+
+    table += "</table>"
+    $('.main-table').append(table);
+}
+
+
+function applySoloTable() {
+    let soloTable = "<table>";
+    soloTable += "<tr><th>#</th><th>Игрок</th><th>Итог (Ср. зн.)</th></tr>";
+
+    let playerNamesArray = Object.keys(tableData).sort((a, b) => {
+        if (tableData[a].score < tableData[b].score) {
+        return 1;
+        }
+        if (tableData[a].score > tableData[b].score) {
+        return -1;
+        }
+        return 0;
+    });
+
+    playerNamesArray.forEach((playerName, index) => {
+        soloTable += "<tr><td>" + (index + 1) + "</td><td class='solo-player'> <img src='" + tableData[playerName].img + "' />" + playerName + "</td>";
+        const tours = tableData[playerName].tours;
+        const avg = tours !== 0 ? (tableData[playerName].score / tours) : 0;
+        soloTable += "<td class='avg-score'>" + avg + "</td></tr>"
+    });
+
+    soloTable += "</table>"
+    $('.solo-table').append(soloTable);
+}
