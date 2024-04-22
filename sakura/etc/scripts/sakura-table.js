@@ -389,8 +389,8 @@ $(document).ready(function() {
         $('.fantasy-table').hide();
         $('.main-table').show();
         $('#teams').css("color", "lightpink");
-        $('#solo').css("color", "antiquewhite");
-        $('#fantasy').css("color", "antiquewhite");
+        $('#solo').css("color", "aliceblue");
+        $('#fantasy').css("color", "aliceblue");
 
     });
 
@@ -399,16 +399,16 @@ $(document).ready(function() {
         $('.fantasy-table').hide();
         $('.solo-table').show();
         $('#solo').css("color", "lightpink");
-        $('#teams').css("color", "antiquewhite");
-        $('#fantasy').css("color", "antiquewhite");
+        $('#teams').css("color", "aliceblue");
+        $('#fantasy').css("color", "aliceblue");
     });
 
     $('#fantasy').click(function(event) {
         $('.main-table').hide();
         $('.solo-table').hide();
         $('.fantasy-table').show();
-        $('#solo').css("color", "antiquewhite");
-        $('#teams').css("color", "antiquewhite");
+        $('#solo').css("color", "aliceblue");
+        $('#teams').css("color", "aliceblue");
         $('#fantasy').css("color", "lightpink");
     });
 });
