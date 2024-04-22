@@ -185,6 +185,7 @@ td.score {
     padding: 0px 15px;
 }
 
+.fantasy-table,
 .solo-table {
     display: none;
 }
