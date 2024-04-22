@@ -112,12 +112,12 @@ h1 {
 
 .main-table,
 .solo-table,
-.main-fanstasy-table {
+.fantasy-table {
     overflow-x: scroll;
 
 }
 
-.main-fanstasy-table-player-img {
+.fantasy-table-player-img {
     width: 130px;
     height: 130px;
     background-size: cover;
@@ -126,7 +126,7 @@ h1 {
     border: solid 2px transparent;
 }
 
-.main-fanstasy-table-player-img.selected {
+.fantasy-table-player-img.selected {
     border: solid 2px aliceblue;
 }
 
