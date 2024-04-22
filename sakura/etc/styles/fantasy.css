@@ -26,7 +26,15 @@ h1 {
     font-family: Hanzi;
     padding: 30px;
     margin: 0;
+}
 
+h3 {
+    color: lightpink;
+    text-align: center;
+    font-size: 30px;
+    font-family: Hanzi;
+    padding-top: 30px;
+    margin: 0;
 }
 
 .main {
@@ -112,7 +120,8 @@ h1 {
 
 .main-table,
 .solo-table,
-.fantasy-table {
+.fantasy-table,
+.seria-table {
     overflow-x: scroll;
 
 }
@@ -143,7 +152,8 @@ table th {
     cursor: pointer;
 }
 
-.main-table th {
+.main-table th,
+.games-table th {
     font-size: 16px;
     padding: 10px;
 }
@@ -185,6 +195,7 @@ td.score {
     padding: 0px 15px;
 }
 
+.games-table,
 .fantasy-table,
 .solo-table {
     display: none;
@@ -216,4 +227,67 @@ td.score {
 
 #teams {
     color: lightpink;
+}
+
+.games-table table {
+    border-collapse: collapse;
+}
+
+.games-table table th {
+    border: solid 2px black;
+}
+
+.games-table td {
+    font-family: 'Mandarinc';
+    font-size: 16px;
+    padding: 5px;
+    border: solid 1px cadetblue;
+}
+
+.games-table tr td:nth-child(1) {
+    border-left: solid 2px cadetblue;
+}
+
+.games-table tr td:nth-child(2) {
+    min-width: 150px;
+    font-size: 14px;
+    padding: 10px;
+    font-family: 'Hanzi';
+    border-left: solid 3px cadetblue;
+    border-right: solid 3px cadetblue;
+}
+
+.games-table tr td:nth-child(4),
+.games-table tr td:nth-child(6),
+.games-table tr td:nth-child(8),
+.games-table tr td:nth-child(10),
+.games-table tr td:nth-child(12),
+.games-table tr td:nth-child(14),
+.games-table tr td:nth-child(16),
+.games-table tr td:nth-child(17) {
+    border-right: solid 3px cadetblue;
+}
+
+.games-table tr td:nth-child(18) {
+    border-right: solid 2px cadetblue;
+}
+
+.don {
+    background-color: black;
+    color: white;
+}
+
+.sheriff {
+    background-color: orange;
+    color: white;
+}
+
+.first {
+    background-color: gray;
+    color: white;
+}
+
+.card {
+    background-color: yellow;
+    color: black;
 }

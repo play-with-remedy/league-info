@@ -387,29 +387,46 @@ $(document).ready(function() {
     $('#teams').click(function(event) {
         $('.solo-table').hide();
         $('.fantasy-table').hide();
+        $('.games-table').hide();
         $('.main-table').show();
         $('#teams').css("color", "lightpink");
         $('#solo').css("color", "aliceblue");
         $('#fantasy').css("color", "aliceblue");
+        $('#games').css("color", "aliceblue");
 
     });
 
     $('#solo').click(function(event) {
         $('.main-table').hide();
         $('.fantasy-table').hide();
+        $('.games-table').hide();
         $('.solo-table').show();
         $('#solo').css("color", "lightpink");
         $('#teams').css("color", "aliceblue");
         $('#fantasy').css("color", "aliceblue");
+        $('#games').css("color", "aliceblue");
     });
 
     $('#fantasy').click(function(event) {
         $('.main-table').hide();
         $('.solo-table').hide();
+        $('.games-table').hide();
         $('.fantasy-table').show();
         $('#solo').css("color", "aliceblue");
         $('#teams').css("color", "aliceblue");
+        $('#games').css("color", "aliceblue");
         $('#fantasy').css("color", "lightpink");
+    });
+
+    $('#games').click(function(event) {
+        $('.main-table').hide();
+        $('.solo-table').hide();
+        $('.games-table').show();
+        $('.fantasy-table').hide();
+        $('#solo').css("color", "aliceblue");
+        $('#teams').css("color", "aliceblue");
+        $('#games').css("color", "lightpink");
+        $('#fantasy').css("color", "aliceblue");
     });
 });
 
