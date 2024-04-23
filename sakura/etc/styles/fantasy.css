@@ -118,12 +118,14 @@ h3 {
     padding-top: 280px;
 }
 
-.main-table,
-.solo-table,
-.fantasy-table,
-.seria-table {
-    overflow-x: scroll;
+@media (max-width: 767px) {
+    .main-table,
+    .solo-table,
+    .fantasy-table,
+    .seria-table {
+        overflow-x: scroll;
 
+    }
 }
 
 .fantasy-table-player-img {
