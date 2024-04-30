@@ -45,8 +45,8 @@ const tableData = {
         img: "../etc/images/players/Yria.jpeg",
     },
     "Скарлетт": {
-        tours: 1,
-        score: 25.5,
+        tours: 2,
+        score: 50.75,
         img: "../etc/images/players/Skarlet.jpeg",
     },
     "Пчела": {
@@ -55,13 +55,13 @@ const tableData = {
         img: "../etc/images/players/Pcela.jpeg",
     },
     "Мориарти": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 19.25,
         img: "../etc/images/players/Moriarti.jpeg",
     },
     "Саранча": {
-        tours: 1,
-        score: 19.5,
+        tours: 2,
+        score: 53,
         img: "../etc/images/players/Sarancha.jpeg",
     },
     "Весна": {
@@ -70,8 +70,8 @@ const tableData = {
         img: "../etc/images/players/Vesna.jpeg",
     },
     "Michael": {
-        tours: 1,
-        score: 23,
+        tours: 2,
+        score: 47,
         img: "../etc/images/players/Michael.jpeg",
     },
     "Gadfour": {
@@ -95,13 +95,13 @@ const tableData = {
         img: "../etc/images/players/Morti.jpeg",
     },
     "Злая Киса": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 24.75,
         img: "../etc/images/players/ZK.jpeg",
     },
     "Марго": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 28.75,
         img: "../etc/images/players/Margo.jpeg",
     },
     "Спонжик": {
@@ -120,8 +120,8 @@ const tableData = {
         img: "../etc/images/players/Cherry.png",
     },
     "Грибочки": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 20.5,
         img: "../etc/images/players/Gribochki.jpeg",
     },
     "Rocket Woman": {
@@ -130,13 +130,13 @@ const tableData = {
         img: "../etc/images/players/Roket.jpeg",
     },
     "Джейн": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 27.25,
         img: "../etc/images/players/Jane.jpeg",
     },
     "Curly": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 23.5,
         img: "../etc/images/players/Curly.jpeg",
     },
     "Манекен": {
@@ -146,8 +146,8 @@ const tableData = {
     },
     "Карась": {
         nickname: "Карась",
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 22,
         img: "../etc/images/players/Karas.jpeg",
     },
 };
@@ -157,61 +157,61 @@ const teamDate = {
         {
             "teamName": "Ну мёд, медятина!",
             "games": [
-                28, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                28, 22, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Понапикали!",
             "games": [
-                22.25, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                22.25, 19.25, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Япона Мать",
             "games": [
-                26, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                26, 23.5, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Город-герой и 2 героини",
             "games": [
-                25.5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                25.5, 25.25, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Не Ангелы",
             "games": [
-                26.5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                26.5, 28.75, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "С кем я мафия?!",
             "games": [
-                21, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                21, 24.75, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Под(д)ержим Ремчика!",
             "games": [
-                27.25, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                27.25, 27.25, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Ночная Фурия",
             "games": [
-                32.5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                32.5, 20.5, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "ЗПГ",
             "games": [
-            19.5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            19.5, 33.5, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Банда экстремистов",
             "games": [
-                23, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                23, 24, 0, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
     ],
@@ -383,6 +383,26 @@ $(document).ready(function() {
     applySoloTable();
     buildFantasyTable();
 
+    const hashtag = window.location.hash.substring(1);
+    
+    switch(hashtag) {
+        case "teams-table":
+            showTable(".main-table", "#teams");
+            break;
+        case "solo-table":
+            showTable(".solo-table", "#solo");
+            break;
+        case "fantasy-table":
+            showTable(".fantasy-table", "#fantasy");
+            break;
+        case "games-table":
+            showTable(".games-table", "#games");
+            break;
+        default:
+            showTable(".main-table", "#teams");
+            break;
+    };
+
 
     $('#teams').click(function(event) {
         $('.solo-table').hide();
@@ -393,7 +413,6 @@ $(document).ready(function() {
         $('#solo').css("color", "aliceblue");
         $('#fantasy').css("color", "aliceblue");
         $('#games').css("color", "aliceblue");
-
     });
 
     $('#solo').click(function(event) {
@@ -430,6 +449,20 @@ $(document).ready(function() {
     });
 });
 
+function showTable(tableClass, tableHash) {
+    $('.main-table').hide();
+    $('.solo-table').hide();
+    $('.fantasy-table').hide();
+    $('.games-table').hide();
+    $(tableClass).show();
+
+    $('#teams').css("color", "aliceblue");
+    $('#solo').css("color", "aliceblue");
+    $('#fantasy').css("color", "aliceblue");
+    $('#games').css("color", "aliceblue");
+    $(tableHash).css("color", "lightpink");
+}
+
 function applyTeamTable() {
     let table = "<table>";
     table += "<tr><th>#</th><th>Команда</th><th>Серия 1</th><th>Серия 2</th><th>Серия 3</th><th>Серия 4</th><th>Серия 5</th>" + 
@@ -460,7 +493,7 @@ function applyTeamTable() {
         let games = 0;
         table += "<tr><td>" + (index + 1) + "</td><td>" + team.teamName + "</td>";
         team.games.forEach((gameScore) => {
-            table += gameScore !== 0 ? "<td>" + gameScore + "</td>" : "<td></td>";
+            table += gameScore !== 0 ? "<td class='cell-score'>" + gameScore + "</td>" : "<td></td>";
             games += gameScore !== 0 ? 1 : 0;
             total += gameScore;
         });
@@ -475,12 +508,16 @@ function applyTeamTable() {
 function applySoloTable() {
     let soloTable = "<table>";
     soloTable += "<tr><th>#</th><th>Игрок</th><th>Итог (Ср. зн.)</th></tr>";
+    
 
     let playerNamesArray = Object.keys(tableData).sort((a, b) => {
-        if (tableData[a].score < tableData[b].score) {
+        let var1 = tableData[a].tours !== 0 ? (tableData[a].score / tableData[a].tours) : 0;
+        let var2 = tableData[b].tours !== 0 ? (tableData[b].score / tableData[b].tours) : 0;
+
+        if (var1 < var2) {
         return 1;
         }
-        if (tableData[a].score > tableData[b].score) {
+        if (var1 > var2) {
         return -1;
         }
         return 0;
@@ -545,7 +582,7 @@ function buildTable() {
         t += "<tr><td>" + (index + 1) + "</td><td class='player-name'>" + row.playerName + "</td>";
         row.team.forEach(team => {
             t += "<td><div name='" + row.playerName + "'class='fantasy-table-player-img' style='background-image: url(" + team.playerImg + ")'></div>" 
-                    + "<p>" + team.playerScore + "</p></td>";
+                    + "<p class='fanstsy-score'>" + team.playerScore + "</p></td>";
         });
         t += "<td class='score'>" + row.totalScore + "</td>";
         t += "<td class='score'>" + row.averageScore + "</td>";

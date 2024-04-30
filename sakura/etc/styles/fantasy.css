@@ -33,8 +33,7 @@ h3 {
     text-align: center;
     font-size: 30px;
     font-family: Hanzi;
-    padding-top: 30px;
-    margin: 0;
+    padding: 30px 0 0;
 }
 
 .main {
@@ -203,9 +202,19 @@ td.score {
     display: none;
 }
 
+.fanstsy-score {
+    font-family: 'Mandarinc';
+    font-size: 23px;
+}
+
 .solo-table .avg-score {
     font-family: 'Mandarinc';
     font-size: 30px;
+}
+
+.main-table .cell-score {
+    font-family: 'Mandarinc';
+    font-size: 18px;
 }
 
 .main-table .total-score {
@@ -215,14 +224,16 @@ td.score {
 
 .divisions {
     text-align: center;
+    margin: 20px 0 60px;
 }
 
+.divisions a,
 .divisions p {
     display: inline-block;
     font-size: 20px;
     font-family: 'Hanzi';
     color: aliceblue;
-    padding: 20px;
+    padding: 20px 20px 0;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -292,4 +303,8 @@ td.score {
 .card {
     background-color: yellow;
     color: black;
+}
+
+.minus {
+    background-color: red;
 }
