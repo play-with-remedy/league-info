@@ -538,19 +538,25 @@ function buildFantasyTable() {
     Object.keys(data).forEach((fpsPlayerName) => {
         let playerObject = { "playerName" : fpsPlayerName, "team": [], };
         let totalScore = 0;
-        let totalTours = 0;
+        let totalPlayers = 0;
         data[fpsPlayerName].forEach(player => {
             const playerScore = tableData[player].score;
             const playerTours = tableData[player].tours;
+            let avgScore;
+            if (playerTours !== 0) {
+                avgScore = playerScore / playerTours;
+                totalPlayers++;
+            } else {
+                avgScore = 0;
+            }
             const playerImg = tableData[player].img;
-            playerObject.team.push( {"playerImg": playerImg, "playerScore": playerScore} );
-            totalScore += playerScore;
-            totalTours += playerTours;
+            playerObject.team.push( {"playerImg": playerImg, "playerScore": avgScore} );
+            totalScore += avgScore;
         });
 
         playerObject.totalScore = totalScore;
-        if (totalTours !== 0) {
-            let avg = (totalScore / totalTours).toFixed(2);
+        if (totalPlayers !== 0) {
+            let avg = (totalScore / totalPlayers).toFixed(2);
             playerObject.averageScore = avg;
         } else {
             playerObject.averageScore = 0;
