@@ -5,8 +5,8 @@ const tableData = {
         img: "../etc/images/players/Artik.jpeg",
     },
     "Архи": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 31,
         img: "../etc/images/players/Arhi.jpeg",
     },
     "Интерактив": {
@@ -15,8 +15,8 @@ const tableData = {
         img: "../etc/images/players/Inter.jpeg",
     },
     "Сергеевна": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 26.5,
         img: "../etc/images/players/Sergeevna.jpeg",
     },
     "Боня": {
@@ -30,8 +30,8 @@ const tableData = {
         img: "../etc/images/players/Sovest.jpeg",
     },
     "Жнец": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 32.5,
         img: "../etc/images/players/Jnec.jpeg",
     },
     "Young": {
@@ -50,13 +50,13 @@ const tableData = {
         img: "../etc/images/players/Skarlet.jpeg",
     },
     "Пчела": {
-        tours: 1,
-        score: 28,
+        tours: 2,
+        score: 54.25,
         img: "../etc/images/players/Pcela.jpeg",
     },
     "Мориарти": {
-        tours: 1,
-        score: 19.25,
+        tours: 2,
+        score: 47.25,
         img: "../etc/images/players/Moriarti.jpeg",
     },
     "Саранча": {
@@ -80,13 +80,13 @@ const tableData = {
         img: "../etc/images/players/Gadfour.jpeg",
     },
     "Лекса": {
-        tours: 1,
-        score: 26,
+        tours: 2,
+        score: 46.75,
         img: "../etc/images/players/Leksa.jpeg",
     },
     "Lina": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 24.5,
         img: "../etc/images/players/Lina.jpeg",
     },
     "Morti": {
@@ -100,8 +100,8 @@ const tableData = {
         img: "../etc/images/players/ZK.jpeg",
     },
     "Марго": {
-        tours: 1,
-        score: 28.75,
+        tours: 2,
+        score: 58.75,
         img: "../etc/images/players/Margo.jpeg",
     },
     "Спонжик": {
@@ -115,8 +115,8 @@ const tableData = {
         img: "../etc/images/players/Bestia.jpeg",
     },
     "Cherry Pick": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 27.75,
         img: "../etc/images/players/Cherry.png",
     },
     "Грибочки": {
@@ -125,8 +125,8 @@ const tableData = {
         img: "../etc/images/players/Gribochki.jpeg",
     },
     "Rocket Woman": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 26,
         img: "../etc/images/players/Roket.jpeg",
     },
     "Джейн": {
@@ -157,61 +157,61 @@ const teamDate = {
         {
             "teamName": "Ну мёд, медятина!",
             "games": [
-                28, 22, 0, 0, 0, 0, 0, 0, 0, 0,
+                28, 22, 26.25, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Понапикали!",
             "games": [
-                22.25, 19.25, 0, 0, 0, 0, 0, 0, 0, 0,
+                22.25, 19.25, 28, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Япона Мать",
             "games": [
-                26, 23.5, 0, 0, 0, 0, 0, 0, 0, 0,
+                26, 23.5, 20.75, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Город-герой и 2 героини",
             "games": [
-                25.5, 25.25, 0, 0, 0, 0, 0, 0, 0, 0,
+                25.5, 25.25, 32.5, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Не Ангелы",
             "games": [
-                26.5, 28.75, 0, 0, 0, 0, 0, 0, 0, 0,
+                26.5, 28.75, 30, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "С кем я мафия?!",
             "games": [
-                21, 24.75, 0, 0, 0, 0, 0, 0, 0, 0,
+                21, 24.75, 27.75, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Под(д)ержим Ремчика!",
             "games": [
-                27.25, 27.25, 0, 0, 0, 0, 0, 0, 0, 0,
+                27.25, 27.25, 31, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Ночная Фурия",
             "games": [
-                32.5, 20.5, 0, 0, 0, 0, 0, 0, 0, 0,
+                32.5, 20.5, 26.5, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "ЗПГ",
             "games": [
-            19.5, 33.5, 0, 0, 0, 0, 0, 0, 0, 0,
+            19.5, 33.5, 26, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Банда экстремистов",
             "games": [
-                23, 24, 0, 0, 0, 0, 0, 0, 0, 0,
+                23, 24, 24.5, 0, 0, 0, 0, 0, 0, 0,
             ],
         },
     ],
