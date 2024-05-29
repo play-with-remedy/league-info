@@ -189,11 +189,13 @@ td.score {
     align-items: center;
 }
 
-.solo-player img {
-    width: 75;
-    height: 75;
+.solo-player-img {
+    width: 75px;
+    height: 75px;
     border-radius: 90%;
-    padding: 0px 15px;
+    margin: 0px 15px;
+    background-size: cover;
+    background-position: center;
 }
 
 .games-table,

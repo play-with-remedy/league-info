@@ -524,7 +524,7 @@ function applySoloTable() {
     });
 
     playerNamesArray.forEach((playerName, index) => {
-        soloTable += "<tr><td>" + (index + 1) + "</td><td class='solo-player'> <img src='" + tableData[playerName].img + "' />" + playerName + "</td>";
+        soloTable += "<tr><td>" + (index + 1) + "</td><td class='solo-player'> <div class='solo-player-img' style='background-image: url(" + tableData[playerName].img  + ")'></div>" + playerName + "</td>";
         const tours = tableData[playerName].tours;
         const avg = tours !== 0 ? (tableData[playerName].score / tours) : 0;
         soloTable += "<td class='avg-score'>" + Math.round(avg * 1000) / 1000 + "</td></tr>"
