@@ -41,7 +41,7 @@ const tableData = {
     },
     "Юрия": {
         tours: 2,
-        score: 57.5,
+        score: 57.25,
         img: "../etc/images/players/Yria.jpeg",
     },
     "Скарлетт": {
@@ -65,8 +65,8 @@ const tableData = {
         img: "../etc/images/players/Sarancha.jpeg",
     },
     "Весна": {
-        tours: 2,
-        score: 55.75,
+        tours: 2, 
+        score: 56,
         img: "../etc/images/players/Vesna.jpeg",
     },
     "Michael": {
