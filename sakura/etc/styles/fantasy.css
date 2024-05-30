@@ -260,9 +260,8 @@ td.score {
     cursor: pointer;
 }
 
-p.teamatese {
-    font-size: 12px;
-    font-family: 'Times New Roman';
+p.teamates {
+    font-size: 8px;
     line-height: 12px;
 }
 

@@ -531,7 +531,7 @@ function applyTeamTable() {
     teamDate.teams.forEach((team, index) => {
         let total = 0;
         let games = 0;
-        table += "<tr><td>" + (index + 1) + "</td><td>" + team.teamName + "<p class='teamatese'>" + team.teamates + "</p></td>";
+        table += "<tr><td>" + (index + 1) + "</td><td>" + team.teamName + "<p class='teamates'>" + team.teamates + "</p></td>";
         team.games.forEach((gameScore) => {
             table += gameScore !== 0 ? "<td class='cell-score'>" + gameScore + "</td>" : "<td></td>";
             games += gameScore !== 0 ? 1 : 0;
