@@ -161,8 +161,9 @@ table th {
 
 .main-table td {
     border: double 1px cadetblue;
-    font-size: 12px;
+    font-size: 14px;
     padding: 10px;
+    line-height: 24px;
 }
 
 table td {
@@ -198,6 +199,19 @@ td.score {
     background-position: center;
 }
 
+.solo-player .solo-player-wrapper {
+    width: 200px;
+}
+
+.solo-player .player-name {
+    margin: 15px;
+}
+
+.solo-player .team-name {
+    margin: 0;
+    font-size: 12px;
+}
+
 .games-table,
 .fantasy-table,
 .solo-table {
@@ -212,6 +226,12 @@ td.score {
 .solo-table .avg-score {
     font-family: 'Mandarinc';
     font-size: 30px;
+}
+
+.solo-table .avg-score span {
+    font-size: 20px;
+    vertical-align: middle;
+    line-height: 30px;
 }
 
 .main-table .cell-score {
@@ -238,6 +258,12 @@ td.score {
     padding: 20px 20px 0;
     text-decoration: underline;
     cursor: pointer;
+}
+
+p.teamatese {
+    font-size: 12px;
+    font-family: 'Times New Roman';
+    line-height: 12px;
 }
 
 #teams {
@@ -309,4 +335,9 @@ td.score {
 
 .minus {
     background-color: red;
+}
+
+.rofl {
+    font-size: 10px;
+    color: gray;
 }

@@ -1,153 +1,183 @@
 const tableData = {
     "Артик": {
         tours: 1,
+        team: "ЗПГ",
         score: 31.25,
         img: "../etc/images/players/Artik.jpeg",
     },
     "Архи": {
         tours: 1,
         score: 31,
+        team: "Под(д)ержим Ремчика!",
         img: "../etc/images/players/Arhi.jpeg",
     },
     "Интерактив": {
         tours: 1,
         score: 34,
+        team: "Банда экстремистов",
         img: "../etc/images/players/Inter.jpeg",
     },
     "Сергеевна": {
         tours: 2,
         score: 51,
+        team: "Ночная фурия",
         img: "../etc/images/players/Sergeevna.jpeg",
     },
     "Боня": {
         tours: 2,
         score: 46,
+        team: "Не ангелы",
         img: "../etc/images/players/Bonya.jpeg",
     },
     "SOVEST": {
         tours: 0,
         score: 0,
+        team: "Япона мать",
         img: "../etc/images/players/Sovest.jpeg",
     },
     "Жнец": {
         tours: 1,
         score: 32.5,
+        team: "Город-герой и 2 героини",
         img: "../etc/images/players/Jnec.jpeg",
     },
     "Young": {
         tours: 2,
         score: 47.75,
+        team: "С кем я мафия?!",
         img: "../etc/images/players/Young.jpeg",
     },
     "Юрия": {
         tours: 2,
         score: 57.25,
+        team: "Понапикали!",
         img: "../etc/images/players/Yria.jpeg",
     },
     "Скарлетт": {
         tours: 2,
         score: 50.75,
+        team: "Город-герой и 2 героини",
         img: "../etc/images/players/Skarlet.jpeg",
     },
     "Пчела": {
         tours: 2,
         score: 54.25,
+        team: "Ну мёд, медятина!",
         img: "../etc/images/players/Pcela.jpeg",
     },
     "Мориарти": {
         tours: 3,
         score: 77.5,
+        team: "Понапикали!",
         img: "../etc/images/players/Moriarti.jpeg",
     },
     "Саранча": {
         tours: 3,
+        team: "ЗПГ",
         score: 77.75,
         img: "../etc/images/players/Sarancha.jpeg",
     },
     "Весна": {
         tours: 2, 
         score: 56,
+        team: "Город-герой и 2 героини",
         img: "../etc/images/players/Vesna.jpeg",
     },
     "Michael": {
         tours: 2,
         score: 47,
+        team: "Банда экстремистов",
         img: "../etc/images/players/Michael.jpeg",
     },
     "Gadfour": {
         tours: 2,
         score: 55,
+        team: "Под(д)ержим Ремчика!",
         img: "../etc/images/players/Gadfour.jpeg",
     },
     "Лекса": {
         tours: 2,
         score: 46.75,
+        team: "Япона мать",
         img: "../etc/images/players/Leksa.jpeg",
     },
     "Lina": {
         tours: 2,
         score: 46.75,
+        team: "Банда экстремистов",
         img: "../etc/images/players/Lina.jpeg",
     },
     "Morti": {
         tours: 0,
         score: 0,
+        team: "Не ангелы",
         img: "../etc/images/players/Morti.jpeg",
     },
     "Злая Киса": {
         tours: 1,
         score: 24.75,
+        team: "С кем я мафия?!",
         img: "../etc/images/players/ZK.jpeg",
     },
     "Марго": {
         tours: 3,
         score: 82.25,
+        team: "Не ангелы",
         img: "../etc/images/players/Margo.jpeg",
     },
     "Спонжик": {
         tours: 0,
         score: 0,
+        team: "Понапикали!",
         img: "../etc/images/players/Sponjik.jpeg",
     },
     "Бестия": {
         tours: 1,
         score: 32.5,
+        team: "Ночная фурия",
         img: "../etc/images/players/Bestia.jpeg",
     },
     "Cherry Pick": {
         tours: 2,
         score: 53.5,
+        team: "С кем я мафия?!",
         img: "../etc/images/players/Cherry.png",
     },
     "Грибочки": {
         tours: 2,
         score: 45.25,
+        team: "Ночная фурия",
         img: "../etc/images/players/Gribochki.jpeg",
     },
     "Rocket Woman": {
         tours: 1,
+        team: "ЗПГ",
         score: 26,
         img: "../etc/images/players/Roket.jpeg",
     },
     "Джейн": {
         tours: 2,
         score: 48,
+        team: "Под(д)ержим Ремчика!",
         img: "../etc/images/players/Jane.jpeg",
     },
     "Curly": {
         tours: 3,
         score: 77.5,
+        team: "Япона мать",
         img: "../etc/images/players/Curly.jpeg",
     },
     "Манекен": {
         tours: 1,
         score: 27,
+        team: "Ну мёд, медятина!",
         img: "../etc/images/players/Maneken.jpeg",
     },
     "Карась": {
         nickname: "Карась",
         tours: 2,
         score: 49.5,
+        team: "Ну мёд, медятина!",
         img: "../etc/images/players/Karas.jpeg",
     },
 };
@@ -156,60 +186,70 @@ const teamDate = {
     "teams": [
         {
             "teamName": "Ну мёд, медятина!",
+            "teamates": "Пчела, Манекен, Карась",
             "games": [
                 28, 22, 26.25, 27.5, 27, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Понапикали!",
+            "teamates": "Юрия, Мориарти, Спонжик",
             "games": [
                 22.25, 19.25, 28, 30.25, 35, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Япона Мать",
+            "teamates": "SOVEST, Лекса, Curly",
             "games": [
                 26, 23.5, 20.75, 27, 27, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Город-герой и 2 героини",
+            "teamates": "Жнец, Скарлетт, Весна",
             "games": [
                 25.5, 25.25, 32.5, 28.75, 27.25, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Не Ангелы",
+            "teamates": "Боня, Марго, Morti",
             "games": [
                 26.5, 28.75, 30, 19.5, 23.5, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "С кем я мафия?!",
+            "teamates": "Young, Злая Киса, Cherry Pick",
             "games": [
                 21, 24.75, 27.75, 26.75, 25.75, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Под(д)ержим Ремчика!",
+            "teamates": "Архи, Gadfour, Джейн",
             "games": [
                 27.25, 27.25, 31, 27.75, 20.75, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Ночная Фурия",
+            "teamates": "Сергеевна, Бестия, Грибочки",
             "games": [
                 32.5, 20.5, 26.5, 24.75, 24.5, 0, 0, 0, 0, 0,
             ],
         },
         {
-            "teamName": "ЗПГ",
+            "teamName": "Закрытая покемонная группировка",
+            "teamates": "Артик, Саранча, Rocket Woman",
             "games": [
             19.5, 33.5, 26, 24.75, 31.25, 0, 0, 0, 0, 0,
             ],
         },
         {
             "teamName": "Банда экстремистов",
+            "teamates": "Интерактив, Michael, Lina",
             "games": [
                 23, 24, 24.5, 22.25, 34, 0, 0, 0, 0, 0,
             ],
@@ -491,7 +531,7 @@ function applyTeamTable() {
     teamDate.teams.forEach((team, index) => {
         let total = 0;
         let games = 0;
-        table += "<tr><td>" + (index + 1) + "</td><td>" + team.teamName + "</td>";
+        table += "<tr><td>" + (index + 1) + "</td><td>" + team.teamName + "<p class='teamatese'>" + team.teamates + "</p></td>";
         team.games.forEach((gameScore) => {
             table += gameScore !== 0 ? "<td class='cell-score'>" + gameScore + "</td>" : "<td></td>";
             games += gameScore !== 0 ? 1 : 0;
@@ -524,10 +564,12 @@ function applySoloTable() {
     });
 
     playerNamesArray.forEach((playerName, index) => {
-        soloTable += "<tr><td>" + (index + 1) + "</td><td class='solo-player'> <div class='solo-player-img' style='background-image: url(" + tableData[playerName].img  + ")'></div>" + playerName + "</td>";
+        soloTable += "<tr><td>" + (index + 1) + "</td><td class='solo-player'><div class='solo-player-img' style='background-image: url(" + 
+                      tableData[playerName].img  + ")'></div><div class='solo-player-wrapper'><p class='player-name'>" + playerName + "</p><p class='team-name'>" + tableData[playerName].team + "</p></div></td>";
+
         const tours = tableData[playerName].tours;
         const avg = tours !== 0 ? (tableData[playerName].score / tours) : 0;
-        soloTable += "<td class='avg-score'>" + Math.round(avg * 1000) / 1000 + "</td></tr>"
+        soloTable += "<td class='avg-score'>" + Math.round(avg * 1000) / 1000 + " <span>(" + tours + ")</span></td></tr>"
     });
 
     soloTable += "</table>"
@@ -585,7 +627,8 @@ function buildTable() {
     $('.fantasy-table').empty();
     let t = "<table><tr><th>#</th><th>Игрок</th><th colspan='4'>Команда</th><th id='total'>Итог</th><th id='average'>Ср. зн.</th></tr>";
     fanTable.forEach((row, index) => {
-        t += "<tr><td>" + (index + 1) + "</td><td class='player-name'>" + row.playerName + "</td>";
+        const rofl = index === 0 ? "<p class='rofl'>Show me the money</p>" : "";
+        t += "<tr><td>" + (index + 1) + "</td><td class='player-name'>" + row.playerName + rofl + "</td>";
         row.team.forEach(team => {
             t += "<td><div name='" + row.playerName + "'class='fantasy-table-player-img' style='background-image: url(" + team.playerImg + ")'></div>" 
                     + "<p class='fanstsy-score'>" + team.playerScore + "</p></td>";
