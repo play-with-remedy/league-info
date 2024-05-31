@@ -418,6 +418,8 @@ const data = {
 
 let fanTable = [];
 
+let activeFantasyTeamate;
+
 $(document).ready(function() {
     applyTeamTable();
     applySoloTable();
@@ -444,7 +446,7 @@ $(document).ready(function() {
     };
 
 
-    $('#teams').click(function(event) {
+    $('#teams').click(function() {
         $('.solo-table').hide();
         $('.fantasy-table').hide();
         $('.games-table').hide();
@@ -455,7 +457,7 @@ $(document).ready(function() {
         $('#games').css("color", "aliceblue");
     });
 
-    $('#solo').click(function(event) {
+    $('#solo').click(function() {
         $('.main-table').hide();
         $('.fantasy-table').hide();
         $('.games-table').hide();
@@ -466,7 +468,7 @@ $(document).ready(function() {
         $('#games').css("color", "aliceblue");
     });
 
-    $('#fantasy').click(function(event) {
+    $('#fantasy').click(function() {
         $('.main-table').hide();
         $('.solo-table').hide();
         $('.games-table').hide();
@@ -477,7 +479,7 @@ $(document).ready(function() {
         $('#fantasy').css("color", "lightpink");
     });
 
-    $('#games').click(function(event) {
+    $('#games').click(function() {
         $('.main-table').hide();
         $('.solo-table').hide();
         $('.games-table').show();
@@ -592,7 +594,7 @@ function buildFantasyTable() {
                 avgScore = 0;
             }
             const playerImg = tableData[player].img;
-            playerObject.team.push( {"playerImg": playerImg, "playerScore": Math.round(avgScore * 1000) / 1000} );
+            playerObject.team.push( {player, "playerImg": playerImg, "playerScore": Math.round(avgScore * 1000) / 1000} );
             totalScore += avgScore;
         });
 
@@ -620,17 +622,22 @@ function sortFantasy(param) {
         return 0;
     });
 
-    buildTable();
+    fanTable.forEach((row, index) => {
+        row.number = index + 1;
+    });
+
+    buildTable(fanTable);
 }
 
-function buildTable() {
+function buildTable(table) {
     $('.fantasy-table').empty();
     let t = "<table><tr><th>#</th><th>Игрок</th><th colspan='4'>Команда</th><th id='total'>Итог</th><th id='average'>Ср. зн.</th></tr>";
-    fanTable.forEach((row, index) => {
-        const rofl = index === 0 ? "<p class='rofl'>Show me the money</p>" : "";
-        t += "<tr><td>" + (index + 1) + "</td><td class='player-name'>" + row.playerName + rofl + "</td>";
+    table.forEach(row => {
+        const rofl = row.number === 1 ? "<p class='rofl'>Show me the money</p>" : "";
+        t += "<tr><td>" + row.number + "</td><td class='player-name'>" + row.playerName + rofl + "</td>";
         row.team.forEach(team => {
-            t += "<td><div name='" + row.playerName + "'class='fantasy-table-player-img' style='background-image: url(" + team.playerImg + ")'></div>" 
+            const selectedUserClass = team.player === activeFantasyTeamate ? "selected" : "";
+            t += "<td><div name='" + team.player + "'class='fantasy-table-player-img " + selectedUserClass + "' style='background-image: url(" + team.playerImg + ")'></div>" 
                     + "<p class='fanstsy-score'>" + team.playerScore + "</p></td>";
         });
         t += "<td class='score'>" + row.totalScore + "</td>";
@@ -646,7 +653,27 @@ function buildTable() {
         sortFantasy("totalScore");
     });
 
-    $('#average').click(function(event) {
+    $('#average').click(function() {
         sortFantasy("averageScore");
+    });
+
+    $('.fantasy-table-player-img').click(function(event) {
+        const playerName = $(event.target).attr('name');
+        if (activeFantasyTeamate === playerName) {
+            activeFantasyTeamate = "";
+            buildTable(fanTable);
+        } else {
+            activeFantasyTeamate = playerName;
+            let sortedFanTable = [];
+            fanTable.forEach((row, index) => {
+                row.team.forEach(teamate => {
+                    if (teamate.player === playerName) {
+                        sortedFanTable.push(row);
+                    }
+                });
+            });
+
+            buildTable(sortedFanTable);
+        }
     });
 }
