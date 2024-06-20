@@ -6,14 +6,14 @@ const tableData = {
         img: "../etc/images/players/Artik.jpeg",
     },
     "Архи": {
-        tours: 1,
-        score: 31,
+        tours: 2,
+        score: 62.25,
         team: "Под(д)ержим Ремчика!",
         img: "../etc/images/players/Arhi.jpeg",
     },
     "Интерактив": {
-        tours: 1,
-        score: 34,
+        tours: 3,
+        score: 94.25,
         team: "Банда экстремистов",
         img: "../etc/images/players/Inter.jpeg",
     },
@@ -30,14 +30,14 @@ const tableData = {
         img: "../etc/images/players/Bonya.jpeg",
     },
     "SOVEST": {
-        tours: 0,
-        score: 0,
+        tours: 2,
+        score: 50.75,
         team: "Япона мать",
         img: "../etc/images/players/Sovest.jpeg",
     },
     "Жнец": {
-        tours: 1,
-        score: 32.5,
+        tours: 2,
+        score: 61.75,
         team: "Город-герой и 2 героини",
         img: "../etc/images/players/Jnec.jpeg",
     },
@@ -48,14 +48,14 @@ const tableData = {
         img: "../etc/images/players/Young.jpeg",
     },
     "Юрия": {
-        tours: 2,
-        score: 57.25,
+        tours: 3,
+        score: 81.75,
         team: "Понапикали!",
         img: "../etc/images/players/Yria.jpeg",
     },
     "Скарлетт": {
-        tours: 2,
-        score: 50.75,
+        tours: 3,
+        score: 79.50,
         team: "Город-герой и 2 героини",
         img: "../etc/images/players/Skarlet.jpeg",
     },
@@ -90,8 +90,8 @@ const tableData = {
         img: "../etc/images/players/Michael.jpeg",
     },
     "Gadfour": {
-        tours: 2,
-        score: 55,
+        tours: 3,
+        score: 75,
         team: "Под(д)ержим Ремчика!",
         img: "../etc/images/players/Gadfour.jpeg",
     },
@@ -108,14 +108,14 @@ const tableData = {
         img: "../etc/images/players/Lina.jpeg",
     },
     "Morti": {
-        tours: 0,
-        score: 0,
+        tours: 2,
+        score: 33.5,
         team: "Не ангелы",
         img: "../etc/images/players/Morti.jpeg",
     },
     "Злая Киса": {
-        tours: 1,
-        score: 24.75,
+        tours: 3,
+        score: 77.50,
         team: "С кем я мафия?!",
         img: "../etc/images/players/ZK.jpeg",
     },
@@ -126,14 +126,14 @@ const tableData = {
         img: "../etc/images/players/Margo.jpeg",
     },
     "Спонжик": {
-        tours: 0,
-        score: 0,
+        tours: 1,
+        score: 32.75,
         team: "Понапикали!",
         img: "../etc/images/players/Sponjik.jpeg",
     },
     "Бестия": {
-        tours: 1,
-        score: 32.5,
+        tours: 3,
+        score: 79.5,
         team: "Ночная фурия",
         img: "../etc/images/players/Bestia.jpeg",
     },
@@ -150,9 +150,9 @@ const tableData = {
         img: "../etc/images/players/Gribochki.jpeg",
     },
     "Rocket Woman": {
-        tours: 1,
+        tours: 3,
         team: "ЗПГ",
-        score: 26,
+        score: 71.25,
         img: "../etc/images/players/Roket.jpeg",
     },
     "Джейн": {
@@ -168,15 +168,15 @@ const tableData = {
         img: "../etc/images/players/Curly.jpeg",
     },
     "Манекен": {
-        tours: 1,
-        score: 27,
+        tours: 2,
+        score: 56,
         team: "Ну мёд, медятина!",
         img: "../etc/images/players/Maneken.jpeg",
     },
     "Карась": {
         nickname: "Карась",
-        tours: 2,
-        score: 49.5,
+        tours: 3,
+        score: 70,
         team: "Ну мёд, медятина!",
         img: "../etc/images/players/Karas.jpeg",
     },
@@ -188,70 +188,70 @@ const teamDate = {
             "teamName": "Ну мёд, медятина!",
             "teamates": "Пчела, Манекен, Карась",
             "games": [
-                28, 22, 26.25, 27.5, 27, 0, 0, 0, 0, 0,
+                28, 22, 26.25, 27.5, 27, 29, 20.5, 0, 0, 0,
             ],
         },
         {
             "teamName": "Понапикали!",
             "teamates": "Юрия, Мориарти, Спонжик",
             "games": [
-                22.25, 19.25, 28, 30.25, 35, 0, 0, 0, 0, 0,
+                22.25, 19.25, 28, 30.25, 35, 32.75, 24.5, 0, 0, 0,
             ],
         },
         {
             "teamName": "Япона Мать",
             "teamates": "SOVEST, Лекса, Curly",
             "games": [
-                26, 23.5, 20.75, 27, 27, 0, 0, 0, 0, 0,
+                26, 23.5, 20.75, 27, 27, 29.75, 21, 0, 0, 0,
             ],
         },
         {
             "teamName": "Город-герой и 2 героини",
             "teamates": "Жнец, Скарлетт, Весна",
             "games": [
-                25.5, 25.25, 32.5, 28.75, 27.25, 0, 0, 0, 0, 0,
+                25.5, 25.25, 32.5, 28.75, 27.25, 29.25, 28.75, 0, 0, 0,
             ],
         },
         {
             "teamName": "Не Ангелы",
             "teamates": "Боня, Марго, Morti",
             "games": [
-                26.5, 28.75, 30, 19.5, 23.5, 0, 0, 0, 0, 0,
+                26.5, 28.75, 30, 19.5, 23.5, 18, 15.5, 0, 0, 0,
             ],
         },
         {
             "teamName": "С кем я мафия?!",
             "teamates": "Young, Злая Киса, Cherry Pick",
             "games": [
-                21, 24.75, 27.75, 26.75, 25.75, 0, 0, 0, 0, 0,
+                21, 24.75, 27.75, 26.75, 25.75, 30.75, 22, 0, 0, 0,
             ],
         },
         {
             "teamName": "Под(д)ержим Ремчика!",
             "teamates": "Архи, Gadfour, Джейн",
             "games": [
-                27.25, 27.25, 31, 27.75, 20.75, 0, 0, 0, 0, 0,
+                27.25, 27.25, 31, 27.75, 20.75, 31.25, 20, 0, 0, 0,
             ],
         },
         {
             "teamName": "Ночная Фурия",
             "teamates": "Сергеевна, Бестия, Грибочки",
             "games": [
-                32.5, 20.5, 26.5, 24.75, 24.5, 0, 0, 0, 0, 0,
+                32.5, 20.5, 26.5, 24.75, 24.5, 21.25, 25.75, 0, 0, 0,
             ],
         },
         {
             "teamName": "Закрытая покемонная группировка",
             "teamates": "Артик, Саранча, Rocket Woman",
             "games": [
-            19.5, 33.5, 26, 24.75, 31.25, 0, 0, 0, 0, 0,
+            19.5, 33.5, 26, 24.75, 31.25, 25.25, 20, 0, 0, 0,
             ],
         },
         {
             "teamName": "Банда экстремистов",
             "teamates": "Интерактив, Michael, Lina",
             "games": [
-                23, 24, 24.5, 22.25, 34, 0, 0, 0, 0, 0,
+                23, 24, 24.5, 22.25, 34, 30.75, 29.5, 0, 0, 0,
             ],
         },
     ],
