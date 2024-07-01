@@ -6,8 +6,8 @@ const tableData = {
         img: "../etc/images/players/Artik.jpeg",
     },
     "Архи": {
-        tours: 3,
-        score: 85,
+        tours: 4,
+        score: 119,
         team: "Под(д)ержим Ремчика!",
         img: "../etc/images/players/Arhi.jpeg",
     },
@@ -18,8 +18,8 @@ const tableData = {
         img: "../etc/images/players/Inter.jpeg",
     },
     "Сергеевна": {
-        tours: 3,
-        score: 74.75,
+        tours: 4,
+        score: 106.75,
         team: "Ночная фурия",
         img: "../etc/images/players/Sergeevna.jpeg",
     },
@@ -30,26 +30,26 @@ const tableData = {
         img: "../etc/images/players/Bonya.jpeg",
     },
     "SOVEST": {
-        tours: 3,
-        score: 76.5,
+        tours: 4,
+        score: 105.25,
         team: "Япона мать",
         img: "../etc/images/players/Sovest.jpeg",
     },
     "Жнец": {
-        tours: 2,
-        score: 61.75,
+        tours: 3,
+        score: 89.25,
         team: "Город-герой и 2 героини",
         img: "../etc/images/players/Jnec.jpeg",
     },
     "Young": {
-        tours: 3,
-        score: 85,
+        tours: 4,
+        score: 111.75,
         team: "С кем я мафия?!",
         img: "../etc/images/players/Young.jpeg",
     },
     "Юрия": {
-        tours: 3,
-        score: 81.75,
+        tours: 4,
+        score: 106.5,
         team: "Понапикали!",
         img: "../etc/images/players/Yria.jpeg",
     },
@@ -72,9 +72,9 @@ const tableData = {
         img: "../etc/images/players/Moriarti.jpeg",
     },
     "Саранча": {
-        tours: 3,
+        tours: 4,
         team: "ЗПГ",
-        score: 77.75,
+        score: 96.5,
         img: "../etc/images/players/Sarancha.jpeg",
     },
     "Весна": {
@@ -102,8 +102,8 @@ const tableData = {
         img: "../etc/images/players/Leksa.jpeg",
     },
     "Lina": {
-        tours: 3,
-        score: 74.25,
+        tours: 4,
+        score: 93.5,
         team: "Банда экстремистов",
         img: "../etc/images/players/Lina.jpeg",
     },
@@ -168,8 +168,8 @@ const tableData = {
         img: "../etc/images/players/Curly.jpeg",
     },
     "Манекен": {
-        tours: 2,
-        score: 56,
+        tours: 3,
+        score: 84.25,
         team: "Ну мёд, медятина!",
         img: "../etc/images/players/Maneken.jpeg",
     },
@@ -188,70 +188,70 @@ const teamDate = {
             "teamName": "Ну мёд, медятина!",
             "teamates": "Пчела, Манекен, Карась",
             "games": [
-                28, 22, 26.25, 27.5, 27, 29, 20.5, 27, 24.25, 0,
+                28, 22, 26.25, 27.5, 27, 29, 20.5, 27, 24.25, 28.25,
             ],
         },
         {
             "teamName": "Понапикали!",
             "teamates": "Юрия, Мориарти, Спонжик",
             "games": [
-                22.25, 19.25, 28, 30.25, 35, 32.75, 24.5, 24.5, 21.75, 0,
+                22.25, 19.25, 28, 30.25, 35, 32.75, 24.5, 24.5, 21.75, 24.75,
             ],
         },
         {
             "teamName": "Япона Мать",
             "teamates": "SOVEST, Лекса, Curly",
             "games": [
-                26, 23.5, 20.75, 27, 27, 29.75, 21, 25.75, 23.75, 0,
+                26, 23.5, 20.75, 27, 27, 29.75, 21, 25.75, 23.75, 28.75,
             ],
         },
         {
             "teamName": "Город-герой и 2 героини",
             "teamates": "Жнец, Скарлетт, Весна",
             "games": [
-                25.5, 25.25, 32.5, 28.75, 27.25, 29.25, 28.75, 21.5, 28.75, 0,
+                25.5, 25.25, 32.5, 28.75, 27.25, 29.25, 28.75, 21.5, 28.75, 27.5,
             ],
         },
         {
             "teamName": "Не Ангелы",
             "teamates": "Боня, Марго, Morti",
             "games": [
-                26.5, 28.75, 30, 19.5, 23.5, 18, 15.5, 16, 27.75, 0,
+                26.5, 28.75, 30, 19.5, 23.5, 18, 15.5, 16, 27.75, 16.75,
             ],
         },
         {
             "teamName": "С кем я мафия?!",
             "teamates": "Young, Злая Киса, Cherry Pick",
             "games": [
-                21, 24.75, 27.75, 26.75, 25.75, 30.75, 22, 29.75, 37.25, 0,
+                21, 24.75, 27.75, 26.75, 25.75, 30.75, 22, 29.75, 37.25, 26.75,
             ],
         },
         {
             "teamName": "Под(д)ержим Ремчика!",
             "teamates": "Архи, Gadfour, Джейн",
             "games": [
-                27.25, 27.25, 31, 27.75, 20.75, 31.25, 20, 22.75, 31.75, 0,
+                27.25, 27.25, 31, 27.75, 20.75, 31.25, 20, 22.75, 31.75, 34,
             ],
         },
         {
             "teamName": "Ночная Фурия",
             "teamates": "Сергеевна, Бестия, Грибочки",
             "games": [
-                32.5, 20.5, 26.5, 24.75, 24.5, 21.25, 25.75, 23.75, 23, 0,
+                32.5, 20.5, 26.5, 24.75, 24.5, 21.25, 25.75, 23.75, 23, 32,
             ],
         },
         {
             "teamName": "Закрытая покемонная группировка",
             "teamates": "Артик, Саранча, Rocket Woman",
             "games": [
-            19.5, 33.5, 26, 24.75, 31.25, 25.25, 20, 19, 33.5, 0,
+            19.5, 33.5, 26, 24.75, 31.25, 25.25, 20, 19, 33.5, 18.75,
             ],
         },
         {
             "teamName": "Банда экстремистов",
             "teamates": "Интерактив, Michael, Lina",
             "games": [
-                23, 24, 24.5, 22.25, 34, 30.75, 29.5, 27.5, 22, 0,
+                23, 24, 24.5, 22.25, 34, 30.75, 29.5, 27.5, 22, 19.25,
             ],
         },
     ],
