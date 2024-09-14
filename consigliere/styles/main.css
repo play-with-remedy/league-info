@@ -1,9 +1,5 @@
 body {
-    background: url(../images/background.jpg);
-}
-
-.wrapper {
-    padding: 30px 15% 0 15%;
+    background: url(../images/background.png);
 }
 
 .total-wrapper {
@@ -14,15 +10,24 @@ body {
     text-align: center;
 }
 
+.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 35px 0;
+}
+
 .header img {
-    width: 200px;
+    width: 120px;
+    margin-right: 30px;
 }
 
 h1 {
     color: white;
     font-size: 85px;
     font-family: serif;
-    margin-top: 35px;
+    margin: 0;
+    display: inline-block;
 }
 
 .total {
@@ -39,20 +44,27 @@ h1 {
 
 .game table {
     border: solid 2px white;
+    border-collapse: collapse;
     color: white;
     font-family: serif;
-    font-size: 60px;
+    font-size: 20px;
+    width: 100%;
 }
 
 td {
-    border: dashed 1px white;
-    padding: 20px;
+    border: solid 1px white;
     text-align: center;
+    height: 45px;
+}
+
+.mafia-table-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 .mafia-table {
-    display: grid;
-    padding-bottom: 50px;
+    display: inline-block;
+    width: 30%;
 }
 
 .mafia-table p {
@@ -61,6 +73,7 @@ td {
     color: white;
     border-bottom: none !important;
     margin: 20px 0;
+    text-align: center;
 }
 
 .total-mafia-table {
@@ -96,12 +109,12 @@ td {
   float: right;
 }
 
-.game p {
+.game-number {
     color: white;
     font-size: 70px;
-    border-bottom: solid 3px white;
-    padding: 50px 0 20px;
+    padding: 70px 0 20px;
     margin: 20px 0;
+    text-align: center;
 }
 
 .total p {
