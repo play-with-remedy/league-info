@@ -14,7 +14,7 @@ body {
 }
 
 .total-wrapper {
-    padding: 30px 5% 0 5%;
+    padding: 30px 5% 50px 5%;
 }
 
 .header {
@@ -26,11 +26,21 @@ body {
     align-items: center;
     justify-content: center;
     margin: 35px 0;
+
+    @media (max-width: 1024px) {
+        display: block;
+    }
 }
 
 .header img {
     width: 120px;
     margin-right: 30px;
+
+    @media (max-width: 1024px) {
+        width: 150px;
+        margin-bottom: 50px;
+        margin-right: 0;
+    }
 }
 
 h1 {
@@ -38,6 +48,11 @@ h1 {
     font-size: 100px;
     margin: 0;
     display: inline-block;
+
+    @media (max-width: 1024px) {
+        font-size: 40px;
+        display: block;
+    }
 }
 
 .total {
@@ -65,14 +80,27 @@ td {
     height: 70px;
 }
 
+.table-number {
+    width: 40px;
+}
+
 .mafia-table-wrapper {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1024px) {
+        display: block;
+    }
 }
 
 .mafia-table {
     display: inline-block;
     width: 30%;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        margin-bottom: 35px;
+    }
 }
 
 .mafia-table p {
