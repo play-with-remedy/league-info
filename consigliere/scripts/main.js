@@ -81,8 +81,8 @@ const teamList = [
         teamName: "Easy Win", totalScore: 0, additionScore: 0, ci: 0,
         games: [
             { game: 1, score: 0, additionScore: 0, totalScore: 0 },
-            { game: 2, score: 1, additionScore: 0, totalScore: 0 },
-            { game: 3, score: 1, additionScore: 0, totalScore: 0 },
+            { game: 2, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 3, score: 0, additionScore: 0, totalScore: 0 },
             { game: 4, score: 0, additionScore: 0, totalScore: 0 },
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 0, additionScore: 0, totalScore: 0 },

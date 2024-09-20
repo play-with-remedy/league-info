@@ -12,13 +12,13 @@ const teams = [
         ],
     },
     {
-        teamName: "team3",
+        teamName: "Брестдари",
         slots: [
             3,8,23,29,10,29,15,7
         ],
     },
     {
-        teamName: "team4",
+        teamName: "Лучшая проверка за этим столом",
         slots: [
             4,29,14,20,9,2,6,18
         ],
@@ -30,43 +30,43 @@ const teams = [
         ],
     },
     {
-        teamName: "team6",
+        teamName: "Шляпа и звезда",
         slots: [
             6,7,22,28,11,3,16,28
         ],
     },
     {
-        teamName: "Клянусь, мы шериф",
+        teamName: "Гемотагенка с ежиком",
         slots: [
             7,28,13,19,14,27,7,29
         ],
     },
     {
-        teamName: "team8",
+        teamName: "Давай по новой, Миша",
         slots: [
             8,17,2,8,13,4,27,9
         ],
     },
     {
-        teamName: "team9",
+        teamName: "Наследие покемонов",
         slots: [
             9,6,21,27,16,26,17,19
         ],
     },
     {
-        teamName: "team10",
+        teamName: "Диванные критики",
         slots: [
             10,27,12,9,15,5,8,30
         ],
     },
     {
-        teamName: "team11",
+        teamName: "Красивая и скромная команда!",
         slots: [
             11,16,1,7,18,25,28,10
         ],
     },
     {
-        teamName: "Бывшие",
+        teamName: "Салат с грибочками",
         slots: [
             12,5,20,26,17,6,18,20
         ],
@@ -78,43 +78,43 @@ const teams = [
         ],
     },
     {
-        teamName: "В щи",
+        teamName: "Бандюги",
         slots: [
             14,15,30,6,19,7,29,21
         ],
     },
     {
-        teamName: "DDNIWE",
+        teamName: "Ведьмы",
         slots: [
             15,4,19,25,22,23,19,11
         ],
     },
     {
-        teamName: "Пёс да Лис",
+        teamName: "В щи",
         slots: [
             16,25,10,16,21,8,10,2
         ],
     },
     {
-        teamName: "Инцест - дело семейное",
+        teamName: "Дети девятки",
         slots: [
             17,14,29,5,24,22,30,12
         ],
     },
     {
-        teamName: "team18",
+        teamName: "Пёс да Лис",
         slots: [
             18,3,18,24,23,9,20,22
         ],
     },
     {
-        teamName: "team19",
+        teamName: "Инцест - дело семейное",
         slots: [
             19,24,9,18,26,21,11,3
         ],
     },
     {
-        teamName: "team20",
+        teamName: "ГЛАМУР",
         slots: [
             20,13,28,4,25,10,1,23
         ],
@@ -126,13 +126,13 @@ const teams = [
         ],
     },
     {
-        teamName: "team22",
+        teamName: "Black hearts",
         slots: [
             22,23,8,14,27,11,12,4
         ],
     },
     {
-        teamName: "team23",
+        teamName: "Вперед, на 3в3!",
         slots: [
             23,12,27,3,30,19,2,24
         ],
@@ -144,19 +144,19 @@ const teams = [
         ],
     },
     {
-        teamName: "team25",
+        teamName: "Афера Круэллы",
         slots: [
             25,22,7,15,2,18,13,5
         ],
     },
     {
-        teamName: "team26",
+        teamName: "Те ещё фрукты",
         slots: [
             26,11,26,2,1,13,3,25
         ],
     },
     {
-        teamName: "team27",
+        teamName: "Mafia House",
         slots: [
             27,20,5,1,4,17,23,15
         ],
@@ -168,13 +168,13 @@ const teams = [
         ],
     },
     {
-        teamName: "Шляпа и звезда",
+        teamName: "ПрофиТролли",
         slots: [
             29,10,25,11,6,16,14,26
         ],
     },
     {
-        teamName: "team30",
+        teamName: "Анапа 2008",
         slots: [
             30,9,24,10,5,15,24,16
         ],
