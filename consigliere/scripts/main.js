@@ -286,7 +286,7 @@ const teamList = [
         ],
     },
     {
-        teamName: "Вперед, на 3в3!", totalScore: 0, additionScore: 0, ci: 0.2,
+        teamName: "Вперед, на 3в3!", totalScore: 0, additionScore: 0, ci: 0,
         games: [
             { game: 1, score: 1, additionScore: 0.2, totalScore: 0 },
             { game: 2, score: 0, additionScore: 0.1, totalScore: 0 },
@@ -351,7 +351,7 @@ const teamList = [
         ],
     },
     {
-        teamName: "Без паники", totalScore: 0, additionScore: 0, ci: 0,
+        teamName: "Без паники", totalScore: 0, additionScore: 0, ci: 0.2,
         games: [
             { game: 1, score: 1, additionScore: 0.1, totalScore: 0 },
             { game: 2, score: 1, additionScore: 0.2, totalScore: 0 },
