@@ -1,6 +1,6 @@
 const teamList = [
     {
-        teamName: "Лучшие пупсики на вашу вечеринку❤️", totalScore: 0, additionScore: 0, ci: 1.5,
+        teamName: "Лучшие пупсики на вашу вечеринку❤️", totalScore: 0, additionScore: 0, ci: 1.8,
         games: [
             { game: 1, score: 0, additionScore: 0, totalScore: 0 },
             { game: 2, score: 1, additionScore: 0.2, totalScore: 0 },
@@ -13,7 +13,7 @@ const teamList = [
         ],
     },
     {
-        teamName: "Переполненный ЛХ", totalScore: 0, additionScore: 0, ci: 0.6,
+        teamName: "Переполненный ЛХ", totalScore: 0, additionScore: 0, ci: 0.9,
         games: [
             { game: 1, score: 0, additionScore: 0, totalScore: 0 },
             { game: 2, score: 1, additionScore: 0.1, totalScore: 0 },
@@ -22,7 +22,7 @@ const teamList = [
             { game: 5, score: 1, additionScore: 0.3, totalScore: 0 },
             { game: 6, score: 0, additionScore: 0, totalScore: 0 },
             { game: 7, score: 1, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0.5, totalScore: 0 },
         ],
     },
     {
@@ -35,7 +35,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 1, additionScore: 0, totalScore: 0 },
             { game: 7, score: 1, additionScore: 0.3, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0.1, totalScore: 0 },
         ],
     },
     {
@@ -74,7 +74,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 0, additionScore: 0, totalScore: 0 },
             { game: 7, score: 0, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0, totalScore: 0 },
         ],
     },
     {
@@ -87,7 +87,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 1, additionScore: 0.2, totalScore: 0 },
             { game: 7, score: 1, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 0, additionScore: 0.2, totalScore: 0 },
         ],
     },
     {
@@ -100,7 +100,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 0, additionScore: -0.5, totalScore: 0 },
             { game: 7, score: 0, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0, totalScore: 0 },
         ],
     },
     {
@@ -113,7 +113,7 @@ const teamList = [
             { game: 5, score: 1, additionScore: 0.3, totalScore: 0 },
             { game: 6, score: 0, additionScore: 0, totalScore: 0 },
             { game: 7, score: 0, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0.5, totalScore: 0 },
         ],
     },
     {
@@ -126,7 +126,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 0, additionScore: 0, totalScore: 0 },
             { game: 7, score: 0, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0.4, totalScore: 0 },
         ],
     },
     {
@@ -139,7 +139,7 @@ const teamList = [
             { game: 5, score: 1, additionScore: 0.2, totalScore: 0 },
             { game: 6, score: 1, additionScore: -0.5, totalScore: 0 },
             { game: 7, score: 1, additionScore: 0.3, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0, totalScore: 0 },
         ],
     },
     {
@@ -152,7 +152,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 0, additionScore: 0, totalScore: 0 },
             { game: 7, score: 1, additionScore: 0.5, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 0, additionScore: 0.4, totalScore: 0 },
         ],
     },
     {
@@ -165,7 +165,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 0, additionScore: 0, totalScore: 0 },
             { game: 7, score: 0, additionScore: 0.1, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0, totalScore: 0 },
         ],
     },
     {
@@ -178,7 +178,7 @@ const teamList = [
             { game: 5, score: 1, additionScore: 0.2, totalScore: 0 },
             { game: 6, score: 1, additionScore: 0.5, totalScore: 0 },
             { game: 7, score: 1, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0, totalScore: 0 },
         ],
     },
     {
@@ -204,7 +204,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 1, additionScore: 0.3, totalScore: 0 },
             { game: 7, score: 1, additionScore: 0.6, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0, totalScore: 0 },
         ],
     },
     {
@@ -217,7 +217,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 1, additionScore: 0.1, totalScore: 0 },
             { game: 7, score: 0, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0, totalScore: 0 },
         ],
     },
     {
@@ -230,7 +230,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 0, additionScore: 0, totalScore: 0 },
             { game: 7, score: 0, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0.3, totalScore: 0 },
         ],
     },
     {
@@ -243,7 +243,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 1, additionScore: 0.3, totalScore: 0 },
             { game: 7, score: 0, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 0, additionScore: 0.2, totalScore: 0 },
         ],
     },
     {
@@ -282,7 +282,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 0, additionScore: 0.2, totalScore: 0 },
             { game: 7, score: 0, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0.3, totalScore: 0 },
         ],
     },
     {
@@ -295,7 +295,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0.1, totalScore: 0 },
             { game: 6, score: 0, additionScore: 0.1, totalScore: 0 },
             { game: 7, score: 0, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0.2, totalScore: 0 },
         ],
     },
     {
@@ -308,7 +308,7 @@ const teamList = [
             { game: 5, score: 1, additionScore: 0.5, totalScore: 0 },
             { game: 6, score: 0, additionScore: 0.3, totalScore: 0 },
             { game: 7, score: 1, additionScore: 0.3, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0, totalScore: 0 },
         ],
     },
     {
@@ -321,7 +321,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 0, additionScore: 0, totalScore: 0 },
             { game: 7, score: 0, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0.1, totalScore: 0 },
         ],
     },
     {
@@ -334,7 +334,7 @@ const teamList = [
             { game: 5, score: 0, additionScore: 0, totalScore: 0 },
             { game: 6, score: 1, additionScore: 0, totalScore: 0 },
             { game: 7, score: 1, additionScore: 0, totalScore: 0 },
-            { game: 8, score: 0, additionScore: 0, totalScore: 0 },
+            { game: 8, score: 1, additionScore: 0.3, totalScore: 0 },
         ],
     },
     {
