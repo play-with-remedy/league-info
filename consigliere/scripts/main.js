@@ -13,7 +13,7 @@ const teamList = [
         ],
     },
     {
-        teamName: "Переполненный ЛХ", totalScore: 0, additionScore: 0, ci: 0.9,
+        teamName: "Переполненный ЛХ", totalScore: 0, additionScore: 0, ci: 1.2,
         games: [
             { game: 1, score: 0, additionScore: 0, totalScore: 0 },
             { game: 2, score: 1, additionScore: 0.1, totalScore: 0 },
